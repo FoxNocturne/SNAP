@@ -78,9 +78,6 @@ public class Teleport : MonoBehaviour
         {
             SonHero.PlayOneShot(Clac, 1f);
             TransitionTrigger = true;
-            GetComponent<Hero>().activeControl = false;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            GetComponent<Rigidbody2D>().gravityScale = 0;
             yield return new WaitForSeconds(1);
             switch (dimension)
             {
@@ -102,8 +99,6 @@ public class Teleport : MonoBehaviour
             }
            
             TransitionTrigger = false;
-            GetComponent<Rigidbody2D>().gravityScale = 2;
-            GetComponent<Hero>().activeControl = true;
         }
 
     }
