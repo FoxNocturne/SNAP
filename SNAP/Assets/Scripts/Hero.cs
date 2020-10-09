@@ -51,22 +51,25 @@ public class Hero : MonoBehaviour
     void Update()
     {
         onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 0.5f), 0.1f, whatIsGround);
-        // SAUTER
+        // DEPLACEMENT
         if(activeControl)
         {
+            // En escalade
             if(canClimb)
             {
                 transform.Translate(new Vector2(moveHorizontal * maxSpeed * Time.deltaTime, moveVertical * maxSpeed * Time.deltaTime));
             }
+            // Au sol
             else
             {
                 transform.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
             }
 
+            // SAUTER 
             if (Input.GetKeyDown(KeyCode.Space) && onTheGround)
             {
-                rb.gravityScale = 2;
-                canClimb = false;
+                rb.gravityScale = 2; // Initialise la gravité
+                canClimb = false; // Cancel l'escalade
                 rb.AddForce(transform.up * jump);
             }
 
@@ -78,16 +81,17 @@ public class Hero : MonoBehaviour
 
 
         }
-
+        // Peut dasher une nouvelle fois s'il touche le sol et lorsuq'il reprend sa vitesse normal
         if(onTheGround && maxSpeed == speed && dash)
         {
             dash = false;
         }
+        // Pour l'effet de ghost au dash
         if(dash && !ghost)
         {
             StartCoroutine(GhostEffect(0.02f));
         }
-
+        // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
         if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("ObserveThisThing") != null)
         {
             Destroy(GameObject.Find("ObserveThisThing"));
@@ -110,8 +114,8 @@ public class Hero : MonoBehaviour
     IEnumerator Dash()
     {
         dash = true;
-        maxSpeed *= 3;
-        rb.gravityScale = 0;
+        maxSpeed *= 3; // accélération
+        rb.gravityScale = 0; 
         rb.velocity = new Vector2(rb.velocity.x, 0);
         yield return new WaitForSeconds(0.2f);
         rb.gravityScale = 2;
@@ -156,7 +160,7 @@ public class Hero : MonoBehaviour
 
         }
     }
-
+    // Sort de la zone d'escalade
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Climb")
@@ -165,7 +169,7 @@ public class Hero : MonoBehaviour
             canClimb = false;
         }
     }
-
+    // Détecte si Mr.X touche le sol 
     void OnDrawGizmosSelected()
     {
         // Draw a yellow sphere at the transform's position
