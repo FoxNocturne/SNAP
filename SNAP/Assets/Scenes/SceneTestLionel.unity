@@ -267,7 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194058041}
   - component: {fileID: 194058043}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: poteau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637633407}
   - component: {fileID: 637633408}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: poteau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 669355244}
   - component: {fileID: 669355243}
   - component: {fileID: 669355242}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: pancarte2
   m_TagString: Display
   m_Icon: {fileID: 0}
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 722169758}
   - component: {fileID: 722169757}
   - component: {fileID: 722169756}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: pancarte
   m_TagString: Display
   m_Icon: {fileID: 0}
@@ -984,7 +984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &851786498
 Transform:
   m_ObjectHideFlags: 0
@@ -6677,7 +6677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1911336534
 Transform:
   m_ObjectHideFlags: 0
@@ -7008,7 +7008,7 @@ MonoBehaviour:
     type: 3}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 23
   onTheGround: 0
 --- !u!82 &2005670629
 AudioSource:

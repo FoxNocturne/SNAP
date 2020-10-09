@@ -137,7 +137,7 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) && onTheGround)
             {
                 if(GameObject.Find("ObserveThisThing") == null)
                 {
