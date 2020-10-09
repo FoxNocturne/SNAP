@@ -34,15 +34,11 @@ public class Hero : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(activeControl)
+        if(activeControl && !dash)
         {
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
-        }
-        else if(!activeControl && moveHorizontal != 0)
-        {
-            moveHorizontal = 0;
         }
         // DEPLACEMENT DU PERSONNAGE
         
