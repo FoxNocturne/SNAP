@@ -77,11 +77,8 @@ public class Teleport : MonoBehaviour
         // Effectue l'animation
         IEnumerator TransitionEffect()
         {
-            SonHero.PlayOneShot(Clac, 1f); // SON
-            TransitionTrigger = true; // Active la transition
-            GetComponent<Hero>().activeControl = false; // Désactive le héros dans le script hero (pour qu'il ne bouge plus)
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            GetComponent<Rigidbody2D>().gravityScale = 0;
+            SonHero.PlayOneShot(Clac, 1f);
+            TransitionTrigger = true;
             yield return new WaitForSeconds(1);
             switch (dimension)
             {
@@ -102,9 +99,7 @@ public class Teleport : MonoBehaviour
                     break;
             }
            
-            TransitionTrigger = false; // Désactive la transition pour que l'animation s'effectue en effet inverse
-            GetComponent<Rigidbody2D>().gravityScale = 2;
-            GetComponent<Hero>().activeControl = true;
+            TransitionTrigger = false;
         }
 
     }

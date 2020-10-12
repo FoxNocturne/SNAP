@@ -8,7 +8,8 @@ public class Hero : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
     public bool activeControl = true;
-
+    private bool directionGauche;
+    public float dashSpeed;
     public float maxSpeed = 5;
     private float speed;
     public float jump = 100;
@@ -28,34 +29,34 @@ public class Hero : MonoBehaviour
     void Start()
     {
         speed = maxSpeed;
+        dashSpeed = maxSpeed * 3;
         SonHero = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
-        if(activeControl)
+        if (activeControl && !dash)
         {
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
         }
-        else if(!activeControl && moveHorizontal != 0)
-        {
-            moveHorizontal = 0;
-        }
         // DEPLACEMENT DU PERSONNAGE
-        
+
     }
 
     void Update()
     {
         onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 0.5f), 0.1f, whatIsGround);
         // DEPLACEMENT
-        if(activeControl)
+        if (activeControl)
         {
+            if (moveHorizontal != 0)
+                directionGauche = moveHorizontal < 0;
+
             // En escalade
-            if(canClimb)
+            if (canClimb)
             {
                 transform.Translate(new Vector2(moveHorizontal * maxSpeed * Time.deltaTime, moveVertical * maxSpeed * Time.deltaTime));
             }
@@ -81,13 +82,8 @@ public class Hero : MonoBehaviour
 
 
         }
-        // Peut dasher une nouvelle fois s'il touche le sol et lorsuq'il reprend sa vitesse normal
-        if(onTheGround && maxSpeed == speed && dash)
-        {
-            dash = false;
-        }
-        // Pour l'effet de ghost au dash
-        if(dash && !ghost)
+        
+        if (dash && !ghost)
         {
             StartCoroutine(GhostEffect(0.02f));
         }
@@ -115,11 +111,14 @@ public class Hero : MonoBehaviour
     {
         dash = true;
         maxSpeed *= 3; // accélération
-        rb.gravityScale = 0; 
-        rb.velocity = new Vector2(rb.velocity.x, 0);
+        moveHorizontal = 0;
+        rb.gravityScale = 0;
+        rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
         yield return new WaitForSeconds(0.2f);
         rb.gravityScale = 2;
+        rb.velocity = new Vector2(0, 0);
         maxSpeed = speed;
+        dash = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -145,9 +144,9 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) && onTheGround)
             {
-                if(GameObject.Find("ObserveThisThing") == null)
+                if (GameObject.Find("ObserveThisThing") == null)
                 {
                     GameObject DisplayObject = Instantiate(ObserveThisThing, transform.position, Quaternion.identity);
                     DisplayObject.name = "ObserveThisThing";
