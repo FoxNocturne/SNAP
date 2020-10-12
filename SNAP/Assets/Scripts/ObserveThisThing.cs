@@ -5,19 +5,7 @@ using UnityEngine.UI;
 
 public class ObserveThisThing : MonoBehaviour
 {
+    // Ajouter manuellement sur Unity le texte et l'image à afiicher lorsque le personnage interagit avec un panneau ou une affiche
     public Sprite Object_Picture;
     public string text;
-
-        
-     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
