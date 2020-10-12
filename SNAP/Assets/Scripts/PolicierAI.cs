@@ -52,4 +52,12 @@ public class PolicierAI : MonoBehaviour
         yield return new WaitForSeconds(TempsDePause);
         isWaiting = false;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Ennemy")
+        {
+            Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
+        }
+    }
 }

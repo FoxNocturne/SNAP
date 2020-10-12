@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3190405453620607029}
   m_Layer: 0
   m_Name: Policier
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,10 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 3
   TempsDePause: 2
-  circleGround: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 23
 --- !u!1 &3190405454161081445
 GameObject:
   m_ObjectHideFlags: 0
