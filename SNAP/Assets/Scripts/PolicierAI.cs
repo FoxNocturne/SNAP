@@ -14,20 +14,27 @@ public class PolicierAI : MonoBehaviour
     private int currentTargetIndex = 0;
     private Vector2 currentTargetPos;
     private bool isWaiting = false;
+    private bool playerFinded = false;
     private bool directionGauche;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-
+        // Mémorisation des points de patrouille
         Transform pathParent = transform.GetChild(0);
+        pathParent.name = pathParent.parent.name + " path";
+
+        int i = 0;
         foreach (Transform child in pathParent)
         {
             path.Add(child);
+            child.name = $"{i}";
+            i++;
         }
 
         pathParent.parent = transform.parent;
 
+        // Initialisation des variables importantes
+        player = GameObject.FindGameObjectWithTag("Player");
         currentTargetPos = path[currentTargetIndex].position;
     }
 
@@ -35,13 +42,14 @@ public class PolicierAI : MonoBehaviour
     {
         Vector2 currentPos = transform.position;
 
-        if (!isWaiting)
+        // Déplacement
+        if (!isWaiting && !playerFinded)
         {
-            if (currentPos.x == currentTargetPos.x)
+            if (currentPos.x == currentTargetPos.x) // Pause entre chaque point
             {
                 StartCoroutine(PausePolicier());
             }
-            else
+            else // Déplacement vers un point
             {
                 directionGauche = currentPos.x > currentTargetPos.x;
 
@@ -51,31 +59,32 @@ public class PolicierAI : MonoBehaviour
             }
         }
 
-        if (Vector2.Distance(currentPos, player.transform.position) <= viewDistance)
+        // Détection du joueur
+        playerFinded = false;
+        float dist = Vector2.Distance(currentPos, player.transform.position);
+        if (dist <= viewDistance) // Vérification de la distance (cercle de vision)
         {
             float angle = Vector2.Angle(transform.right, (player.transform.position - transform.position).normalized);
 
-            if(directionGauche)
+            if ((directionGauche && angle > 135) || (!directionGauche && angle < 45)) // Vérification de l'angle (cône de vision)
             {
-                if(angle > 135)
+                if (!(Physics2D.Raycast(transform.position, (player.transform.position - transform.position), dist, layerMask))) // Vérification de la présence d'obstacles
                 {
-                    Debug.Log("Le joueur est dans mon cône de vision");
-
-                    if (Physics2D.Raycast(transform.position, Vector2.left, viewDistance, layerMask))
-                    {
-                        Debug.Log("Je le vois !");
-                    }
-                }
-            }else
-            {
-                if(angle < 45)
-                {
-                    Debug.Log("Le joueur est dans mon cône de vision");
+                    playerFinded = true;
+                    GetComponent<SpriteRenderer>().color = Color.yellow;
+                    Debug.Log("Je vois le joueur");
                 }
             }
         }
+
+        // Je change la couleur pour un feedback visuel. Mais ce n'est que pour les tests, cette fonction disparaitra
+        if(!playerFinded)
+        {
+            GetComponent<SpriteRenderer>().color = Color.blue;
+        }
     }
 
+    // Pause du policier
     IEnumerator PausePolicier()
     {
         isWaiting = true;
@@ -85,6 +94,7 @@ public class PolicierAI : MonoBehaviour
         isWaiting = false;
     }
 
+    // Collision entre deux policiers
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ennemy")
@@ -93,6 +103,7 @@ public class PolicierAI : MonoBehaviour
         }
     }
 
+    // Cette fonction ne sert que pour la visualisation du cône de vision dans l'inspecteur. Elle peut être supprimée sans conséquence sur le mode play
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
     {
         if (!angleIsGlobal)
