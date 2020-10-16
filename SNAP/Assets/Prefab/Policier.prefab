@@ -146,6 +146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 3
   TempsDePause: 2
+  player: {fileID: 0}
+  viewDistance: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &3190405454161081445
 GameObject:
   m_ObjectHideFlags: 0
