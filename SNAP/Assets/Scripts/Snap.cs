@@ -7,7 +7,7 @@ public class Snap : MonoBehaviour
     private GameObject[] cameras = new GameObject[3];
     private float snapPressed;
     private int actualDimension = 0;
-    
+
     // Character layer 8
     //
     // Dictature layer 9
@@ -20,6 +20,8 @@ public class Snap : MonoBehaviour
         cameras[1].GetComponent<Camera>().enabled = false;
         cameras[2].GetComponent<Camera>().enabled = false;
 
+        Physics2D.IgnoreLayerCollision(8, 7);
+        Physics2D.IgnoreLayerCollision(8, 8);
         Physics2D.IgnoreLayerCollision(8, 10);
         Physics2D.IgnoreLayerCollision(8, 11);
     }

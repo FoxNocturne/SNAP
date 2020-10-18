@@ -48,9 +48,14 @@ public class Hero : MonoBehaviour
 
     void Update()
     {
+        whatIsGround = Physics2D.GetLayerCollisionMask(8);
         onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 0.5f), 0.1f, whatIsGround);
+
+        if (!canDash && onTheGround)
+            canDash = true;
+
         // DEPLACEMENT
-        if (activeControl)
+        if (activeControl && !dash)
         {
             if (moveHorizontal != 0)
                 directionGauche = moveHorizontal < 0;
@@ -75,9 +80,12 @@ public class Hero : MonoBehaviour
             }
 
             // DASH
-            if (Input.GetKeyDown(KeyCode.E) && !dash)
+            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash)
             {
-                StartCoroutine(Dash());
+                if (onTheGround)
+                    StartCoroutine(DashSol());
+                else
+                    StartCoroutine(Dash());
             }
 
 
@@ -110,14 +118,45 @@ public class Hero : MonoBehaviour
     IEnumerator Dash()
     {
         dash = true;
+        canDash = false;
+
         maxSpeed *= 3; // accélération
         moveHorizontal = 0;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
+
         yield return new WaitForSeconds(0.2f);
+
+        maxSpeed = speed;
         rb.gravityScale = 2;
         rb.velocity = new Vector2(0, 0);
+        
+        dash = false;
+    }
+
+    // TEMPS DE DASH AU SOL
+    IEnumerator DashSol()
+    {
+        dash = true;
+        canDash = false;
+        float tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+        float tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
+
+        maxSpeed *= 3; // accélération
+        moveHorizontal = 0;
+        transform.Rotate(0, 0, directionGauche ? -90 : 90);
+        transform.position = new Vector2(transform.position.x, transform.position.y + tailleX - tailleY);
+        rb.gravityScale = 0;
+        rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
+
+        yield return new WaitForSeconds(0.2f);
+
         maxSpeed = speed;
+        transform.Rotate(0, 0, directionGauche ? 90 : -90);
+        transform.position = new Vector2(transform.position.x, transform.position.y - tailleX + tailleY);
+        rb.gravityScale = 2;
+        rb.velocity = new Vector2(0, 0);
+
         dash = false;
     }
 
