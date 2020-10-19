@@ -29,7 +29,6 @@ public class Hero : MonoBehaviour
     void Start()
     {
         speed = maxSpeed;
-        dashSpeed = maxSpeed * 3;
         SonHero = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -49,7 +48,7 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 0.5f), 0.1f, whatIsGround);
+        onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 1.15f), 0.1f, whatIsGround);
 
         if (!canDash && onTheGround)
             canDash = true;
@@ -150,6 +149,12 @@ public class Hero : MonoBehaviour
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
 
         yield return new WaitForSeconds(0.2f);
+
+        // Le dash au sol continue tant qu'il y a quelque chose au-dessus du personnage
+        while(Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + tailleY), whatIsGround))
+        {
+            yield return new WaitForSeconds(0.05f);
+        }
 
         maxSpeed = speed;
         transform.Rotate(0, 0, directionGauche ? 90 : -90);
