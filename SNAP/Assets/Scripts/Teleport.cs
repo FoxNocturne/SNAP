@@ -22,14 +22,15 @@ public class Teleport : MonoBehaviour
 
     void Update()
     {        
-        SNAP = Input.GetAxis("SNAP");
+        SNAP = Input.GetAxis("SNAP"); // La valeur SNAP est égal à 1 lorsqu'on presse le bouton (2) , égal à -1 lorsqu'on appuie sur le bouton (1) 
         if (Input.GetButtonDown("SNAP") && !TransitionTrigger && Transition.SizeTransition >= 12)
         {
-            Transition.SizeTransition = 0f;
-            Transition.Mask.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
-            Transition.Mask2.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+            Transition.SizeTransition = 0f; // C'est la valeur qui permet de changer la taille du mask dans WarpSpeed
+            Transition.Mask.maskInteraction = SpriteMaskInteraction.VisibleInsideMask; // Le cercle noir, elle masque directement le jeu pour voir le fond
+            Transition.Mask2.maskInteraction = SpriteMaskInteraction.VisibleInsideMask; // Il s'agit des particules dans le fond
 
-            StartCoroutine(TransitionEffect());
+            StartCoroutine(TransitionEffect()); // Effectue l'animation
+            // le numero de dimension active le gameObject de la dimension concerné.
             if (SNAP == 1)
             {
                 dimension++;
@@ -73,14 +74,11 @@ public class Teleport : MonoBehaviour
             }
         }
 
-
+        // Effectue l'animation
         IEnumerator TransitionEffect()
         {
             SonHero.PlayOneShot(Clac, 1f);
             TransitionTrigger = true;
-            GetComponent<Hero>().activeControl = false;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            GetComponent<Rigidbody2D>().gravityScale = 0;
             yield return new WaitForSeconds(1);
             switch (dimension)
             {
@@ -102,8 +100,6 @@ public class Teleport : MonoBehaviour
             }
            
             TransitionTrigger = false;
-            GetComponent<Rigidbody2D>().gravityScale = 2;
-            GetComponent<Hero>().activeControl = true;
         }
 
     }
