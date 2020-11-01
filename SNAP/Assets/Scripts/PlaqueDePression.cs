@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlaqueDePression : MonoBehaviour
 {
-    public List<Transform> portes;
-    public float speed = 10f;
+    public List<Transform> portes; // Liste des portes connectées à la plaque
+    public float speed = 10f;      // Vitesse d'ouverture des portes
     [Range(0, 1)]
-    public float ouverture = 0.9f;
+    public float ouverture = 0.9f; // Pourcentage d'ouverture des portes
 
     private List<Vector2> portesPos = new List<Vector2>();
     private List<Collider2D> actualColliders = new List<Collider2D>();
@@ -28,6 +28,8 @@ public class PlaqueDePression : MonoBehaviour
     {
         GetComponent<BoxCollider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
 
+        // La plaque de pression ne détecte pas les objets ou personnage qui lui marchent dessus
+        // Elle détecte en réalité une différence de colliders sur elle
         if (actualColliders.Count - actualCollidersOffset == 0)
         {
             foreach (var porte in portes)
