@@ -32,16 +32,43 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
-            // Désactivation de la dimension actuelle
-            cameras[actualDimension].GetComponent<Camera>().enabled = false;
-            Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
-
-            // Changement d'index
-            actualDimension = (actualDimension + (snapPressed == 1 ? 1 : 2)) % 3;
-
-            // Activation de la nouvelle dimension
-            cameras[actualDimension].GetComponent<Camera>().enabled = true;
-            Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
+            ActiveSnap(snapPressed);
         }
+    }
+
+    public void ActiveSnap(float target)
+    {
+        Debug.Log(target == 1 ? "On recule" : "On avance");
+
+        // Désactivation de la dimension actuelle
+        cameras[actualDimension].GetComponent<Camera>().enabled = false;
+        Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
+
+        // Changement d'index
+        actualDimension = (actualDimension + (target == 1 ? 1 : 2)) % 3;
+
+        // Activation de la nouvelle dimension
+        cameras[actualDimension].GetComponent<Camera>().enabled = true;
+        Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
+    }
+
+    public int GetActualDimension()
+    {
+        return actualDimension;
+    }
+
+    public int GetPreviousDimension()
+    {
+        return (actualDimension + 2) % 3;
+    }
+
+    public int GetNextDimension()
+    {
+        return (actualDimension + 1) % 3;
+    }
+
+    public void SetActualDimension(int _actualDimension)
+    {
+        actualDimension = _actualDimension;
     }
 }
