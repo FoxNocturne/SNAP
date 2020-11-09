@@ -24,6 +24,8 @@ public class Hero : MonoBehaviour
     bool dash = false;
     bool canDash = false;
     bool canClimb = false;
+    bool isPulling = false;
+    Transform objectPulling;
 
     void Start()
     {
@@ -67,10 +69,14 @@ public class Hero : MonoBehaviour
             else
             {
                 transform.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
+                if (objectPulling)
+                {
+                    objectPulling.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
+                }
             }
 
             // SAUTER 
-            if (Input.GetKeyDown(KeyCode.Space) && onTheGround)
+            if (Input.GetKeyDown(KeyCode.Space) && onTheGround && !isPulling)
             {
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
@@ -78,7 +84,7 @@ public class Hero : MonoBehaviour
             }
 
             // DASH
-            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash)
+            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash && !isPulling)
             {
                 if (onTheGround)
                     StartCoroutine(DashSol());
@@ -86,7 +92,32 @@ public class Hero : MonoBehaviour
                     StartCoroutine(DashAir());
             }
 
+            // ATTRAPER
+            if (Input.GetButtonDown("Attraper"))
+            {
+                float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
+                float sizeQuarter = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
 
+                RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, sizeQuarter), directionGauche ? Vector2.left : Vector2.right, distance, whatIsGround);
+                if (hit && hit.transform.tag == "Item")
+                {
+                    isPulling = true;
+
+                    objectPulling = hit.transform;
+                    GetComponent<SpriteRenderer>().color = Color.gray;
+                    hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
+                }
+            }
+
+            if (Input.GetButtonUp("Attraper") || !onTheGround || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+            {
+                GetComponent<SpriteRenderer>().color = Color.red;
+                if (objectPulling)
+                    objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
+
+                objectPulling = null;
+                isPulling = false;
+            }
         }
         
         if (dash && !ghost)
