@@ -1,0 +1,3296 @@
+fileFormatVersion: 2
+guid: 887f37db370f3ac41af014bdcc49ff4c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6842052791619260012
+    second: "\xE9lement batiment4_0"
+  - first:
+      213: -6365340769281390141
+    second: "\xE9lement batiment4_1"
+  - first:
+      213: 6004932190803668811
+    second: "\xE9lement batiment4_2"
+  - first:
+      213: -3441380771515359525
+    second: "\xE9lement batiment4_3"
+  - first:
+      213: -3095013193388603652
+    second: "\xE9lement batiment4_4"
+  - first:
+      213: 4804270354502425904
+    second: "\xE9lement batiment4_5"
+  - first:
+      213: 3636080740482592412
+    second: "\xE9lement batiment4_6"
+  - first:
+      213: -3166599898468309960
+    second: "\xE9lement batiment4_7"
+  - first:
+      213: -1331937367959374525
+    second: "\xE9lement batiment4_8"
+  - first:
+      213: -3176099587590129893
+    second: "\xE9lement batiment4_9"
+  - first:
+      213: 681757950313545596
+    second: "\xE9lement batiment4_10"
+  - first:
+      213: 7770692574784547447
+    second: "\xE9lement batiment4_11"
+  - first:
+      213: -8360655712289039325
+    second: "\xE9lement batiment4_12"
+  - first:
+      213: 1868963357023992731
+    second: "\xE9lement batiment4_13"
+  - first:
+      213: 6375656812241225524
+    second: "\xE9lement batiment4_14"
+  - first:
+      213: 1510083180707672517
+    second: "\xE9lement batiment4_15"
+  - first:
+      213: -538675302878756703
+    second: "\xE9lement batiment4_16"
+  - first:
+      213: 129290446402395095
+    second: "\xE9lement batiment4_17"
+  - first:
+      213: 3005730692989416036
+    second: "\xE9lement batiment4_18"
+  - first:
+      213: -8729769624428440782
+    second: "\xE9lement batiment4_19"
+  - first:
+      213: 6998037401010153445
+    second: "\xE9lement batiment4_20"
+  - first:
+      213: -2024434578489261105
+    second: "\xE9lement batiment4_21"
+  - first:
+      213: 6348410909488993457
+    second: "\xE9lement batiment4_22"
+  - first:
+      213: -3046035097108228316
+    second: "\xE9lement batiment4_23"
+  - first:
+      213: 8673811720161864975
+    second: "\xE9lement batiment4_24"
+  - first:
+      213: 2790384131548451194
+    second: "\xE9lement batiment4_25"
+  - first:
+      213: -481736951383050049
+    second: "\xE9lement batiment4_26"
+  - first:
+      213: 3351267993294956568
+    second: "\xE9lement batiment4_27"
+  - first:
+      213: 4651951705628506625
+    second: "\xE9lement batiment4_28"
+  - first:
+      213: -8548739897004027433
+    second: "\xE9lement batiment4_29"
+  - first:
+      213: -36983700113992805
+    second: "\xE9lement batiment4_30"
+  - first:
+      213: 345350190137591128
+    second: "\xE9lement batiment4_31"
+  - first:
+      213: -3338651612597291484
+    second: "\xE9lement batiment4_32"
+  - first:
+      213: -2581628634808865467
+    second: "\xE9lement batiment4_33"
+  - first:
+      213: -1107709820592843593
+    second: "\xE9lement batiment4_34"
+  - first:
+      213: -4607379884961578378
+    second: "\xE9lement batiment4_35"
+  - first:
+      213: -1247547597399401331
+    second: "\xE9lement batiment4_36"
+  - first:
+      213: -3397498683159738381
+    second: "\xE9lement batiment4_37"
+  - first:
+      213: 1943581069603374263
+    second: "\xE9lement batiment4_38"
+  - first:
+      213: -6478280475286055924
+    second: "\xE9lement batiment4_39"
+  - first:
+      213: 2406688887526663076
+    second: "\xE9lement batiment4_40"
+  - first:
+      213: -7955648654789013587
+    second: "\xE9lement batiment4_41"
+  - first:
+      213: -6700917774504002269
+    second: "\xE9lement batiment4_42"
+  - first:
+      213: -7709235926688724661
+    second: "\xE9lement batiment4_43"
+  - first:
+      213: 7050433879061190986
+    second: "\xE9lement batiment4_44"
+  - first:
+      213: 5586591671687044411
+    second: "\xE9lement batiment4_45"
+  - first:
+      213: -5487121734545877233
+    second: "\xE9lement batiment4_46"
+  - first:
+      213: -1549165207535315202
+    second: "\xE9lement batiment4_47"
+  - first:
+      213: -116008678648171604
+    second: "\xE9lement batiment4_48"
+  - first:
+      213: -6833449929463786914
+    second: "\xE9lement batiment4_49"
+  - first:
+      213: -8959993228745334796
+    second: "\xE9lement batiment4_50"
+  - first:
+      213: 7644924148500621461
+    second: "\xE9lement batiment4_51"
+  - first:
+      213: -1118432751371589499
+    second: "\xE9lement batiment4_52"
+  - first:
+      213: -3598583695334019911
+    second: "\xE9lement batiment4_53"
+  - first:
+      213: -8226736767235822436
+    second: "\xE9lement batiment4_54"
+  - first:
+      213: -4744344626835422994
+    second: "\xE9lement batiment4_55"
+  - first:
+      213: 7793192754131260030
+    second: "\xE9lement batiment4_56"
+  - first:
+      213: -6848149041153428574
+    second: "\xE9lement batiment4_57"
+  - first:
+      213: -7190311230597689503
+    second: "\xE9lement batiment4_58"
+  - first:
+      213: -8828236967277305411
+    second: "\xE9lement batiment4_59"
+  - first:
+      213: -6795553654312763488
+    second: "\xE9lement batiment4_60"
+  - first:
+      213: 4968336769373663221
+    second: "\xE9lement batiment4_61"
+  - first:
+      213: -9117791631894979903
+    second: "\xE9lement batiment4_62"
+  - first:
+      213: -7999686273056779565
+    second: "\xE9lement batiment4_63"
+  - first:
+      213: -4367399582375148965
+    second: "\xE9lement batiment4_64"
+  - first:
+      213: -5146014353991817310
+    second: "\xE9lement batiment4_65"
+  - first:
+      213: -676517831615907887
+    second: "\xE9lement batiment4_66"
+  - first:
+      213: 2513727497810187487
+    second: "\xE9lement batiment4_67"
+  - first:
+      213: 1185947903253115238
+    second: "\xE9lement batiment4_68"
+  - first:
+      213: 5595955152064001299
+    second: "\xE9lement batiment4_69"
+  - first:
+      213: 6076685709663625003
+    second: "\xE9lement batiment4_70"
+  - first:
+      213: 5655603838637750675
+    second: "\xE9lement batiment4_71"
+  - first:
+      213: -1265231333601150362
+    second: "\xE9lement batiment4_72"
+  - first:
+      213: 3485724971325411591
+    second: "\xE9lement batiment4_73"
+  - first:
+      213: 4278422643429855007
+    second: "\xE9lement batiment4_74"
+  - first:
+      213: -4407768130785397662
+    second: "\xE9lement batiment4_75"
+  - first:
+      213: 9087663023418660689
+    second: "\xE9lement batiment4_76"
+  - first:
+      213: 2065495122951709676
+    second: "\xE9lement batiment4_77"
+  - first:
+      213: 4842800680063939336
+    second: "\xE9lement batiment4_78"
+  - first:
+      213: -2336013325789454100
+    second: "\xE9lement batiment4_79"
+  - first:
+      213: 8218277844550129744
+    second: "\xE9lement batiment4_80"
+  - first:
+      213: 8138298326278006990
+    second: "\xE9lement batiment4_81"
+  - first:
+      213: 7258277141092570642
+    second: "\xE9lement batiment4_82"
+  - first:
+      213: -4626646692344302692
+    second: "\xE9lement batiment4_83"
+  - first:
+      213: 3046872619268576522
+    second: "\xE9lement batiment4_84"
+  - first:
+      213: 5810286605396353626
+    second: "\xE9lement batiment4_85"
+  - first:
+      213: -8219357880230310177
+    second: "\xE9lement batiment4_86"
+  - first:
+      213: 6356309951548146441
+    second: "\xE9lement batiment4_87"
+  - first:
+      213: -6367166843377358650
+    second: "\xE9lement batiment4_88"
+  - first:
+      213: -6124907128698758038
+    second: "\xE9lement batiment4_89"
+  - first:
+      213: 2618457943248309748
+    second: "\xE9lement batiment4_90"
+  - first:
+      213: -4963206062111855745
+    second: "\xE9lement batiment4_91"
+  - first:
+      213: 6778621179109721591
+    second: "\xE9lement batiment4_92"
+  - first:
+      213: 100577516774342187
+    second: "\xE9lement batiment4_93"
+  - first:
+      213: -3160518628802250920
+    second: "\xE9lement batiment4_94"
+  - first:
+      213: 2279470569595930559
+    second: "\xE9lement batiment4_95"
+  - first:
+      213: 6123145859168207143
+    second: "\xE9lement batiment4_96"
+  - first:
+      213: 6804939438005346343
+    second: "\xE9lement batiment4_97"
+  - first:
+      213: 4051839968536450418
+    second: "\xE9lement batiment4_98"
+  - first:
+      213: -3326386632252814639
+    second: "\xE9lement batiment4_99"
+  - first:
+      213: -667406964417175181
+    second: "\xE9lement batiment4_100"
+  - first:
+      213: 1073893587335664617
+    second: "\xE9lement batiment4_101"
+  - first:
+      213: -1556663835546679590
+    second: "\xE9lement batiment4_102"
+  - first:
+      213: 2852511370796860116
+    second: "\xE9lement batiment4_103"
+  - first:
+      213: -2279040040191943219
+    second: "\xE9lement batiment4_104"
+  - first:
+      213: 4041229576866959153
+    second: "\xE9lement batiment4_105"
+  - first:
+      213: 1621996664690531115
+    second: "\xE9lement batiment4_106"
+  - first:
+      213: 2808445680804067416
+    second: "\xE9lement batiment4_107"
+  - first:
+      213: 7939459138907981179
+    second: "\xE9lement batiment4_108"
+  - first:
+      213: 837877477399729499
+    second: "\xE9lement batiment4_109"
+  - first:
+      213: 2182600787229184553
+    second: "\xE9lement batiment4_110"
+  - first:
+      213: -7533941882784762000
+    second: "\xE9lement batiment4_111"
+  - first:
+      213: -4940415148110698881
+    second: "\xE9lement batiment4_112"
+  - first:
+      213: -610706076966847053
+    second: "\xE9lement batiment4_113"
+  - first:
+      213: -1232863471299048912
+    second: "\xE9lement batiment4_114"
+  - first:
+      213: -2641255699025699911
+    second: "\xE9lement batiment4_115"
+  - first:
+      213: 7788690937530356631
+    second: "\xE9lement batiment4_116"
+  - first:
+      213: -8666608760835214593
+    second: "\xE9lement batiment4_117"
+  - first:
+      213: -3801567910826003709
+    second: "\xE9lement batiment4_118"
+  - first:
+      213: 4166664088169473458
+    second: "\xE9lement batiment4_119"
+  - first:
+      213: 156807617798416004
+    second: "\xE9lement batiment4_120"
+  - first:
+      213: -5110282416936681179
+    second: "\xE9lement batiment4_121"
+  - first:
+      213: 8294720700721026835
+    second: "\xE9lement batiment4_122"
+  - first:
+      213: -7900379736186888848
+    second: "\xE9lement batiment4_123"
+  - first:
+      213: -5184121281771117145
+    second: "\xE9lement batiment4_124"
+  - first:
+      213: 4263886527811477162
+    second: "\xE9lement batiment4_125"
+  - first:
+      213: 6261893966211908614
+    second: "\xE9lement batiment4_126"
+  - first:
+      213: 739576218106276893
+    second: "\xE9lement batiment4_127"
+  - first:
+      213: -5068525676377965098
+    second: "\xE9lement batiment4_128"
+  - first:
+      213: 5169217447017521219
+    second: "\xE9lement batiment4_129"
+  - first:
+      213: 1837401716684264071
+    second: "\xE9lement batiment4_130"
+  - first:
+      213: 4164156069201811725
+    second: "\xE9lement batiment4_131"
+  - first:
+      213: -3180505607825849494
+    second: "\xE9lement batiment4_132"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_0"
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2141
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e8fe263cad3fe50800000000000000
+      internalID: 6842052791619260012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_1"
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 2140
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9cbac9b44c9a7a0800000000000000
+      internalID: -6365340769281390141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_2"
+      rect:
+        serializedVersion: 2
+        x: 2558
+        y: 2140
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f2925130ec55350800000000000000
+      internalID: 6004932190803668811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_3"
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 2146
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde97f8eb62cd30d0800000000000000
+      internalID: -3441380771515359525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_4"
+      rect:
+        serializedVersion: 2
+        x: 4351
+        y: 1683
+        width: 328
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6cce016ed4c05d0800000000000000
+      internalID: -3095013193388603652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_5"
+      rect:
+        serializedVersion: 2
+        x: 4731
+        y: 1677
+        width: 329
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d9e0dee623ca240800000000000000
+      internalID: 4804270354502425904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_6"
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 2125
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eaa1f2b24f57230800000000000000
+      internalID: 3636080740482592412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_7"
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 2123
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83422027b2afd04d0800000000000000
+      internalID: -3166599898468309960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_8"
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2117
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34576bf4502048de0800000000000000
+      internalID: -1331937367959374525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_9"
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 2116
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17fc66b04a3ce3d0800000000000000
+      internalID: -3176099587590129893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_10"
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 2119
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fbc336e37167900800000000000000
+      internalID: 681757950313545596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_11"
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 2125
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a6cc2d9bb07db60800000000000000
+      internalID: 7770692574784547447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_12"
+      rect:
+        serializedVersion: 2
+        x: 2582
+        y: 2129
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cdba32debf8fb80800000000000000
+      internalID: -8360655712289039325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_13"
+      rect:
+        serializedVersion: 2
+        x: 2787
+        y: 2123
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bf2a16544efe910800000000000000
+      internalID: 1868963357023992731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_14"
+      rect:
+        serializedVersion: 2
+        x: 3258
+        y: 2128
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437007f4712ea7850800000000000000
+      internalID: 6375656812241225524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_15"
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 2125
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c17f5fe6a4e4f410800000000000000
+      internalID: 1510083180707672517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_16"
+      rect:
+        serializedVersion: 2
+        x: 3765
+        y: 1099
+        width: 524
+        height: 1046
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0c2a28aad3688f0800000000000000
+      internalID: -538675302878756703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_17"
+      rect:
+        serializedVersion: 2
+        x: 5118
+        y: 1677
+        width: 322
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db9aaad9f45bc100800000000000000
+      internalID: 129290446402395095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_18"
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 2112
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4627f16e32086b920800000000000000
+      internalID: 3005730692989416036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_19"
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2111
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23392f467c0a9d680800000000000000
+      internalID: -8729769624428440782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_20"
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 1128
+        width: 1647
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7ab1460f50e1160800000000000000
+      internalID: 6998037401010153445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_21"
+      rect:
+        serializedVersion: 2
+        x: 2824
+        y: 2119
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3412e0a73c7e3e0800000000000000
+      internalID: -2024434578489261105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_22"
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 1144
+        width: 216
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b45e4c36161a1850800000000000000
+      internalID: 6348410909488993457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_23"
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 2113
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427dd7fb73f4ab5d0800000000000000
+      internalID: -3046035097108228316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_24"
+      rect:
+        serializedVersion: 2
+        x: 5476
+        y: 1712
+        width: 216
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d2edcbdc19f5870800000000000000
+      internalID: 8673811720161864975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_25"
+      rect:
+        serializedVersion: 2
+        x: 5763
+        y: 1707
+        width: 216
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7115d3659f69b620800000000000000
+      internalID: 2790384131548451194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_26"
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 1712
+        width: 211
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb832a98bc68059f0800000000000000
+      internalID: -481736951383050049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_27"
+      rect:
+        serializedVersion: 2
+        x: 6343
+        y: 1712
+        width: 211
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8186b7feb78128e20800000000000000
+      internalID: 3351267993294956568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_28"
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 1706
+        width: 217
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a724edd6d0f8040800000000000000
+      internalID: 4651951705628506625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_29"
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 2107
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d19dd95b56cc5980800000000000000
+      internalID: -8548739897004027433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_30"
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 2107
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93d93c458b9c7ff0800000000000000
+      internalID: -36983700113992805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_31"
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 1706
+        width: 217
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855c34e0b2eeac400800000000000000
+      internalID: 345350190137591128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_32"
+      rect:
+        serializedVersion: 2
+        x: 7192
+        y: 1706
+        width: 211
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4267a5a1c0abaa1d0800000000000000
+      internalID: -3338651612597291484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_33"
+      rect:
+        serializedVersion: 2
+        x: 7480
+        y: 1706
+        width: 210
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54dad384f663c2cd0800000000000000
+      internalID: -2581628634808865467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_34"
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1112
+        width: 1651
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b41a5d79cf90a0f0800000000000000
+      internalID: -1107709820592843593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_35"
+      rect:
+        serializedVersion: 2
+        x: 7907
+        y: 1911
+        width: 1647
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672c593d76c4f00c0800000000000000
+      internalID: -4607379884961578378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_36"
+      rect:
+        serializedVersion: 2
+        x: 9618
+        y: 1882
+        width: 317
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cdd98e112dfaee0800000000000000
+      internalID: -1247547597399401331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_37"
+      rect:
+        serializedVersion: 2
+        x: 10005
+        y: 1882
+        width: 316
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f70869c2f8a9d0d0800000000000000
+      internalID: -3397498683159738381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_38"
+      rect:
+        serializedVersion: 2
+        x: 10351
+        y: 1654
+        width: 216
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b402ed6facf8fa10800000000000000
+      internalID: 1943581069603374263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_39"
+      rect:
+        serializedVersion: 2
+        x: 10734
+        y: 1654
+        width: 214
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04d93b2b368816a0800000000000000
+      internalID: -6478280475286055924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_40"
+      rect:
+        serializedVersion: 2
+        x: 11118
+        y: 1654
+        width: 228
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a328e1cac6466120800000000000000
+      internalID: 2406688887526663076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_41"
+      rect:
+        serializedVersion: 2
+        x: 11505
+        y: 1654
+        width: 214
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf8c7503bbd79190800000000000000
+      internalID: -7955648654789013587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_42"
+      rect:
+        serializedVersion: 2
+        x: 3463
+        y: 1862
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d769d79ce8103a0800000000000000
+      internalID: -6700917774504002269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_43"
+      rect:
+        serializedVersion: 2
+        x: 7907
+        y: 1718
+        width: 1647
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b490a0c15ca430590800000000000000
+      internalID: -7709235926688724661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_44"
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 1844
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4952d9124c28d160800000000000000
+      internalID: 7050433879061190986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_45"
+      rect:
+        serializedVersion: 2
+        x: 9624
+        y: 1437
+        width: 117
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ddf00c68f878d40800000000000000
+      internalID: 5586591671687044411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_46"
+      rect:
+        serializedVersion: 2
+        x: 9817
+        y: 1437
+        width: 117
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07511dbad3d9d3b0800000000000000
+      internalID: -5487121734545877233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_47"
+      rect:
+        serializedVersion: 2
+        x: 10005
+        y: 1695
+        width: 316
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6967a9372408ae0800000000000000
+      internalID: -1549165207535315202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_48"
+      rect:
+        serializedVersion: 2
+        x: 4351
+        y: 1098
+        width: 328
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3305ea8bad36ef0800000000000000
+      internalID: -116008678648171604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_49"
+      rect:
+        serializedVersion: 2
+        x: 4691
+        y: 1550
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5294eb8e75ba21a0800000000000000
+      internalID: -6833449929463786914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_50"
+      rect:
+        serializedVersion: 2
+        x: 4732
+        y: 1103
+        width: 327
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff9aba61a5b7a380800000000000000
+      internalID: -8959993228745334796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_51"
+      rect:
+        serializedVersion: 2
+        x: 5118
+        y: 1103
+        width: 322
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5986f2e220a381a60800000000000000
+      internalID: 7644924148500621461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_52"
+      rect:
+        serializedVersion: 2
+        x: 7849
+        y: 1572
+        width: 1757
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588655d96578a70f0800000000000000
+      internalID: -1118432751371589499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_53"
+      rect:
+        serializedVersion: 2
+        x: 9999
+        y: 1513
+        width: 316
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc6a19f1334f0ec0800000000000000
+      internalID: -3598583695334019911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_54"
+      rect:
+        serializedVersion: 2
+        x: 5476
+        y: 1128
+        width: 216
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c63405f72c4dd80800000000000000
+      internalID: -8226736767235822436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_55"
+      rect:
+        serializedVersion: 2
+        x: 5763
+        y: 1127
+        width: 216
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee00171d2b3b82eb0800000000000000
+      internalID: -4744344626835422994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_56"
+      rect:
+        serializedVersion: 2
+        x: 6053
+        y: 1127
+        width: 214
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e725420158bf62c60800000000000000
+      internalID: 7793192754131260030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_57"
+      rect:
+        serializedVersion: 2
+        x: 6338
+        y: 1133
+        width: 221
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a33e19eabc76f0a0800000000000000
+      internalID: -6848149041153428574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_58"
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 1127
+        width: 217
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f09bb1802e63c90800000000000000
+      internalID: -7190311230597689503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_59"
+      rect:
+        serializedVersion: 2
+        x: 6900
+        y: 1122
+        width: 216
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1e674904dcb7580800000000000000
+      internalID: -8828236967277305411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_60"
+      rect:
+        serializedVersion: 2
+        x: 7192
+        y: 1127
+        width: 211
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af749ea4f751b1a0800000000000000
+      internalID: -6795553654312763488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_61"
+      rect:
+        serializedVersion: 2
+        x: 7480
+        y: 1127
+        width: 216
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff6707e7f313f440800000000000000
+      internalID: 4968336769373663221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_62"
+      rect:
+        serializedVersion: 2
+        x: 7849
+        y: 1384
+        width: 1757
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caded4a1d8177180800000000000000
+      internalID: -9117791631894979903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_63"
+      rect:
+        serializedVersion: 2
+        x: 10351
+        y: 1080
+        width: 216
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2d1e308b76bf090800000000000000
+      internalID: -7999686273056779565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_64"
+      rect:
+        serializedVersion: 2
+        x: 10732
+        y: 1080
+        width: 216
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5207542831e363c0800000000000000
+      internalID: -4367399582375148965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_65"
+      rect:
+        serializedVersion: 2
+        x: 11118
+        y: 1080
+        width: 217
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7a145b53fa598b0800000000000000
+      internalID: -5146014353991817310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_66"
+      rect:
+        serializedVersion: 2
+        x: 11505
+        y: 1080
+        width: 214
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7f052dd968c96f0800000000000000
+      internalID: -676517831615907887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_67"
+      rect:
+        serializedVersion: 2
+        x: 9809
+        y: 1344
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd49b1947dd82e220800000000000000
+      internalID: 2513727497810187487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_68"
+      rect:
+        serializedVersion: 2
+        x: 2828
+        y: 1128
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6617587a555557010800000000000000
+      internalID: 1185947903253115238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_69"
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 1128
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315bac9ef83d8ad40800000000000000
+      internalID: 5595955152064001299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_70"
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 1124
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f51301579b45450800000000000000
+      internalID: 6076685709663625003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_71"
+      rect:
+        serializedVersion: 2
+        x: 3397
+        y: 1117
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399b6500abdbc7e40800000000000000
+      internalID: 5655603838637750675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_72"
+      rect:
+        serializedVersion: 2
+        x: 7915
+        y: 776
+        width: 221
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a720a3ecef07ee0800000000000000
+      internalID: -1265231333601150362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_73"
+      rect:
+        serializedVersion: 2
+        x: 8206
+        y: 776
+        width: 217
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7015f8ca468cf5030800000000000000
+      internalID: 3485724971325411591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_74"
+      rect:
+        serializedVersion: 2
+        x: 8493
+        y: 776
+        width: 217
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fcf94e9b2006b30800000000000000
+      internalID: 4278422643429855007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_75"
+      rect:
+        serializedVersion: 2
+        x: 8780
+        y: 776
+        width: 217
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264bf380d3674d2c0800000000000000
+      internalID: -4407768130785397662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_76"
+      rect:
+        serializedVersion: 2
+        x: 9068
+        y: 776
+        width: 222
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157525d0f5ddd1e70800000000000000
+      internalID: 9087663023418660689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_77"
+      rect:
+        serializedVersion: 2
+        x: 9355
+        y: 770
+        width: 222
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3a6d0fedc1aac10800000000000000
+      internalID: 2065495122951709676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_78"
+      rect:
+        serializedVersion: 2
+        x: 9648
+        y: 764
+        width: 64
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8033b3d6f85153340800000000000000
+      internalID: 4842800680063939336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_79"
+      rect:
+        serializedVersion: 2
+        x: 9765
+        y: 764
+        width: 64
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0adb5c140d49fd0800000000000000
+      internalID: -2336013325789454100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_80"
+      rect:
+        serializedVersion: 2
+        x: 9888
+        y: 764
+        width: 58
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0589fd548203d0270800000000000000
+      internalID: 8218277844550129744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_81"
+      rect:
+        serializedVersion: 2
+        x: 10011
+        y: 764
+        width: 64
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8e4fd853b01f070800000000000000
+      internalID: 8138298326278006990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_82"
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1098
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21619249a949ab460800000000000000
+      internalID: 7258277141092570642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_83"
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 1109
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93f499a859dacfb0800000000000000
+      internalID: -4626646692344302692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_84"
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 1104
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a051e53118aa84a20800000000000000
+      internalID: 3046872619268576522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_85"
+      rect:
+        serializedVersion: 2
+        x: 2572
+        y: 1104
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a522cd522e842a050800000000000000
+      internalID: 5810286605396353626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_86"
+      rect:
+        serializedVersion: 2
+        x: 3261
+        y: 1110
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde80135e89feed80800000000000000
+      internalID: -8219357880230310177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_87"
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 1095
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903ce484936263850800000000000000
+      internalID: 6356309951548146441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_88"
+      rect:
+        serializedVersion: 2
+        x: 2377
+        y: 1087
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8e8da9d7743a7a0800000000000000
+      internalID: -6367166843377358650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_89"
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 1093
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c17a7ea65fffaa0800000000000000
+      internalID: -6124907128698758038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_90"
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 1093
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd8d9e40a1a65420800000000000000
+      internalID: 2618457943248309748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_91"
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 1087
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7be1c8f1662f1bb0800000000000000
+      internalID: -4963206062111855745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_92"
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 1093
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f546c73c00821e50800000000000000
+      internalID: 6778621179109721591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_93"
+      rect:
+        serializedVersion: 2
+        x: 3369
+        y: 1089
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2eb9b7f7b2556100800000000000000
+      internalID: 100577516774342187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_94"
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 1083
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857bc306d059324d0800000000000000
+      internalID: -3160518628802250920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_95"
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 57
+        width: 1646
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb709b8e76e42af10800000000000000
+      internalID: 2279470569595930559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_96"
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 50
+        width: 1652
+        height: 993
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72100a397b8c9f450800000000000000
+      internalID: 6123145859168207143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_97"
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 74
+        width: 216
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720ea506d50007e50800000000000000
+      internalID: 6804939438005346343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_98"
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 79
+        width: 509
+        height: 983
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275585bdbf60b3830800000000000000
+      internalID: 4051839968536450418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_99"
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 530
+        width: 305
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da86fe5bfc46d1d0800000000000000
+      internalID: -3326386632252814639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_100"
+      rect:
+        serializedVersion: 2
+        x: 4755
+        y: 530
+        width: 287
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371ea45e6e4ecb6f0800000000000000
+      internalID: -667406964417175181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_101"
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 530
+        width: 305
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e356b7278c37ee00800000000000000
+      internalID: 1073893587335664617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_102"
+      rect:
+        serializedVersion: 2
+        x: 5476
+        y: 554
+        width: 216
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad60b873d7e956ae0800000000000000
+      internalID: -1556663835546679590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_103"
+      rect:
+        serializedVersion: 2
+        x: 5769
+        y: 559
+        width: 216
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d20c1e7af7269720800000000000000
+      internalID: 2852511370796860116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_104"
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 559
+        width: 211
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd977788293f50e0800000000000000
+      internalID: -2279040040191943219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_105"
+      rect:
+        serializedVersion: 2
+        x: 6337
+        y: 559
+        width: 217
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f05f883e4551830800000000000000
+      internalID: 4041229576866959153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_106"
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 553
+        width: 217
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b5fb17f5d728610800000000000000
+      internalID: 1621996664690531115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_107"
+      rect:
+        serializedVersion: 2
+        x: 6905
+        y: 553
+        width: 217
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8587e47877a99f620800000000000000
+      internalID: 2808445680804067416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_108"
+      rect:
+        serializedVersion: 2
+        x: 7193
+        y: 553
+        width: 210
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75c6539500ae2e60800000000000000
+      internalID: 7939459138907981179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_109"
+      rect:
+        serializedVersion: 2
+        x: 7474
+        y: 553
+        width: 216
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5516bd502db0ab00800000000000000
+      internalID: 837877477399729499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_110"
+      rect:
+        serializedVersion: 2
+        x: 9742
+        y: 726
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92298412ad72a4e10800000000000000
+      internalID: 2182600787229184553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_111"
+      rect:
+        serializedVersion: 2
+        x: 4884
+        y: 0
+        width: 427
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0773d2e26cf027790800000000000000
+      internalID: -7533941882784762000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_112"
+      rect:
+        serializedVersion: 2
+        x: 5435
+        y: 97
+        width: 263
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7627e5299e107bb0800000000000000
+      internalID: -4940415148110698881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_113"
+      rect:
+        serializedVersion: 2
+        x: 6513
+        y: 284
+        width: 244
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdf7340f065687f0800000000000000
+      internalID: -610706076966847053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_114"
+      rect:
+        serializedVersion: 2
+        x: 6835
+        y: 167
+        width: 305
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a4aa0743df3eee0800000000000000
+      internalID: -1232863471299048912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_115"
+      rect:
+        serializedVersion: 2
+        x: 7204
+        y: 319
+        width: 123
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbd89a8fef585bd0800000000000000
+      internalID: -2641255699025699911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_116"
+      rect:
+        serializedVersion: 2
+        x: 7398
+        y: 319
+        width: 122
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7931dc4342df61c60800000000000000
+      internalID: 7788690937530356631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_117"
+      rect:
+        serializedVersion: 2
+        x: 7591
+        y: 313
+        width: 87
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2f02bef350ab780800000000000000
+      internalID: -8666608760835214593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_118"
+      rect:
+        serializedVersion: 2
+        x: 7919
+        y: 202
+        width: 404
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30331bd602e1e3bc0800000000000000
+      internalID: -3801567910826003709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_119"
+      rect:
+        serializedVersion: 2
+        x: 8401
+        y: 202
+        width: 409
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5e7b989e6f2d930800000000000000
+      internalID: 4166664088169473458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_120"
+      rect:
+        serializedVersion: 2
+        x: 9097
+        y: 454
+        width: 240
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48623f492b71d2200800000000000000
+      internalID: 156807617798416004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_121"
+      rect:
+        serializedVersion: 2
+        x: 9384
+        y: 454
+        width: 240
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521809c9731a419b0800000000000000
+      internalID: -5110282416936681179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_122"
+      rect:
+        serializedVersion: 2
+        x: 4122
+        y: 173
+        width: 346
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3175e8da784cc1370800000000000000
+      internalID: 8294720700721026835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_123"
+      rect:
+        serializedVersion: 2
+        x: 4568
+        y: 173
+        width: 351
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07dd2e9ec763c5290800000000000000
+      internalID: -7900379736186888848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_124"
+      rect:
+        serializedVersion: 2
+        x: 5798
+        y: 179
+        width: 322
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a56d7f292d4e08b0800000000000000
+      internalID: -5184121281771117145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_125"
+      rect:
+        serializedVersion: 2
+        x: 6249
+        y: 138
+        width: 258
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaed6ccb43e5c2b30800000000000000
+      internalID: 4263886527811477162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_126"
+      rect:
+        serializedVersion: 2
+        x: 7204
+        y: 27
+        width: 123
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6040935a267b6e650800000000000000
+      internalID: 6261893966211908614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_127"
+      rect:
+        serializedVersion: 2
+        x: 7398
+        y: 27
+        width: 122
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c2d84e6a0834a00800000000000000
+      internalID: 739576218106276893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_128"
+      rect:
+        serializedVersion: 2
+        x: 7591
+        y: 26
+        width: 87
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd7b8460caf8a9b0800000000000000
+      internalID: -5068525676377965098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_129"
+      rect:
+        serializedVersion: 2
+        x: 9015
+        y: 132
+        width: 369
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3402b3061efbcb740800000000000000
+      internalID: 5169217447017521219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_130"
+      rect:
+        serializedVersion: 2
+        x: 9507
+        y: 132
+        width: 369
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78298a85023cf7910800000000000000
+      internalID: 1837401716684264071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_131"
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 45
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d099f0ed1ed0ac930800000000000000
+      internalID: 4164156069201811725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_132"
+      rect:
+        serializedVersion: 2
+        x: 3334
+        y: 39
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63076f20039cd3d0800000000000000
+      internalID: -3180505607825849494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
