@@ -37,7 +37,7 @@ public class CreationPortail : MonoBehaviour
         portailActualDimension.GetComponent<SpriteRenderer>().color = portailColors[dimensionCible];
         portailActualDimension.layer = snapScript.GetActualDimension() + 9;
         portailActualDimension.GetComponent<Portail>().targetDimension = dimensionCible;
-
+        
         portailTargetDimension = Instantiate(portailPrefab, new Vector2(transform.position.x + 2, transform.position.y), transform.rotation);
         portailTargetDimension.GetComponent<SpriteRenderer>().color = portailColors[snapScript.GetActualDimension()];
         portailTargetDimension.layer = dimensionCible + 9;
@@ -45,6 +45,7 @@ public class CreationPortail : MonoBehaviour
 
         portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
         portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
+        Physics2D.SetLayerCollisionMask(12, LayerMask.GetMask("Character", LayerMask.LayerToName(snapScript.GetActualDimension() + 9), LayerMask.LayerToName(dimensionCible + 9)));
     }
 }
     
