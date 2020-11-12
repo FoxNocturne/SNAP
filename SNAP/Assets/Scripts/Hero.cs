@@ -12,6 +12,8 @@ public class Hero : MonoBehaviour
     public float dashSpeed;
     public float maxSpeed = 5;
     private float speed;
+    private float tailleX;
+    private float tailleY;
     public float jump = 100;
     AudioSource SonHero;
     Rigidbody2D rb;
@@ -29,6 +31,8 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
+        tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+        tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
         speed = maxSpeed;
         SonHero = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
@@ -49,7 +53,7 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 1.65f), 0.1f, whatIsGround);
+        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
 
         if (!canDash && onTheGround)
             canDash = true;
@@ -138,6 +142,7 @@ public class Hero : MonoBehaviour
     {
         ghost = true;
         GameObject effect = Instantiate(phantomEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localScale = transform.localScale;
         effect.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         yield return new WaitForSeconds(timeSpawn);
         ghost = false;
@@ -168,8 +173,6 @@ public class Hero : MonoBehaviour
     {
         dash = true;
         canDash = false;
-        float tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
-        float tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
 
         maxSpeed *= 3; // accélération
         moveHorizontal = 0;
