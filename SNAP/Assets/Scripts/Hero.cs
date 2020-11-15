@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -253,3 +253,4 @@ public class Hero : MonoBehaviour
         Gizmos.DrawSphere(circleGround.transform.position, 0.1f);
     }
 }
+
