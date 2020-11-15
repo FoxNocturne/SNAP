@@ -1,25 +1,27 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Hero : MonoBehaviour
 {
+    private float moveHorizontal;
+    private float moveVertical;
     public bool activeControl = true;
-    public float jump = 100;
+    private bool directionGauche;
     public float dashSpeed;
-    public float dashDistance;
     public float maxSpeed = 5;
-    float speed;
-    float moveHorizontal;
-    float moveVertical; AudioSource SonHero;
+    private float speed;
+    private float tailleX;
+    private float tailleY;
+    public float jump = 100;
+    AudioSource SonHero;
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
     public GameObject ObserveThisThing;
     public LayerMask whatIsGround;
     public bool onTheGround = false;
-    bool directionGauche;
     bool ghost = false;
     bool dash = false;
     bool canDash = false;
@@ -29,6 +31,8 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
+        tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+        tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
         speed = maxSpeed;
         SonHero = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
@@ -49,7 +53,7 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 1.61f), 0.1f, whatIsGround);
+        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
 
         if (!canDash && onTheGround)
             canDash = true;
@@ -89,7 +93,7 @@ public class Hero : MonoBehaviour
                 if (onTheGround)
                     StartCoroutine(DashSol());
                 else
-                    StartCoroutine(DashAir());
+                    StartCoroutine(Dash());
             }
 
             // ATTRAPER
@@ -138,78 +142,62 @@ public class Hero : MonoBehaviour
     {
         ghost = true;
         GameObject effect = Instantiate(phantomEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localScale = transform.localScale;
         effect.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         yield return new WaitForSeconds(timeSpawn);
         ghost = false;
     }
 
-    IEnumerator DashAir()
+    // TEMPS DE DASH
+    IEnumerator Dash()
     {
         dash = true;
         canDash = false;
-        float initialPosX = transform.position.x;
-        float tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
-        float tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
 
+        maxSpeed *= 3; // accélération
         moveHorizontal = 0;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
 
-        while(!Physics2D.OverlapArea(new Vector2(transform.position.x + (directionGauche ? - tailleX : tailleX), transform.position.y + tailleY), 
-                                     new Vector2(transform.position.x + (directionGauche ? - tailleX - 0.01f : tailleX + 0.01f), transform.position.y - tailleY), 
-                                     whatIsGround))
-        {
-            if (directionGauche ? (transform.position.x <= initialPosX - dashDistance)
-                                : (transform.position.x >= initialPosX + dashDistance))
-                break;
-            yield return new WaitForSeconds(0.001f);
-        }
+        yield return new WaitForSeconds(0.2f);
 
+        maxSpeed = speed;
         rb.gravityScale = 2;
-        rb.velocity = Vector2.zero;
-
+        rb.velocity = new Vector2(0, 0);
+        
         dash = false;
     }
 
+    // TEMPS DE DASH AU SOL
     IEnumerator DashSol()
     {
         dash = true;
         canDash = false;
-        float oldSizeX = transform.localScale.x;
-        float oldSizeY = transform.localScale.y;
-        transform.localScale = new Vector2(oldSizeY, oldSizeX);
-        float initialPosX = transform.position.x;
-        float tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
-        float tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
 
-        transform.position = new Vector2(transform.position.x, transform.position.y - tailleX + tailleY);
+        maxSpeed *= 3; // accélération
         moveHorizontal = 0;
+        transform.Rotate(0, 0, directionGauche ? -90 : 90);
+        transform.position = new Vector2(transform.position.x, transform.position.y + tailleX - tailleY);
         rb.gravityScale = 0;
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
 
-        while (!Physics2D.OverlapArea(new Vector2(transform.position.x + (directionGauche ? -tailleX : tailleX), transform.position.y + tailleY),
-                                          new Vector2(transform.position.x + (directionGauche ? -tailleX - 0.01f : tailleX + 0.01f), transform.position.y - tailleY + 0.05f),
-                                          whatIsGround))
+        yield return new WaitForSeconds(0.2f);
+
+        // Le dash au sol continue tant qu'il y a quelque chose au-dessus du personnage
+        while(Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + tailleY), whatIsGround))
         {
-            if (directionGauche ? (transform.position.x <= initialPosX - dashDistance)
-                                : (transform.position.x >= initialPosX + dashDistance))
-                break;
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.05f);
         }
 
-        while (Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + oldSizeY - tailleY), whatIsGround))
-            yield return new WaitForSeconds(0.05f);
-
-
-        transform.localScale = new Vector2(oldSizeX, oldSizeY);
-        transform.position = new Vector2(transform.position.x, transform.position.y + (GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2 - tailleY));
-
+        maxSpeed = speed;
+        transform.Rotate(0, 0, directionGauche ? 90 : -90);
+        transform.position = new Vector2(transform.position.x, transform.position.y - tailleX + tailleY);
         rb.gravityScale = 2;
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(0, 0);
 
         dash = false;
-    }// 
-     /**/
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         // Si Mr.X est devant un mur à escalader ou une échelle
@@ -265,3 +253,4 @@ public class Hero : MonoBehaviour
         Gizmos.DrawSphere(circleGround.transform.position, 0.1f);
     }
 }
+

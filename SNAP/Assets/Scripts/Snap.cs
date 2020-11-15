@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Snap : MonoBehaviour
 {
+    public bool tutoriel = true;
+    public bool niveau1  = true;
+
     private GameObject[] cameras = new GameObject[3];
     private float snapPressed;
     private int actualDimension = 0;
@@ -28,6 +31,36 @@ public class Snap : MonoBehaviour
 
     void Update()
     {
+        if (tutoriel)
+            return;
+        
+        if(niveau1)
+            SnapNiveau1();
+        else
+            SnapNormal();
+    }
+
+    private void SnapNiveau1()
+    {
+        //snapPressed vaudra -1 avec le bouton '1' et 1 avec le bouton '2'
+        snapPressed = Input.GetAxis("SNAP");
+        if (Input.GetButtonDown("SNAP"))
+        {
+            // Désactivation de la dimension actuelle
+            cameras[actualDimension].GetComponent<Camera>().enabled = false;
+            Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
+
+            // Changement d'index
+            actualDimension = (actualDimension == 0 ? 2 : 0);
+
+            // Activation de la nouvelle dimension
+            cameras[actualDimension].GetComponent<Camera>().enabled = true;
+            Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
+        }
+    }
+
+    private void SnapNormal()
+    {
         //snapPressed vaudra -1 avec le bouton '1' et 1 avec le bouton '2'
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
@@ -38,8 +71,6 @@ public class Snap : MonoBehaviour
 
     public void ActiveSnap(float target)
     {
-        Debug.Log(target == 1 ? "On recule" : "On avance");
-
         // Désactivation de la dimension actuelle
         cameras[actualDimension].GetComponent<Camera>().enabled = false;
         Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
