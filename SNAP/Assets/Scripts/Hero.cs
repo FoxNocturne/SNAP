@@ -5,26 +5,27 @@ using UnityEngine.UI;
 
 public class Hero : MonoBehaviour
 {
-    private float moveHorizontal;
-    private float moveVertical;
     public bool activeControl = true;
-    private bool directionGauche;
-    public float dashSpeed;
-    public float maxSpeed = 5;
-    private float speed;
     public float jump = 100;
-    AudioSource SonHero;
+    public float dashSpeed;
+    public float dashDistance;
+    public float maxSpeed = 5;
+    float speed;
+    float moveHorizontal;
+    float moveVertical; AudioSource SonHero;
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
     public GameObject ObserveThisThing;
     public LayerMask whatIsGround;
     public bool onTheGround = false;
+    bool directionGauche;
     bool ghost = false;
     bool dash = false;
     bool canDash = false;
     bool canClimb = false;
-
+    bool isPulling = false;
+    Transform objectPulling;
 
     void Start()
     {
@@ -48,7 +49,7 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 1.15f), 0.1f, whatIsGround);
+        onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 1.61f), 0.1f, whatIsGround);
 
         if (!canDash && onTheGround)
             canDash = true;
@@ -68,10 +69,14 @@ public class Hero : MonoBehaviour
             else
             {
                 transform.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
+                if (objectPulling)
+                {
+                    objectPulling.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
+                }
             }
 
             // SAUTER 
-            if (Input.GetKeyDown(KeyCode.Space) && onTheGround)
+            if (Input.GetKeyDown(KeyCode.Space) && onTheGround && !isPulling)
             {
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
@@ -79,15 +84,40 @@ public class Hero : MonoBehaviour
             }
 
             // DASH
-            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash)
+            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash && !isPulling)
             {
                 if (onTheGround)
                     StartCoroutine(DashSol());
                 else
-                    StartCoroutine(Dash());
+                    StartCoroutine(DashAir());
             }
 
+            // ATTRAPER
+            if (Input.GetButtonDown("Attraper"))
+            {
+                float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
+                float sizeQuarter = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
 
+                RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, sizeQuarter), directionGauche ? Vector2.left : Vector2.right, distance, whatIsGround);
+                if (hit && hit.transform.tag == "Item")
+                {
+                    isPulling = true;
+
+                    objectPulling = hit.transform;
+                    GetComponent<SpriteRenderer>().color = Color.gray;
+                    hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
+                }
+            }
+
+            if (Input.GetButtonUp("Attraper") || !onTheGround || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+            {
+                GetComponent<SpriteRenderer>().color = Color.red;
+                if (objectPulling)
+                    objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
+
+                objectPulling = null;
+                isPulling = false;
+            }
         }
         
         if (dash && !ghost)
@@ -113,58 +143,73 @@ public class Hero : MonoBehaviour
         ghost = false;
     }
 
-    // TEMPS DE DASH
-    IEnumerator Dash()
+    IEnumerator DashAir()
     {
         dash = true;
         canDash = false;
+        float initialPosX = transform.position.x;
+        float tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+        float tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
 
-        maxSpeed *= 3; // accélération
         moveHorizontal = 0;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
 
-        yield return new WaitForSeconds(0.2f);
+        while(!Physics2D.OverlapArea(new Vector2(transform.position.x + (directionGauche ? - tailleX : tailleX), transform.position.y + tailleY), 
+                                     new Vector2(transform.position.x + (directionGauche ? - tailleX - 0.01f : tailleX + 0.01f), transform.position.y - tailleY), 
+                                     whatIsGround))
+        {
+            if (directionGauche ? (transform.position.x <= initialPosX - dashDistance)
+                                : (transform.position.x >= initialPosX + dashDistance))
+                break;
+            yield return new WaitForSeconds(0.001f);
+        }
 
-        maxSpeed = speed;
         rb.gravityScale = 2;
-        rb.velocity = new Vector2(0, 0);
-        
+        rb.velocity = Vector2.zero;
+
         dash = false;
     }
 
-    // TEMPS DE DASH AU SOL
     IEnumerator DashSol()
     {
         dash = true;
         canDash = false;
+        float oldSizeX = transform.localScale.x;
+        float oldSizeY = transform.localScale.y;
+        transform.localScale = new Vector2(oldSizeY, oldSizeX);
+        float initialPosX = transform.position.x;
         float tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
         float tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
 
-        maxSpeed *= 3; // accélération
+        transform.position = new Vector2(transform.position.x, transform.position.y - tailleX + tailleY);
         moveHorizontal = 0;
-        transform.Rotate(0, 0, directionGauche ? -90 : 90);
-        transform.position = new Vector2(transform.position.x, transform.position.y + tailleX - tailleY);
         rb.gravityScale = 0;
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
 
-        yield return new WaitForSeconds(0.2f);
-
-        // Le dash au sol continue tant qu'il y a quelque chose au-dessus du personnage
-        while(Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + tailleY), whatIsGround))
+        while (!Physics2D.OverlapArea(new Vector2(transform.position.x + (directionGauche ? -tailleX : tailleX), transform.position.y + tailleY),
+                                          new Vector2(transform.position.x + (directionGauche ? -tailleX - 0.01f : tailleX + 0.01f), transform.position.y - tailleY + 0.05f),
+                                          whatIsGround))
         {
-            yield return new WaitForSeconds(0.05f);
+            if (directionGauche ? (transform.position.x <= initialPosX - dashDistance)
+                                : (transform.position.x >= initialPosX + dashDistance))
+                break;
+            yield return new WaitForSeconds(0.001f);
         }
 
-        maxSpeed = speed;
-        transform.Rotate(0, 0, directionGauche ? 90 : -90);
-        transform.position = new Vector2(transform.position.x, transform.position.y - tailleX + tailleY);
+        while (Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + oldSizeY - tailleY), whatIsGround))
+            yield return new WaitForSeconds(0.05f);
+
+
+        transform.localScale = new Vector2(oldSizeX, oldSizeY);
+        transform.position = new Vector2(transform.position.x, transform.position.y + (GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2 - tailleY));
+
         rb.gravityScale = 2;
-        rb.velocity = new Vector2(0, 0);
+        rb.velocity = Vector2.zero;
 
         dash = false;
-    }
-
+    }// 
+     /**/
     private void OnTriggerStay2D(Collider2D collision)
     {
         // Si Mr.X est devant un mur à escalader ou une échelle
