@@ -12,6 +12,8 @@ public class Hero : MonoBehaviour
     public float dashSpeed;
     public float maxSpeed = 5;
     private float speed;
+    private float tailleX;
+    private float tailleY;
     public float jump = 100;
     AudioSource SonHero;
     Rigidbody2D rb;
@@ -24,10 +26,13 @@ public class Hero : MonoBehaviour
     bool dash = false;
     bool canDash = false;
     bool canClimb = false;
-
+    bool isPulling = false;
+    Transform objectPulling;
 
     void Start()
     {
+        tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+        tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
         speed = maxSpeed;
         SonHero = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
@@ -48,7 +53,7 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y - 1.15f), 0.1f, whatIsGround);
+        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
 
         if (!canDash && onTheGround)
             canDash = true;
@@ -68,10 +73,14 @@ public class Hero : MonoBehaviour
             else
             {
                 transform.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
+                if (objectPulling)
+                {
+                    objectPulling.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
+                }
             }
 
             // SAUTER 
-            if (Input.GetKeyDown(KeyCode.Space) && onTheGround)
+            if (Input.GetKeyDown(KeyCode.Space) && onTheGround && !isPulling)
             {
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
@@ -79,7 +88,7 @@ public class Hero : MonoBehaviour
             }
 
             // DASH
-            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash)
+            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash && !isPulling)
             {
                 if (onTheGround)
                     StartCoroutine(DashSol());
@@ -87,7 +96,32 @@ public class Hero : MonoBehaviour
                     StartCoroutine(Dash());
             }
 
+            // ATTRAPER
+            if (Input.GetButtonDown("Attraper"))
+            {
+                float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
+                float sizeQuarter = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
 
+                RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, sizeQuarter), directionGauche ? Vector2.left : Vector2.right, distance, whatIsGround);
+                if (hit && hit.transform.tag == "Item")
+                {
+                    isPulling = true;
+
+                    objectPulling = hit.transform;
+                    GetComponent<SpriteRenderer>().color = Color.gray;
+                    hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
+                }
+            }
+
+            if (Input.GetButtonUp("Attraper") || !onTheGround || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+            {
+                GetComponent<SpriteRenderer>().color = Color.red;
+                if (objectPulling)
+                    objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
+
+                objectPulling = null;
+                isPulling = false;
+            }
         }
         
         if (dash && !ghost)
@@ -108,6 +142,7 @@ public class Hero : MonoBehaviour
     {
         ghost = true;
         GameObject effect = Instantiate(phantomEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.transform.localScale = transform.localScale;
         effect.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         yield return new WaitForSeconds(timeSpawn);
         ghost = false;
@@ -138,8 +173,6 @@ public class Hero : MonoBehaviour
     {
         dash = true;
         canDash = false;
-        float tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
-        float tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
 
         maxSpeed *= 3; // accélération
         moveHorizontal = 0;
