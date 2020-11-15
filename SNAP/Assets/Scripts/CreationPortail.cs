@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CreationPortail : MonoBehaviour
 {
+    public bool tutoriel = true;
+    public bool niveau1 =  true;
+
     public GameObject portailPrefab;
     public Color[] portailColors = new Color[3];
 
@@ -17,12 +20,43 @@ public class CreationPortail : MonoBehaviour
 
     void Update()
     {
+        if (tutoriel)
+            return;
+
         float portailInput = Input.GetAxis("Portail");
 
         if (Input.GetButtonDown("Portail"))
         {
-            CreerPortail(portailInput == 1 ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension());
+            if (niveau1)
+                CreerPortailNiveau1();
+            else
+                CreerPortail(portailInput == 1 ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension());
         }
+    }
+
+    private void CreerPortailNiveau1()
+    {
+        if (portailActualDimension)
+        {
+            Destroy(portailActualDimension);
+            Destroy(portailTargetDimension);
+        }
+
+        int actualDimension = snapScript.GetActualDimension(); ;
+        int targetDimension = actualDimension == 0 ? 2 : 0;
+
+        portailActualDimension = Instantiate(portailPrefab, new Vector2(transform.position.x + 2, transform.position.y), transform.rotation);
+        portailActualDimension.GetComponent<SpriteRenderer>().color = portailColors[targetDimension];
+        portailActualDimension.layer = actualDimension + 9;
+        portailActualDimension.GetComponent<Portail>().targetDimension = targetDimension;
+
+        portailTargetDimension = Instantiate(portailPrefab, new Vector2(transform.position.x + 2, transform.position.y), transform.rotation);
+        portailTargetDimension.GetComponent<SpriteRenderer>().color = portailColors[actualDimension];
+        portailTargetDimension.layer = targetDimension + 9;
+        portailTargetDimension.GetComponent<Portail>().targetDimension = actualDimension;
+
+        portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
+        portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
     }
 
     private void CreerPortail(int dimensionCible)
@@ -45,7 +79,9 @@ public class CreationPortail : MonoBehaviour
 
         portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
         portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
-        Physics2D.SetLayerCollisionMask(12, LayerMask.GetMask("Character", LayerMask.LayerToName(snapScript.GetActualDimension() + 9), LayerMask.LayerToName(dimensionCible + 9)));
+
+        portailActualDimension.name = "Premier portail";
+        portailTargetDimension.name = "Second portail";
     }
 }
     

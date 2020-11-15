@@ -20,11 +20,13 @@ public class Portail : MonoBehaviour
     {
         if ((collision.tag == "Item") && !arrived.Contains(collision))
         {
+            Debug.Log($"L'objet {collision.name} entre dans le portail {name}");
             StopAllCoroutines();
             StartCoroutine(portailScale(collision.transform.localScale / 1.5f));
             portalLinked.GetComponent<Portail>().transferObject(collision, collision.transform.localScale / 1.5f);
 
             collision.gameObject.layer = 12;
+            Physics2D.SetLayerCollisionMask(12, LayerMask.GetMask("Character", LayerMask.LayerToName(targetDimension + 9)));
             cameras[targetDimension].GetComponent<Camera>().cullingMask |= 1 << 12;
             
         }else if((collision.tag == "Player") && !arrived.Contains(collision))
@@ -41,6 +43,7 @@ public class Portail : MonoBehaviour
     {
         if (arrived.Contains(collision))
         {
+            Debug.Log($"L'objet {collision.name} sort du portail {name}");
             if (collision.tag == "Item")
                 collision.gameObject.layer = portalLinked.GetComponent<Portail>().targetDimension + 9;
             arrived.Remove(collision);
@@ -50,6 +53,7 @@ public class Portail : MonoBehaviour
 
     public void transferObject(Collider2D collision, Vector3 targetScale)
     {
+        Debug.Log($"L'objet {collision.name} est reçu par le portail {name}");
         arrived.Add(collision);
 
         StopAllCoroutines();
