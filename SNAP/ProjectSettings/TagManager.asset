@@ -7,6 +7,7 @@ TagManager:
   - Climb
   - Item
   - Display
+  - Ennemy
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Dictature
   - Chaos
   - PostApo
-  - 
+  - Transition
   - 
   - 
   - 
