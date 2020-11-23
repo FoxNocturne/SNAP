@@ -253,5 +253,10 @@ public class Hero : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(circleGround.transform.position, 0.1f);
     }
+
+    public bool isMovingLeft()
+    {
+        return directionGauche;
+    }
 }
 

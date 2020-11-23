@@ -55,8 +55,8 @@ public class CreationPortail : MonoBehaviour
         portailTargetDimension.layer = targetDimension + 9;
         portailTargetDimension.GetComponent<Portail>().targetDimension = actualDimension;
 
-        portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
-        portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
+        //portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
+        //portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
     }
 
     private void CreerPortail(int dimensionCible)
@@ -77,8 +77,8 @@ public class CreationPortail : MonoBehaviour
         portailTargetDimension.layer = dimensionCible + 9;
         portailTargetDimension.GetComponent<Portail>().targetDimension = snapScript.GetActualDimension();
 
-        portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
-        portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
+        //portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
+        //portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
 
         portailActualDimension.name = "Premier portail";
         portailTargetDimension.name = "Second portail";

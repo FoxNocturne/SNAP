@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Portail : MonoBehaviour
 {
-
     public int targetDimension;
-    public GameObject portalLinked;
+}
+    /*public GameObject portalLinked;
 
     private GameObject[] cameras = new GameObject[3];
     private List<Collider2D> arrived = new List<Collider2D>();
@@ -82,4 +82,4 @@ public class Portail : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
-}
+}*/
