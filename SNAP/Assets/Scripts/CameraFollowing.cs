@@ -125,6 +125,8 @@ public class CameraFollowing : MonoBehaviour
 
     IEnumerator TomberBouclier(Transform bouclier, GameObject player)
     {
+        Vector2 targetPosP = new Vector2(player.transform.position.x, 0);
+        Vector2 targetPosB = new Vector2(bouclier.transform.position.x, 0);
         float timeStart = Time.time;
         while (Time.time < timeStart + 3f)
         {
@@ -132,40 +134,39 @@ public class CameraFollowing : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        Vector2 targetPos = new Vector2(player.transform.position.x, 0);
-
-        while(player.transform.position.y > 2)
+        
+        while (player.transform.position.y > 1)
         {
-            player.transform.position = Vector2.MoveTowards(player.transform.position, targetPos, 8 * Time.deltaTime);
-            bouclier.position = Vector2.MoveTowards(bouclier.position, targetPos, 8 * Time.deltaTime);
+            player.transform.position = Vector2.MoveTowards(player.transform.position, targetPosP, 8 * Time.deltaTime);
+            bouclier.position = Vector2.MoveTowards(bouclier.position, targetPosB, 8 * Time.deltaTime);
 
             yield return new WaitForEndOfFrame();
         }
 
         while(fading.color.a < 1)
         {
-            Debug.Log($"On change le fading ({fading.color.a})");
             fading.color = new Color(0, 0, 0, fading.color.a + fadingSpeed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
 
-        Destroy(bouclier);
+        //Destroy(bouclier);
+        Debug.Log("test");
         player.transform.position = new Vector2(0, -31.51f);
         Tableau = 2;
-        following = true;
-
-        while (fading.color.a > 0)
-        {
-            Debug.Log($"On change le fading ({fading.color.a})");
-            fading.color = new Color(0, 0, 0, fading.color.a - fadingSpeed * Time.deltaTime);
-            yield return new WaitForEndOfFrame();
-        }
-
         player.GetComponent<Hero>().enabled = true;
         player.GetComponent<Snap>().enabled = true;
         player.GetComponent<CreationPortail>().enabled = true;
         player.GetComponent<BoxCollider2D>().enabled = true;
         player.GetComponent<Rigidbody2D>().gravityScale = 2;
+        following = true;
+
+        while (fading.color.a > 0)
+        {
+            fading.color = new Color(0, 0, 0, fading.color.a - fadingSpeed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+       
+        
 
         StopAllCoroutines();
     }
