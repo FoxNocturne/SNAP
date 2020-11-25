@@ -5,13 +5,10 @@ using UnityEngine;
 public class Portail : MonoBehaviour
 {
     public int targetDimension;
+    public Portail portailLinked;
 
-
-
-    public GameObject portalLinked;
-
+    private List<Collider2D> objectsReceived = new List<Collider2D>();
     private GameObject[] cameras = new GameObject[3];
-    private List<Collider2D> arrived = new List<Collider2D>();
 
     private void Start()
     {
@@ -20,49 +17,43 @@ public class Portail : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.tag == "Item") && !arrived.Contains(collision))
+        if (!objectsReceived.Contains(collision))
         {
-            Debug.Log($"L'objet {collision.name} entre dans le portail {name}");
-            StopAllCoroutines();
-            StartCoroutine(portailScale(collision.transform.localScale / 1.5f));
-            portalLinked.GetComponent<Portail>().transferObject(collision, collision.transform.localScale / 1.5f);
+            Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : Un objet entre");
+            portailLinked.transferObject(collision);
 
-            collision.gameObject.layer = 12;
-            Physics2D.SetLayerCollisionMask(12, LayerMask.GetMask("Character", LayerMask.LayerToName(targetDimension + 9)));
-            cameras[targetDimension].GetComponent<Camera>().cullingMask |= 1 << 12;
-            
-        }else if((collision.tag == "Player") && !arrived.Contains(collision))
-        {
-            StopAllCoroutines();
-            StartCoroutine(portailScale(collision.transform.localScale / 1.5f));
-            portalLinked.GetComponent<Portail>().transferObject(collision, collision.transform.localScale / 1.5f);
-
-            collision.GetComponent<Snap>().ActiveSnap(targetDimension == collision.GetComponent<Snap>().GetNextDimension() ? 1 : -1);
+            if (collision.tag == "Item")
+            {
+                Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : C'est un item");
+                collision.gameObject.layer = targetDimension + 12;
+                cameras[targetDimension].GetComponent<Camera>().cullingMask |= 1 << targetDimension + 12;
+            }
+            else if (collision.tag == "Player")
+            {
+                collision.GetComponent<Snap>().ActiveSnap(targetDimension == collision.GetComponent<Snap>().GetNextDimension() ? 1 : -1);
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (arrived.Contains(collision))
+        if (objectsReceived.Contains(collision))
         {
-            Debug.Log($"L'objet {collision.name} sort du portail {name}");
+            Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : L'objet sort");
             if (collision.tag == "Item")
-                collision.gameObject.layer = portalLinked.GetComponent<Portail>().targetDimension + 9;
-            arrived.Remove(collision);
-            cameras[portalLinked.GetComponent<Portail>().targetDimension].GetComponent<Camera>().cullingMask &= ~(1 << 12);
+                collision.gameObject.layer = portailLinked.targetDimension + 9;
+            objectsReceived.Remove(collision);
+            cameras[portailLinked.targetDimension].GetComponent<Camera>().cullingMask &= ~(1 << portailLinked.targetDimension + 12);
         }
     }
 
-    public void transferObject(Collider2D collision, Vector3 targetScale)
+    public void transferObject(Collider2D collision)
     {
-        Debug.Log($"L'objet {collision.name} est reçu par le portail {name}");
-        arrived.Add(collision);
-
-        StopAllCoroutines();
-        StartCoroutine(portailScale(targetScale));
+        Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : On reçoit l'objet");
+        objectsReceived.Add(collision);
     }
-
-    private IEnumerator portailScale(Vector3 targetScale)
+}
+ /*   private IEnumerator portailScale(Vector3 targetScale)
     {
         Vector3 originScale = Vector3.one / 2;
 

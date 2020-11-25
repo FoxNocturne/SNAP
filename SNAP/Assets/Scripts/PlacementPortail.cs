@@ -111,10 +111,6 @@ public class PlacementPortail : MonoBehaviour
         portailPlacing = Instantiate(portailPrefab, new Vector2(transform.position.x + placementX, transform.position.y), transform.rotation, transform);
         portailPlacing.layer = 8;
 
-        // Ajout temporaire
-        portailPlacing.GetComponent<CircleCollider2D>().enabled = false;
-        //
-
         relativePositionFromPlayer = new Vector2(placementX, 0);
     }
 
@@ -136,9 +132,7 @@ public class PlacementPortail : MonoBehaviour
         portailTargetDimension.GetComponent<SpriteRenderer>().color = portailColors[actualDimension];
         portailTargetDimension.GetComponent<Portail>().targetDimension = actualDimension;
 
-        // Ajout temporaire
-        portailPlacing.GetComponent<CircleCollider2D>().enabled = true;
-        portailActualDimension.GetComponent<Portail>().portalLinked = portailTargetDimension;
-        portailTargetDimension.GetComponent<Portail>().portalLinked = portailActualDimension;
+        portailActualDimension.GetComponent<Portail>().portailLinked = portailTargetDimension.GetComponent<Portail>();
+        portailTargetDimension.GetComponent<Portail>().portailLinked = portailActualDimension.GetComponent<Portail>();
     }
 }
