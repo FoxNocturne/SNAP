@@ -7,7 +7,7 @@ public class Portail : MonoBehaviour
     public int targetDimension;
     public Portail portailLinked;
 
-    private List<Collider2D> objectsReceived = new List<Collider2D>();
+    private List<ObjetTransfert> objectsReceived = new List<ObjetTransfert>();
     private GameObject[] cameras = new GameObject[3];
 
     private void Start()
@@ -17,16 +17,14 @@ public class Portail : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!objectsReceived.Contains(collision))
+        if (objectsReceived.Find(objet => objet.collider == collision) == null)
         {
-            Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : Un objet entre");
-            portailLinked.transferObject(collision);
+            portailLinked.transferObject(new ObjetTransfert(collision, FindProvenance(collision.transform)));
 
             if (collision.tag == "Item")
             {
-                Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : C'est un item");
                 collision.gameObject.layer = targetDimension + 12;
-                cameras[targetDimension].GetComponent<Camera>().cullingMask |= 1 << targetDimension + 12;
+                cameras[portailLinked.targetDimension].GetComponent<Camera>().cullingMask |= 1 << targetDimension + 12; // Ajoute le layer de transition au culling mask de la dimension de départ
             }
             else if (collision.tag == "Player")
             {
@@ -37,20 +35,35 @@ public class Portail : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (objectsReceived.Contains(collision))
+        var objetTransfert = objectsReceived.Find(objet => objet.collider == collision);
+        if (objetTransfert != null)
         {
-            Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : L'objet sort");
             if (collision.tag == "Item")
-                collision.gameObject.layer = portailLinked.targetDimension + 9;
-            objectsReceived.Remove(collision);
-            cameras[portailLinked.targetDimension].GetComponent<Camera>().cullingMask &= ~(1 << portailLinked.targetDimension + 12);
+            {
+                if (FindProvenance(collision.transform) == objetTransfert.provenance)
+                    collision.gameObject.layer = targetDimension + 9;
+                else
+                    collision.gameObject.layer = portailLinked.targetDimension + 9;
+            }
+            objectsReceived.Remove(objetTransfert);
+            cameras[targetDimension].GetComponent<Camera>().cullingMask &= ~(1 << portailLinked.targetDimension + 12); // On retire le layer de transition du culling mask
         }
     }
 
-    public void transferObject(Collider2D collision)
+    public void transferObject(ObjetTransfert objet)
     {
-        Debug.Log($"Portail {LayerMask.LayerToName(gameObject.layer)} : On reçoit l'objet");
-        objectsReceived.Add(collision);
+        objectsReceived.Add(objet);
+    }
+
+    private Vector2 FindProvenance(Transform objetTransform)
+    {
+        Vector2 direction = objetTransform.position - transform.position;
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+            direction = direction.x > 0 ? Vector2.right : Vector2.left;
+        else
+            direction = direction.y > 0 ? Vector2.up : Vector2.down;
+
+        return direction;
     }
 }
  /*   private IEnumerator portailScale(Vector3 targetScale)
@@ -77,3 +90,15 @@ public class Portail : MonoBehaviour
     }
 }
 //*/
+
+public class ObjetTransfert
+{
+    public Collider2D collider { get; set; }
+    public Vector2 provenance { get; set; }
+
+    public ObjetTransfert(Collider2D collider, Vector2 provenance)
+    {
+        this.collider = collider;
+        this.provenance = provenance;
+    }
+}
