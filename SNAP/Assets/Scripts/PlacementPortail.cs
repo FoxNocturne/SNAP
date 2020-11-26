@@ -26,6 +26,9 @@ public class PlacementPortail : MonoBehaviour
         portailRadius.SetActive(false);
 
         snapScript = GetComponent<Snap>();
+
+        // Le joueur ignore les layers de transition au départ
+        IgnoreAllTransition();
     }
 
     private void FixedUpdate()
@@ -46,16 +49,7 @@ public class PlacementPortail : MonoBehaviour
         // Déplace le portail 
         if (placing)
         {
-            Vector2 nextPos = new Vector2(transform.position.x + relativePositionFromPlayer.x, transform.position.y + relativePositionFromPlayer.y);
-            if (Vector2.Distance(transform.position, nextPos) <= 5) // On vérifie que le portail n'est pas hors de portée
-                portailPlacing.transform.position = nextPos;
-            else // On remet à jour l'offset si non
-                relativePositionFromPlayer = portailPlacing.transform.position - transform.position;
-
-            bool test = (Physics2D.OverlapCircle(portailPlacing.transform.position, portailPlacing.transform.localScale.x, LayerMask.GetMask(LayerMask.LayerToName(snapScript.GetActualDimension() + 9))) ||
-                         Physics2D.OverlapCircle(portailPlacing.transform.position, portailPlacing.transform.localScale.x, LayerMask.GetMask(LayerMask.LayerToName((targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension()) + 9))));
-            portailPlacing.GetComponent<SpriteRenderer>().color = test ? Color.red : Color.white;
-            placingOkay = !test;
+            DeplacementPortail();
         }
 
         // Lance le placement ou détruit le portail s'il est déjà présent
@@ -69,9 +63,12 @@ public class PlacementPortail : MonoBehaviour
             if ((portailActualDimension && snapScript.GetActualDimension() + 9 == portailActualDimension.layer && portailActualDimension.GetComponent<Portail>().targetDimension == (targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension())) ||
                 (portailTargetDimension && snapScript.GetActualDimension() + 9 == portailTargetDimension.layer && portailTargetDimension.GetComponent<Portail>().targetDimension == (targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension())))
             {
+                IgnoreAllTransition();
+
                 Destroy(portailActualDimension);
                 Destroy(portailTargetDimension);
-            }else
+            }
+            else
             {
                 placing = true;
                 Placer();
@@ -88,6 +85,8 @@ public class PlacementPortail : MonoBehaviour
             {
                 if (portailActualDimension)
                 {
+                    IgnoreAllTransition();
+
                     Destroy(portailActualDimension);
                     Destroy(portailTargetDimension);
                 }
@@ -102,6 +101,20 @@ public class PlacementPortail : MonoBehaviour
         }
     }
 
+    private void DeplacementPortail()
+    {
+        Vector2 nextPos = new Vector2(transform.position.x + relativePositionFromPlayer.x, transform.position.y + relativePositionFromPlayer.y);
+        if (Vector2.Distance(transform.position, nextPos) <= 5) // On vérifie que le portail n'est pas hors de portée
+            portailPlacing.transform.position = nextPos;
+        else // On remet à jour l'offset si non
+            relativePositionFromPlayer = portailPlacing.transform.position - transform.position;
+
+        bool test = (Physics2D.OverlapCircle(portailPlacing.transform.position, portailPlacing.transform.localScale.x, LayerMask.GetMask(LayerMask.LayerToName(snapScript.GetActualDimension() + 9))) ||
+                     Physics2D.OverlapCircle(portailPlacing.transform.position, portailPlacing.transform.localScale.x, LayerMask.GetMask(LayerMask.LayerToName((targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension()) + 9))));
+        portailPlacing.GetComponent<SpriteRenderer>().color = test ? Color.red : Color.white;
+        placingOkay = !test;
+    }
+
     private void Placer()
     {
         occlusionPlacement.enabled = true;
@@ -110,12 +123,14 @@ public class PlacementPortail : MonoBehaviour
 
         portailPlacing = Instantiate(portailPrefab, new Vector2(transform.position.x + placementX, transform.position.y), transform.rotation, transform);
         portailPlacing.layer = 8;
+        portailPlacing.GetComponent<Collider2D>().enabled = false;
 
         relativePositionFromPlayer = new Vector2(placementX, 0);
     }
 
     private void Creer()
     {
+        portailPlacing.GetComponent<Collider2D>().enabled = true;
         portailActualDimension = portailPlacing;
         portailPlacing = null;
 
@@ -134,5 +149,17 @@ public class PlacementPortail : MonoBehaviour
 
         portailActualDimension.GetComponent<Portail>().portailLinked = portailTargetDimension.GetComponent<Portail>();
         portailTargetDimension.GetComponent<Portail>().portailLinked = portailActualDimension.GetComponent<Portail>();
+
+        // Collision entre le layer du joueur et celui de transition
+        Physics2D.IgnoreLayerCollision(8, targetDimension + 12, false);
+        Physics2D.IgnoreLayerCollision(8, actualDimension + 12, false);
+        snapScript.dimensionAIgnorer = ((Mathf.Max(targetDimension, actualDimension) * 2) % 3 - Mathf.Min(targetDimension, actualDimension)); // Trouve la troisième dimension
+    }
+
+    private void IgnoreAllTransition()
+    {
+        Physics2D.IgnoreLayerCollision(8, 12, true);
+        Physics2D.IgnoreLayerCollision(8, 13, true);
+        Physics2D.IgnoreLayerCollision(8, 14, true);
     }
 }

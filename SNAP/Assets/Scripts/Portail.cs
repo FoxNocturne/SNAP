@@ -65,7 +65,8 @@ public class Portail : MonoBehaviour
 
         return direction;
     }
-}
+
+
  /*   private IEnumerator portailScale(Vector3 targetScale)
     {
         Vector3 originScale = Vector3.one / 2;
@@ -87,9 +88,8 @@ public class Portail : MonoBehaviour
                                                transform.localScale.y + (originScale.y - transform.localScale.y) * Time.deltaTime * 30);
             yield return new WaitForSeconds(0.05f);
         }
-    }
+    }*/
 }
-//*/
 
 public class ObjetTransfert
 {
