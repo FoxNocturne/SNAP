@@ -70,7 +70,7 @@ public class CameraFollowing : MonoBehaviour
         }
         else if (player.position.x < 42)
         {
-            player.GetComponent<CreationPortail>().tutoriel = false;
+            player.GetComponent<PlacementPortail>().tutoriel = false;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(30.39f, -33.56f, -10), 15 * Time.deltaTime);
             foreach (Transform child in transform)
             {
@@ -112,7 +112,7 @@ public class CameraFollowing : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<Hero>().enabled = false;
         player.GetComponent<Snap>().enabled = false;
-        player.GetComponent<CreationPortail>().enabled = false;
+        player.GetComponent<PlacementPortail>().enabled = false;
         player.GetComponent<BoxCollider2D>().enabled = false;
         player.GetComponent<Rigidbody2D>().gravityScale = 0;
         bouclier.GetComponent<BoxCollider2D>().enabled = false;
@@ -165,8 +165,12 @@ public class CameraFollowing : MonoBehaviour
             fading.color = new Color(0, 0, 0, fading.color.a - fadingSpeed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
-       
-        
+
+        player.GetComponent<Hero>().enabled = true;
+        player.GetComponent<Snap>().enabled = true;
+        player.GetComponent<PlacementPortail>().enabled = true;
+        player.GetComponent<BoxCollider2D>().enabled = true;
+        player.GetComponent<Rigidbody2D>().gravityScale = 2;
 
         StopAllCoroutines();
     }

@@ -246,12 +246,10 @@ public class Hero : MonoBehaviour
             canClimb = false;
         }
     }
-    // Détecte si Mr.X touche le sol 
-    void OnDrawGizmosSelected()
+
+    public bool isMovingLeft()
     {
-        // Draw a yellow sphere at the transform's position
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(circleGround.transform.position, 0.1f);
+        return directionGauche;
     }
 }
 

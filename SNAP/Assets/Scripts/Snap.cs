@@ -7,6 +7,9 @@ public class Snap : MonoBehaviour
     public bool tutoriel = true;
     public bool niveau1  = true;
 
+    [HideInInspector]
+    public int dimensionAIgnorer = 0;
+
     private GameObject[] cameras = new GameObject[3];
     private float snapPressed;
     private int actualDimension = 0;
@@ -81,6 +84,9 @@ public class Snap : MonoBehaviour
         // Activation de la nouvelle dimension
         cameras[actualDimension].GetComponent<Camera>().enabled = true;
         Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
+
+        // Verification des layers de transition
+        IgnorerTransition(actualDimension == dimensionAIgnorer);
     }
 
     public int GetActualDimension()
@@ -101,5 +107,12 @@ public class Snap : MonoBehaviour
     public void SetActualDimension(int _actualDimension)
     {
         actualDimension = _actualDimension;
+    }
+
+    private void IgnorerTransition(bool param)
+    {
+        Physics2D.IgnoreLayerCollision(8, 12, param);
+        Physics2D.IgnoreLayerCollision(8, 13, param);
+        Physics2D.IgnoreLayerCollision(8, 14, param);
     }
 }
