@@ -53,7 +53,7 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
+        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX + 0.1f, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX - 0.1f, transform.position.y - tailleY - 0.1f), whatIsGround);
 
         if (!canDash && onTheGround)
             canDash = true;

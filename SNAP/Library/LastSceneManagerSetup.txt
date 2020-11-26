@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SceneTestLionel.unity
+- path: Assets/Scenes/Chapitre 1 - Niveau 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
