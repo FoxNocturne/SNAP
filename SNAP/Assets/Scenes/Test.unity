@@ -349,9 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a0f18bc6a2e3c4ebe6e244c1da0c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  tutoriel: 0
+  niveau1: 0
   occlusionPlacement: {fileID: 550085456}
   portailRadius: {fileID: 311324071}
   portailPrefab: {fileID: 5868348086208344494, guid: 4176333913973404c9cd7812c2916202,
@@ -372,8 +371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c8211f2219f77449037450a8ee69a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutoriel: 0
-  niveau1: 0
+  tutoriel: 1
+  niveau1: 1
+  dimensionAIgnorer: 0
 --- !u!114 &31315867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   activeControl: 1
   dashSpeed: 30
   maxSpeed: 5
-  jump: 675
+  jump: 715
   circleGround: {fileID: 0}
   phantomEffect: {fileID: 1265865981250434113, guid: 274130e54c367bc409a8bd427e5ba692,
     type: 3}

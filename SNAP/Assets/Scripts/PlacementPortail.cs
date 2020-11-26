@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PlacementPortail : MonoBehaviour
 {
-    public LayerMask testLayer;
+    public bool tutoriel;
+    public bool niveau1;
 
     [SerializeField] private Image occlusionPlacement;
     [SerializeField] private GameObject portailRadius;
@@ -46,6 +47,9 @@ public class PlacementPortail : MonoBehaviour
 
     private void Update()
     {
+        if (tutoriel)
+            return;
+
         // Déplace le portail 
         if (placing)
         {
@@ -136,6 +140,9 @@ public class PlacementPortail : MonoBehaviour
 
         int targetDimension = targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension();
         int actualDimension = snapScript.GetActualDimension();
+
+        if(niveau1)
+            targetDimension = (actualDimension == 0 ? 2 : 0);
 
         portailActualDimension.transform.parent = transform.parent;
         portailActualDimension.layer = actualDimension + 9;

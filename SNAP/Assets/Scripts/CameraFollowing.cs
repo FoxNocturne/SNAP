@@ -70,7 +70,7 @@ public class CameraFollowing : MonoBehaviour
         }
         else if (player.position.x < 42)
         {
-            //player.GetComponent<PlacementPortail>().tutoriel = false;
+            player.GetComponent<PlacementPortail>().tutoriel = false;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(30.39f, -33.56f, -10), 15 * Time.deltaTime);
             foreach (Transform child in transform)
             {

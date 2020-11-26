@@ -6,6 +6,8 @@ public class Snap : MonoBehaviour
 {
     public bool tutoriel = true;
     public bool niveau1  = true;
+
+    [HideInInspector]
     public int dimensionAIgnorer = 0;
 
     private GameObject[] cameras = new GameObject[3];
