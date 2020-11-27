@@ -66,6 +66,7 @@
     <Compile Include="Assets\CODIR.cs" />
     <Compile Include="Assets\Scripts\Bouton.cs" />
     <Compile Include="Assets\Scripts\CameraFollowing.cs" />
+    <Compile Include="Assets\Scripts\CheckPoints.cs" />
     <Compile Include="Assets\Scripts\ChuteBouclier.cs" />
     <Compile Include="Assets\Scripts\CreationPortail.cs" />
     <Compile Include="Assets\Scripts\GhostEffect.cs" />

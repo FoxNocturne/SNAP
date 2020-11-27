@@ -29,6 +29,7 @@ public class Hero : MonoBehaviour
     bool isPulling = false;
     Transform objectPulling;
 
+
     void Start()
     {
         tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
@@ -53,7 +54,7 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX + 0.1f, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX - 0.1f, transform.position.y - tailleY - 0.1f), whatIsGround);
+        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
 
         if (!canDash && onTheGround)
             canDash = true;
@@ -96,8 +97,15 @@ public class Hero : MonoBehaviour
                     StartCoroutine(Dash());
             }
 
+            // Checkpoint TEST
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+              
+                    RestartLevel();
+            }
+
             // ATTRAPER
-            if (Input.GetButtonDown("Attraper"))
+                if (Input.GetButtonDown("Attraper"))
             {
                 float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
                 float sizeQuarter = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
@@ -135,6 +143,13 @@ public class Hero : MonoBehaviour
             Time.timeScale = 1;
             activeControl = true;
         }
+    }
+
+    //Recharger au Checkpoint
+    private void RestartLevel()
+    {
+       
+        transform.position = CheckPoints.reachedPoint;
     }
 
     // EFFET DE GHOST
@@ -217,6 +232,7 @@ public class Hero : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+ 
 
         if (collision.tag == "Display")
         {
@@ -236,6 +252,18 @@ public class Hero : MonoBehaviour
 
         }
     }
+
+    // Entrer de collision
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // DeadZones
+        if (collision.tag == "Dead")
+        {
+            RestartLevel();
+        }
+    }
+
+
     // Sort de la zone d'escalade
     private void OnTriggerExit2D(Collider2D collision)
     {
