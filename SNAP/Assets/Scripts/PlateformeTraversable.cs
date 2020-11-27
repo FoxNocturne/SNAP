@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlateformeTraversable : MonoBehaviour
 {
-    BoxCollider2D player, thisCollider;
+    Snap player;
+    BoxCollider2D thisCollider;
 
     private void Start()
     {
-        player       = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
+        player       = GameObject.FindGameObjectWithTag("Player").GetComponent<Snap>();
         thisCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        float playerPosY = player.transform.position.y - (player.transform.localScale.y * player.size.y) / 2;
-        Physics2D.IgnoreCollision(player, thisCollider, (playerPosY < transform.position.y));
+        thisCollider.enabled = (player.GetActualDimension() + 9 == gameObject.layer);
     }
 }

@@ -17,7 +17,6 @@ public class Porte : ObjetActivable
     {
         startingPos = transform.position;
         targetPos = new Vector2(transform.position.x, transform.position.y + GetComponent<BoxCollider2D>().size.y * transform.localScale.y * ouverture);
-        Debug.Log(targetPos);
     }
 
     public override void Activation()
