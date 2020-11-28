@@ -155,7 +155,7 @@ public class CameraFollowing : MonoBehaviour
         Tableau = 2;
         player.GetComponent<Hero>().enabled = true;
         player.GetComponent<Snap>().enabled = true;
-        player.GetComponent<CreationPortail>().enabled = true;
+        player.GetComponent<PlacementPortail>().enabled = true;
         player.GetComponent<BoxCollider2D>().enabled = true;
         player.GetComponent<Rigidbody2D>().gravityScale = 2;
         following = true;

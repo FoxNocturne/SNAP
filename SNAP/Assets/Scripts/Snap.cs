@@ -11,7 +11,7 @@ public class Snap : MonoBehaviour
     public int dimensionAIgnorer = 0;
 
     private GameObject[] cameras = new GameObject[3];
-    private float snapPressed;
+    private float snapPressed, demiTailleX, demiTailleY;
     private int actualDimension = 0;
 
     // Character layer 8
@@ -30,6 +30,9 @@ public class Snap : MonoBehaviour
         Physics2D.IgnoreLayerCollision(8, 8);
         Physics2D.IgnoreLayerCollision(8, 10);
         Physics2D.IgnoreLayerCollision(8, 11);
+
+        demiTailleX = (transform.localScale.x * GetComponent<BoxCollider2D>().size.x) / 2;
+        demiTailleY = (transform.localScale.y * GetComponent<BoxCollider2D>().size.y) / 2;
     }
 
     void Update()
@@ -49,6 +52,11 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
+            if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f),
+                                      new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
+                                      LayerMask.GetMask(LayerMask.LayerToName((actualDimension == 0 ? 2 : 0) + 9))))
+                return;
+
             // Désactivation de la dimension actuelle
             cameras[actualDimension].GetComponent<Camera>().enabled = false;
             Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
@@ -74,6 +82,11 @@ public class Snap : MonoBehaviour
 
     public void ActiveSnap(float target)
     {
+        if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f),
+                                      new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
+                                      LayerMask.GetMask(LayerMask.LayerToName(((actualDimension + (target == 1 ? 1 : 2)) % 3) + 9))))
+            return;
+
         // Désactivation de la dimension actuelle
         cameras[actualDimension].GetComponent<Camera>().enabled = false;
         Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
