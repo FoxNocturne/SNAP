@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Display
   - Ennemy
+  - Dead
   layers:
   - Default
   - TransparentFX
