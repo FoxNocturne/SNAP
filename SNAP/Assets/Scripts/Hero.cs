@@ -81,7 +81,7 @@ public class Hero : MonoBehaviour
             }
 
             // SAUTER 
-            if (Input.GetKeyDown(KeyCode.Space) && onTheGround && !isPulling)
+            if (Input.GetButtonDown("Sauter") && onTheGround && !isPulling)
             {
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
@@ -89,7 +89,7 @@ public class Hero : MonoBehaviour
             }
 
             // DASH
-            if (Input.GetKeyDown(KeyCode.E) && !dash && canDash && !isPulling)
+            if (Input.GetButtonDown("Dash") && !dash && canDash && !isPulling)
             {
                 if (onTheGround)
                     StartCoroutine(DashSol());
@@ -136,6 +136,7 @@ public class Hero : MonoBehaviour
         {
             StartCoroutine(GhostEffect(0.02f));
         }
+
         // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
         if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("ObserveThisThing") != null)
         {
@@ -273,12 +274,10 @@ public class Hero : MonoBehaviour
             canClimb = false;
         }
     }
-    // Détecte si Mr.X touche le sol 
-    void OnDrawGizmosSelected()
+
+    public bool isMovingLeft()
     {
-        // Draw a yellow sphere at the transform's position
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(circleGround.transform.position, 0.1f);
+        return directionGauche;
     }
 }
 
