@@ -132,8 +132,9 @@ public class Hero : MonoBehaviour
 
                 objectPulling = null;
                 isPulling = false;
-                if (hit && hit.transform.tag == "Item")
-                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+                hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+                
+                    
             }
         }
         
