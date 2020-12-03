@@ -124,14 +124,15 @@ public class Hero : MonoBehaviour
                     objectPulling = hit.transform;
                     GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
-                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
             }
 
             if (Input.GetButtonUp("Attraper") || !onTheGround || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
             {
                 GetComponent<SpriteRenderer>().color = Color.red;
-                hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+                hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+
                 if (objectPulling)
                     objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
 
