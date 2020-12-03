@@ -292,6 +292,13 @@ public class Hero : MonoBehaviour
         return directionGauche;
     }
 
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.yellow;
+        //Use the same vars you use to draw your Overlap SPhere to draw your Wire Sphere.
+        Gizmos.DrawWireSphere (new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), 1);
+        // Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
+    }    
+
 
 }
 
