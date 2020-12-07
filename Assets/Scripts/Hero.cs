@@ -59,7 +59,6 @@ public class Hero : MonoBehaviour
             {
                 anim.SetBool("onTheGround", false);
             }
-            Debug.Log(onTheGround);
         }
         // DEPLACEMENT DU PERSONNAGE
 
@@ -164,7 +163,7 @@ public class Hero : MonoBehaviour
 
 
             // IL FAUDRA CORRIGER CETTE LIGNE, CAR MR.X DEVIENT ROUGE SANS ATTRAPER UN OBJET (IL FAUT PEUT-ETRE REMPLACE LES || PAR DES &&)
-            if (Input.GetButtonUp("Attraper") || !onTheGround || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+            if (Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
             {
                 // GetComponent<SpriteRenderer>().color = Color.red;
                 hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
@@ -172,10 +171,7 @@ public class Hero : MonoBehaviour
                     objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
 
                 objectPulling = null;
-                isPulling = false;
-                
-                
-                    
+                isPulling = false;                
             }
         }
         
