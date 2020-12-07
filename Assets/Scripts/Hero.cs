@@ -29,6 +29,7 @@ public class Hero : MonoBehaviour
     bool canClimb = false;
     bool isPulling = false;
     Transform objectPulling;
+    RaycastHit2D hit;
 
 
     void Start()
@@ -139,12 +140,17 @@ public class Hero : MonoBehaviour
             }
 
             // ATTRAPER
-                if (Input.GetButtonDown("Attraper"))
+            float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
+            float sizeQuarter = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
+            if(!isPulling)
             {
-                float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
-                float sizeQuarter = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
+                hit = Physics2D.Raycast(new Vector2(transform.position.x, sizeQuarter), directionGauche ? Vector2.left : Vector2.right, distance, whatIsGround);
+            }
+            
 
-                RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, sizeQuarter), directionGauche ? Vector2.left : Vector2.right, distance, whatIsGround);
+            if (Input.GetButtonDown("Attraper"))
+            {
+                
                 if (hit && hit.transform.tag == "Item")
                 {
                     isPulling = true;
@@ -152,6 +158,7 @@ public class Hero : MonoBehaviour
                     objectPulling = hit.transform;
                     GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
+                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
             }
 
@@ -160,11 +167,15 @@ public class Hero : MonoBehaviour
             if (Input.GetButtonUp("Attraper") || !onTheGround || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
             {
                 // GetComponent<SpriteRenderer>().color = Color.red;
+                hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 if (objectPulling)
                     objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
 
                 objectPulling = null;
                 isPulling = false;
+                
+                
+                    
             }
         }
         
