@@ -15,6 +15,7 @@ public class Hero : MonoBehaviour
     private float tailleX;
     private float tailleY;
     public float jump = 100;
+    Animator anim;    // ON AJOUTE ANIMATOR POUR GERER L'ANIMATION DE MR.X
     AudioSource SonHero;
     Rigidbody2D rb;
     public Transform circleGround;
@@ -37,6 +38,7 @@ public class Hero : MonoBehaviour
         speed = maxSpeed;
         SonHero = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();// ON AJOUTE LA REFERENCE D'ANIMATOR POUR GERER L'ANIMATION DE MR.X
     }
 
     void FixedUpdate()
@@ -46,6 +48,17 @@ public class Hero : MonoBehaviour
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
+            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 2f), new Vector3(0.7f,0.7f, 1f), 0, whatIsGround);
+            if(onTheGround)
+            {
+                anim.SetBool("jump", false); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
+                anim.SetBool("onTheGround", true);
+            }
+            else
+            {
+                anim.SetBool("onTheGround", false);
+            }
+            Debug.Log(onTheGround);
         }
         // DEPLACEMENT DU PERSONNAGE
 
@@ -54,16 +67,36 @@ public class Hero : MonoBehaviour
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
-        onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
+        // onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
+
+        
+        anim.SetFloat("moveVertical", rb.velocity.y); // IL REGARDE SI MR.X VA VERS LE HAUT OU VERS LE BAS POUR L'ANIMATION.
+                                                        // S'IL VA VERS LE BAS (moveVertical < 0), ON LANCE LA TRANSITION DE LA CHUTE
+      
+        
+
 
         if (!canDash && onTheGround)
+        {
             canDash = true;
+
+        }
+            
+
 
         // DEPLACEMENT
         if (activeControl && !dash)
         {
             if (moveHorizontal != 0)
+            {
+                anim.SetBool("run", true); // IL COURT, ACTIVE L'ANIMATION DE COURSE
                 directionGauche = moveHorizontal < 0;
+            }
+            else
+            {
+                anim.SetBool("run", false); // IL S'ARRETE, DESACTIVE L'ANIMATION DE COURSE
+            }
+
 
             // En escalade
             if (canClimb)
@@ -83,6 +116,7 @@ public class Hero : MonoBehaviour
             // SAUTER 
             if (Input.GetButtonDown("Sauter") && onTheGround && !isPulling)
             {
+                anim.SetBool("jump", true); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
                 rb.AddForce(transform.up * jump);
@@ -121,9 +155,11 @@ public class Hero : MonoBehaviour
                 }
             }
 
+
+            // IL FAUDRA CORRIGER CETTE LIGNE, CAR MR.X DEVIENT ROUGE SANS ATTRAPER UN OBJET (IL FAUT PEUT-ETRE REMPLACE LES || PAR DES &&)
             if (Input.GetButtonUp("Attraper") || !onTheGround || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
             {
-                GetComponent<SpriteRenderer>().color = Color.red;
+                // GetComponent<SpriteRenderer>().color = Color.red;
                 if (objectPulling)
                     objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
 
@@ -279,5 +315,13 @@ public class Hero : MonoBehaviour
     {
         return directionGauche;
     }
+
+    void OnDrawGizmos()
+    {
+        // Draw a semitransparent blue cube at the transforms position
+        Gizmos.color = Color.yellow;
+        // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 2f), new Vector3(0.7f,0.7f, 1f));
+    } 
 }
 
