@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 61b9566fb80ddf44cbce11b10abc0842
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6368189049337190814
+    second: balcon 6 (2)_0
+  - first:
+      213: 4097761363849446083
+    second: balcon 6 (2)_1
+  - first:
+      213: -7553115959770265989
+    second: balcon 6 (2)_2
+  - first:
+      213: -8583550442510586577
+    second: balcon 6 (2)_3
+  - first:
+      213: -5995397877940946418
+    second: balcon 6 (2)_4
+  - first:
+      213: 3115367183746126509
+    second: balcon 6 (2)_5
+  - first:
+      213: -4848352692045252582
+    second: balcon 6 (2)_6
+  - first:
+      213: -7070472570148764336
+    second: balcon 6 (2)_7
+  - first:
+      213: 921844682727789313
+    second: balcon 6 (2)_8
+  - first:
+      213: -8793343056094985729
+    second: balcon 6 (2)_9
+  - first:
+      213: 1419940240878388308
+    second: balcon 6 (2)_10
+  - first:
+      213: -101559699731292840
+    second: balcon 6 (2)_11
+  - first:
+      213: 194956268452720265
+    second: balcon 6 (2)_12
+  - first:
+      213: -938620853019102056
+    second: balcon 6 (2)_13
+  - first:
+      213: 694127703028810281
+    second: balcon 6 (2)_14
+  - first:
+      213: 970432413164657743
+    second: balcon 6 (2)_15
+  - first:
+      213: -5453253667538079024
+    second: balcon 6 (2)_16
+  - first:
+      213: -4164982628232415929
+    second: balcon 6 (2)_17
+  - first:
+      213: 705339928285060277
+    second: balcon 6 (2)_18
+  - first:
+      213: 8856547191190777177
+    second: balcon 6 (2)_19
+  - first:
+      213: 3008575501168620888
+    second: balcon 6 (2)_20
+  - first:
+      213: -8344314839461317997
+    second: balcon 6 (2)_21
+  - first:
+      213: 4382312869896083337
+    second: balcon 6 (2)_22
+  - first:
+      213: 959968227725954955
+    second: balcon 6 (2)_23
+  - first:
+      213: 6094618791583902130
+    second: balcon 6 (2)_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: balcon 6 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 485
+        width: 95
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26669bbbcc5af97a0800000000000000
+      internalID: -6368189049337190814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 477
+        width: 206
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b764f8e7d01fd2790800000000000000
+      internalID: -7553115959770265989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 494
+        width: 302
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d6282a95a11e880800000000000000
+      internalID: -8583550442510586577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 496
+        width: 302
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0af23e15611ccca0800000000000000
+      internalID: -5995397877940946418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 279
+        width: 94
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745b88cdd520336c0800000000000000
+      internalID: -4164982628232415929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_18
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 51
+        width: 106
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc945f7deed9c900800000000000000
+      internalID: 705339928285060277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_19
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 47
+        width: 101
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95de8631fb6c8ea70800000000000000
+      internalID: 8856547191190777177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_20
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 307
+        width: 302
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855391b6a7b90c920800000000000000
+      internalID: 3008575501168620888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_22
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 82
+        width: 149
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98757c0365a11dc30800000000000000
+      internalID: 4382312869896083337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balcon 6 (2)_23
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 129
+        width: 302
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f4449540e725d00800000000000000
+      internalID: 959968227725954955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
