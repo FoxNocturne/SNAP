@@ -9,6 +9,7 @@ public class Hero : MonoBehaviour
     private float moveVertical;
     public bool activeControl = true;
     private bool directionGauche;
+    private bool flipLeft = false;
     public float dashSpeed;
     public float maxSpeed = 5;
     private float speed;
@@ -31,6 +32,8 @@ public class Hero : MonoBehaviour
     Transform objectPulling;
     RaycastHit2D hit;
 
+    BoxCollider2D hitbox;
+
 
     void Start()
     {
@@ -39,6 +42,7 @@ public class Hero : MonoBehaviour
         speed = maxSpeed;
         SonHero = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
+        hitbox = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();// ON AJOUTE LA REFERENCE D'ANIMATOR POUR GERER L'ANIMATION DE MR.X
     }
 
@@ -69,12 +73,12 @@ public class Hero : MonoBehaviour
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
         // onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
 
-        
+        anim.SetBool("Grab", isPulling );
+        anim.SetBool("directionGauche", flipLeft);
+        anim.SetBool("climb", canClimb);
+        anim.SetFloat("pousser", moveHorizontal);
         anim.SetFloat("moveVertical", rb.velocity.y); // IL REGARDE SI MR.X VA VERS LE HAUT OU VERS LE BAS POUR L'ANIMATION.
                                                         // S'IL VA VERS LE BAS (moveVertical < 0), ON LANCE LA TRANSITION DE LA CHUTE
-      
-        
-
 
         if (!canDash && onTheGround)
         {
@@ -91,6 +95,10 @@ public class Hero : MonoBehaviour
             {
                 anim.SetBool("run", true); // IL COURT, ACTIVE L'ANIMATION DE COURSE
                 directionGauche = moveHorizontal < 0;
+                if(flipLeft != directionGauche && !isPulling)
+                {
+                    LookLeft();
+                }
             }
             else
             {
@@ -102,10 +110,35 @@ public class Hero : MonoBehaviour
             if (canClimb)
             {
                 transform.Translate(new Vector2(moveHorizontal * maxSpeed * Time.deltaTime, moveVertical * maxSpeed * Time.deltaTime));
+                if((moveHorizontal < moveVertical && moveVertical > 0) || (moveHorizontal > moveVertical && moveVertical < 0) )
+                {
+                    if(moveVertical < 0)
+                    {
+                        anim.speed = moveVertical * -1;
+                    }
+                    else
+                    {
+                        anim.speed = moveVertical;
+                    }
+                }
+                else
+                {
+                    if(moveHorizontal < 0)
+                    {
+                        anim.speed = moveHorizontal * -1;
+                    }
+                    else
+                    {
+                        anim.speed = moveHorizontal;
+                    }                   
+                }
+                
+                
             }
             // Au sol
             else
             {
+                anim.speed = 1;
                 transform.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
                 if (objectPulling)
                 {
@@ -125,6 +158,7 @@ public class Hero : MonoBehaviour
             // DASH
             if (Input.GetButtonDown("Dash") && !dash && canDash && !isPulling)
             {
+                
                 if (onTheGround)
                     StartCoroutine(DashSol());
                 else
@@ -141,38 +175,37 @@ public class Hero : MonoBehaviour
             // ATTRAPER
             float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
             float sizeQuarter = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
-            if(!isPulling)
-            {
-                hit = Physics2D.Raycast(new Vector2(transform.position.x, sizeQuarter), directionGauche ? Vector2.left : Vector2.right, distance, whatIsGround);
-            }
+            hit = Physics2D.Raycast(new Vector2(transform.position.x, sizeQuarter), Vector2.right, distance, whatIsGround);
             
 
             if (Input.GetButtonDown("Attraper"))
             {
-                
+                Debug.Log(hit.transform);
                 if (hit && hit.transform.tag == "Item")
                 {
                     isPulling = true;
 
                     objectPulling = hit.transform;
-                    GetComponent<SpriteRenderer>().color = Color.gray;
+                    // GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
             }
 
-
-            // IL FAUDRA CORRIGER CETTE LIGNE, CAR MR.X DEVIENT ROUGE SANS ATTRAPER UN OBJET (IL FAUT PEUT-ETRE REMPLACE LES || PAR DES &&)
-            if (Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+            if(objectPulling != null)
             {
-                // GetComponent<SpriteRenderer>().color = Color.red;
-                hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-                if (objectPulling)
-                    objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
+                if (Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+                {
+                    // GetComponent<SpriteRenderer>().color = Color.red;
+                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;               
+                    if (objectPulling)
+                        objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
 
-                objectPulling = null;
-                isPulling = false;                
+                    objectPulling = null;
+                    isPulling = false;  
+                }
             }
+
         }
         
         if (dash && !ghost)
@@ -210,6 +243,7 @@ public class Hero : MonoBehaviour
     // TEMPS DE DASH
     IEnumerator Dash()
     {
+        anim.SetBool("Dash", true);
         dash = true;
         canDash = false;
 
@@ -219,7 +253,7 @@ public class Hero : MonoBehaviour
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
 
         yield return new WaitForSeconds(0.2f);
-
+        anim.SetBool("Dash", false);
         maxSpeed = speed;
         rb.gravityScale = 2;
         rb.velocity = new Vector2(0, 0);
@@ -232,11 +266,13 @@ public class Hero : MonoBehaviour
     {
         dash = true;
         canDash = false;
-
+        anim.SetBool("Dash", true);
         maxSpeed *= 3; // accélération
         moveHorizontal = 0;
-        transform.Rotate(0, 0, directionGauche ? -90 : 90);
-        transform.position = new Vector2(transform.position.x, transform.position.y + tailleX - tailleY);
+        hitbox.offset = new Vector2(0, -1.338f);
+        hitbox.size = new Vector2(1, 1.363f);
+        // transform.Rotate(0, 0, directionGauche ? -90 : 90);
+        //transform.position = new Vector2(transform.position.x, transform.position.y + tailleX - tailleY);
         rb.gravityScale = 0;
         rb.velocity = new Vector2(dashSpeed * (directionGauche ? -1 : 1), 0);
 
@@ -247,10 +283,12 @@ public class Hero : MonoBehaviour
         {
             yield return new WaitForSeconds(0.05f);
         }
-
+        anim.SetBool("Dash", false);
         maxSpeed = speed;
-        transform.Rotate(0, 0, directionGauche ? 90 : -90);
-        transform.position = new Vector2(transform.position.x, transform.position.y - tailleX + tailleY);
+        hitbox.offset = new Vector2(0, -0.62f);
+        hitbox.size = new Vector2(1, 2.8f);
+        //transform.Rotate(0, 0, directionGauche ? 90 : -90);
+        //transform.position = new Vector2(transform.position.x, transform.position.y - tailleX + tailleY);
         rb.gravityScale = 2;
         rb.velocity = new Vector2(0, 0);
 
@@ -320,15 +358,36 @@ public class Hero : MonoBehaviour
 
     public bool isMovingLeft()
     {
+
         return directionGauche;
+
     }
 
-    void OnDrawGizmos()
+    void LookLeft()
+    {
+        flipLeft = !flipLeft;
+        Vector2 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
+
+   /* void OnDrawGizmos()
     {
         // Draw a semitransparent blue cube at the transforms position
         Gizmos.color = Color.yellow;
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
         Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 2f), new Vector3(0.7f,0.7f, 1f));
-    } 
+    } */
+
+    void OnDrawGizmos()
+    {
+        // Draws a 5 unit long red line in front of the object
+        Gizmos.color = Color.red;
+        float size = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
+        float distance2 = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
+        Gizmos.DrawRay(new Vector2(transform.position.x, size), flipLeft ? Vector2.left : Vector2.right);
+
+        
+    }    
 }
 

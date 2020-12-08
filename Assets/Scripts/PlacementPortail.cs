@@ -20,11 +20,13 @@ public class PlacementPortail : MonoBehaviour
     private bool placing;
     private bool placingOkay;
     private bool targetIsNext;
+    Animator anim;
 
     private void Start()
     {
         occlusionPlacement.enabled = false;
         portailRadius.SetActive(false);
+        anim = GetComponent<Animator>();
 
         snapScript = GetComponent<Snap>();
 
@@ -82,6 +84,7 @@ public class PlacementPortail : MonoBehaviour
         // Place le portail une fois la touche relachée
         if (Input.GetButtonUp("Portail") && placing)
         {
+            anim.SetTrigger("portal");
             occlusionPlacement.enabled = false;
             portailRadius.SetActive(false);
 

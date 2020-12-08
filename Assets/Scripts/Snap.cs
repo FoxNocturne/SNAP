@@ -13,6 +13,7 @@ public class Snap : MonoBehaviour
     private GameObject[] cameras = new GameObject[3];
     private float snapPressed, demiTailleX, demiTailleY;
     private int actualDimension = 0;
+    Animator anim;
 
     // Character layer 8
     //
@@ -25,7 +26,7 @@ public class Snap : MonoBehaviour
         cameras = GameObject.FindGameObjectsWithTag("MainCamera");
         cameras[1].GetComponent<Camera>().enabled = false;
         cameras[2].GetComponent<Camera>().enabled = false;
-
+        anim = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(8, 7);
         Physics2D.IgnoreLayerCollision(8, 8);
         Physics2D.IgnoreLayerCollision(8, 10);
@@ -52,6 +53,7 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
+            anim.SetTrigger("SNAP");
             if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f),
                                       new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
                                       LayerMask.GetMask(LayerMask.LayerToName((actualDimension == 0 ? 2 : 0) + 9))))
@@ -76,6 +78,7 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
+            anim.SetTrigger("SNAP");
             ActiveSnap(snapPressed);
         }
     }
