@@ -135,6 +135,17 @@ MonoBehaviour:
   dashSpeed: 30
   maxSpeed: 5
   jump: 715
+  sonMrX:
+  - {fileID: 8300000, guid: e5b2bb8d73d38d5419185ce1e320e475, type: 3}
+  - {fileID: 8300000, guid: a94b1dd78882bef468a8e2ad23aabe63, type: 3}
+  - {fileID: 8300000, guid: 07667f7241c3acb49869513023e57017, type: 3}
+  - {fileID: 8300000, guid: 388b5903f7b62cf49a3077537626b3ac, type: 3}
+  - {fileID: 8300000, guid: a3c235724569cfc43801efebfbdd4955, type: 3}
+  - {fileID: 8300000, guid: 23e0e8f582c2071428558ac2dc0e5ff3, type: 3}
+  - {fileID: 8300000, guid: a630aa687c2ca6b4da95a0ebb26645f1, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   circleGround: {fileID: 0}
   phantomEffect: {fileID: 1265865981250434113, guid: 274130e54c367bc409a8bd427e5ba692,
     type: 3}
@@ -159,6 +170,9 @@ MonoBehaviour:
   tutoriel: 1
   niveau1: 1
   dimensionAIgnorer: 0
+  sonSnap:
+  - {fileID: 8300000, guid: 0144285eb93aad0489d116b0b3d8ee68, type: 3}
+  - {fileID: 0}
 --- !u!114 &6034129655936310720
 MonoBehaviour:
   m_ObjectHideFlags: 0

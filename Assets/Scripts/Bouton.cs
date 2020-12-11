@@ -9,14 +9,31 @@ public class Bouton : MonoBehaviour
     private bool actif = false;
     private bool playerOn = false;
 
+  
+    AudioSource sonBouttonEnclencher;
+    public AudioClip[] sonBoutton;
+
+    private void Start()
+    {
+        sonBouttonEnclencher = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if(Input.GetButtonDown("Attraper") && playerOn)
             actif = !actif;
 
         if (actif)
+        {
             foreach (var objet in objetsRelies)
+            {
                 objet.Activation();
+                sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 1f);
+            }
+
+        }
+                
+                
         else
             foreach (var objet in objetsRelies)
                 objet.Desactivation();

@@ -10,9 +10,13 @@ public class Portail : MonoBehaviour
     private List<ObjetTransfert> objectsReceived = new List<ObjetTransfert>();
     private GameObject[] cameras = new GameObject[3];
 
+    AudioSource sonPortailEnclencher;
+    public AudioClip[] sonPortail;
+
     private void Start()
     {
         cameras = GameObject.FindGameObjectsWithTag("MainCamera");
+        sonPortailEnclencher = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,6 +24,7 @@ public class Portail : MonoBehaviour
         if (objectsReceived.Find(objet => objet.collider == collision) == null)
         {
             portailLinked.transferObject(new ObjetTransfert(collision, FindProvenance(collision.transform)));
+            //sonPortailEnclencher.PlayOneShot(sonPortail[0], 1f);
 
             if (collision.tag == "Item")
             {
@@ -67,29 +72,39 @@ public class Portail : MonoBehaviour
     }
 
 
- /*   private IEnumerator portailScale(Vector3 targetScale)
+    /*   private IEnumerator portailScale(Vector3 targetScale)
+       {
+           Vector3 originScale = Vector3.one / 2;
+
+           float debut = Time.time;
+           while(transform.localScale.x < targetScale.x || transform.localScale.y < targetScale.y)
+           {
+               if (Time.time > debut + 1)
+                   break;
+
+               transform.localScale = new Vector2(transform.localScale.x + (targetScale.x - transform.localScale.x) * Time.deltaTime * 30,
+                                                  transform.localScale.y + (targetScale.y - transform.localScale.y) * Time.deltaTime * 30);
+               yield return new WaitForSeconds(0.05f);
+           }
+
+           while (transform.localScale.x > originScale.x || transform.localScale.y > originScale.y)
+           {
+               transform.localScale = new Vector2(transform.localScale.x + (originScale.x - transform.localScale.x) * Time.deltaTime * 30,
+                                                  transform.localScale.y + (originScale.y - transform.localScale.y) * Time.deltaTime * 30);
+               yield return new WaitForSeconds(0.05f);
+           }
+       }*/
+    void Update()
     {
-        Vector3 originScale = Vector3.one / 2;
+       //if (Input.GetButtonDown("L2")){
+            //sonPortailEnclencher.PlayOneShot(sonPortail[0], 1f);
 
-        float debut = Time.time;
-        while(transform.localScale.x < targetScale.x || transform.localScale.y < targetScale.y)
-        {
-            if (Time.time > debut + 1)
-                break;
+        //}
 
-            transform.localScale = new Vector2(transform.localScale.x + (targetScale.x - transform.localScale.x) * Time.deltaTime * 30,
-                                               transform.localScale.y + (targetScale.y - transform.localScale.y) * Time.deltaTime * 30);
-            yield return new WaitForSeconds(0.05f);
-        }
-
-        while (transform.localScale.x > originScale.x || transform.localScale.y > originScale.y)
-        {
-            transform.localScale = new Vector2(transform.localScale.x + (originScale.x - transform.localScale.x) * Time.deltaTime * 30,
-                                               transform.localScale.y + (originScale.y - transform.localScale.y) * Time.deltaTime * 30);
-            yield return new WaitForSeconds(0.05f);
-        }
-    }*/
+            
+    }
 }
+
 
 public class ObjetTransfert
 {

@@ -152,6 +152,7 @@ public class Hero : MonoBehaviour
             // SAUTER 
             if (Input.GetButtonDown("Sauter") && onTheGround && !isPulling)
             {
+                SonHero.PlayOneShot(sonMrX[3], 1f);              
                 anim.SetBool("jump", true); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
@@ -164,12 +165,14 @@ public class Hero : MonoBehaviour
                 
                 if (onTheGround) {
                     StartCoroutine(DashSol());
+                    SonHero.PlayOneShot(sonMrX[1], 1f);
 
                 }
 
                 else
                 {
                     StartCoroutine(Dash());
+                    SonHero.PlayOneShot(sonMrX[2], 1f);
                 }
                     
             }
@@ -198,6 +201,7 @@ public class Hero : MonoBehaviour
                     // GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                    
                 }
             }
 
@@ -353,6 +357,19 @@ public class Hero : MonoBehaviour
 
         }
     }
+    //Sons de pas MrX
+    public void SonPasMrX() 
+    {
+        SonHero.PlayOneShot(sonMrX[0], 1f);
+
+    }
+    // Sons pousser et tirer Objet
+    public void SonPousserTirer()
+    {
+        SonHero.PlayOneShot(sonMrX[6], 1f);
+
+    }
+
 
     // Entrer de collision
     private void OnTriggerEnter2D(Collider2D collision)
@@ -360,6 +377,7 @@ public class Hero : MonoBehaviour
         // DeadZones
         if (collision.tag == "Dead")
         {
+            SonHero.PlayOneShot(sonMrX[4], 1f);
             RestartLevel();
         }
     }
@@ -408,10 +426,6 @@ public class Hero : MonoBehaviour
 
         
     } */
-
-    public void pasMrX()
-    {
-        // Tu mets ton son ici
-    }    
+   
 }
 
