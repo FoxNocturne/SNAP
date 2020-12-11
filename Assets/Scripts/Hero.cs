@@ -75,7 +75,6 @@ public class Hero : MonoBehaviour
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
         // onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
-    Debug.Log(rb.velocity.x);
         anim.SetBool("Grab", isPulling );
         anim.SetBool("directionGauche", flipLeft);
         anim.SetBool("climb", canClimb);
