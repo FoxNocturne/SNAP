@@ -18,6 +18,7 @@ public class Hero : MonoBehaviour
     public float jump = 100;
     Animator anim;    // ON AJOUTE ANIMATOR POUR GERER L'ANIMATION DE MR.X
     AudioSource SonHero;
+    public AudioClip[] sonMrX;
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
@@ -33,6 +34,7 @@ public class Hero : MonoBehaviour
     RaycastHit2D hit;
 
     BoxCollider2D hitbox;
+    float TimeNoMove = 0;
 
 
     void Start()
@@ -68,11 +70,12 @@ public class Hero : MonoBehaviour
 
     }
 
+
     void Update()
     {
         whatIsGround = Physics2D.GetLayerCollisionMask(8);
         // onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
-
+    Debug.Log(rb.velocity.x);
         anim.SetBool("Grab", isPulling );
         anim.SetBool("directionGauche", flipLeft);
         anim.SetBool("climb", canClimb);
@@ -91,6 +94,7 @@ public class Hero : MonoBehaviour
         // DEPLACEMENT
         if (activeControl && !dash)
         {
+            //SonHero.playOnAwake(sonMrX[6], 1f);
             if (moveHorizontal != 0)
             {
                 anim.SetBool("run", true); // IL COURT, ACTIVE L'ANIMATION DE COURSE
@@ -159,10 +163,16 @@ public class Hero : MonoBehaviour
             if (Input.GetButtonDown("Dash") && !dash && canDash && !isPulling)
             {
                 
-                if (onTheGround)
+                if (onTheGround) {
                     StartCoroutine(DashSol());
+
+                }
+
                 else
+                {
                     StartCoroutine(Dash());
+                }
+                    
             }
 
             // Checkpoint TEST
@@ -264,6 +274,7 @@ public class Hero : MonoBehaviour
     // TEMPS DE DASH AU SOL
     IEnumerator DashSol()
     {
+        TimeNoMove = 0;
         dash = true;
         canDash = false;
         anim.SetBool("Dash", true);
@@ -279,9 +290,18 @@ public class Hero : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         // Le dash au sol continue tant qu'il y a quelque chose au-dessus du personnage
-        while(Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + tailleY), whatIsGround))
+        while(Physics2D.OverlapPoint(new Vector2(transform.position.x, transform.position.y + (tailleY - 1)), whatIsGround))
         {
             yield return new WaitForSeconds(0.05f);
+
+            if((rb.velocity.x < 20 && !directionGauche) || (rb.velocity.x > -20 && directionGauche) )
+            {            
+                TimeNoMove += Time.deltaTime;
+                if(TimeNoMove > 0.05f)
+                {
+                    break;
+                }
+            }
         }
         anim.SetBool("Dash", false);
         maxSpeed = speed;
@@ -371,15 +391,15 @@ public class Hero : MonoBehaviour
         transform.localScale = theScale;
     }
 
-   /* void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         // Draw a semitransparent blue cube at the transforms position
         Gizmos.color = Color.yellow;
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
-        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 2f), new Vector3(0.7f,0.7f, 1f));
-    } */
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y + (tailleY - 1)), new Vector3(0.7f,0.7f, 1f));
+    } 
 
-    void OnDrawGizmos()
+   /* void OnDrawGizmos()
     {
         // Draws a 5 unit long red line in front of the object
         Gizmos.color = Color.red;
@@ -388,6 +408,11 @@ public class Hero : MonoBehaviour
         Gizmos.DrawRay(new Vector2(transform.position.x, size), flipLeft ? Vector2.left : Vector2.right);
 
         
+    } */
+
+    public void pasMrX()
+    {
+        // Tu mets ton son ici
     }    
 }
 
