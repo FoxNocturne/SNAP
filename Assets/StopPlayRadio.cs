@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayRadioCivil : MonoBehaviour
+public class StopPlayRadio : MonoBehaviour
 {
     AudioSource sonRadioCivilEnclencher;
     public AudioClip[] sonRadioCivil;
@@ -13,17 +13,12 @@ public class PlayRadioCivil : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.tag == "Player")
-        {
-            sonRadioCivilEnclencher.Play();
 
-
-        }
-        if (Input.GetButtonDown("SNAP"))
+        if (collision.tag == "Player"  )
         {
+            //sonRadioCivilEnclencher.PlayOneShot(sonRadioCivil[0], 1f);
             sonRadioCivilEnclencher.Pause();
+
         }
     }
-
 }
