@@ -10,13 +10,13 @@ public class Portail : MonoBehaviour
     private List<ObjetTransfert> objectsReceived = new List<ObjetTransfert>();
     private GameObject[] cameras = new GameObject[3];
 
-    AudioSource sonPortailEnclencher;
-    public AudioClip[] sonPortail;
+    AudioSource sonPortailAspire;
+    public AudioClip[] sonPortailObjet;
 
     private void Start()
     {
         cameras = GameObject.FindGameObjectsWithTag("MainCamera");
-        sonPortailEnclencher = GetComponent<AudioSource>();
+        sonPortailAspire = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +24,7 @@ public class Portail : MonoBehaviour
         if (objectsReceived.Find(objet => objet.collider == collision) == null)
         {
             portailLinked.transferObject(new ObjetTransfert(collision, FindProvenance(collision.transform)));
-            //sonPortailEnclencher.PlayOneShot(sonPortail[0], 1f);
+            sonPortailAspire.PlayOneShot(sonPortailObjet[1], 0.1f);
 
             if (collision.tag == "Item")
             {
@@ -34,6 +34,7 @@ public class Portail : MonoBehaviour
             else if (collision.tag == "Player")
             {
                 collision.GetComponent<Snap>().ActiveSnap(targetDimension == collision.GetComponent<Snap>().GetNextDimension() ? 1 : -1);
+                sonPortailAspire.PlayOneShot(sonPortailObjet[1], 0.1f);
             }
         }
     }

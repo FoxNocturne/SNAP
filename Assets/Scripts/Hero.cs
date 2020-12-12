@@ -152,7 +152,7 @@ public class Hero : MonoBehaviour
             // SAUTER 
             if (Input.GetButtonDown("Sauter") && onTheGround && !isPulling)
             {
-                SonHero.PlayOneShot(sonMrX[3], 1f);              
+                SonHero.PlayOneShot(sonMrX[3], 0.2f);              
                 anim.SetBool("jump", true); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
@@ -165,14 +165,14 @@ public class Hero : MonoBehaviour
                 
                 if (onTheGround) {
                     StartCoroutine(DashSol());
-                    SonHero.PlayOneShot(sonMrX[1], 1f);
+                    SonHero.PlayOneShot(sonMrX[1], 0.2f);
 
                 }
 
                 else
                 {
                     StartCoroutine(Dash());
-                    SonHero.PlayOneShot(sonMrX[2], 1f);
+                    SonHero.PlayOneShot(sonMrX[2], 0.2f);
                 }
                     
             }
@@ -360,13 +360,13 @@ public class Hero : MonoBehaviour
     //Sons de pas MrX
     public void SonPasMrX() 
     {
-        SonHero.PlayOneShot(sonMrX[0], 1f);
+        SonHero.PlayOneShot(sonMrX[0], 0.1f);
 
     }
     // Sons pousser et tirer Objet
     public void SonPousserTirer()
     {
-        SonHero.PlayOneShot(sonMrX[6], 1f);
+        SonHero.PlayOneShot(sonMrX[6], 0.5f);
 
     }
 

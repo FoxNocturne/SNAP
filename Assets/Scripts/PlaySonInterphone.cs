@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySonudInterphone : MonoBehaviour
+public class PlaySonInterphone : MonoBehaviour
 {
     AudioSource sonInterphoneEnclencher;
     public AudioClip[] sonInterphone;
@@ -17,10 +17,8 @@ public class PlaySonudInterphone : MonoBehaviour
         if (collision.tag == "Player")
         {
             sonInterphoneEnclencher.PlayOneShot(sonInterphone[0], 1f);
-            
+
 
         }
     }
-
- 
 }

@@ -10,6 +10,7 @@ TagManager:
   - Ennemy
   - Dead
   - TagCheckPoint
+  - Sons
   layers:
   - Default
   - TransparentFX

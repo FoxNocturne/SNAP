@@ -121,8 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63bedd761748de041815cbc5fd66e61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portes:
+  objetsRelies: []
+  sonPlaque:
+  - {fileID: 8300000, guid: c42091064fac79b4499c7ae8dca5dffe, type: 3}
   - {fileID: 0}
-  - {fileID: 0}
-  speed: 10
-  ouverture: 0.9

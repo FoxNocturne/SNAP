@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetDimension: 0
   portailLinked: {fileID: 0}
-  sonPortail:
+  sonPortailObjet:
   - {fileID: 8300000, guid: 7f8624bd2619c9e43bfea2b11d4de4cb, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: e6958b0094c995240bb6f62111c5530f, type: 3}
 --- !u!212 &5868348086208344495
 SpriteRenderer:
   m_ObjectHideFlags: 0

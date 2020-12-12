@@ -28,7 +28,7 @@ public class Bouton : MonoBehaviour
             foreach (var objet in objetsRelies)
             {
                 objet.Activation();
-                sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 1f);
+                sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
             }
 
         }

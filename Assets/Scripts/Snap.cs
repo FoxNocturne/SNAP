@@ -58,7 +58,7 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
-            soundSnap.PlayOneShot(sonSnap[0], 1f);
+            soundSnap.PlayOneShot(sonSnap[0], 0.05f);
             anim.SetTrigger("SNAP");
             if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f),
                                       new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
