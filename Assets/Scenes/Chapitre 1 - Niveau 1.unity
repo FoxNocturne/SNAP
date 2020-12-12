@@ -1794,6 +1794,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
 --- !u!4 &218889758 stripped
@@ -1879,6 +1884,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
 --- !u!4 &250607689 stripped
@@ -1958,6 +1968,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
@@ -7529,6 +7544,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
 --- !u!4 &929693171 stripped
@@ -8233,6 +8253,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
 --- !u!4 &1001973293 stripped
@@ -8856,7 +8881,7 @@ PrefabInstance:
     - target: {fileID: 5175232416693967924, guid: 204874a806e0e49498d1eedd897e3056,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.704036
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 5175232416693967924, guid: 204874a806e0e49498d1eedd897e3056,
         type: 3}
@@ -8912,6 +8937,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.2756401
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2893364
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
@@ -9244,6 +9284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
@@ -10717,6 +10762,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
 --- !u!4 &1379953182 stripped
@@ -11147,6 +11197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
@@ -11859,6 +11914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938513768756102399, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_TagString
+      value: TagCheckPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
