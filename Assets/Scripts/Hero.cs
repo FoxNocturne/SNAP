@@ -55,7 +55,7 @@ public class Hero : MonoBehaviour
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
-            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 2f), new Vector3(0.7f,0.7f, 1f), 0, whatIsGround);
+            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 2f), new Vector3(0.45f,0.25f, 1f), 0, whatIsGround);
             if(onTheGround)
             {
                 anim.SetBool("jump", false); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
@@ -73,7 +73,7 @@ public class Hero : MonoBehaviour
 
     void Update()
     {
-        whatIsGround = Physics2D.GetLayerCollisionMask(8);
+        //whatIsGround = Physics2D.GetLayerCollisionMask(8);
         // onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
         anim.SetBool("Grab", isPulling );
         anim.SetBool("directionGauche", flipLeft);
@@ -155,6 +155,7 @@ public class Hero : MonoBehaviour
                 anim.SetBool("jump", true); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
+                rb.velocity = new Vector2(0, 0);
                 rb.AddForce(transform.up * jump);
             }
 
@@ -395,7 +396,7 @@ public class Hero : MonoBehaviour
         // Draw a semitransparent blue cube at the transforms position
         Gizmos.color = Color.yellow;
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
-        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y + (tailleY - 1)), new Vector3(0.7f,0.7f, 1f));
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.75f), new Vector3(0.45f,0.25f, 1f));
     } 
 
    /* void OnDrawGizmos()
