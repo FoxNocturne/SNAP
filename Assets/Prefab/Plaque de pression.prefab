@@ -8,11 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 3135535528843235616}
   - component: {fileID: 3135535528843235621}
   - component: {fileID: 3135535528843235619}
   - component: {fileID: 4039309045726811671}
   m_Layer: 9
+
   m_Name: Plaque de pression
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +123,7 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+
   m_Points:
     m_Paths:
     - - {x: 0.9408474, y: -0.070381165}
@@ -137,3 +140,4 @@ PolygonCollider2D:
       - {x: 1.099068, y: -0.22117679}
       - {x: 1.0984151, y: -0.21983553}
       - {x: 0.93772197, y: -0.068405785}
+

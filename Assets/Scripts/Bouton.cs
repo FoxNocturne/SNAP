@@ -9,17 +9,45 @@ public class Bouton : MonoBehaviour
     private bool actif = false;
     private bool playerOn = false;
 
-    private void Update()
+  
+    AudioSource sonBouttonEnclencher;
+    public AudioClip[] sonBoutton;
+
+    private void Start()
     {
-        if(Input.GetButtonDown("Attraper") && playerOn)
+        sonBouttonEnclencher = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {        
+        if (Input.GetButtonDown("Attraper") && playerOn)
+        {
+            sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+
             actif = !actif;
 
-        if (actif)
-            foreach (var objet in objetsRelies)
-                objet.Activation();
-        else
-            foreach (var objet in objetsRelies)
-                objet.Desactivation();
+            if (actif)
+
+            {
+                //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+                foreach (var objet in objetsRelies)
+                {
+                    objet.Activation();
+                    //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+                }
+
+            }
+            else
+            {
+                foreach (var objet in objetsRelies)
+                    objet.Desactivation();
+
+            }
+
+        }
+
+
+            
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

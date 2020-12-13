@@ -9,6 +9,9 @@ TagManager:
   - Display
   - Ennemy
   - Dead
+  - TagCheckPoint
+  - Sons
+
   layers:
   - Default
   - TransparentFX
@@ -25,7 +28,7 @@ TagManager:
   - TransitionDictature
   - TransitionChaos
   - TransitionPostApo
-  - 
+  - Checkpoint
   - 
   - 
   - 

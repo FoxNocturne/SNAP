@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5175232416693967924}
   - component: {fileID: 8245829187929812098}
   - component: {fileID: -4957986605672146264}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: CheckPoints
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 10}
   m_SpriteTilingProperty:

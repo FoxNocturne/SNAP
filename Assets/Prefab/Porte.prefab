@@ -496,6 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   ouverture: 0.9
+
 --- !u!1 &5471613251729142740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,3 +1001,4 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+
