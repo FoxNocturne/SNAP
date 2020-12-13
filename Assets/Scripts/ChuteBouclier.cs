@@ -18,7 +18,7 @@ public class ChuteBouclier : MonoBehaviour
         if (collision.transform.tag == "Player" && collision.gameObject.GetComponent<Hero>().onTheGround)
         {
             cameras.GetComponent<CameraFollowing>().EvenementChuteBouclier(transform);
-            sonBouclierChute.PlayOneShot(sonBouclier[0], 1f);
+            sonBouclierChute.PlayOneShot(sonBouclier[0], 0.1f);
 
         }
         
