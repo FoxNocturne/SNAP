@@ -123,3 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   ouverture: 0.9
+  sonPorte:
+  - {fileID: 8300000, guid: 651be554e4bf5fc4aa820389578ea5b2, type: 3}
+  - {fileID: 0}

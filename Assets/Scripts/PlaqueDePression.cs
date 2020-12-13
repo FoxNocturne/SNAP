@@ -9,10 +9,15 @@ public class PlaqueDePression : MonoBehaviour
     private List<Collider2D> actualColliders = new List<Collider2D>();
     private int actualCollidersOffset;
 
+    AudioSource sonPlaqueEnclencher;
+    public AudioClip[] sonPlaque;
+
     private void Start()
     {
         GetComponent<BoxCollider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
         actualCollidersOffset = actualColliders.Count;
+
+        //sonPlaqueEnclencher = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -23,13 +28,28 @@ public class PlaqueDePression : MonoBehaviour
         // Elle détecte en réalité une différence de colliders sur elle
         if (actualColliders.Count - actualCollidersOffset == 0)
         {
+            //sonPlaqueEnclencher.PlayOneShot(sonPlaque[0], 1f);
+
             foreach (var objet in objetsRelies)
+            {
                 objet.Desactivation();
+                
+
+            }
+                
         }
         else
         {
+            //sonPlaqueEnclencher.PlayOneShot(sonPlaque[0], 1f);
             foreach (var objet in objetsRelies)
+            {
+                
                 objet.Activation();
+                //sonPlaqueEnclencher.PlayOneShot(sonPlaque[0], 1f);
+
+            }
+
+
         }
     }
 }

@@ -22,6 +22,9 @@ public class PlacementPortail : MonoBehaviour
     private bool targetIsNext;
     Animator anim;
 
+    AudioSource sonPortailEnclencher;
+    public AudioClip[] sonPortail;
+
     private void Start()
     {
         occlusionPlacement.enabled = false;
@@ -29,6 +32,8 @@ public class PlacementPortail : MonoBehaviour
         anim = GetComponent<Animator>();
 
         snapScript = GetComponent<Snap>();
+
+        sonPortailEnclencher = GetComponent<AudioSource>();
 
         // Le joueur ignore les layers de transition au départ
         IgnoreAllTransition();
@@ -61,6 +66,8 @@ public class PlacementPortail : MonoBehaviour
         // Lance le placement ou détruit le portail s'il est déjà présent
         if (Input.GetButtonDown("Portail"))
         {
+            sonPortailEnclencher.PlayOneShot(sonPortail[0], 0.05f);
+
             targetIsNext = Input.GetAxis("Portail") == 1;
 
             // Je m'excuse d'avance pour le contenu de ce if
