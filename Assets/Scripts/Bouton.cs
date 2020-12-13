@@ -19,24 +19,35 @@ public class Bouton : MonoBehaviour
     }
 
     private void Update()
-    {
-        if(Input.GetButtonDown("Attraper") && playerOn)
+    {        
+        if (Input.GetButtonDown("Attraper") && playerOn)
+        {
+            sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+
             actif = !actif;
 
-        if (actif)
-        {
-            foreach (var objet in objetsRelies)
+            if (actif)
+
             {
-                objet.Activation();
-                sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+                //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+                foreach (var objet in objetsRelies)
+                {
+                    objet.Activation();
+                    //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+                }
+
+            }
+            else
+            {
+                foreach (var objet in objetsRelies)
+                    objet.Desactivation();
+
             }
 
         }
-                
-                
-        else
-            foreach (var objet in objetsRelies)
-                objet.Desactivation();
+
+
+            
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
