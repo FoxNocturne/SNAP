@@ -12,8 +12,8 @@ public class CheckPoints : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            reachedPoint = transform.position;
-            
+            Debug.Log("détecté");
+            reachedPoint = transform.position;            
         }
         
     }
