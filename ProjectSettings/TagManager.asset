@@ -49,17 +49,26 @@ TagManager:
   - name: DictatureDecors
     uniqueID: 1178484387
     locked: 0
+  - name: DictaturePlayer
+    uniqueID: 3860561269
+    locked: 0
   - name: Chaos
     uniqueID: 355134515
     locked: 0
   - name: ChaosDecors
     uniqueID: 3749869089
     locked: 0
+  - name: ChaosPlayer
+    uniqueID: 3751136565
+    locked: 0
   - name: PostApo
     uniqueID: 3622029715
     locked: 0
   - name: PostApoDecors
     uniqueID: 1501267185
+    locked: 0
+  - name: PostApoPlayer
+    uniqueID: 3373081371
     locked: 0
   - name: Default
     uniqueID: 0

@@ -1,0 +1,2984 @@
+fileFormatVersion: 2
+guid: 887f37db370f3ac41af014bdcc49ff4c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6842052791619260012
+    second: "\xE9lement batiment4_0"
+  - first:
+      213: -6365340769281390141
+    second: "\xE9lement batiment4_1"
+  - first:
+      213: 6004932190803668811
+    second: "\xE9lement batiment4_2"
+  - first:
+      213: -3441380771515359525
+    second: "\xE9lement batiment4_3"
+  - first:
+      213: -3095013193388603652
+    second: FenetreBleuFonceOuverte1
+  - first:
+      213: 4804270354502425904
+    second: FenetreBleuFonceOuverte2
+  - first:
+      213: 3636080740482592412
+    second: "\xE9lement batiment4_6"
+  - first:
+      213: -3166599898468309960
+    second: "\xE9lement batiment4_7"
+  - first:
+      213: -1331937367959374525
+    second: "\xE9lement batiment4_8"
+  - first:
+      213: -3176099587590129893
+    second: "\xE9lement batiment4_9"
+  - first:
+      213: 681757950313545596
+    second: "\xE9lement batiment4_10"
+  - first:
+      213: 7770692574784547447
+    second: "\xE9lement batiment4_11"
+  - first:
+      213: -8360655712289039325
+    second: "\xE9lement batiment4_12"
+  - first:
+      213: 1868963357023992731
+    second: "\xE9lement batiment4_13"
+  - first:
+      213: 6375656812241225524
+    second: "\xE9lement batiment4_14"
+  - first:
+      213: 1510083180707672517
+    second: "\xE9lement batiment4_15"
+  - first:
+      213: -538675302878756703
+    second: MurGrisBordDroit
+  - first:
+      213: 129290446402395095
+    second: FenetreBleuFonceOuverte3
+  - first:
+      213: 3005730692989416036
+    second: "\xE9lement batiment4_18"
+  - first:
+      213: -8729769624428440782
+    second: "\xE9lement batiment4_19"
+  - first:
+      213: 6998037401010153445
+    second: MurGrisSansBord
+  - first:
+      213: -2024434578489261105
+    second: "\xE9lement batiment4_21"
+  - first:
+      213: 6348410909488993457
+    second: MurGrisBordGauche
+  - first:
+      213: -3046035097108228316
+    second: "\xE9lement batiment4_23"
+  - first:
+      213: 8673811720161864975
+    second: FenetreOuverte1Allumee1
+  - first:
+      213: 2790384131548451194
+    second: FenetreOuverte1Allumee2
+  - first:
+      213: -481736951383050049
+    second: FenetreOuverte1Allumee3
+  - first:
+      213: 3351267993294956568
+    second: FenetreOuverte1Allumee4
+  - first:
+      213: 4651951705628506625
+    second: FenetreOuverte1Eteinte1
+  - first:
+      213: -8548739897004027433
+    second: "\xE9lement batiment4_29"
+  - first:
+      213: -36983700113992805
+    second: "\xE9lement batiment4_30"
+  - first:
+      213: 345350190137591128
+    second: FenetreOuverte1Eteinte2
+  - first:
+      213: -3338651612597291484
+    second: FenetreOuverte1Eteinte3
+  - first:
+      213: -2581628634808865467
+    second: FenetreOuverte1Eteinte4
+  - first:
+      213: -1107709820592843593
+    second: MurGrisBord
+  - first:
+      213: -4607379884961578378
+    second: ToitBleu2
+  - first:
+      213: -1247547597399401331
+    second: BalconBleu1
+  - first:
+      213: -3397498683159738381
+    second: BalconGris1
+  - first:
+      213: 1943581069603374263
+    second: Poster1
+  - first:
+      213: -6478280475286055924
+    second: Poster2
+  - first:
+      213: 2406688887526663076
+    second: Poster3
+  - first:
+      213: -7955648654789013587
+    second: Poster4
+  - first:
+      213: -6700917774504002269
+    second: "\xE9lement batiment4_42"
+  - first:
+      213: -7709235926688724661
+    second: ToitGris2
+  - first:
+      213: 7050433879061190986
+    second: "\xE9lement batiment4_44"
+  - first:
+      213: 5586591671687044411
+    second: Echelle1
+  - first:
+      213: -5487121734545877233
+    second: Echelle2
+  - first:
+      213: -1549165207535315202
+    second: BalconBleu2
+  - first:
+      213: -116008678648171604
+    second: FenetreBleuOuverte2
+  - first:
+      213: -6833449929463786914
+    second: "\xE9lement batiment4_49"
+  - first:
+      213: -8959993228745334796
+    second: FenetreBleuOuverte1
+  - first:
+      213: 7644924148500621461
+    second: FenetreBleuOuverte3
+  - first:
+      213: -1118432751371589499
+    second: ToitBleu1
+  - first:
+      213: -3598583695334019911
+    second: BalconGris2
+  - first:
+      213: -8226736767235822436
+    second: FenetreOuverte2Allumee1
+  - first:
+      213: -4744344626835422994
+    second: FenetreOuverte2Allumee2
+  - first:
+      213: 7793192754131260030
+    second: FenetreOuverte2Allumee3
+  - first:
+      213: -6848149041153428574
+    second: FenetreOuverte2Allumee4
+  - first:
+      213: -7190311230597689503
+    second: FenetreOuverte2Eteinte1
+  - first:
+      213: -8828236967277305411
+    second: FenetreOuverte2Eteinte2
+  - first:
+      213: -6795553654312763488
+    second: FenetreOuverte2Eteinte3
+  - first:
+      213: 4968336769373663221
+    second: FenetreOuverte2Eteinte4
+  - first:
+      213: -9117791631894979903
+    second: ToitGris1
+  - first:
+      213: -7999686273056779565
+    second: Poster5
+  - first:
+      213: -4367399582375148965
+    second: Poster6
+  - first:
+      213: -5146014353991817310
+    second: Poster7
+  - first:
+      213: -676517831615907887
+    second: Poster8
+  - first:
+      213: 2513727497810187487
+    second: "\xE9lement batiment4_67"
+  - first:
+      213: 1185947903253115238
+    second: "\xE9lement batiment4_68"
+  - first:
+      213: 5595955152064001299
+    second: "\xE9lement batiment4_69"
+  - first:
+      213: 6076685709663625003
+    second: "\xE9lement batiment4_70"
+  - first:
+      213: 5655603838637750675
+    second: "\xE9lement batiment4_71"
+  - first:
+      213: -1265231333601150362
+    second: Porte1Bleue
+  - first:
+      213: 3485724971325411591
+    second: Porte1Grise
+  - first:
+      213: 4278422643429855007
+    second: Porte2Bleue
+  - first:
+      213: -4407768130785397662
+    second: Porte2Grise
+  - first:
+      213: 9087663023418660689
+    second: Porte3Bleue
+  - first:
+      213: 2065495122951709676
+    second: Porte3Grise
+  - first:
+      213: 4842800680063939336
+    second: PorteCote1
+  - first:
+      213: -2336013325789454100
+    second: PorteCote2
+  - first:
+      213: 8218277844550129744
+    second: PorteCote3
+  - first:
+      213: 8138298326278006990
+    second: PorteCote4
+  - first:
+      213: 7258277141092570642
+    second: "\xE9lement batiment4_82"
+  - first:
+      213: -4626646692344302692
+    second: "\xE9lement batiment4_83"
+  - first:
+      213: 3046872619268576522
+    second: "\xE9lement batiment4_84"
+  - first:
+      213: 5810286605396353626
+    second: "\xE9lement batiment4_85"
+  - first:
+      213: -8219357880230310177
+    second: FenetreBleuFermee
+  - first:
+      213: 6356309951548146441
+    second: "\xE9lement batiment4_87"
+  - first:
+      213: -6367166843377358650
+    second: "\xE9lement batiment4_88"
+  - first:
+      213: -6124907128698758038
+    second: "\xE9lement batiment4_89"
+  - first:
+      213: 2618457943248309748
+    second: "\xE9lement batiment4_90"
+  - first:
+      213: -4963206062111855745
+    second: "\xE9lement batiment4_91"
+  - first:
+      213: 6778621179109721591
+    second: FenetreBleuFonceFermee
+  - first:
+      213: 100577516774342187
+    second: "\xE9lement batiment4_93"
+  - first:
+      213: -3160518628802250920
+    second: "\xE9lement batiment4_94"
+  - first:
+      213: 2279470569595930559
+    second: "\xE9lement batiment4_95"
+  - first:
+      213: 6123145859168207143
+    second: "\xE9lement batiment4_96"
+  - first:
+      213: 6804939438005346343
+    second: "\xE9lement batiment4_97"
+  - first:
+      213: 4051839968536450418
+    second: "\xE9lement batiment4_98"
+  - first:
+      213: -3326386632252814639
+    second: FenetreGrisOuverte1
+  - first:
+      213: -667406964417175181
+    second: FenetreGrisOuverte2
+  - first:
+      213: 1073893587335664617
+    second: Ouverte3
+  - first:
+      213: -1556663835546679590
+    second: FenetreOuverte3Allumee1
+  - first:
+      213: 2852511370796860116
+    second: FenetreOuverte3Allumee2
+  - first:
+      213: -2279040040191943219
+    second: FenetreOuverte3Allumee3
+  - first:
+      213: 4041229576866959153
+    second: FenetreOuverte3Allumee4
+  - first:
+      213: 1621996664690531115
+    second: FenetreOuverte3Eteinte1
+  - first:
+      213: 2808445680804067416
+    second: FenetreOuverte3Eteinte2
+  - first:
+      213: 7939459138907981179
+    second: FenetreOuverte3Eteinte3
+  - first:
+      213: 837877477399729499
+    second: FenetreOuverte3Eteinte4
+  - first:
+      213: 2182600787229184553
+    second: "\xE9lement batiment4_110"
+  - first:
+      213: -7533941882784762000
+    second: ChaiseGrise
+  - first:
+      213: -4940415148110698881
+    second: ChaiseBleue
+  - first:
+      213: -610706076966847053
+    second: Camera2Face
+  - first:
+      213: -1232863471299048912
+    second: Camera1Face
+  - first:
+      213: -2641255699025699911
+    second: InterphoneGris1Face
+  - first:
+      213: 7788690937530356631
+    second: InterphoneGris2
+  - first:
+      213: -8666608760835214593
+    second: InterphoneGris1Cote
+  - first:
+      213: -3801567910826003709
+    second: PorteVitreeBleue
+  - first:
+      213: 4166664088169473458
+    second: PorteVitreeGrise
+  - first:
+      213: 156807617798416004
+    second: LuminaireBleu
+  - first:
+      213: -5110282416936681179
+    second: LuminaireGris
+  - first:
+      213: 8294720700721026835
+    second: CommodeGrise
+  - first:
+      213: -7900379736186888848
+    second: CommodeBleue
+  - first:
+      213: -5184121281771117145
+    second: Camera1Cote1
+  - first:
+      213: 4263886527811477162
+    second: Camera2Cote
+  - first:
+      213: 6261893966211908614
+    second: InterphoneBleu1Face
+  - first:
+      213: 739576218106276893
+    second: InterphoneBleu2
+  - first:
+      213: -5068525676377965098
+    second: InterphoneBleu1Cote
+  - first:
+      213: 5169217447017521219
+    second: Camera1Cote2Gris
+  - first:
+      213: 1837401716684264071
+    second: Camera1Cote2Bleue
+  - first:
+      213: 4164156069201811725
+    second: "\xE9lement batiment4_131"
+  - first:
+      213: -3180505607825849494
+    second: "\xE9lement batiment4_132"
+  - first:
+      213: 6216080111630537445
+    second: FenetreGrisFermee
+  - first:
+      213: -5453251714269503684
+    second: "\xE9lement batiment4_68"
+  - first:
+      213: 8304297582278051951
+    second: "\xE9lement batiment4_70"
+  - first:
+      213: 2130980868957523931
+    second: "\xE9lement batiment4_71"
+  - first:
+      213: -9202672165290352882
+    second: FenetreBleuFermee
+  - first:
+      213: 2386848771492067519
+    second: "\xE9lement batiment4_91"
+  - first:
+      213: -6521912127867979425
+    second: FenetreBleuFonceFermee
+  - first:
+      213: 869491401442261483
+    second: "\xE9lement batiment4_0"
+  - first:
+      213: -9127372062158511533
+    second: "\xE9lement batiment4_1"
+  - first:
+      213: 5136938256048676325
+    second: "\xE9lement batiment4_2"
+  - first:
+      213: 3110784698912682792
+    second: "\xE9lement batiment4_3"
+  - first:
+      213: 2258516817941618953
+    second: FenetreBleuFonceOuverte1
+  - first:
+      213: 6389799777870734226
+    second: FenetreBleuFonceOuverte2
+  - first:
+      213: 8597460179254936000
+    second: "\xE9lement batiment4_6"
+  - first:
+      213: 4542629371462562072
+    second: "\xE9lement batiment4_7"
+  - first:
+      213: 5149421564096587021
+    second: "\xE9lement batiment4_8"
+  - first:
+      213: 1242063079371858781
+    second: "\xE9lement batiment4_9"
+  - first:
+      213: 1344534865839960359
+    second: "\xE9lement batiment4_10"
+  - first:
+      213: 2165183633004944881
+    second: "\xE9lement batiment4_11"
+  - first:
+      213: -2654173253041901456
+    second: "\xE9lement batiment4_12"
+  - first:
+      213: -3580901726203434679
+    second: "\xE9lement batiment4_13"
+  - first:
+      213: 729553003743701092
+    second: "\xE9lement batiment4_14"
+  - first:
+      213: -3592762095026365818
+    second: "\xE9lement batiment4_15"
+  - first:
+      213: -7365148889522706289
+    second: MurGrisBordDroit
+  - first:
+      213: -2869833145620063090
+    second: FenetreBleuFonceOuverte3
+  - first:
+      213: 5901914754748024147
+    second: "\xE9lement batiment4_18"
+  - first:
+      213: -2442926113186599698
+    second: "\xE9lement batiment4_19"
+  - first:
+      213: 8458009842561802010
+    second: MurGrisSansBord
+  - first:
+      213: 8396207331426266276
+    second: "\xE9lement batiment4_21"
+  - first:
+      213: -1454881192214901147
+    second: MurGrisBordGauche
+  - first:
+      213: -7339979475629175346
+    second: "\xE9lement batiment4_23"
+  - first:
+      213: 303068450138912958
+    second: FenetreOuverte1Allumee1
+  - first:
+      213: -4041921971775932159
+    second: FenetreOuverte1Allumee2
+  - first:
+      213: 1494860490565406579
+    second: FenetreOuverte1Allumee3
+  - first:
+      213: -7042981471898406861
+    second: FenetreOuverte1Allumee4
+  - first:
+      213: 7483733941144990898
+    second: FenetreOuverte1Eteinte1
+  - first:
+      213: 4940849530592209778
+    second: "\xE9lement batiment4_29"
+  - first:
+      213: -4767707764791151522
+    second: "\xE9lement batiment4_30"
+  - first:
+      213: -2841364962922935390
+    second: FenetreOuverte1Eteinte2
+  - first:
+      213: 250859725268650494
+    second: FenetreOuverte1Eteinte3
+  - first:
+      213: 3408261840233891206
+    second: FenetreOuverte1Eteinte4
+  - first:
+      213: -7625756803185048809
+    second: MurGrisBord
+  - first:
+      213: 4959098047745270353
+    second: ToitBleu2
+  - first:
+      213: -2600550142919104015
+    second: BalconBleu1
+  - first:
+      213: -3927491844147359317
+    second: BalconGris1
+  - first:
+      213: 4843419336099652270
+    second: Poster1
+  - first:
+      213: -9017613704495650437
+    second: Poster2
+  - first:
+      213: 8937425481017342354
+    second: Poster3
+  - first:
+      213: 5976325805306697091
+    second: Poster4
+  - first:
+      213: 5919095771054285604
+    second: "\xE9lement batiment4_42"
+  - first:
+      213: -7488676665537985845
+    second: ToitGris2
+  - first:
+      213: 4517719170801481155
+    second: "\xE9lement batiment4_44"
+  - first:
+      213: -2343694505396835284
+    second: Echelle1
+  - first:
+      213: -72315272197734428
+    second: Echelle2
+  - first:
+      213: 7462161850659542821
+    second: BalconBleu2
+  - first:
+      213: -6890471557168702482
+    second: FenetreBleuOuverte2
+  - first:
+      213: -7834492893261578860
+    second: "\xE9lement batiment4_49"
+  - first:
+      213: 2531489649268932972
+    second: FenetreBleuOuverte1
+  - first:
+      213: 2790525041316439594
+    second: FenetreBleuOuverte3
+  - first:
+      213: 3146586553838705227
+    second: ToitBleu1
+  - first:
+      213: -4655418439513189010
+    second: BalconGris2
+  - first:
+      213: 5171490559333433926
+    second: FenetreOuverte2Allumee1
+  - first:
+      213: -7942546151643524547
+    second: FenetreOuverte2Allumee2
+  - first:
+      213: -577813980427571935
+    second: FenetreOuverte2Allumee3
+  - first:
+      213: -8372166835840760690
+    second: FenetreOuverte2Allumee4
+  - first:
+      213: -2730177042642588038
+    second: FenetreOuverte2Eteinte1
+  - first:
+      213: -596403696721995753
+    second: FenetreOuverte2Eteinte2
+  - first:
+      213: -2965700822405543313
+    second: FenetreOuverte2Eteinte3
+  - first:
+      213: -2834803500213921095
+    second: FenetreOuverte2Eteinte4
+  - first:
+      213: 1688048544388806861
+    second: ToitGris1
+  - first:
+      213: 3616280823789080707
+    second: Poster5
+  - first:
+      213: -5231223453916519665
+    second: Poster6
+  - first:
+      213: 519426811814211379
+    second: Poster7
+  - first:
+      213: -4182782567357111290
+    second: Poster8
+  - first:
+      213: 4428664355579393861
+    second: "\xE9lement batiment4_67"
+  - first:
+      213: -7364483422309985669
+    second: "\xE9lement batiment4_69"
+  - first:
+      213: 8671971751988759379
+    second: Porte1Bleue
+  - first:
+      213: -3210349887425613014
+    second: Porte1Grise
+  - first:
+      213: 4348193040999780807
+    second: Porte2Bleue
+  - first:
+      213: 4726277892392880464
+    second: Porte2Grise
+  - first:
+      213: -7868184433118328103
+    second: Porte3Bleue
+  - first:
+      213: -8981001449079534551
+    second: Porte3Grise
+  - first:
+      213: -7099457712244252721
+    second: PorteCote1
+  - first:
+      213: -5495064770683368751
+    second: PorteCote2
+  - first:
+      213: 8406889626389293357
+    second: PorteCote3
+  - first:
+      213: 1081995847917233502
+    second: PorteCote4
+  - first:
+      213: -6157621617606756531
+    second: "\xE9lement batiment4_82"
+  - first:
+      213: 4672889092981786860
+    second: "\xE9lement batiment4_83"
+  - first:
+      213: 7814767878856381405
+    second: "\xE9lement batiment4_84"
+  - first:
+      213: 3964551058883126971
+    second: "\xE9lement batiment4_85"
+  - first:
+      213: 4607990834464113102
+    second: "\xE9lement batiment4_87"
+  - first:
+      213: 3430631453498061079
+    second: "\xE9lement batiment4_88"
+  - first:
+      213: -5503286660322994734
+    second: "\xE9lement batiment4_89"
+  - first:
+      213: -1203094495158363252
+    second: "\xE9lement batiment4_90"
+  - first:
+      213: 6565942974547351106
+    second: "\xE9lement batiment4_93"
+  - first:
+      213: -7014897628001085507
+    second: "\xE9lement batiment4_94"
+  - first:
+      213: -146797442359537265
+    second: "\xE9lement batiment4_95"
+  - first:
+      213: 4813028032265251320
+    second: "\xE9lement batiment4_96"
+  - first:
+      213: 7637239049913566056
+    second: "\xE9lement batiment4_97"
+  - first:
+      213: 4925780830564193
+    second: "\xE9lement batiment4_98"
+  - first:
+      213: 1077354381164060426
+    second: FenetreGrisOuverte1
+  - first:
+      213: 7101711871054786670
+    second: FenetreGrisOuverte2
+  - first:
+      213: 1082655209365440370
+    second: Ouverte3
+  - first:
+      213: 7221791040165925569
+    second: FenetreOuverte3Allumee1
+  - first:
+      213: -251001900507301320
+    second: FenetreOuverte3Allumee2
+  - first:
+      213: -2957320738938199725
+    second: FenetreOuverte3Allumee3
+  - first:
+      213: 3104950011173421418
+    second: FenetreOuverte3Allumee4
+  - first:
+      213: 609403518441375206
+    second: FenetreOuverte3Eteinte1
+  - first:
+      213: 5025548001822414215
+    second: FenetreOuverte3Eteinte2
+  - first:
+      213: 7173406894001642318
+    second: FenetreOuverte3Eteinte3
+  - first:
+      213: -5867937667145073127
+    second: FenetreOuverte3Eteinte4
+  - first:
+      213: 1656401442885832630
+    second: "\xE9lement batiment4_110"
+  - first:
+      213: 5056134517509516293
+    second: ChaiseGrise
+  - first:
+      213: -3540764145654101393
+    second: ChaiseBleue
+  - first:
+      213: 4245028472321227618
+    second: Camera2Face
+  - first:
+      213: -7436636447687860125
+    second: Camera1Face
+  - first:
+      213: 7182713468404193019
+    second: InterphoneGris1Face
+  - first:
+      213: 1045200597946034507
+    second: InterphoneGris2
+  - first:
+      213: 5237670085353014143
+    second: InterphoneGris1Cote
+  - first:
+      213: -3417602846386894132
+    second: PorteVitreeBleue
+  - first:
+      213: 2881448400249832573
+    second: PorteVitreeGrise
+  - first:
+      213: 8713784324322184056
+    second: LuminaireBleu
+  - first:
+      213: -6857979831146103280
+    second: LuminaireGris
+  - first:
+      213: -8139930713955984022
+    second: CommodeGrise
+  - first:
+      213: -165860177216880778
+    second: CommodeBleue
+  - first:
+      213: 929985473268451033
+    second: Camera1Cote1
+  - first:
+      213: -5055295670897788957
+    second: Camera2Cote
+  - first:
+      213: -2993781418526946240
+    second: InterphoneBleu1Face
+  - first:
+      213: 2872558390643807390
+    second: InterphoneBleu2
+  - first:
+      213: -9035437640118335930
+    second: InterphoneBleu1Cote
+  - first:
+      213: 2667455494229322749
+    second: Camera1Cote2Gris
+  - first:
+      213: -7310348765147641907
+    second: Camera1Cote2Bleue
+  - first:
+      213: -5764555886726056645
+    second: "\xE9lement batiment4_131"
+  - first:
+      213: -381348245430584260
+    second: "\xE9lement batiment4_132"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FenetreBleuFonceOuverte1
+      rect:
+        serializedVersion: 2
+        x: 4351
+        y: 1683
+        width: 328
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901e7ac641dd75f10800000000000000
+      internalID: 2258516817941618953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreBleuFonceOuverte2
+      rect:
+        serializedVersion: 2
+        x: 4731
+        y: 1677
+        width: 329
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293ead91b012da850800000000000000
+      internalID: 6389799777870734226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MurGrisBordDroit
+      rect:
+        serializedVersion: 2
+        x: 3765
+        y: 1151
+        width: 209
+        height: 976
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88e2227b1cb9c990800000000000000
+      internalID: -7365148889522706289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreBleuFonceOuverte3
+      rect:
+        serializedVersion: 2
+        x: 5118
+        y: 1677
+        width: 322
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c9ca685fd4c28d0800000000000000
+      internalID: -2869833145620063090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MurGrisSansBord
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 1128
+        width: 1647
+        height: 994
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f57aca323e06570800000000000000
+      internalID: 8458009842561802010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MurGrisBordGauche
+      rect:
+        serializedVersion: 2
+        x: 3472
+        y: 1144
+        width: 216
+        height: 978
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e42a393493fcbe0800000000000000
+      internalID: -1454881192214901147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Allumee1
+      rect:
+        serializedVersion: 2
+        x: 5476
+        y: 1712
+        width: 216
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb878215627b43400800000000000000
+      internalID: 303068450138912958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Allumee2
+      rect:
+        serializedVersion: 2
+        x: 5763
+        y: 1707
+        width: 216
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109f276b16538e7c0800000000000000
+      internalID: -4041921971775932159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Allumee3
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 1712
+        width: 211
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fcae032bfceb410800000000000000
+      internalID: 1494860490565406579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Allumee4
+      rect:
+        serializedVersion: 2
+        x: 6343
+        y: 1712
+        width: 211
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33076d7aaad424e90800000000000000
+      internalID: -7042981471898406861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Eteinte1
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 1706
+        width: 217
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b43b737e509bd760800000000000000
+      internalID: 7483733941144990898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Eteinte2
+      rect:
+        serializedVersion: 2
+        x: 6899
+        y: 1706
+        width: 217
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abccb3de917198d0800000000000000
+      internalID: -2841364962922935390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Eteinte3
+      rect:
+        serializedVersion: 2
+        x: 7192
+        y: 1706
+        width: 211
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9071d479b3b7300800000000000000
+      internalID: 250859725268650494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte1Eteinte4
+      rect:
+        serializedVersion: 2
+        x: 7480
+        y: 1706
+        width: 210
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68509a006149c4f20800000000000000
+      internalID: 3408261840233891206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MurGrisBord
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1112
+        width: 1651
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71303aa279edb2690800000000000000
+      internalID: -7625756803185048809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToitBleu2
+      rect:
+        serializedVersion: 2
+        x: 7907
+        y: 1911
+        width: 1647
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152a036666142d440800000000000000
+      internalID: 4959098047745270353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconBleu1
+      rect:
+        serializedVersion: 2
+        x: 9618
+        y: 1882
+        width: 317
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f927be5c6df8ebd0800000000000000
+      internalID: -2600550142919104015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconGris1
+      rect:
+        serializedVersion: 2
+        x: 10005
+        y: 1882
+        width: 316
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba15a5bf9febe79c0800000000000000
+      internalID: -3927491844147359317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster1
+      rect:
+        serializedVersion: 2
+        x: 10351
+        y: 1654
+        width: 216
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea26a728938473340800000000000000
+      internalID: 4843419336099652270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster2
+      rect:
+        serializedVersion: 2
+        x: 10734
+        y: 1654
+        width: 214
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79a7d5fc100bd280800000000000000
+      internalID: -9017613704495650437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster3
+      rect:
+        serializedVersion: 2
+        x: 11118
+        y: 1654
+        width: 228
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299309a5f1d180c70800000000000000
+      internalID: 8937425481017342354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster4
+      rect:
+        serializedVersion: 2
+        x: 11505
+        y: 1654
+        width: 214
+        height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3855e4fe7ac20f250800000000000000
+      internalID: 5976325805306697091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_42"
+      rect:
+        serializedVersion: 2
+        x: 3463
+        y: 1862
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42325393e3ad42250800000000000000
+      internalID: 5919095771054285604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToitGris2
+      rect:
+        serializedVersion: 2
+        x: 7907
+        y: 1718
+        width: 1647
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc20ad8df30e21890800000000000000
+      internalID: -7488676665537985845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_44"
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 1844
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5389266a922be30800000000000000
+      internalID: 4517719170801481155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echelle1
+      rect:
+        serializedVersion: 2
+        x: 9624
+        y: 1437
+        width: 117
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c69c7c346897fd0800000000000000
+      internalID: -2343694505396835284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Echelle2
+      rect:
+        serializedVersion: 2
+        x: 9817
+        y: 1437
+        width: 117
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef71d0a4a51ffef0800000000000000
+      internalID: -72315272197734428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconBleu2
+      rect:
+        serializedVersion: 2
+        x: 10005
+        y: 1695
+        width: 316
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527980dbaacee8760800000000000000
+      internalID: 7462161850659542821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreBleuOuverte2
+      rect:
+        serializedVersion: 2
+        x: 4351
+        y: 1098
+        width: 328
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebd60440a02060a0800000000000000
+      internalID: -6890471557168702482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreBleuOuverte1
+      rect:
+        serializedVersion: 2
+        x: 4732
+        y: 1103
+        width: 327
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61c0417c68a12320800000000000000
+      internalID: 2531489649268932972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreBleuOuverte3
+      rect:
+        serializedVersion: 2
+        x: 5118
+        y: 1103
+        width: 322
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26af708dbfe9b620800000000000000
+      internalID: 2790525041316439594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToitBleu1
+      rect:
+        serializedVersion: 2
+        x: 7849
+        y: 1572
+        width: 1757
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a9394accbeaab20800000000000000
+      internalID: 3146586553838705227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BalconGris2
+      rect:
+        serializedVersion: 2
+        x: 9999
+        y: 1513
+        width: 316
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6553004891a46fb0800000000000000
+      internalID: -4655418439513189010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Allumee1
+      rect:
+        serializedVersion: 2
+        x: 5476
+        y: 1128
+        width: 216
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6420b549343d4c740800000000000000
+      internalID: 5171490559333433926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Allumee2
+      rect:
+        serializedVersion: 2
+        x: 5763
+        y: 1127
+        width: 216
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3254234b5866c190800000000000000
+      internalID: -7942546151643524547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Allumee3
+      rect:
+        serializedVersion: 2
+        x: 6053
+        y: 1127
+        width: 214
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d2c560f313bf7f0800000000000000
+      internalID: -577813980427571935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Allumee4
+      rect:
+        serializedVersion: 2
+        x: 6338
+        y: 1133
+        width: 221
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84c765de9610db80800000000000000
+      internalID: -8372166835840760690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Eteinte1
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 1127
+        width: 217
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7eac5fd1767c1ad0800000000000000
+      internalID: -2730177042642588038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Eteinte2
+      rect:
+        serializedVersion: 2
+        x: 6900
+        y: 1122
+        width: 216
+        height: 414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718d72a6ff529b7f0800000000000000
+      internalID: -596403696721995753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Eteinte3
+      rect:
+        serializedVersion: 2
+        x: 7192
+        y: 1127
+        width: 211
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a0f62a0d6b7d6d0800000000000000
+      internalID: -2965700822405543313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte2Eteinte4
+      rect:
+        serializedVersion: 2
+        x: 7480
+        y: 1127
+        width: 216
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba17b96c31c8a8d0800000000000000
+      internalID: -2834803500213921095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToitGris1
+      rect:
+        serializedVersion: 2
+        x: 7849
+        y: 1384
+        width: 1757
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8f8eb15372d6710800000000000000
+      internalID: 1688048544388806861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster5
+      rect:
+        serializedVersion: 2
+        x: 10351
+        y: 1080
+        width: 216
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3805106df3c9f2230800000000000000
+      internalID: 3616280823789080707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster6
+      rect:
+        serializedVersion: 2
+        x: 10732
+        y: 1080
+        width: 216
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f032d902cf5f667b0800000000000000
+      internalID: -5231223453916519665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster7
+      rect:
+        serializedVersion: 2
+        x: 11118
+        y: 1080
+        width: 217
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33feffceeef553700800000000000000
+      internalID: 519426811814211379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Poster8
+      rect:
+        serializedVersion: 2
+        x: 11505
+        y: 1080
+        width: 214
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604abf39a65c3f5c0800000000000000
+      internalID: -4182782567357111290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_69"
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 1128
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72d5fa98591cc990800000000000000
+      internalID: -7364483422309985669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_70"
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 1124
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6881dc27aace3370800000000000000
+      internalID: 8304297582278051951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Porte1Bleue
+      rect:
+        serializedVersion: 2
+        x: 7915
+        y: 776
+        width: 221
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b0383cc58095870800000000000000
+      internalID: 8671971751988759379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Porte1Grise
+      rect:
+        serializedVersion: 2
+        x: 8206
+        y: 776
+        width: 217
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23f74b59cb8273d0800000000000000
+      internalID: -3210349887425613014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Porte2Bleue
+      rect:
+        serializedVersion: 2
+        x: 8493
+        y: 776
+        width: 217
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c11e977882e75c30800000000000000
+      internalID: 4348193040999780807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Porte2Grise
+      rect:
+        serializedVersion: 2
+        x: 8780
+        y: 776
+        width: 217
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0590cd5c3bc179140800000000000000
+      internalID: 4726277892392880464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Porte3Bleue
+      rect:
+        serializedVersion: 2
+        x: 9068
+        y: 776
+        width: 222
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da49bc02f79ec290800000000000000
+      internalID: -7868184433118328103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Porte3Grise
+      rect:
+        serializedVersion: 2
+        x: 9355
+        y: 770
+        width: 222
+        height: 515
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c8854f3c21d5380800000000000000
+      internalID: -8981001449079534551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorteCote1
+      rect:
+        serializedVersion: 2
+        x: 9648
+        y: 764
+        width: 64
+        height: 524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf16c343d8a97d90800000000000000
+      internalID: -7099457712244252721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorteCote2
+      rect:
+        serializedVersion: 2
+        x: 9765
+        y: 764
+        width: 64
+        height: 527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da87a584bb9db3b0800000000000000
+      internalID: -5495064770683368751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorteCote3
+      rect:
+        serializedVersion: 2
+        x: 9888
+        y: 764
+        width: 58
+        height: 527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29a9d6d2954ba470800000000000000
+      internalID: 8406889626389293357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorteCote4
+      rect:
+        serializedVersion: 2
+        x: 10011
+        y: 764
+        width: 64
+        height: 527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55ed83bd75040f00800000000000000
+      internalID: 1081995847917233502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_82"
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1098
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47784563cbbb8aa0800000000000000
+      internalID: -6157621617606756531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreBleuFermee
+      rect:
+        serializedVersion: 2
+        x: 3974
+        y: 1109
+        width: 309
+        height: 464
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f5e7b6c6a894080800000000000000
+      internalID: -9202672165290352882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreBleuFonceFermee
+      rect:
+        serializedVersion: 2
+        x: 3974
+        y: 1680
+        width: 304
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59fd1a69738d75a0800000000000000
+      internalID: -6521912127867979425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_95"
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 57
+        width: 1646
+        height: 982
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f815932018876fdf0800000000000000
+      internalID: -146797442359537265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_96"
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 50
+        width: 1652
+        height: 993
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9ea2dae7f4bc240800000000000000
+      internalID: 4813028032265251320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_97"
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 74
+        width: 216
+        height: 994
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86307dab37cecf960800000000000000
+      internalID: 7637239049913566056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_98"
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 79
+        width: 206
+        height: 983
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fa5a8b8ff711000800000000000000
+      internalID: 4925780830564193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreGrisOuverte1
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 530
+        width: 305
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f9e720a1883fe00800000000000000
+      internalID: 1077354381164060426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreGrisOuverte2
+      rect:
+        serializedVersion: 2
+        x: 4755
+        y: 530
+        width: 287
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60356bf1595e8260800000000000000
+      internalID: 7101711871054786670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ouverte3
+      rect:
+        serializedVersion: 2
+        x: 5130
+        y: 530
+        width: 305
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27704704d2d560f00800000000000000
+      internalID: 1082655209365440370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Allumee1
+      rect:
+        serializedVersion: 2
+        x: 5476
+        y: 554
+        width: 216
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2503730b4f83460800000000000000
+      internalID: 7221791040165925569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Allumee2
+      rect:
+        serializedVersion: 2
+        x: 5766
+        y: 559
+        width: 216
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a7052f913448cf0800000000000000
+      internalID: -251001900507301320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Allumee3
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 559
+        width: 211
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35161bcd47c75f6d0800000000000000
+      internalID: -2957320738938199725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Allumee4
+      rect:
+        serializedVersion: 2
+        x: 6337
+        y: 559
+        width: 217
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61465d959ff61b20800000000000000
+      internalID: 3104950011173421418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Eteinte1
+      rect:
+        serializedVersion: 2
+        x: 6612
+        y: 553
+        width: 217
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e542917549057800800000000000000
+      internalID: 609403518441375206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Eteinte2
+      rect:
+        serializedVersion: 2
+        x: 6905
+        y: 553
+        width: 217
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7859c4af7455eb540800000000000000
+      internalID: 5025548001822414215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Eteinte3
+      rect:
+        serializedVersion: 2
+        x: 7193
+        y: 553
+        width: 210
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b5e42509f0d8360800000000000000
+      internalID: 7173406894001642318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreOuverte3Eteinte4
+      rect:
+        serializedVersion: 2
+        x: 7474
+        y: 553
+        width: 216
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91efea908c5e09ea0800000000000000
+      internalID: -5867937667145073127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_110"
+      rect:
+        serializedVersion: 2
+        x: 9742
+        y: 726
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf87a81658bcf610800000000000000
+      internalID: 1656401442885832630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChaiseGrise
+      rect:
+        serializedVersion: 2
+        x: 5054
+        y: 102
+        width: 251
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ceebc1e8ffa2640800000000000000
+      internalID: 5056134517509516293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChaiseBleue
+      rect:
+        serializedVersion: 2
+        x: 5435
+        y: 97
+        width: 263
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a09d0f4cdacdec0800000000000000
+      internalID: -3540764145654101393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camera2Face
+      rect:
+        serializedVersion: 2
+        x: 6513
+        y: 284
+        width: 244
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b302a87ee59ea30800000000000000
+      internalID: 4245028472321227618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camera1Face
+      rect:
+        serializedVersion: 2
+        x: 6835
+        y: 167
+        width: 305
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360a7d34d82cbc890800000000000000
+      internalID: -7436636447687860125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterphoneGris1Face
+      rect:
+        serializedVersion: 2
+        x: 7204
+        y: 319
+        width: 123
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf655a708df1ea360800000000000000
+      internalID: 7182713468404193019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterphoneGris2
+      rect:
+        serializedVersion: 2
+        x: 7398
+        y: 319
+        width: 122
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b496997f76c418e00800000000000000
+      internalID: 1045200597946034507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterphoneGris1Cote
+      rect:
+        serializedVersion: 2
+        x: 7591
+        y: 313
+        width: 87
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7308283131ffa840800000000000000
+      internalID: 5237670085353014143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorteVitreeBleue
+      rect:
+        serializedVersion: 2
+        x: 7919
+        y: 202
+        width: 404
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccaceb5815c3290d0800000000000000
+      internalID: -3417602846386894132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorteVitreeGrise
+      rect:
+        serializedVersion: 2
+        x: 8401
+        y: 202
+        width: 409
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74428fad06fcf720800000000000000
+      internalID: 2881448400249832573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuminaireBleu
+      rect:
+        serializedVersion: 2
+        x: 9097
+        y: 454
+        width: 240
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b4794eca49de870800000000000000
+      internalID: 8713784324322184056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LuminaireGris
+      rect:
+        serializedVersion: 2
+        x: 9384
+        y: 454
+        width: 240
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e3ebfbdaf83d0a0800000000000000
+      internalID: -6857979831146103280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommodeGrise
+      rect:
+        serializedVersion: 2
+        x: 4122
+        y: 173
+        width: 346
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d9c529428290f80800000000000000
+      internalID: -8139930713955984022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CommodeBleue
+      rect:
+        serializedVersion: 2
+        x: 4568
+        y: 173
+        width: 351
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fba9e2c0fb2bdf0800000000000000
+      internalID: -165860177216880778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camera1Cote1
+      rect:
+        serializedVersion: 2
+        x: 5798
+        y: 179
+        width: 322
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d680745cd8f7ec00800000000000000
+      internalID: 929985473268451033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camera2Cote
+      rect:
+        serializedVersion: 2
+        x: 6249
+        y: 138
+        width: 258
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e731951f5bf7d9b0800000000000000
+      internalID: -5055295670897788957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterphoneBleu1Face
+      rect:
+        serializedVersion: 2
+        x: 7204
+        y: 27
+        width: 123
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c498d59a3f376d0800000000000000
+      internalID: -2993781418526946240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterphoneBleu2
+      rect:
+        serializedVersion: 2
+        x: 7398
+        y: 27
+        width: 122
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9454e603a06dd720800000000000000
+      internalID: 2872558390643807390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterphoneBleu1Cote
+      rect:
+        serializedVersion: 2
+        x: 7588
+        y: 26
+        width: 87
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6468d8e865dab9280800000000000000
+      internalID: -9035437640118335930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camera1Cote2Gris
+      rect:
+        serializedVersion: 2
+        x: 9015
+        y: 132
+        width: 369
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbe3b3a3a4b40520800000000000000
+      internalID: 2667455494229322749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camera1Cote2Bleue
+      rect:
+        serializedVersion: 2
+        x: 9507
+        y: 132
+        width: 369
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7c82da78c6c8a90800000000000000
+      internalID: -7310348765147641907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\xE9lement batiment4_132"
+      rect:
+        serializedVersion: 2
+        x: 3334
+        y: 39
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c346f8acd25baf0800000000000000
+      internalID: -381348245430584260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FenetreGrisFermee
+      rect:
+        serializedVersion: 2
+        x: 3985
+        y: 533
+        width: 289
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2db156de3f34650800000000000000
+      internalID: 6216080111630537445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

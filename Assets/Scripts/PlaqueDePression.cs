@@ -11,13 +11,16 @@ public class PlaqueDePression : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<BoxCollider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
-        actualCollidersOffset = actualColliders.Count;
+        GetComponent<PolygonCollider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
+        if (actualColliders != null)
+            actualCollidersOffset = actualColliders.Count;
+        else
+            actualCollidersOffset = 0;
     }
 
     private void Update()
     {
-        GetComponent<BoxCollider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
+        GetComponent<PolygonCollider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
 
         // La plaque de pression ne détecte pas les objets ou personnage qui lui marchent dessus
         // Elle détecte en réalité une différence de colliders sur elle
