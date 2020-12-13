@@ -50,12 +50,14 @@ public class Hero : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Debug.Log(onTheGround);
         if (activeControl && !dash)
         {
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
-            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 2f), new Vector3(0.45f,0.25f, 1f), 0, whatIsGround);
+            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f), 0, whatIsGround);
+            
             if(onTheGround)
             {
                 anim.SetBool("jump", false); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
@@ -73,7 +75,8 @@ public class Hero : MonoBehaviour
 
     void Update()
     {
-        //whatIsGround = Physics2D.GetLayerCollisionMask(8);
+        whatIsGround = Physics2D.GetLayerCollisionMask(8);
+
         // onTheGround = Physics2D.OverlapArea(new Vector2(transform.position.x - tailleX, transform.position.y - tailleY), new Vector2(transform.position.x + tailleX, transform.position.y - tailleY - 0.1f), whatIsGround);
         anim.SetBool("Grab", isPulling );
         anim.SetBool("directionGauche", flipLeft);
@@ -296,8 +299,9 @@ public class Hero : MonoBehaviour
 
             if((rb.velocity.x < 20 && !directionGauche) || (rb.velocity.x > -20 && directionGauche) )
             {            
+                
                 TimeNoMove += Time.deltaTime;
-                if(TimeNoMove > 0.05f)
+                 if(TimeNoMove > 0.02f)
                 {
                     break;
                 }
@@ -359,6 +363,7 @@ public class Hero : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // DeadZones
+
         if (collision.tag == "Dead")
         {
             RestartLevel();
@@ -396,7 +401,7 @@ public class Hero : MonoBehaviour
         // Draw a semitransparent blue cube at the transforms position
         Gizmos.color = Color.yellow;
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
-        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.75f), new Vector3(0.45f,0.25f, 1f));
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f));
     } 
 
    /* void OnDrawGizmos()
