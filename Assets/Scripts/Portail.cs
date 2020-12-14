@@ -29,7 +29,6 @@ public class Portail : MonoBehaviour
             if (collision.tag == "Item")
             {
                 collision.gameObject.layer = targetDimension + 12;
-                collision.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
                 cameras[portailLinked.targetDimension].GetComponent<Camera>().cullingMask |= 1 << targetDimension + 12; // Ajoute le layer de transition au culling mask de la dimension de départ
             }
             else if (collision.tag == "Player")
@@ -48,15 +47,9 @@ public class Portail : MonoBehaviour
             if (collision.tag == "Item")
             {
                 if (FindProvenance(collision.transform) == objetTransfert.provenance)
-                {
                     collision.gameObject.layer = targetDimension + 9;
-                    collision.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID(LayerMask.LayerToName(targetDimension + 9));
-                }
                 else
-                {
                     collision.gameObject.layer = portailLinked.targetDimension + 9;
-                    collision.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID(LayerMask.LayerToName(portailLinked.targetDimension + 9));
-                }
             }
             objectsReceived.Remove(objetTransfert);
             cameras[targetDimension].GetComponent<Camera>().cullingMask &= ~(1 << portailLinked.targetDimension + 12); // On retire le layer de transition du culling mask

@@ -75,7 +75,6 @@ public class Snap : MonoBehaviour
             // Activation de la nouvelle dimension
             cameras[actualDimension].GetComponent<Camera>().enabled = true;
             Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
-            GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID($"{LayerMask.LayerToName(actualDimension + 9)}Player");
         }
     }
 
@@ -107,7 +106,6 @@ public class Snap : MonoBehaviour
         // Activation de la nouvelle dimension
         cameras[actualDimension].GetComponent<Camera>().enabled = true;
         Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
-        GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID($"{LayerMask.LayerToName(actualDimension + 9)}Player");
 
         // Verification des layers de transition
         IgnorerTransition(actualDimension == dimensionAIgnorer);

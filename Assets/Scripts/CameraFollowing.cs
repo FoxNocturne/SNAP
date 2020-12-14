@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Experimental.Rendering.Universal;
 
 public class CameraFollowing : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class CameraFollowing : MonoBehaviour
     public float shakeSpeed, shakeMagnitude;
     public Image fading;
     public float fadingSpeed;
-    public Light2D globalLightPostApo;
 
     private bool following = true;
 
@@ -123,7 +121,6 @@ public class CameraFollowing : MonoBehaviour
         StartCoroutine(SizeCamera(3.5f));
         // StartCoroutine(ViewPortCamera(new Rect(0, 0.15f, 1f, 0.7f)));
         StartCoroutine(TomberBouclier(bouclier, player));
-        globalLightPostApo.intensity = 0.55f; // Changement de la luminosité pour le sous-terrain
     }
 
     IEnumerator TomberBouclier(Transform bouclier, GameObject player)
@@ -153,6 +150,7 @@ public class CameraFollowing : MonoBehaviour
         }
 
         //Destroy(bouclier);
+        Debug.Log("test");
         player.transform.position = new Vector2(0, -31.51f);
         Tableau = 2;
         player.GetComponent<Hero>().enabled = true;
