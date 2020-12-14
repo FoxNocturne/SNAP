@@ -11,7 +11,7 @@ TagManager:
   - Dead
   - TagCheckPoint
   - Sons
-
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -28,7 +28,7 @@ TagManager:
   - TransitionDictature
   - TransitionChaos
   - TransitionPostApo
-  - Checkpoint
+  - 
   - 
   - 
   - 
