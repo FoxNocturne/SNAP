@@ -35,7 +35,8 @@ public class PolicierAI : MonoBehaviour
 
         // Initialisation des variables importantes
         player = GameObject.FindGameObjectWithTag("Player");
-        currentTargetPos = path[currentTargetIndex].position;
+        if(path.Count != 0)
+            currentTargetPos = path[currentTargetIndex].position;
     }
 
     void Update()
@@ -43,7 +44,7 @@ public class PolicierAI : MonoBehaviour
         Vector2 currentPos = transform.position;
 
         // Déplacement
-        if (!isWaiting && !playerFinded)
+        if (!isWaiting && !playerFinded && path.Count != 0)
         {
             if (currentPos.x == currentTargetPos.x) // Pause entre chaque point
             {
