@@ -203,7 +203,6 @@ public class Hero : MonoBehaviour
 
                     objectPulling = hit.transform;
                     // GetComponent<SpriteRenderer>().color = Color.gray;
-                    hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     
                 }
@@ -215,9 +214,7 @@ public class Hero : MonoBehaviour
                 {
                     SonHero.PlayOneShot(sonMrX[5], 0.2f);
                     // GetComponent<SpriteRenderer>().color = Color.red;
-                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;               
-                    if (objectPulling)
-                        objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
+                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;         
 
                     objectPulling = null;
                     isPulling = false;  

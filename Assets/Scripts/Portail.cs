@@ -53,6 +53,7 @@ public class Portail : MonoBehaviour
             }
             objectsReceived.Remove(objetTransfert);
             cameras[targetDimension].GetComponent<Camera>().cullingMask &= ~(1 << portailLinked.targetDimension + 12); // On retire le layer de transition du culling mask
+            collision.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID(LayerMask.LayerToName(collision.gameObject.layer));
         }
     }
 
