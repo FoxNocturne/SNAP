@@ -1,0 +1,3128 @@
+fileFormatVersion: 2
+guid: 2129b0de2b7106d458f086008d476aee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8752868409023746914
+    second: elementbatimentB2,7 (2)_0
+  - first:
+      213: 3526013543242390811
+    second: elementbatimentB2,7 (2)_1
+  - first:
+      213: 5289558011949918142
+    second: Linge3
+  - first:
+      213: -564135556268383284
+    second: Fil2
+  - first:
+      213: 1053527435530571406
+    second: Fil3
+  - first:
+      213: -4053154478635433558
+    second: elementbatimentB2,7 (2)_5
+  - first:
+      213: 7692310808837454472
+    second: elementbatimentB2,7 (2)_6
+  - first:
+      213: -6048648736220929849
+    second: elementbatimentB2,7 (2)_7
+  - first:
+      213: -5655955793297677745
+    second: elementbatimentB2,7 (2)_8
+  - first:
+      213: -5777375483306781017
+    second: elementbatimentB2,7 (2)_9
+  - first:
+      213: 840862613683227718
+    second: elementbatimentB2,7 (2)_10
+  - first:
+      213: 9109588024230344321
+    second: elementbatimentB2,7 (2)_11
+  - first:
+      213: -683391230880322686
+    second: elementbatimentB2,7 (2)_12
+  - first:
+      213: -4253336281954350393
+    second: elementbatimentB2,7 (2)_13
+  - first:
+      213: -7124444420522259678
+    second: elementbatimentB2,7 (2)_14
+  - first:
+      213: 3093395463508532328
+    second: elementbatimentB2,7 (2)_15
+  - first:
+      213: -544078302715074846
+    second: elementbatimentB2,7 (2)_16
+  - first:
+      213: 8221203171621670183
+    second: elementbatimentB2,7 (2)_17
+  - first:
+      213: -1999688949351785746
+    second: elementbatimentB2,7 (2)_18
+  - first:
+      213: -4306869088089502184
+    second: elementbatimentB2,7 (2)_19
+  - first:
+      213: 3668303253286348834
+    second: elementbatimentB2,7 (2)_20
+  - first:
+      213: 50518082711800224
+    second: elementbatimentB2,7 (2)_21
+  - first:
+      213: -9025384225669191157
+    second: elementbatimentB2,7 (2)_22
+  - first:
+      213: 221299029191674283
+    second: elementbatimentB2,7 (2)_23
+  - first:
+      213: 5773064138182423859
+    second: Fil1
+  - first:
+      213: 1532782192668458681
+    second: elementbatimentB2,7 (2)_25
+  - first:
+      213: -1813738853324639107
+    second: elementbatimentB2,7 (2)_26
+  - first:
+      213: -1954386732370256400
+    second: elementbatimentB2,7 (2)_27
+  - first:
+      213: 7388057118375873700
+    second: elementbatimentB2,7 (2)_28
+  - first:
+      213: 4395906228960497536
+    second: elementbatimentB2,7 (2)_29
+  - first:
+      213: -3453555506302603113
+    second: elementbatimentB2,7 (2)_30
+  - first:
+      213: 4183832851517103795
+    second: elementbatimentB2,7 (2)_31
+  - first:
+      213: -3471724083122556259
+    second: elementbatimentB2,7 (2)_32
+  - first:
+      213: -7303397047499762593
+    second: elementbatimentB2,7 (2)_33
+  - first:
+      213: 2617332120293021957
+    second: Linge2
+  - first:
+      213: -8804448941297629433
+    second: elementbatimentB2,7 (2)_35
+  - first:
+      213: -8842472343348540428
+    second: elementbatimentB2,7 (2)_36
+  - first:
+      213: 7711273639435126979
+    second: elementbatimentB2,7 (2)_37
+  - first:
+      213: -909544615215071326
+    second: elementbatimentB2,7 (2)_38
+  - first:
+      213: -4753898780161120684
+    second: elementbatimentB2,7 (2)_39
+  - first:
+      213: 514181769184834257
+    second: elementbatimentB2,7 (2)_40
+  - first:
+      213: -8774132140824518873
+    second: elementbatimentB2,7 (2)_41
+  - first:
+      213: 3426694964907580156
+    second: elementbatimentB2,7 (2)_42
+  - first:
+      213: 1907079019703864856
+    second: elementbatimentB2,7 (2)_43
+  - first:
+      213: -1395833549289517753
+    second: elementbatimentB2,7 (2)_44
+  - first:
+      213: 4568373170524504959
+    second: elementbatimentB2,7 (2)_45
+  - first:
+      213: -1671911898818659146
+    second: elementbatimentB2,7 (2)_46
+  - first:
+      213: 7152929360954593861
+    second: Hotel
+  - first:
+      213: -2709348135538791473
+    second: elementbatimentB2,7 (2)_48
+  - first:
+      213: -8968283417481868190
+    second: elementbatimentB2,7 (2)_49
+  - first:
+      213: 7654774144949370199
+    second: elementbatimentB2,7 (2)_50
+  - first:
+      213: -1781434989573918820
+    second: elementbatimentB2,7 (2)_51
+  - first:
+      213: 1687973722310459481
+    second: elementbatimentB2,7 (2)_52
+  - first:
+      213: 6747079820188600625
+    second: elementbatimentB2,7 (2)_53
+  - first:
+      213: 6142259676537742351
+    second: elementbatimentB2,7 (2)_54
+  - first:
+      213: 2324407725724046854
+    second: elementbatimentB2,7 (2)_55
+  - first:
+      213: -5268643911518761118
+    second: Linge1
+  - first:
+      213: -8718334172401135445
+    second: elementbatimentB2,7 (2)_57
+  - first:
+      213: 1990501551605294353
+    second: elementbatimentB2,7 (2)_58
+  - first:
+      213: 390438855307398942
+    second: elementbatimentB2,7 (2)_59
+  - first:
+      213: 7756834838086325367
+    second: elementbatimentB2,7 (2)_60
+  - first:
+      213: -5093147460774530535
+    second: elementbatimentB2,7 (2)_61
+  - first:
+      213: -4663848065611547550
+    second: elementbatimentB2,7 (2)_62
+  - first:
+      213: 4025571834588385156
+    second: elementbatimentB2,7 (2)_63
+  - first:
+      213: -6499558201879342705
+    second: elementbatimentB2,7 (2)_64
+  - first:
+      213: -6488510358990224323
+    second: elementbatimentB2,7 (2)_65
+  - first:
+      213: -1979008457565457438
+    second: elementbatimentB2,7 (2)_66
+  - first:
+      213: 8889661891163587233
+    second: elementbatimentB2,7 (2)_67
+  - first:
+      213: 8002930090385710010
+    second: elementbatimentB2,7 (2)_68
+  - first:
+      213: 3573858442431808657
+    second: elementbatimentB2,7 (2)_69
+  - first:
+      213: -2277838933805225947
+    second: elementbatimentB2,7 (2)_70
+  - first:
+      213: 5199985285770944046
+    second: elementbatimentB2,7 (2)_71
+  - first:
+      213: -4092901552532690390
+    second: elementbatimentB2,7 (2)_72
+  - first:
+      213: 7026381690376640914
+    second: elementbatimentB2,7 (2)_73
+  - first:
+      213: 3453023039303626695
+    second: elementbatimentB2,7 (2)_74
+  - first:
+      213: -8737081921766518927
+    second: elementbatimentB2,7 (2)_75
+  - first:
+      213: 2910595795641671965
+    second: elementbatimentB2,7 (2)_76
+  - first:
+      213: 4321278448406735844
+    second: elementbatimentB2,7 (2)_77
+  - first:
+      213: -5421985219698600100
+    second: elementbatimentB2,7 (2)_78
+  - first:
+      213: 832674606731013505
+    second: elementbatimentB2,7 (2)_79
+  - first:
+      213: 462079718576180348
+    second: elementbatimentB2,7 (2)_80
+  - first:
+      213: -4814744731293991375
+    second: elementbatimentB2,7 (2)_81
+  - first:
+      213: -197758065372971678
+    second: elementbatimentB2,7 (2)_82
+  - first:
+      213: -3141990293643156846
+    second: elementbatimentB2,7 (2)_83
+  - first:
+      213: 7003357560901422415
+    second: Affiche
+  - first:
+      213: -13324803906880029
+    second: elementbatimentB2,7 (2)_85
+  - first:
+      213: 2862844220842816508
+    second: elementbatimentB2,7 (2)_86
+  - first:
+      213: 4533075026817271586
+    second: elementbatimentB2,7 (2)_87
+  - first:
+      213: 2867958114199945719
+    second: elementbatimentB2,7 (2)_88
+  - first:
+      213: -3669486126483863743
+    second: elementbatimentB2,7 (2)_89
+  - first:
+      213: 5063899777975016674
+    second: elementbatimentB2,7 (2)_90
+  - first:
+      213: -7729311149050138905
+    second: elementbatimentB2,7 (2)_91
+  - first:
+      213: 5207626103242650542
+    second: elementbatimentB2,7 (2)_92
+  - first:
+      213: -6388920945511017998
+    second: elementbatimentB2,7 (2)_93
+  - first:
+      213: 6469396322987966536
+    second: elementbatimentB2,7 (2)_94
+  - first:
+      213: -5436504978752517996
+    second: elementbatimentB2,7 (2)_95
+  - first:
+      213: -3060828177762041543
+    second: elementbatimentB2,7 (2)_96
+  - first:
+      213: 2212864300534006146
+    second: elementbatimentB2,7 (2)_97
+  - first:
+      213: 4965243023055814209
+    second: elementbatimentB2,7 (2)_98
+  - first:
+      213: 3515662765699257711
+    second: elementbatimentB2,7 (2)_99
+  - first:
+      213: 3500668038010839347
+    second: elementbatimentB2,7 (2)_100
+  - first:
+      213: -4702046285550700346
+    second: elementbatimentB2,7 (2)_101
+  - first:
+      213: -5052661882151320228
+    second: elementbatimentB2,7 (2)_102
+  - first:
+      213: 3661180164601552268
+    second: elementbatimentB2,7 (2)_103
+  - first:
+      213: -458515543598843038
+    second: elementbatimentB2,7 (2)_104
+  - first:
+      213: -2358599773742323955
+    second: elementbatimentB2,7 (2)_105
+  - first:
+      213: -4188350187238131090
+    second: elementbatimentB2,7 (2)_106
+  - first:
+      213: -4285488089460182445
+    second: elementbatimentB2,7 (2)_107
+  - first:
+      213: 3406411740254019429
+    second: elementbatimentB2,7 (2)_108
+  - first:
+      213: 3819769477048358950
+    second: elementbatimentB2,7 (2)_109
+  - first:
+      213: 36597526856679197
+    second: elementbatimentB2,7 (2)_110
+  - first:
+      213: -5516285300267640992
+    second: elementbatimentB2,7 (2)_111
+  - first:
+      213: -3296757942043832591
+    second: elementbatimentB2,7 (2)_112
+  - first:
+      213: -5267510221072514740
+    second: elementbatimentB2,7 (2)_113
+  - first:
+      213: -4420757325625138486
+    second: elementbatimentB2,7 (2)_114
+  - first:
+      213: -4104656324601790814
+    second: Bouteilles
+  - first:
+      213: -2435637533807707555
+    second: elementbatimentB2,7 (2)_116
+  - first:
+      213: -7683624520349992780
+    second: elementbatimentB2,7 (2)_117
+  - first:
+      213: 8849797602472243898
+    second: elementbatimentB2,7 (2)_118
+  - first:
+      213: 9054420190753518098
+    second: elementbatimentB2,7 (2)_119
+  - first:
+      213: -3212618965691679532
+    second: elementbatimentB2,7 (2)_120
+  - first:
+      213: -8554952509228076544
+    second: elementbatimentB2,7 (2)_121
+  - first:
+      213: 6802237244807461186
+    second: elementbatimentB2,7 (2)_122
+  - first:
+      213: -9119309217936695750
+    second: DAPIGEON
+  - first:
+      213: 2949211195547621559
+    second: elementbatimentB2,7 (2)_124
+  - first:
+      213: 4546160770863813469
+    second: elementbatimentB2,7 (2)_125
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1759
+        width: 197
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263599d717f687970800000000000000
+      internalID: 8752868409023746914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 1729
+        width: 537
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ddd2ec2aaeee030800000000000000
+      internalID: 3526013543242390811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Linge3
+      rect:
+        serializedVersion: 2
+        x: 6591
+        y: 1767
+        width: 438
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7a8119cf8486940800000000000000
+      internalID: 5289558011949918142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fil2
+      rect:
+        serializedVersion: 2
+        x: 7196
+        y: 1850
+        width: 98
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3a47353b9cb28f0800000000000000
+      internalID: -564135556268383284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fil3
+      rect:
+        serializedVersion: 2
+        x: 7324
+        y: 2024
+        width: 159
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e8debee91ee9e00800000000000000
+      internalID: 1053527435530571406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 8929
+        y: 1767
+        width: 159
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1c629e97d40c7c0800000000000000
+      internalID: -4053154478635433558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 9126
+        y: 1760
+        width: 165
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a77aecce390ca60800000000000000
+      internalID: 7692310808837454472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 9315
+        y: 1767
+        width: 159
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0af628502ee0ca0800000000000000
+      internalID: -6048648736220929849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 9573
+        y: 1828
+        width: 416
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42ed2b2c220281b0800000000000000
+      internalID: -5655955793297677745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 10019
+        y: 1828
+        width: 423
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6d2779b93a2dfa0800000000000000
+      internalID: -5777375483306781017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 10466
+        y: 1828
+        width: 416
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cce7197185bab00800000000000000
+      internalID: 840862613683227718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 10989
+        y: 1268
+        width: 1445
+        height: 802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186f66a1b02cb6e70800000000000000
+      internalID: 9109588024230344321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 12472
+        y: 1268
+        width: 1445
+        height: 807
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28be2c8db4b1486f0800000000000000
+      internalID: -683391230880322686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 14009
+        y: 1268
+        width: 1438
+        height: 802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca84dbcf2d19f4c0800000000000000
+      internalID: -4253336281954350393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1767
+        width: 151
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bc1c4eb83e02d90800000000000000
+      internalID: -7124444420522259678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1487
+        width: 159
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c1b38d8c2fdea20800000000000000
+      internalID: 3093395463508532328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_16
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1487
+        width: 166
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6aba49aab0378f0800000000000000
+      internalID: -544078302715074846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1548
+        width: 159
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d03de0ab4971270800000000000000
+      internalID: 8221203171621670183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_18
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 1548
+        width: 158
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeadc90de7daf34e0800000000000000
+      internalID: -1999688949351785746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_19
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 1608
+        width: 672
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e8056126dea34c0800000000000000
+      internalID: -4306869088089502184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_20
+      rect:
+        serializedVersion: 2
+        x: 3252
+        y: 1608
+        width: 666
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228ea849f5e68e230800000000000000
+      internalID: 3668303253286348834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_21
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 1623
+        width: 666
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a945c6bde973b000800000000000000
+      internalID: 50518082711800224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_22
+      rect:
+        serializedVersion: 2
+        x: 5833
+        y: 1722
+        width: 477
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ae2938dd46fb280800000000000000
+      internalID: -9025384225669191157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_23
+      rect:
+        serializedVersion: 2
+        x: 7252
+        y: 1487
+        width: 518
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9cb186b46321300800000000000000
+      internalID: 221299029191674283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fil1
+      rect:
+        serializedVersion: 2
+        x: 7552
+        y: 1676
+        width: 460
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335f8e52f3b0e1050800000000000000
+      internalID: 5773064138182423859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_25
+      rect:
+        serializedVersion: 2
+        x: 8067
+        y: 1533
+        width: 733
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be3c008849854510800000000000000
+      internalID: 1532782192668458681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_26
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1517
+        width: 257
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74b24c5f1e44d6e0800000000000000
+      internalID: -1813738853324639107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_27
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1540
+        width: 114
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd95572f9f90e4e0800000000000000
+      internalID: -1954386732370256400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_28
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1563
+        width: 189
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac07193ec6a78660800000000000000
+      internalID: 7388057118375873700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_29
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 1381
+        width: 82
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f0e1bbc65610d30800000000000000
+      internalID: 4395906228960497536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_30
+      rect:
+        serializedVersion: 2
+        x: 2729
+        y: 1162
+        width: 415
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7903db290918210d0800000000000000
+      internalID: -3453555506302603113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_31
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 1162
+        width: 409
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be5942cfc5ff0a30800000000000000
+      internalID: 4183832851517103795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_32
+      rect:
+        serializedVersion: 2
+        x: 4970
+        y: 1275
+        width: 537
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92bf432755f1dfc0800000000000000
+      internalID: -3471724083122556259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_33
+      rect:
+        serializedVersion: 2
+        x: 5644
+        y: 1442
+        width: 285
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54d322941f15aa90800000000000000
+      internalID: -7303397047499762593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Linge2
+      rect:
+        serializedVersion: 2
+        x: 6575
+        y: 1389
+        width: 340
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509194932b1a25420800000000000000
+      internalID: 2617332120293021957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_35
+      rect:
+        serializedVersion: 2
+        x: 8930
+        y: 1442
+        width: 158
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70704eaf55050d580800000000000000
+      internalID: -8804448941297629433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_36
+      rect:
+        serializedVersion: 2
+        x: 9126
+        y: 1449
+        width: 165
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb8e7ec04a394580800000000000000
+      internalID: -8842472343348540428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_37
+      rect:
+        serializedVersion: 2
+        x: 9315
+        y: 1442
+        width: 152
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c84d5cd482f30b60800000000000000
+      internalID: 7711273639435126979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_38
+      rect:
+        serializedVersion: 2
+        x: 9505
+        y: 1442
+        width: 227
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af7cbecdf5a063f0800000000000000
+      internalID: -909544615215071326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_39
+      rect:
+        serializedVersion: 2
+        x: 9823
+        y: 1442
+        width: 422
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45665562f32c60eb0800000000000000
+      internalID: -4753898780161120684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_40
+      rect:
+        serializedVersion: 2
+        x: 10337
+        y: 1506
+        width: 424
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d27e36489db22700800000000000000
+      internalID: 514181769184834257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_41
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1321
+        width: 97
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f11d52e450c3680800000000000000
+      internalID: -8774132140824518873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_42
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1313
+        width: 120
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa9fe84ae01e8f20800000000000000
+      internalID: 3426694964907580156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_43
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 1321
+        width: 106
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e8c08a34e477a10800000000000000
+      internalID: 1907079019703864856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_44
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1101
+        width: 280
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d860948c001ace0800000000000000
+      internalID: -1395833549289517753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_45
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 1101
+        width: 280
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73c98eb13f166f30800000000000000
+      internalID: 4568373170524504959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_46
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 1033
+        width: 666
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc3a277cfc2cc8e0800000000000000
+      internalID: -1671911898818659146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hotel
+      rect:
+        serializedVersion: 2
+        x: 5992
+        y: 1464
+        width: 348
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542192f1b5f444360800000000000000
+      internalID: 7152929360954593861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_48
+      rect:
+        serializedVersion: 2
+        x: 7624
+        y: 1018
+        width: 669
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbe758b936766ad0800000000000000
+      internalID: -2709348135538791473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_49
+      rect:
+        serializedVersion: 2
+        x: 8331
+        y: 1010
+        width: 424
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c87ff6fb14a8380800000000000000
+      internalID: -8968283417481868190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_50
+      rect:
+        serializedVersion: 2
+        x: 10337
+        y: 1245
+        width: 231
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d3d8137883b3a60800000000000000
+      internalID: 7654774144949370199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_51
+      rect:
+        serializedVersion: 2
+        x: 10595
+        y: 1245
+        width: 234
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9faeffb0521747e0800000000000000
+      internalID: -1781434989573918820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_52
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1101
+        width: 159
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950428c3823ec6710800000000000000
+      internalID: 1687973722310459481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_53
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 1101
+        width: 159
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1394c81595172ad50800000000000000
+      internalID: 6747079820188600625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_54
+      rect:
+        serializedVersion: 2
+        x: 5644
+        y: 1215
+        width: 280
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04ec3af1a0bd3550800000000000000
+      internalID: 6142259676537742351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_55
+      rect:
+        serializedVersion: 2
+        x: 6030
+        y: 1215
+        width: 310
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60694f4e284f14020800000000000000
+      internalID: 2324407725724046854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Linge1
+      rect:
+        serializedVersion: 2
+        x: 6568
+        y: 1101
+        width: 385
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f46e5e64402e6b0800000000000000
+      internalID: -5268643911518761118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_57
+      rect:
+        serializedVersion: 2
+        x: 8929
+        y: 1120
+        width: 159
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba091ec0341420780800000000000000
+      internalID: -8718334172401135445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_58
+      rect:
+        serializedVersion: 2
+        x: 9118
+        y: 1124
+        width: 173
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1152c447d9eaf9b10800000000000000
+      internalID: 1990501551605294353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_59
+      rect:
+        serializedVersion: 2
+        x: 9315
+        y: 1124
+        width: 152
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f8b1df11e1b6500800000000000000
+      internalID: 390438855307398942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_60
+      rect:
+        serializedVersion: 2
+        x: 9505
+        y: 1124
+        width: 227
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77492811030d5ab60800000000000000
+      internalID: 7756834838086325367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_61
+      rect:
+        serializedVersion: 2
+        x: 9823
+        y: 1124
+        width: 416
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912f9db7e518159b0800000000000000
+      internalID: -5093147460774530535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_62
+      rect:
+        serializedVersion: 2
+        x: 10330
+        y: 980
+        width: 242
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cb4daf4eea64fb0800000000000000
+      internalID: -4663848065611547550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_63
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1048
+        width: 216
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f45725144bdd730800000000000000
+      internalID: 4025571834588385156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_64
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1048
+        width: 220
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f815104604eecc5a0800000000000000
+      internalID: -6499558201879342705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_65
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 851
+        width: 106
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3402f2c43e24f5a0800000000000000
+      internalID: -6488510358990224323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_66
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 852
+        width: 166
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e331570b462984e0800000000000000
+      internalID: -1979008457565457438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_67
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 852
+        width: 26
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2022cf36c6e5b70800000000000000
+      internalID: 8889661891163587233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_68
+      rect:
+        serializedVersion: 2
+        x: 2729
+        y: 715
+        width: 416
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb99bf048e101f60800000000000000
+      internalID: 8002930090385710010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_69
+      rect:
+        serializedVersion: 2
+        x: 3244
+        y: 715
+        width: 409
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194cdaa7155e89130800000000000000
+      internalID: 3573858442431808657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_70
+      rect:
+        serializedVersion: 2
+        x: 4879
+        y: 836
+        width: 341
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5282cf6ee8d7360e0800000000000000
+      internalID: -2277838933805225947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_71
+      rect:
+        serializedVersion: 2
+        x: 5326
+        y: 836
+        width: 340
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e92a3111f0a2840800000000000000
+      internalID: 5199985285770944046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_72
+      rect:
+        serializedVersion: 2
+        x: 5772
+        y: 897
+        width: 105
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ae4ac19b71337c0800000000000000
+      internalID: -4092901552532690390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_73
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 1041
+        width: 249
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29955378be8b28160800000000000000
+      internalID: 7026381690376640914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_74
+      rect:
+        serializedVersion: 2
+        x: 6280
+        y: 1109
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfaeeac82a9bef20800000000000000
+      internalID: 3453023039303626695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_75
+      rect:
+        serializedVersion: 2
+        x: 7272
+        y: 957
+        width: 164
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f8e9f7846afb680800000000000000
+      internalID: -8737081921766518927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_76
+      rect:
+        serializedVersion: 2
+        x: 10595
+        y: 988
+        width: 227
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11a7f38473846820800000000000000
+      internalID: 2910595795641671965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_77
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 851
+        width: 415
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eba5dc8ad348fb30800000000000000
+      internalID: 4321278448406735844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_78
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 716
+        width: 157
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57527a6b2d31c4b0800000000000000
+      internalID: -5421985219698600100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_79
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 715
+        width: 158
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18da0b3a4214e8b00800000000000000
+      internalID: 832674606731013505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_80
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 715
+        width: 280
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c45ab4e03a96600800000000000000
+      internalID: 462079718576180348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_81
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 715
+        width: 280
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13eb90f2d279e2db0800000000000000
+      internalID: -4814744731293991375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_82
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 617
+        width: 340
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26db9f9561c614df0800000000000000
+      internalID: -197758065372971678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_83
+      rect:
+        serializedVersion: 2
+        x: 5863
+        y: 571
+        width: 401
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292aca399786564d0800000000000000
+      internalID: -3141990293643156846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Affiche
+      rect:
+        serializedVersion: 2
+        x: 6348
+        y: 836
+        width: 90
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d4394a89ce03160800000000000000
+      internalID: 7003357560901422415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_85
+      rect:
+        serializedVersion: 2
+        x: 7476
+        y: 935
+        width: 151
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edbd645929a0dff0800000000000000
+      internalID: -13324803906880029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_86
+      rect:
+        serializedVersion: 2
+        x: 8929
+        y: 806
+        width: 159
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3bd9e96addab720800000000000000
+      internalID: 2862844220842816508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_87
+      rect:
+        serializedVersion: 2
+        x: 9119
+        y: 806
+        width: 172
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22743a938b7b8ee30800000000000000
+      internalID: 4533075026817271586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_88
+      rect:
+        serializedVersion: 2
+        x: 9315
+        y: 806
+        width: 159
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f14693b5b80dc720800000000000000
+      internalID: 2867958114199945719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_89
+      rect:
+        serializedVersion: 2
+        x: 9505
+        y: 806
+        width: 227
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14784ba4fcd531dc0800000000000000
+      internalID: -3669486126483863743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_90
+      rect:
+        serializedVersion: 2
+        x: 9823
+        y: 806
+        width: 416
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec5164b406964640800000000000000
+      internalID: 5063899777975016674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_91
+      rect:
+        serializedVersion: 2
+        x: 11004
+        y: 178
+        width: 1445
+        height: 801
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee666a2678fbb490800000000000000
+      internalID: -7729311149050138905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_92
+      rect:
+        serializedVersion: 2
+        x: 12495
+        y: 178
+        width: 1438
+        height: 802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea374d68954354840800000000000000
+      internalID: 5207626103242650542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_93
+      rect:
+        serializedVersion: 2
+        x: 14017
+        y: 201
+        width: 1438
+        height: 802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f153c0004ef557a0800000000000000
+      internalID: -6388920945511017998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_94
+      rect:
+        serializedVersion: 2
+        x: 4432
+        y: 178
+        width: 409
+        height: 719
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8408aeeeda9e7c950800000000000000
+      internalID: 6469396322987966536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_95
+      rect:
+        serializedVersion: 2
+        x: 7339
+        y: 753
+        width: 341
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49840d19687ad84b0800000000000000
+      internalID: -5436504978752517996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_96
+      rect:
+        serializedVersion: 2
+        x: 8543
+        y: 670
+        width: 106
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931ccf14df0c585d0800000000000000
+      internalID: -3060828177762041543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_97
+      rect:
+        serializedVersion: 2
+        x: 8929
+        y: 488
+        width: 152
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28109796b5ca5be10800000000000000
+      internalID: 2212864300534006146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_98
+      rect:
+        serializedVersion: 2
+        x: 9119
+        y: 488
+        width: 172
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e7ab4f83618e440800000000000000
+      internalID: 4965243023055814209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_99
+      rect:
+        serializedVersion: 2
+        x: 9497
+        y: 481
+        width: 234
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65529b98a42ac030800000000000000
+      internalID: 3515662765699257711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_100
+      rect:
+        serializedVersion: 2
+        x: 9823
+        y: 481
+        width: 416
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3312332880fd49030800000000000000
+      internalID: 3500668038010839347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_101
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 88
+        width: 121
+        height: 665
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c83e48d0d9febeb0800000000000000
+      internalID: -4702046285550700346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_102
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 420
+        width: 204
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55c630d9c651e9b0800000000000000
+      internalID: -5052661882151320228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_103
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 496
+        width: 174
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d18c146ff1fc230800000000000000
+      internalID: 3661180164601552268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_104
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 140
+        width: 929
+        height: 537
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bbbcbda8603a9f0800000000000000
+      internalID: -458515543598843038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_105
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 134
+        width: 924
+        height: 543
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07a5ce8002944fd0800000000000000
+      internalID: -2358599773742323955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_106
+      rect:
+        serializedVersion: 2
+        x: 5326
+        y: 64
+        width: 416
+        height: 606
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6afabe02bdffd5c0800000000000000
+      internalID: -4188350187238131090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_107
+      rect:
+        serializedVersion: 2
+        x: 8362
+        y: 609
+        width: 135
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352fe82c943e684c0800000000000000
+      internalID: -4285488089460182445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_108
+      rect:
+        serializedVersion: 2
+        x: 8520
+        y: 527
+        width: 125
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f9f880e61064f20800000000000000
+      internalID: 3406411740254019429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_109
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 405
+        width: 90
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628d853f91c820530800000000000000
+      internalID: 3819769477048358950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_110
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 405
+        width: 91
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f33fbb145028000800000000000000
+      internalID: 36597526856679197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_111
+      rect:
+        serializedVersion: 2
+        x: 6651
+        y: 541
+        width: 1438
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06796d5feb73273b0800000000000000
+      internalID: -5516285300267640992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_112
+      rect:
+        serializedVersion: 2
+        x: 5834
+        y: 450
+        width: 218
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe87026e109f32d0800000000000000
+      internalID: -3296757942043832591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_113
+      rect:
+        serializedVersion: 2
+        x: 6651
+        y: 477
+        width: 1437
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41cb36cc5b06e6b0800000000000000
+      internalID: -5267510221072514740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_114
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 276
+        width: 212
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac268ef62a056a2c0800000000000000
+      internalID: -4420757325625138486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bouteilles
+      rect:
+        serializedVersion: 2
+        x: 3940
+        y: 344
+        width: 265
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aebc07f1d45907c0800000000000000
+      internalID: -4104656324601790814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_116
+      rect:
+        serializedVersion: 2
+        x: 5773
+        y: 64
+        width: 469
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a78cb4190e23ed0800000000000000
+      internalID: -2435637533807707555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_117
+      rect:
+        serializedVersion: 2
+        x: 6651
+        y: 413
+        width: 1438
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8be0555384e5590800000000000000
+      internalID: -7683624520349992780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_118
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 216
+        width: 90
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2367df70cc0da70800000000000000
+      internalID: 8849797602472243898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_119
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 216
+        width: 91
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212fcfce033c7ad70800000000000000
+      internalID: 9054420190753518098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_120
+      rect:
+        serializedVersion: 2
+        x: 6647
+        y: 352
+        width: 1441
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcb347621c7a63d0800000000000000
+      internalID: -3212618965691679532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_121
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 182
+        width: 167
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002bf19d404b64980800000000000000
+      internalID: -8554952509228076544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_122
+      rect:
+        serializedVersion: 2
+        x: 6647
+        y: 284
+        width: 1438
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2493eaefbb6666e50800000000000000
+      internalID: 6802237244807461186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DAPIGEON
+      rect:
+        serializedVersion: 2
+        x: 8339
+        y: 126
+        width: 294
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e10fb1594b17180800000000000000
+      internalID: -9119309217936695750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_124
+      rect:
+        serializedVersion: 2
+        x: 6651
+        y: 223
+        width: 1438
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8983ee4f3bde820800000000000000
+      internalID: 2949211195547621559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elementbatimentB2,7 (2)_125
+      rect:
+        serializedVersion: 2
+        x: 4467
+        y: 172
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53572f6225371f30800000000000000
+      internalID: 4546160770863813469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
