@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4740,6 +4740,7 @@ GameObject:
   - component: {fileID: 369168704}
   - component: {fileID: 369168703}
   - component: {fileID: 369168705}
+  - component: {fileID: 369168706}
   m_Layer: 9
   m_Name: Cube
   m_TagString: Item
@@ -4859,6 +4860,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &369168706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369168701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36789d13ff1378d47b793bab2ee7b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &378910617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6190,6 +6203,7 @@ GameObject:
   - component: {fileID: 489175481}
   - component: {fileID: 489175480}
   - component: {fileID: 489175479}
+  - component: {fileID: 489175482}
   m_Layer: 9
   m_Name: BouclierTombe
   m_TagString: Item
@@ -6309,6 +6323,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &489175482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489175477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36789d13ff1378d47b793bab2ee7b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &492654912
 GameObject:
   m_ObjectHideFlags: 0
@@ -18518,6 +18544,7 @@ GameObject:
   - component: {fileID: 1333717049}
   - component: {fileID: 1333717048}
   - component: {fileID: 1333717047}
+  - component: {fileID: 1333717050}
   m_Layer: 9
   m_Name: Etagere
   m_TagString: Item
@@ -18637,6 +18664,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1333717050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333717045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36789d13ff1378d47b793bab2ee7b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1335595297
 GameObject:
   m_ObjectHideFlags: 0

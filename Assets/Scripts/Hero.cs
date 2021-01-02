@@ -182,11 +182,12 @@ public class Hero : MonoBehaviour
             }
 
             // Checkpoint TEST
-            if (Input.GetKeyDown(KeyCode.T))
-            {
+           if (Input.GetKeyDown(KeyCode.T))
+           {
               
-                    RestartLevel();
-            }
+                   RestartLevel();
+                
+           }
 
             // ATTRAPER
             float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
