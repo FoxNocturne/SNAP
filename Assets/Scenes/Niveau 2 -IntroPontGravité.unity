@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3051,7 +3051,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.37277752}
+  m_Offset: {x: 0, y: 0.00065498054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3062,7 +3062,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.25444496}
+  m_Size: {x: 1, y: 0.99869}
   m_EdgeRadius: 0
 --- !u!1 &232839121
 GameObject:
@@ -9013,7 +9013,7 @@ GameObject:
   - component: {fileID: 780330974}
   - component: {fileID: 780330976}
   - component: {fileID: 780330975}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: ObjetChaos2_Tab1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9100,7 +9100,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e63ffd06f3cee374080407d4eda013eb, type: 3}
-  m_Color: {r: 0.28885618, g: 0.745283, b: 0.16522783, a: 1}
+  m_Color: {r: 0.9056604, g: 0.08116765, b: 0.08116765, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20597,8 +20597,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623804122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 314.117, y: 52.533, z: 0}
-  m_LocalScale: {x: 159.92953, y: 5.0067163, z: 1}
+  m_LocalPosition: {x: 330.83, y: 52.533, z: 0}
+  m_LocalScale: {x: 193.35379, y: 5.0067163, z: 1}
   m_Children: []
   m_Father: {fileID: 308265353}
   m_RootOrder: 0
@@ -23435,8 +23435,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830069580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 442.5062, y: 76.5462, z: 0}
-  m_LocalScale: {x: 23.155882, y: 2.9766703, z: 1}
+  m_LocalPosition: {x: 455.9, y: 76.5462, z: 0}
+  m_LocalScale: {x: 23.100178, y: 2.9766703, z: 1}
   m_Children: []
   m_Father: {fileID: 30529158}
   m_RootOrder: 2
@@ -25132,7 +25132,7 @@ GameObject:
   - component: {fileID: 1943036978}
   - component: {fileID: 1943036980}
   - component: {fileID: 1943036979}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Objet1_PostApo_Tab1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26257,7 +26257,7 @@ GameObject:
   - component: {fileID: 2002365449}
   - component: {fileID: 2002365451}
   - component: {fileID: 2002365450}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: ObjetChaos1_Tab1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26380,8 +26380,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020547960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 469.124, y: 76.033, z: 0}
-  m_LocalScale: {x: 30.034101, y: 3.9308343, z: 1}
+  m_LocalPosition: {x: 475.85, y: 76.033, z: 0}
+  m_LocalScale: {x: 16.577633, y: 3.9308343, z: 1}
   m_Children: []
   m_Father: {fileID: 1767142260}
   m_RootOrder: 8
@@ -27329,7 +27329,7 @@ GameObject:
   - component: {fileID: 2131433234}
   - component: {fileID: 2131433236}
   - component: {fileID: 2131433235}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Objet2_PostApo_Tab1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27416,7 +27416,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e63ffd06f3cee374080407d4eda013eb, type: 3}
-  m_Color: {r: 0.9056604, g: 0.08116765, b: 0.08116765, a: 1}
+  m_Color: {r: 0.28885618, g: 0.745283, b: 0.16522783, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
