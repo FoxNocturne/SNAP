@@ -15,5 +15,10 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Exit the Game!");
         Application.Quit();
     }
+    public void OpenWikiURL(string url)
+    {
+        Application.OpenURL("https://snaplejeu.fandom.com/fr/wiki/SNAP,_Le_Jeu");
+
+    }
 
 }
