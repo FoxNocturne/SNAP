@@ -121,7 +121,6 @@ public class CameraFollowing : MonoBehaviour
 
         StartCoroutine(DeplacementCamera(new Vector3(player.transform.position.x, player.transform.position.y - 1, -10)));
         StartCoroutine(SizeCamera(3.5f));
-        // StartCoroutine(ViewPortCamera(new Rect(0, 0.15f, 1f, 0.7f)));
         StartCoroutine(TomberBouclier(bouclier, player));
         globalLightPostApo.intensity = 0.55f; // Changement de la luminosité pour le sous-terrain
     }
