@@ -12,6 +12,7 @@ public class PlateformeDeplacable : ObjetActivable
 
     private Vector2 startingPos;
     private Vector2 targetPos;
+    private bool activated = false;
 
     void Start()
     {
@@ -37,14 +38,22 @@ public class PlateformeDeplacable : ObjetActivable
         }
     }
 
+    private void Update()
+    {
+        if(activated)
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        else
+            transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
+    }
+
     public override void Activation()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        activated = true;
     }
 
     public override void Desactivation()
     {
-        transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
+        activated = false;
     }
 }
 

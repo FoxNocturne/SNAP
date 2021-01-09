@@ -22,7 +22,7 @@ public class Bouton : MonoBehaviour
     {        
         if (Input.GetButtonDown("Attraper") && playerOn)
         {
-            sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
+            //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
 
             actif = !actif;
 
