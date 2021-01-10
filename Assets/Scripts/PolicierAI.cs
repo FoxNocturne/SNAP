@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class PolicierAI : MonoBehaviour
 {
+    [Header("Déplacement")]
     public float maxSpeed = 5;
     public float TempsDePause = 2;
-    public GameObject player;
+    [Header("Recherche")]
     public float viewDistance;
     public LayerMask layerMask;
+    [Header("Tir")]
+    public GameObject BallePrefab;
+    public float shootSpeed = 10f;
 
+    private GameObject player;
     private List<Transform> path = new List<Transform>();
     private int currentTargetIndex = 0;
     private Vector2 currentTargetPos;
     private bool isWaiting = false;
     private bool playerFinded = false;
     private bool directionGauche;
+    private GameObject shoot;
 
     void Start()
     {
@@ -73,7 +79,14 @@ public class PolicierAI : MonoBehaviour
                 {
                     playerFinded = true;
                     GetComponent<SpriteRenderer>().color = Color.yellow;
-                    Debug.Log("Je vois le joueur");
+
+                    if(!shoot)
+                    {
+                        float sizeX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+                        shoot = Instantiate(BallePrefab, new Vector2(transform.position.x + (directionGauche ? sizeX : -sizeX), transform.position.y), Quaternion.identity);
+
+                        shoot.GetComponent<Rigidbody2D>().AddRelativeForce((player.transform.position - shoot.transform.position) * shootSpeed, ForceMode2D.Impulse);
+                    }
                 }
             }
         }
