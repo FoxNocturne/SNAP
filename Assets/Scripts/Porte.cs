@@ -11,7 +11,7 @@ public class Porte : ObjetActivable
 
     private Vector2 startingPos;
     private Vector2 targetPos;
-
+    private bool activated;
     //AudioSource sonPorteEnclencher;
     //public AudioClip[] sonPorte;
 
@@ -23,15 +23,24 @@ public class Porte : ObjetActivable
         //sonPorteEnclencher = GetComponent<AudioSource>();
     }
 
+    private void Update()
+    {
+        if (activated)
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        else
+            transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
+
+        activated = false;
+    }
+
     public override void Activation()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        activated = true;
         //sonPorteEnclencher.PlayOneShot(sonPorte[0], 1f);
     }
 
     public override void Desactivation()
     {
-        transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
         //sonPorteEnclencher.PlayOneShot(sonPorte[1], 1f);
     }
 }
