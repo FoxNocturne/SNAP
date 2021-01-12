@@ -66,7 +66,11 @@ public class PolicierAI : MonoBehaviour
             }
         }
 
-        // Détection du joueur
+        // Détection du joueur //
+
+        if (player.GetComponent<Snap>().GetActualDimension() != gameObject.layer) // Vérification de la dimension
+            return;
+
         playerFinded = false;
         float dist = Vector2.Distance(currentPos, player.transform.position);
         if (dist <= viewDistance) // Vérification de la distance (cercle de vision)
@@ -80,10 +84,11 @@ public class PolicierAI : MonoBehaviour
                     playerFinded = true;
                     GetComponent<SpriteRenderer>().color = Color.yellow;
 
-                    if(!shoot)
+                    if(!shoot) // Tir de la balle uniquement s'il n'en existe pas déjà une autre
                     {
                         float sizeX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
                         shoot = Instantiate(BallePrefab, new Vector2(transform.position.x + (directionGauche ? sizeX : -sizeX), transform.position.y), Quaternion.identity);
+                        shoot.layer = gameObject.layer;
 
                         shoot.GetComponent<Rigidbody2D>().AddRelativeForce((player.transform.position - shoot.transform.position) * shootSpeed, ForceMode2D.Impulse);
                     }
