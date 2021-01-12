@@ -4,18 +4,8 @@ using UnityEngine;
 
 public abstract class ObjetActivable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    protected List<GameObject> activators = new List<GameObject>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public abstract void Activation();
-    public abstract void Desactivation();
+    public abstract void Activation(GameObject activator);
+    public abstract void Desactivation(GameObject activator);
 }

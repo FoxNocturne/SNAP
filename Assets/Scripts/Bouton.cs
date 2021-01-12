@@ -32,7 +32,7 @@ public class Bouton : MonoBehaviour
                 //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
                 foreach (var objet in objetsRelies)
                 {
-                    objet.Activation();
+                    objet.Activation(gameObject);
                     //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
                 }
 
@@ -40,7 +40,7 @@ public class Bouton : MonoBehaviour
             else
             {
                 foreach (var objet in objetsRelies)
-                    objet.Desactivation();
+                    objet.Desactivation(gameObject);
 
             }
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7563163723456048196}
   - component: {fileID: 6044005229057934830}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4419280403955913650}
   - component: {fileID: 2998318303671237423}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5117203368204766306}
   - component: {fileID: 5755688584394266910}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925869183995290844}
   - component: {fileID: 8695888495767366696}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281055282452541135}
   - component: {fileID: 3484266033168446415}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8140612632755445888}
   - component: {fileID: 8582641999908129215}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2765000261019411183}
   - component: {fileID: 1706755810005280816}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7040695872526624099}
   - component: {fileID: 2085723416905928219}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2149393257906029529}
   - component: {fileID: 1426112999485149944}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299804212630153957}
   - component: {fileID: 4355906030264006994}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8338391700589885722}
   - component: {fileID: 954896309352091318}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197762993657272567}
   - component: {fileID: 6276363171895245190}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Led (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 8630656095340143134}
   - component: {fileID: 8630656094370461072}
   - component: {fileID: 8630656094370461075}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Porte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,8 +959,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1240284175
-  m_SortingLayer: -9
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: -3358368307405392731, guid: a0f72de1db26b07439a4123db6daa3ea,
     type: 3}

@@ -6,50 +6,20 @@ public class PlaqueDePression : MonoBehaviour
 {
     public List<ObjetActivable> objetsRelies; // Liste des objets connectées à la plaque
 
-    private List<Collider2D> actualColliders = new List<Collider2D>();
-    private int actualCollidersOffset;
-
     AudioSource sonPlaqueEnclencher;
     public AudioClip[] sonPlaque;
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
-        actualCollidersOffset = actualColliders.Count;
-
-        //sonPlaqueEnclencher = GetComponent<AudioSource>();
+        if (collision.tag == "Player" || collision.tag == "Item")
+            foreach (var objet in objetsRelies)
+                objet.Activation(gameObject);
     }
 
-    private void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), actualColliders);
-
-        // La plaque de pression ne détecte pas les objets ou personnage qui lui marchent dessus
-        // Elle détecte en réalité une différence de colliders sur elle
-        if (actualColliders.Count - actualCollidersOffset == 0)
-        {
-            //sonPlaqueEnclencher.PlayOneShot(sonPlaque[0], 1f);
-
+        if(collision.tag == "Player" || collision.tag == "Item")
             foreach (var objet in objetsRelies)
-            {
-                objet.Desactivation();
-                
-
-            }
-                
-        }
-        else
-        {
-            //sonPlaqueEnclencher.PlayOneShot(sonPlaque[0], 1f);
-            foreach (var objet in objetsRelies)
-            {
-                
-                objet.Activation();
-                //sonPlaqueEnclencher.PlayOneShot(sonPlaque[0], 1f);
-
-            }
-
-
-        }
+                objet.Desactivation(gameObject);
     }
 }
