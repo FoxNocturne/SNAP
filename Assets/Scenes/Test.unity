@@ -1531,7 +1531,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
@@ -1547,6 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765e0146f74d3534cbce6d4093067825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Observe: {fileID: 9117956510580430532, guid: 9423e206dc95e364dbca3801e2a7fc0c, type: 3}
   Object_Picture: {fileID: 21300000, guid: f2cc01ec5aec2ee40865a9de97a59b3b, type: 3}
   text: Ceci est le bouton jouer
 --- !u!61 &1628451596
@@ -1615,7 +1616,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e63ffd06f3cee374080407d4eda013eb, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.18161473, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
