@@ -233,7 +233,7 @@ public class Hero : MonoBehaviour
         }
 
         // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("ObserveThisThing") != null)
+        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null )
         {
             Destroy(GameObject.Find("ObserveThisThing"));
             Time.timeScale = 1;
@@ -343,25 +343,6 @@ public class Hero : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
-        }
- 
-
-        if (collision.tag == "Display")
-        {
-            // RAMASSER UN OBJET
-            if (Input.GetKeyDown(KeyCode.R) && onTheGround)
-            {
-                if (GameObject.Find("ObserveThisThing") == null)
-                {
-                    GameObject DisplayObject = Instantiate(ObserveThisThing, transform.position, Quaternion.identity);
-                    DisplayObject.name = "ObserveThisThing";
-                    DisplayObject.transform.GetChild(0).GetComponent<Image>().sprite = collision.GetComponent<ObserveThisThing>().Object_Picture;
-                    DisplayObject.transform.GetChild(1).GetComponent<Text>().text = collision.GetComponent<ObserveThisThing>().text;
-                    Time.timeScale = 0;
-                    activeControl = false;
-                }
-            }
-
         }
     }
     //Sons de pas MrX
