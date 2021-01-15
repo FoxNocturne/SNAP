@@ -23,6 +23,7 @@ public class Hero : MonoBehaviour
     public Transform circleGround;
     public GameObject phantomEffect;
     public GameObject ObserveThisThing;
+    public GameObject CheckEffect;    
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
@@ -180,6 +181,8 @@ public class Hero : MonoBehaviour
                 }
                     
             }
+
+
 
             // Checkpoint TEST
            if (Input.GetKeyDown(KeyCode.T))
@@ -420,6 +423,7 @@ public class Hero : MonoBehaviour
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
         Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f));
     } 
+
 
    /* void OnDrawGizmos()
     {

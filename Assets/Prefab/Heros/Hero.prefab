@@ -73,6 +73,7 @@ MonoBehaviour:
     type: 3}
   ObserveThisThing: {fileID: 9117956510580430532, guid: 9423e206dc95e364dbca3801e2a7fc0c,
     type: 3}
+  CheckEffect: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 3607
