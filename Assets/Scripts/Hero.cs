@@ -23,6 +23,7 @@ public class Hero : MonoBehaviour
     public Transform circleGround;
     public GameObject phantomEffect;
     public GameObject ObserveThisThing;
+    public GameObject CheckEffect;    
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
@@ -181,12 +182,15 @@ public class Hero : MonoBehaviour
                     
             }
 
+
+
             // Checkpoint TEST
-            if (Input.GetKeyDown(KeyCode.T))
-            {
+           if (Input.GetKeyDown(KeyCode.T))
+           {
               
-                    RestartLevel();
-            }
+                   RestartLevel();
+                
+           }
 
             // ATTRAPER
             float distance = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
@@ -203,7 +207,6 @@ public class Hero : MonoBehaviour
 
                     objectPulling = hit.transform;
                     // GetComponent<SpriteRenderer>().color = Color.gray;
-                    hit.transform.GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     
                 }
@@ -215,9 +218,7 @@ public class Hero : MonoBehaviour
                 {
                     SonHero.PlayOneShot(sonMrX[5], 0.2f);
                     // GetComponent<SpriteRenderer>().color = Color.red;
-                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;               
-                    if (objectPulling)
-                        objectPulling.GetComponent<SpriteRenderer>().color = Color.blue;
+                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;         
 
                     objectPulling = null;
                     isPulling = false;  
@@ -422,6 +423,7 @@ public class Hero : MonoBehaviour
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
         Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f));
     } 
+
 
    /* void OnDrawGizmos()
     {

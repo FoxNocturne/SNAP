@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class CameraFollowing : MonoBehaviour
 {
@@ -12,13 +13,14 @@ public class CameraFollowing : MonoBehaviour
     public float shakeSpeed, shakeMagnitude;
     public Image fading;
     public float fadingSpeed;
+    public Light2D globalLightPostApo;
 
     private bool following = true;
 
     // Update is called once per frame
     void Update()
     {
-        if(following)
+        if (following)
         {
             switch (Tableau)
             {
@@ -60,7 +62,7 @@ public class CameraFollowing : MonoBehaviour
 
     private void CameraFollowingTableau2()
     {
-        if (player.position.x < 19 )
+        if (player.position.x < 19)
         {
             transform.position = new Vector3(player.position.x, -27.98654f, -10);
             foreach (Transform child in transform)
@@ -79,7 +81,7 @@ public class CameraFollowing : MonoBehaviour
         }
         else
         {
-            if(player.position.x > 86)
+            if (player.position.x > 86)
             {
                 Tableau = 3;
                 return;
@@ -119,8 +121,8 @@ public class CameraFollowing : MonoBehaviour
 
         StartCoroutine(DeplacementCamera(new Vector3(player.transform.position.x, player.transform.position.y - 1, -10)));
         StartCoroutine(SizeCamera(3.5f));
-        // StartCoroutine(ViewPortCamera(new Rect(0, 0.15f, 1f, 0.7f)));
         StartCoroutine(TomberBouclier(bouclier, player));
+        globalLightPostApo.intensity = 0.55f; // Changement de la luminosité pour le sous-terrain
     }
 
     IEnumerator TomberBouclier(Transform bouclier, GameObject player)
@@ -134,7 +136,7 @@ public class CameraFollowing : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        
+
         while (player.transform.position.y > 1)
         {
             player.transform.position = Vector2.MoveTowards(player.transform.position, targetPosP, 8 * Time.deltaTime);
@@ -143,14 +145,13 @@ public class CameraFollowing : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        while(fading.color.a < 1)
+        while (fading.color.a < 1)
         {
             fading.color = new Color(0, 0, 0, fading.color.a + fadingSpeed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
 
         //Destroy(bouclier);
-        Debug.Log("test");
         player.transform.position = new Vector2(0, -31.51f);
         Tableau = 2;
         player.GetComponent<Hero>().enabled = true;
@@ -177,7 +178,7 @@ public class CameraFollowing : MonoBehaviour
 
     IEnumerator DeplacementCamera(Vector3 targetPos)
     {
-        while(transform.position != targetPos)
+        while (transform.position != targetPos)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, 15 * Time.deltaTime);
             yield return new WaitForEndOfFrame();

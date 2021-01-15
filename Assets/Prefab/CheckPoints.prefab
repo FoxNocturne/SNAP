@@ -70,3 +70,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b992e3eee0287294989a6770bb358718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheckEffect: {fileID: 767592818943400113, guid: 624c71d2b66b6e44db64fab7db5fccd8,
+    type: 3}
