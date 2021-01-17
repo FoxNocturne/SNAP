@@ -6,12 +6,11 @@ using UnityEngine;
 public class Porte : ObjetActivable
 {
     public float speed = 10f;      // Vitesse d'ouverture des portes
-    [Range(0, 1)]
+    [Range(-1, 1)]
     public float ouverture = 0.9f; // Pourcentage d'ouverture des portes
 
     private Vector2 startingPos;
     private Vector2 targetPos;
-
     //AudioSource sonPorteEnclencher;
     //public AudioClip[] sonPorte;
 
@@ -23,15 +22,23 @@ public class Porte : ObjetActivable
         //sonPorteEnclencher = GetComponent<AudioSource>();
     }
 
-    public override void Activation()
+    private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        if (activators.Count != 0)
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        else
+            transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
+    }
+
+    public override void Activation(GameObject activator)
+    {
+        activators.Add(activator);
         //sonPorteEnclencher.PlayOneShot(sonPorte[0], 1f);
     }
 
-    public override void Desactivation()
+    public override void Desactivation(GameObject activator)
     {
-        transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
+        activators.Remove(activator);
         //sonPorteEnclencher.PlayOneShot(sonPorte[1], 1f);
     }
 }

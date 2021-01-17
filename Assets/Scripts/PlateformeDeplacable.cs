@@ -37,14 +37,22 @@ public class PlateformeDeplacable : ObjetActivable
         }
     }
 
-    public override void Activation()
+    private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        if(activators.Count != 0)
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        else
+            transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
     }
 
-    public override void Desactivation()
+    public override void Activation(GameObject activator)
     {
-        transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
+        activators.Add(activator);
+    }
+
+    public override void Desactivation(GameObject activator)
+    {
+        activators.Remove(activator);
     }
 }
 

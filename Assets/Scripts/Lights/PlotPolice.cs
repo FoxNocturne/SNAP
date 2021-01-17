@@ -8,26 +8,27 @@ public class PlotPolice : MonoBehaviour
     public float speed = 5;
 
     private Light2D lightComp;
-    private float maxRadius;
+    private float maxOuterRadius, innerRadius;
     private bool on = true;
 
     void Start()
     {
         lightComp = GetComponent<Light2D>();
-        maxRadius = lightComp.pointLightOuterRadius;
+        maxOuterRadius = lightComp.pointLightOuterRadius;
+        innerRadius = lightComp.pointLightInnerRadius;
     }
     
     void Update()
     {
         if (on)
         {
-            lightComp.pointLightOuterRadius = Mathf.Clamp(lightComp.pointLightOuterRadius - (speed * Time.deltaTime), 0, maxRadius);
-            on = !(lightComp.pointLightOuterRadius == 0);
+            lightComp.pointLightOuterRadius = Mathf.Clamp(lightComp.pointLightOuterRadius - (speed * Time.deltaTime), innerRadius, maxOuterRadius);
+            on = !(lightComp.pointLightOuterRadius == innerRadius);
         }
         else
         {
-            lightComp.pointLightOuterRadius = Mathf.Clamp(lightComp.pointLightOuterRadius + (speed * Time.deltaTime), 0, maxRadius);
-            on = lightComp.pointLightOuterRadius == maxRadius;
+            lightComp.pointLightOuterRadius = Mathf.Clamp(lightComp.pointLightOuterRadius + (speed * Time.deltaTime), innerRadius, maxOuterRadius);
+            on = lightComp.pointLightOuterRadius == maxOuterRadius;
         }
     }
 }
