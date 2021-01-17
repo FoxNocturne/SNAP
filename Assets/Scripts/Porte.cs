@@ -6,7 +6,7 @@ using UnityEngine;
 public class Porte : ObjetActivable
 {
     public float speed = 10f;      // Vitesse d'ouverture des portes
-    [Range(0, 1)]
+    [Range(-1, 1)]
     public float ouverture = 0.9f; // Pourcentage d'ouverture des portes
 
     private Vector2 startingPos;
