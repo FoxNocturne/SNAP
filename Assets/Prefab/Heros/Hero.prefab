@@ -71,9 +71,10 @@ MonoBehaviour:
   circleGround: {fileID: 0}
   phantomEffect: {fileID: 1265865981250434113, guid: 274130e54c367bc409a8bd427e5ba692,
     type: 3}
-  ObserveThisThing: {fileID: 9117956510580430532, guid: 9423e206dc95e364dbca3801e2a7fc0c,
+  MessageCollectable: {fileID: 2327485336277788733, guid: 88d660148b3e21e408c4587844063b08,
     type: 3}
-  CheckEffect: {fileID: 0}
+  CheckEffect: {fileID: 767592818943400113, guid: 624c71d2b66b6e44db64fab7db5fccd8,
+    type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 3607
