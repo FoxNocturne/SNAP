@@ -1990,6 +1990,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plaque de pression
       objectReference: {fileID: 0}
+    - target: {fileID: 645770514005538995, guid: e9004bd5fe096fd469cf400848a70c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 645770514005538996, guid: e9004bd5fe096fd469cf400848a70c82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2070,6 +2075,16 @@ PrefabInstance:
       propertyPath: objetsRelies.Array.data[0]
       value: 
       objectReference: {fileID: 709899719}
+    - target: {fileID: 645770514005538999, guid: e9004bd5fe096fd469cf400848a70c82,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 245706777
+      objectReference: {fileID: 0}
+    - target: {fileID: 645770514005538999, guid: e9004bd5fe096fd469cf400848a70c82,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9004bd5fe096fd469cf400848a70c82, type: 3}
 --- !u!4 &169843295 stripped
@@ -2448,7 +2463,7 @@ GameObject:
   - component: {fileID: 199009650}
   - component: {fileID: 199009649}
   - component: {fileID: 199009651}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Voiture en feu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19707,6 +19722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bouton
       objectReference: {fileID: 0}
+    - target: {fileID: 6987930609700553782, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6987930609700553783, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19776,6 +19796,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987930609700553802, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1240284175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987930609700553802, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0, type: 3}
@@ -22143,10 +22173,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 933750524}
     m_Modifications:
+    - target: {fileID: 8630656094370461072, guid: 0c803f23db9cccf41ac3860581ef2f82,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1240284175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630656094370461072, guid: 0c803f23db9cccf41ac3860581ef2f82,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -9
+      objectReference: {fileID: 0}
     - target: {fileID: 8630656094370461074, guid: 0c803f23db9cccf41ac3860581ef2f82,
         type: 3}
       propertyPath: m_Name
       value: Porte
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630656094370461074, guid: 0c803f23db9cccf41ac3860581ef2f82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8630656095340143107, guid: 0c803f23db9cccf41ac3860581ef2f82,
         type: 3}
