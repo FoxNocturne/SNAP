@@ -31,5 +31,7 @@ public class CheckPointEffectPosition : MonoBehaviour
         flash.material.shader = shaderGUItext;
         yield return new WaitForSeconds(0.2f);
         flash.material.shader = shaderSpritesDefault;
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
     }
 }
