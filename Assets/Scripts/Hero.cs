@@ -246,6 +246,7 @@ public class Hero : MonoBehaviour
     {
        
         transform.position = CheckPoints.reachedPoint;
+        rb.velocity = new Vector2(0, 0);
     }
 
     // EFFET DE GHOST
