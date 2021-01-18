@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Chapitre 1 - Niveau 1 copie");
+        SceneManager.LoadScene("Chapitre 1 - Niveau 1");
     }
 
     public void QuitGame()
