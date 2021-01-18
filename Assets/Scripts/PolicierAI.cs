@@ -67,8 +67,7 @@ public class PolicierAI : MonoBehaviour
         }
 
         // Détection du joueur //
-
-        if (player.GetComponent<Snap>().GetActualDimension() != gameObject.layer) // Vérification de la dimension
+        if ((player.GetComponent<Snap>().GetActualDimension() + 9) != gameObject.layer) // Vérification de la dimension
             return;
 
         playerFinded = false;

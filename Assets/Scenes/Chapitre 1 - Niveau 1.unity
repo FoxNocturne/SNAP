@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5660,6 +5660,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 1316099177200914755, guid: c0648a9328a9cae4a848745327ea26e4,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.018040657
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316099177200914755, guid: c0648a9328a9cae4a848745327ea26e4,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.40353024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316099177200914755, guid: c0648a9328a9cae4a848745327ea26e4,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.27572632
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316099177200914755, guid: c0648a9328a9cae4a848745327ea26e4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0648a9328a9cae4a848745327ea26e4, type: 3}
 --- !u!1 &278887223
@@ -7579,7 +7599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369168701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.68, y: -23.9, z: 0}
+  m_LocalPosition: {x: 89.45, y: -23.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1405602309}
@@ -7598,7 +7618,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012477875, y: -0.003296852}
+  m_Offset: {x: 0.026161194, y: -0.003296852}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7609,7 +7629,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7439651, y: 1.492857}
+  m_Size: {x: 0.14910889, y: 1.492857}
   m_EdgeRadius: 0
 --- !u!212 &369168704
 SpriteRenderer:
@@ -14738,7 +14758,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1549363529
   m_SortingLayer: -8
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: e63ffd06f3cee374080407d4eda013eb, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -15096,7 +15116,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1549363529
   m_SortingLayer: -8
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: e63ffd06f3cee374080407d4eda013eb, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
