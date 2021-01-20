@@ -57,9 +57,12 @@ public class Hero : MonoBehaviour
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
-            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f), 0, whatIsGround);
-            
-            if(onTheGround)
+        }
+        // DEPLACEMENT DU PERSONNAGE
+        if(!dash)
+        {
+            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f, 0.1f, 1f), 0, whatIsGround);
+            if (onTheGround)
             {
                 anim.SetBool("jump", false); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
                 anim.SetBool("onTheGround", true);
@@ -69,7 +72,6 @@ public class Hero : MonoBehaviour
                 anim.SetBool("onTheGround", false);
             }
         }
-        // DEPLACEMENT DU PERSONNAGE
 
     }
 
@@ -385,10 +387,9 @@ public class Hero : MonoBehaviour
     {
         // DeadZones
 
-        if (collision.tag == "Dead")
+        if (collision.tag == "Dead" && anim.GetBool("Mort") == false)
         {
-            SonHero.PlayOneShot(sonMrX[4], 1f);
-            RestartLevel();
+            StartCoroutine(DeathMrX());
         }
     }
 
@@ -435,16 +436,30 @@ public class Hero : MonoBehaviour
         Destroy(GameObject.Find("MessageCollectable"));
     }
 
-   /* void OnDrawGizmos()
+    IEnumerator DeathMrX()
     {
-        // Draws a 5 unit long red line in front of the object
-        Gizmos.color = Color.red;
-        float size = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
-        float distance2 = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
-        Gizmos.DrawRay(new Vector2(transform.position.x, size), flipLeft ? Vector2.left : Vector2.right);
+        anim.SetTrigger("Blesse");
+        anim.SetBool("Mort", true);
+        activeControl = false;
+        SonHero.PlayOneShot(sonMrX[4], 1f);
+        yield return new WaitForSeconds(2f);
+        RestartLevel();
+        activeControl = true;
+        anim.SetBool("Mort", false);
 
-        
-    } */
-   
+
+    }
+
+    /* void OnDrawGizmos()
+     {
+         // Draws a 5 unit long red line in front of the object
+         Gizmos.color = Color.red;
+         float size = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
+         float distance2 = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
+         Gizmos.DrawRay(new Vector2(transform.position.x, size), flipLeft ? Vector2.left : Vector2.right);
+
+
+     } */
+
 }
 
