@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Climb
+  - Item
+  - Display
+  - Ennemy
+  - Dead
+  - TagCheckPoint
+  - Sons
+  - Checkpoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Character
+  - Dictature
+  - Chaos
+  - PostApo
+  - TransitionDictature
+  - TransitionChaos
+  - TransitionPostApo
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Dictature
+    uniqueID: 3054683121
+    locked: 0
+  - name: DictatureDecors
+    uniqueID: 1549363529
+    locked: 0
+  - name: DictaturePlayer
+    uniqueID: 1321321237
+    locked: 0
+  - name: Chaos
+    uniqueID: 245706777
+    locked: 0
+  - name: ChaosDecors
+    uniqueID: 3790979351
+    locked: 0
+  - name: ChaosPlayer
+    uniqueID: 703449983
+    locked: 0
+  - name: PostApo
+    uniqueID: 1102990511
+    locked: 0
+  - name: PostApoDecors
+    uniqueID: 4279509701
+    locked: 0
+  - name: PostApoPlayer
+    uniqueID: 3683513687
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2879479951
+    locked: 0
