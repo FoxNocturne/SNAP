@@ -216,7 +216,7 @@ public class Hero : MonoBehaviour
 
             if(objectPulling != null)
             {
-                if (Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+                if(Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || objectPulling.tag != "Item")
                 {
                     SonHero.PlayOneShot(sonMrX[5], 0.2f);
                     // GetComponent<SpriteRenderer>().color = Color.red;
