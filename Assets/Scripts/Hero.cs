@@ -23,7 +23,7 @@ public class Hero : MonoBehaviour
     public Transform circleGround;
     public GameObject phantomEffect;
     public GameObject MessageCollectable;
-    public GameObject CheckEffect;    
+    public GameObject CheckEffect;
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
@@ -31,6 +31,7 @@ public class Hero : MonoBehaviour
     bool canDash = false;
     bool canClimb = false;
     bool isPulling = false;
+    public bool isDead { get; private set; } = false;
     Transform objectPulling;
     RaycastHit2D hit;
 
@@ -438,6 +439,7 @@ public class Hero : MonoBehaviour
 
     IEnumerator DeathMrX()
     {
+        isDead = true;
         anim.SetTrigger("Blesse");
         anim.SetBool("Mort", true);
         activeControl = false;
@@ -446,8 +448,7 @@ public class Hero : MonoBehaviour
         RestartLevel();
         activeControl = true;
         anim.SetBool("Mort", false);
-
-
+        isDead = false;
     }
 
     /* void OnDrawGizmos()
