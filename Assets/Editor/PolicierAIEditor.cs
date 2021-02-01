@@ -13,8 +13,8 @@ public class PolicierAIEditor : Editor
         Handles.color = Color.grey;
         Handles.DrawWireArc(ai.transform.position, Vector3.forward, Vector3.left, 360, ai.viewDistance);
 
-        Vector3 angleA = ai.DirFromAngle(45, false);
-        Vector3 angleB = ai.DirFromAngle(135, false);
+        Vector3 angleA = ai.DirFromAngle(90 + ai.viewAngle / 2, false);
+        Vector3 angleB = ai.DirFromAngle(90 - ai.viewAngle / 2, false);
         
         Handles.DrawLine(ai.transform.position, ai.transform.position + angleA * ai.viewDistance);
         Handles.DrawLine(ai.transform.position, ai.transform.position + angleB * ai.viewDistance);

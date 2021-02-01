@@ -2040,6 +2040,11 @@ PrefabInstance:
       propertyPath: layerMask.m_Bits
       value: 512
       objectReference: {fileID: 0}
+    - target: {fileID: 3190405453620607029, guid: 7da330d0de1e7ab40bae39f67dae3dc4,
+        type: 3}
+      propertyPath: viewAngle
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 3190405454161081445, guid: 7da330d0de1e7ab40bae39f67dae3dc4,
         type: 3}
       propertyPath: m_Layer
