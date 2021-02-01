@@ -27610,12 +27610,22 @@ PrefabInstance:
     - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
         type: 3}
       propertyPath: m_Offset.y
-      value: 1.4023376
+      value: 1.1236625
       objectReference: {fileID: 0}
     - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
         type: 3}
       propertyPath: m_Size.y
-      value: 3.7286024
+      value: 3.1712523
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.33175468
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.33649063
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
@@ -30149,12 +30159,12 @@ PrefabInstance:
     - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.73086095
+      value: -0.8540051
       objectReference: {fileID: 0}
     - target: {fileID: 8245829187929812098, guid: 204874a806e0e49498d1eedd897e3056,
         type: 3}
       propertyPath: m_Size.y
-      value: 4.7202015
+      value: 2.5505037
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204874a806e0e49498d1eedd897e3056, type: 3}
@@ -60886,6 +60896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelLoaderSpiral
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860406197758252987, guid: 0401f291804d12147835ba5fb84c6978,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2860406198590417890, guid: 0401f291804d12147835ba5fb84c6978,
         type: 3}
