@@ -20,6 +20,7 @@ public class PlacementPortail : MonoBehaviour
     private bool placing;
     private bool placingOkay;
     private bool targetIsNext;
+    private int targetDimension;
 
     AudioSource sonPortailEnclencher;
     public AudioClip[] sonPortail;
@@ -44,6 +45,8 @@ public class PlacementPortail : MonoBehaviour
         // Appui sur L2 ou R2
         if (Input.GetButtonDown("Portail"))
         {
+            SetTargetDimension();
+
             if (DestroyExistingPortal())
                 return;
 
@@ -119,14 +122,13 @@ public class PlacementPortail : MonoBehaviour
     private void CheckPortailPlacingPossibility()
     {
         placingOkay = true;
-        int targetDimension = (Input.GetAxis("Portail") == 1 ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension()) + 9;
-
+        
         // Test de la dimension actuelle
         if (Physics2D.OverlapCircle(portailPlacing.transform.position, 0.8f, LayerMask.GetMask(LayerMask.LayerToName(snapScript.GetActualDimension() + 9))))
             placingOkay = false;
 
         // Test de la dimension cible
-        if (Physics2D.OverlapCircle(portailPlacing.transform.position, 0.8f, LayerMask.GetMask(LayerMask.LayerToName(targetDimension))))
+        if (Physics2D.OverlapCircle(portailPlacing.transform.position, 0.8f, LayerMask.GetMask(LayerMask.LayerToName(targetDimension + 9))))
             placingOkay = false;
 
         ChangeColor(portailPlacing, placingOkay ? Color.white : Color.red);
@@ -150,7 +152,6 @@ public class PlacementPortail : MonoBehaviour
             return;
 
         int actualDimension = snapScript.GetActualDimension();
-        int targetDimension = Input.GetAxis("Portail") == 1 ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension();
 
         // Création du premier portail
         actualDimensionPortal = Instantiate(portailPrefab, portalPosition, transform.rotation);
@@ -189,5 +190,13 @@ public class PlacementPortail : MonoBehaviour
 
         foreach (Transform child in portal.transform)
             child.gameObject.layer = newLayer;
+    }
+
+    public void SetTargetDimension()
+    {
+        if (niveau1)
+            targetDimension = snapScript.GetActualDimension() == 0 ? 2 : 0;
+        else
+            targetDimension = Input.GetAxis("Portail") == 1 ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension();
     }
 }

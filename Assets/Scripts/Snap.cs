@@ -65,11 +65,13 @@ public class Snap : MonoBehaviour
     {
         if (tutoriel)
             return;
-        
+
         if(niveau1)
             SnapNiveau1();
         else
             SnapNormal();
+
+        GetComponent<PlacementPortail>().SetTargetDimension();
     }
 
     private void SnapNiveau1()
