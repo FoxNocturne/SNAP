@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c8211f2219f77449037450a8ee69a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UISnap: {fileID: 0}
   tutoriel: 1
   niveau1: 1
   dimensionAIgnorer: 0
@@ -113,7 +114,7 @@ MonoBehaviour:
   niveau1: 1
   occlusionPlacement: {fileID: 0}
   portailRadius: {fileID: 5833364615044193006}
-  portailPrefab: {fileID: 5868348086208344494, guid: 4176333913973404c9cd7812c2916202,
+  portailPrefab: {fileID: 207636714317200984, guid: 4176333913973404c9cd7812c2916202,
     type: 3}
   portailColors:
   - {r: 0, g: 0, b: 1, a: 1}
