@@ -387,8 +387,16 @@ public class Hero : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // DeadZones
-
         if (collision.tag == "Dead" && anim.GetBool("Mort") == false)
+        {
+            StartCoroutine(DeathMrX());
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // DeadZones
+        if (collision.gameObject.tag == "Ennemy" && anim.GetBool("Mort") == false)
         {
             StartCoroutine(DeathMrX());
         }
