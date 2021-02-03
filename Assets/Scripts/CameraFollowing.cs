@@ -14,6 +14,7 @@ public class CameraFollowing : MonoBehaviour
     public Image fading;
     public float fadingSpeed;
     public Light2D globalLightPostApo;
+    public Light2D lightBouclier;
 
     private bool following = true;
 
@@ -127,6 +128,7 @@ public class CameraFollowing : MonoBehaviour
 
     IEnumerator TomberBouclier(Transform bouclier, GameObject player)
     {
+        lightBouclier.enabled = false;
         Vector2 targetPosP = new Vector2(player.transform.position.x, 0);
         Vector2 targetPosB = new Vector2(bouclier.transform.position.x, 0);
         float timeStart = Time.time;
