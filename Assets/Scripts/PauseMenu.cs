@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ConfirmationRespawnToCheckpointUI;
     public GameObject player;
     public GameObject item;
-   // private Vector3 itemPosition;
+    private Vector3 itemPosition;
     public Animator resumeBanim;
     public Animator collectableBanim;
     public Animator optionBanim;
@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (transform.tag == "Item")
         {
-            //itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
+            itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
         }
 
         //pardon pour ça 
@@ -123,8 +123,8 @@ public class PauseMenu : MonoBehaviour
         player.transform.position = CheckPoints.reachedPoint;
 
         //respawn de la caisse a sa position initial
-        //item = GameObject.FindGameObjectWithTag("Item");
-        //item.transform.position = itemPosition;
+        item = GameObject.FindGameObjectWithTag("Item");
+        item.transform.position = itemPosition;
     }
 
 
