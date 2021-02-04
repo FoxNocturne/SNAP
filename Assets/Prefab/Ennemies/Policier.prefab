@@ -49,13 +49,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 3
   TempsDePause: 2
-  player: {fileID: 0}
   viewDistance: 5
+  viewAngle: 120
   layerMask:
     serializedVersion: 2
     m_Bits: 1
   BallePrefab: {fileID: 6532026929992734326, guid: bf984b202a716254983a2af2b9e8eb49,
     type: 3}
+  waitingSecondsBeforeShoot: 0.3
   shootSpeed: 20
 --- !u!212 &3190405453620607027
 SpriteRenderer:

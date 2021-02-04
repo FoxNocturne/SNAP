@@ -1960,6 +1960,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3190405453620607026, guid: 7da330d0de1e7ab40bae39f67dae3dc4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3190405453620607028, guid: 7da330d0de1e7ab40bae39f67dae3dc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2039,6 +2044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: layerMask.m_Bits
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190405453620607029, guid: 7da330d0de1e7ab40bae39f67dae3dc4,
+        type: 3}
+      propertyPath: viewAngle
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3190405454161081445, guid: 7da330d0de1e7ab40bae39f67dae3dc4,
         type: 3}

@@ -9,6 +9,7 @@ public class PolicierAI : MonoBehaviour
     public float TempsDePause = 2;
     [Header("Recherche")]
     public float viewDistance;
+    public int viewAngle;
     public LayerMask layerMask;
     [Header("Tir")]
     public GameObject BallePrefab;
@@ -81,7 +82,7 @@ public class PolicierAI : MonoBehaviour
         {
             float angle = Vector2.Angle(transform.right, (player.transform.position - transform.position).normalized);
 
-            if ((directionGauche && angle > 135) || (!directionGauche && angle < 45)) // Vérification de l'angle (cône de vision)
+            if ((directionGauche && angle > 90 + viewAngle / 2) || (!directionGauche && angle < 90 - viewAngle / 2)) // Vérification de l'angle (cône de vision)
             {
                 if (!(Physics2D.Raycast(transform.position, (player.transform.position - transform.position), dist, layerMask))) // Vérification de la présence d'obstacles
                 {
