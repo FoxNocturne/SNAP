@@ -18,6 +18,7 @@ public class Portail : MonoBehaviour
         {
             draggedObject.gameObject.layer = portailLinked.gameObject.layer;
             draggedObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            draggedObject.GetComponent<SpriteRenderer>().sortingLayerName = SortingLayer.layers[(portailLinked.gameObject.layer - 9) * 3].name;
             draggedObject.localScale = defaultScale;
             draggedObject.tag = "Item";
 
