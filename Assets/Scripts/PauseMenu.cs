@@ -122,9 +122,8 @@ public class PauseMenu : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = CheckPoints.reachedPoint;
 
-        //respawn de la caisse a sa position initial
-        item = GameObject.FindGameObjectWithTag("Item");
-        item.transform.position = itemPosition;
+        RespawnPositionItem();
+
     }
 
 
@@ -208,6 +207,19 @@ public class PauseMenu : MonoBehaviour
             PauseMenuUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(closeCQButton);
+        }
+    }
+    private void RespawnPositionItem()
+    {
+
+        transform.position = itemPosition;
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Dead")
+        {
+            RespawnPositionItem();
         }
     }
 
