@@ -22,7 +22,7 @@ public class Hero : MonoBehaviour
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
-    public GameObject ObserveThisThing;
+    public GameObject MessageCollectable;
     public GameObject CheckEffect;    
     public LayerMask whatIsGround;
     public bool onTheGround = false;
@@ -57,9 +57,12 @@ public class Hero : MonoBehaviour
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
-            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f), 0, whatIsGround);
-            
-            if(onTheGround)
+        }
+        // DEPLACEMENT DU PERSONNAGE
+        if(!dash)
+        {
+            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f, 0.1f, 1f), 0, whatIsGround);
+            if (onTheGround)
             {
                 anim.SetBool("jump", false); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
                 anim.SetBool("onTheGround", true);
@@ -69,7 +72,6 @@ public class Hero : MonoBehaviour
                 anim.SetBool("onTheGround", false);
             }
         }
-        // DEPLACEMENT DU PERSONNAGE
 
     }
 
@@ -200,7 +202,7 @@ public class Hero : MonoBehaviour
 
             if (Input.GetButtonDown("Attraper"))
             {
-                Debug.Log(hit.transform);
+                // Debug.Log(hit.transform);
                 if (hit && hit.transform.tag == "Item")
                 {
                     isPulling = true;
@@ -233,7 +235,7 @@ public class Hero : MonoBehaviour
         }
 
         // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("ObserveThisThing") != null)
+        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null )
         {
             Destroy(GameObject.Find("ObserveThisThing"));
             Time.timeScale = 1;
@@ -246,6 +248,7 @@ public class Hero : MonoBehaviour
     {
        
         transform.position = CheckPoints.reachedPoint;
+        rb.velocity = new Vector2(0, 0);
     }
 
     // EFFET DE GHOST
@@ -344,24 +347,25 @@ public class Hero : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
- 
 
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
-            if (Input.GetKeyDown(KeyCode.R) && onTheGround)
+            if (Input.GetButtonDown("Attraper"))
             {
-                if (GameObject.Find("ObserveThisThing") == null)
+                if (GameObject.Find("MessageCollectable") != null)
                 {
-                    GameObject DisplayObject = Instantiate(ObserveThisThing, transform.position, Quaternion.identity);
-                    DisplayObject.name = "ObserveThisThing";
-                    DisplayObject.transform.GetChild(0).GetComponent<Image>().sprite = collision.GetComponent<ObserveThisThing>().Object_Picture;
-                    DisplayObject.transform.GetChild(1).GetComponent<Text>().text = collision.GetComponent<ObserveThisThing>().text;
-                    Time.timeScale = 0;
-                    activeControl = false;
+                    Destroy(GameObject.Find("MessageCollectable"));
                 }
+                GameObject message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
+                message.name = "MessageCollectable";
+                int numero = collision.gameObject.GetComponent<ObserveThisThing>().Numero;
+                string nom = collision.gameObject.GetComponent<ObserveThisThing>().NomCollectable;
+                PlayerPrefs.SetInt(nom, numero);
+                message.GetComponentInChildren<Text>().text = "Vous avez découvert un indice : \n" + nom;
+                Destroy(collision.gameObject);
+                StartCoroutine(TempsMessageCollectable());
             }
-
         }
     }
     //Sons de pas MrX
@@ -383,10 +387,9 @@ public class Hero : MonoBehaviour
     {
         // DeadZones
 
-        if (collision.tag == "Dead")
+        if (collision.tag == "Dead" && anim.GetBool("Mort") == false)
         {
-            SonHero.PlayOneShot(sonMrX[4], 1f);
-            RestartLevel();
+            StartCoroutine(DeathMrX());
         }
     }
 
@@ -400,6 +403,9 @@ public class Hero : MonoBehaviour
             canClimb = false;
         }
     }
+
+        
+
 
     public bool isMovingLeft()
     {
@@ -424,17 +430,36 @@ public class Hero : MonoBehaviour
         Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f));
     } 
 
-
-   /* void OnDrawGizmos()
+    IEnumerator TempsMessageCollectable()
     {
-        // Draws a 5 unit long red line in front of the object
-        Gizmos.color = Color.red;
-        float size = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
-        float distance2 = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
-        Gizmos.DrawRay(new Vector2(transform.position.x, size), flipLeft ? Vector2.left : Vector2.right);
+        yield return new WaitForSeconds(7.1f);
+        Destroy(GameObject.Find("MessageCollectable"));
+    }
 
-        
-    } */
-   
+    IEnumerator DeathMrX()
+    {
+        anim.SetTrigger("Blesse");
+        anim.SetBool("Mort", true);
+        activeControl = false;
+        SonHero.PlayOneShot(sonMrX[4], 1f);
+        yield return new WaitForSeconds(2f);
+        RestartLevel();
+        activeControl = true;
+        anim.SetBool("Mort", false);
+
+
+    }
+
+    /* void OnDrawGizmos()
+     {
+         // Draws a 5 unit long red line in front of the object
+         Gizmos.color = Color.red;
+         float size = transform.position.y - GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 4;
+         float distance2 = GetComponent<BoxCollider2D>().size.x * transform.localScale.x;
+         Gizmos.DrawRay(new Vector2(transform.position.x, size), flipLeft ? Vector2.left : Vector2.right);
+
+
+     } */
+
 }
 

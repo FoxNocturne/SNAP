@@ -156,14 +156,30 @@ public class PlacementPortail : MonoBehaviour
 
         portailActualDimension.transform.parent = transform.parent;
         portailActualDimension.layer = actualDimension + 9;
+        foreach (Transform child in portailActualDimension.GetComponentsInChildren<Transform>(true))
+        {
+            child.gameObject.layer = actualDimension + 9;
+        }        
         portailActualDimension.GetComponent<SpriteRenderer>().color = portailColors[targetDimension];
-        portailActualDimension.GetComponent<Portail>().targetDimension = targetDimension;
-
+        portailActualDimension.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = portailColors[targetDimension];
+        portailActualDimension.transform.GetChild(1).GetComponent<ParticleSystem>().startColor = portailColors[targetDimension];
+        portailActualDimension.transform.GetChild(2).GetComponent<ParticleSystem>().startColor = portailColors[targetDimension];
+        portailActualDimension.GetComponent<Portail>().targetDimension = targetDimension;        
+        
+        
         portailTargetDimension = Instantiate(portailPrefab, portailActualDimension.transform.position, transform.rotation, portailActualDimension.transform.parent);
         portailTargetDimension.layer = targetDimension + 9;
+        foreach (Transform child in portailTargetDimension.GetComponentsInChildren<Transform>(true))
+        {
+            child.gameObject.layer = targetDimension + 9;
+        }
         portailTargetDimension.GetComponent<SpriteRenderer>().color = portailColors[actualDimension];
+        portailTargetDimension.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = portailColors[actualDimension];
+        portailTargetDimension.transform.GetChild(1).GetComponent<ParticleSystem>().startColor = portailColors[actualDimension];
+        portailTargetDimension.transform.GetChild(2).GetComponent<ParticleSystem>().startColor = portailColors[actualDimension];
         portailTargetDimension.GetComponent<Portail>().targetDimension = actualDimension;
 
+        
         portailActualDimension.GetComponent<Portail>().portailLinked = portailTargetDimension.GetComponent<Portail>();
         portailTargetDimension.GetComponent<Portail>().portailLinked = portailActualDimension.GetComponent<Portail>();
 
