@@ -32566,6 +32566,12 @@ Transform:
   m_Father: {fileID: 1875616823}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1170188462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2086191463300646861, guid: d21ff46b2229c7d46b93e674b1890ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 78861044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1172174026
 GameObject:
   m_ObjectHideFlags: 0
@@ -48251,6 +48257,16 @@ PrefabInstance:
       propertyPath: sonSnap.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: c563aab2813f41943b9f7f76e8f5d564, type: 3}
+    - target: {fileID: 5833364614446276246, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
+      propertyPath: camerasParent
+      value: 
+      objectReference: {fileID: 190969105}
+    - target: {fileID: 5833364614446276246, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
+      propertyPath: UISnap
+      value: 
+      objectReference: {fileID: 1170188462}
     - target: {fileID: 5833364614446276268, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
       propertyPath: m_LocalPosition.x
