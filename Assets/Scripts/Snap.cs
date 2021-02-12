@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Snap : MonoBehaviour
 {
+    public GameObject camerasParent;
     public GameObject UISnap;
     private Image[] interfaceSnap = new Image[6];
 
@@ -15,7 +16,7 @@ public class Snap : MonoBehaviour
     [HideInInspector]
     public int dimensionAIgnorer = 0;
 
-    private GameObject[] cameras = new GameObject[3];
+    private List<GameObject> cameras = new List<GameObject>();
     private float snapPressed, demiTailleX, demiTailleY;
     private int actualDimension = 0;
     Animator anim;
@@ -31,9 +32,14 @@ public class Snap : MonoBehaviour
 
     void Start()
     {
-        cameras = GameObject.FindGameObjectsWithTag("MainCamera");
+        foreach(Transform child in camerasParent.transform)
+        {
+            cameras.Add(child.gameObject);
+        }
+
         cameras[1].GetComponent<Camera>().enabled = false;
         cameras[2].GetComponent<Camera>().enabled = false;
+
         anim = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(8, 7);
         Physics2D.IgnoreLayerCollision(8, 8);
