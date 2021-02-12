@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class SettingMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    public Dropdown resolutionDropdown;
-    Resolution[] resolutions;
+    public TMPro.TMP_Dropdown resolutionDropdown;
+    //public GameObject optionUI;
+    //public GameObject MenuBack;
+    public Resolution[] resolutions;
+
+
+
+
+
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -31,6 +39,15 @@ public class SettingMenu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+    }
+
+    public void Update()
+    {/*
+        if (Input.GetButtonDown("Dash"))
+        {
+            optionUI.SetActive(false);
+            MenuBack.SetActive(true);
+        }*/
     }
     public void SetVolume (float volume)
     {

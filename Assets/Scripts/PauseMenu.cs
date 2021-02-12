@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool optionIsActived = false;
     public GameObject PauseMenuUI;
     public GameObject ConfirmationRespawnToCheckpointUI;
     public GameObject player;
     public GameObject item;
-   // private Vector3 itemPosition;
+    private Vector3 itemPosition;
     public Animator resumeBanim;
     public Animator collectableBanim;
     public Animator optionBanim;
@@ -24,16 +26,28 @@ public class PauseMenu : MonoBehaviour
     public Animator creditBanim;
     public Animator creditSceneBanim;
 
-      
+    public GameObject optionUI;
+    public GameObject collectableUI;
+    public GameObject respawnBDUI;
+    public GameObject quitterBDUI;
 
+    public GameObject firstPauseButton;
+    public GameObject firstOptionButton;
+    public GameObject firstCollectableButton;
+    public GameObject firstCRButton;
+    public GameObject firstCQButton;
 
+    public GameObject closeOptionButton;
+    public GameObject closeCollectableButton;
+    public GameObject closeCRButton;
+    public GameObject closeCQButton;
 
 
     private void Start()
     {
         if (transform.tag == "Item")
         {
-            //itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
+            itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
         }
 
         //pardon pour ça 
@@ -68,7 +82,22 @@ public class PauseMenu : MonoBehaviour
             }
 
         }
-        
+        /*
+        if (optionIsActived)
+            
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                Debug.Log("dhqsjkdhjdhqsjdqsh");
+                PauseMenuUI.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(closeOptionButton);
+
+            }
+
+
+
+        }*/
     }
     public void Resume()
     {
@@ -81,7 +110,11 @@ public class PauseMenu : MonoBehaviour
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true; 
+        GameIsPaused = true;
+
+        EventSystem.current.SetSelectedGameObject(null);
+
+        EventSystem.current.SetSelectedGameObject(firstPauseButton);
     }
     public void RestartLevel()
     {
@@ -89,9 +122,8 @@ public class PauseMenu : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = CheckPoints.reachedPoint;
 
-        //respawn de la caisse a sa position initial
-        //item = GameObject.FindGameObjectWithTag("Item");
-        //item.transform.position = itemPosition;
+        RespawnPositionItem();
+
     }
 
 
@@ -116,7 +148,80 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    public void OptionMenu()
+    {
+        optionUI.SetActive(true);
+        optionIsActived = true;
 
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstOptionButton);
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Debug.Log("dhqsjkdhjdhqsjdqsh");
+            PauseMenuUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(closeOptionButton);
+
+        }
+
+
+    }
+    public void CollectableMenu()
+    {
+        collectableUI.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstCollectableButton);
+
+        if (Input.GetButtonDown("Dash"))
+        {
+            PauseMenuUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(closeCollectableButton);
+        }
+    }
+    public void ConfirmationRespawnMenu()
+    {
+        respawnBDUI.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstCRButton);
+
+        if (Input.GetButtonDown("Dash"))
+        {
+            PauseMenuUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(closeCRButton);
+        }
+    }
+    public void ConfirmationQuitterMenu()
+    {
+        quitterBDUI.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstCQButton);
+
+        if (Input.GetButtonDown("Dash"))
+        {
+            PauseMenuUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(closeCQButton);
+        }
+    }
+    private void RespawnPositionItem()
+    {
+
+        transform.position = itemPosition;
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Dead")
+        {
+            RespawnPositionItem();
+        }
+    }
 
 
 

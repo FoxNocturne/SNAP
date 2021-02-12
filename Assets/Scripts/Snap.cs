@@ -24,6 +24,7 @@ public class Snap : MonoBehaviour
     AudioSource soundSnap;
     public AudioClip[] sonSnap;
 
+
     // Character layer 8
     //
     // Dictature layer 9
@@ -86,12 +87,24 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
-            soundSnap.PlayOneShot(sonSnap[0], 0.05f);
+            //soundSnap.PlayOneShot(sonSnap[0], 0.05f);
             anim.SetTrigger("SNAP");
-            if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f),
-                                      new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
-                                      LayerMask.GetMask(LayerMask.LayerToName((actualDimension == 0 ? 2 : 0) + 9))))
+            if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f), new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),LayerMask.GetMask(LayerMask.LayerToName((actualDimension == 0 ? 2 : 0) + 9))))
+            {
+                soundSnap.PlayOneShot(sonSnap[1], 0.05f);
                 return;
+            }
+            else
+            {
+                soundSnap.PlayOneShot(sonSnap[0], 0.05f);
+            }
+           
+
+
+
+
+
+
 
             // Désactivation de la dimension actuelle
             cameras[actualDimension].GetComponent<Camera>().enabled = false;
@@ -121,9 +134,17 @@ public class Snap : MonoBehaviour
     public void ActiveSnap(float target)
     {
         if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f),
-                                  new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
-                                  LayerMask.GetMask(LayerMask.LayerToName(((actualDimension + (target == 1 ? 1 : 2)) % 3) + 9))))
+                                      new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
+                                      LayerMask.GetMask(LayerMask.LayerToName(((actualDimension + (target == 1 ? 1 : 2)) % 3) + 9))))
+        {
+            soundSnap.PlayOneShot(sonSnap[1], 0.05f);
             return;
+        }
+        else
+        {
+            soundSnap.PlayOneShot(sonSnap[0], 0.05f);
+        }
+       
 
         // Désactivation de la dimension actuelle
         cameras[actualDimension].GetComponent<Camera>().enabled = false;
