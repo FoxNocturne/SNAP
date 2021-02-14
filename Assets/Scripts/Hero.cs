@@ -17,6 +17,7 @@ public class Hero : MonoBehaviour
     private float tailleY;
     public float jump = 100;
     Animator anim;    // ON AJOUTE ANIMATOR POUR GERER L'ANIMATION DE MR.X
+    public Animator BulleCarre; 
     AudioSource SonHero;
     public AudioClip[] sonMrX;
     Rigidbody2D rb;
@@ -37,6 +38,8 @@ public class Hero : MonoBehaviour
 
     BoxCollider2D hitbox;
     float TimeNoMove = 0;
+
+
 
 
     void Start()
@@ -352,6 +355,7 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
+            BulleCarre.SetBool("PlayerNear", true); 
             if (Input.GetButtonDown("Attraper"))
             {
                 if (GameObject.Find("MessageCollectable") != null)
@@ -369,6 +373,7 @@ public class Hero : MonoBehaviour
             }
         }
     }
+   
     //Sons de pas MrX
     public void SonPasMrX() 
     {
@@ -410,6 +415,12 @@ public class Hero : MonoBehaviour
         {
             rb.gravityScale = 2;
             canClimb = false;
+        }
+
+        if (collision.tag == "Display")
+        {
+            // RAMASSER UN OBJET
+            BulleCarre.SetBool("PlayerNear", false); 
         }
     }
 
