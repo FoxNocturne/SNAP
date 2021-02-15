@@ -25,14 +25,14 @@ public class Couloir : MonoBehaviour
             lightInt[0].enabled = true;
             lightInt[1].enabled = true;
 
-            sr.color = new Color(255, 255, 255, Mathf.Clamp(sr.color.a + speed * Time.deltaTime, 0.5f, 1));
+            sr.color = new Color(255, 255, 255, Mathf.Clamp(sr.color.a + speed * Time.deltaTime, 0.8f, 1));
         }else if(!playerIn)
         {
             lightExt.enabled = true;
             lightInt[0].enabled = false;
             lightInt[1].enabled = false;
 
-            sr.color = new Color(255, 255, 255, Mathf.Clamp(sr.color.a - speed * Time.deltaTime, 0.5f, 1));
+            sr.color = new Color(255, 255, 255, Mathf.Clamp(sr.color.a - speed * Time.deltaTime, 0.8f, 1));
         }
     }
 

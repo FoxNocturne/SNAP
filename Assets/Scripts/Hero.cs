@@ -256,6 +256,7 @@ public class Hero : MonoBehaviour
     {
         ghost = true;
         GameObject effect = Instantiate(phantomEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.GetComponent<SpriteRenderer>().sortingLayerID = GetComponent<SpriteRenderer>().sortingLayerID;
         effect.transform.localScale = transform.localScale;
         effect.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         yield return new WaitForSeconds(timeSpawn);
