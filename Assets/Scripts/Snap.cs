@@ -7,6 +7,7 @@ public class Snap : MonoBehaviour
 {
     public GameObject camerasParent;
     public GameObject UISnap;
+    public GameObject feedback;
     private Image[] interfaceSnap = new Image[6];
 
     [Header("Options")]
@@ -91,7 +92,8 @@ public class Snap : MonoBehaviour
             anim.SetTrigger("SNAP");
             if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f), new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),LayerMask.GetMask(LayerMask.LayerToName((actualDimension == 0 ? 2 : 0) + 9))))
             {
-                soundSnap.PlayOneShot(sonSnap[1], 0.05f);
+                //soundSnap.PlayOneShot(sonSnap[1], 0.05f);
+                feedback.SetActive(true);
                 return;
             }
             else
