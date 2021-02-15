@@ -13624,7 +13624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &482857282
 Transform:
   m_ObjectHideFlags: 0
@@ -27664,6 +27664,7 @@ GameObject:
   - component: {fileID: 983172872}
   - component: {fileID: 983172874}
   - component: {fileID: 983172873}
+  - component: {fileID: 983172875}
   m_Layer: 11
   m_Name: Racines_2
   m_TagString: Untagged
@@ -27696,16 +27697,15 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.94168454, y: -0.071859725}
-  - {x: 0.781518, y: -0.3719702}
-  - {x: -0.8904572, y: 0.7173611}
-  - {x: -0.5488539, y: 1.1003606}
-  - {x: 0.942979, y: -0.068083145}
+  - {x: -0.9272862, y: 1.0922657}
+  - {x: 1.5063637, y: -0.56911325}
+  - {x: 1.5885501, y: -0.42376283}
+  - {x: -0.7422529, y: 1.1015942}
 --- !u!212 &983172874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27757,6 +27757,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &983172875
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983172871}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: -8.3
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &990051609
 GameObject:
   m_ObjectHideFlags: 0
@@ -46500,6 +46519,7 @@ GameObject:
   - component: {fileID: 1688784013}
   - component: {fileID: 1688784015}
   - component: {fileID: 1688784014}
+  - component: {fileID: 1688784016}
   m_Layer: 11
   m_Name: Racines_0
   m_TagString: Untagged
@@ -46532,15 +46552,15 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: 1.0458357, y: 0.9585373}
   - {x: 0.094308555, y: 0.5205585}
-  - {x: -0.32197607, y: -0.35932344}
-  - {x: -0.7790785, y: -0.07241097}
+  - {x: -0.8341418, y: -0.25722834}
+  - {x: -1.1483276, y: -0.020873249}
   - {x: -0.09699547, y: 0.8993665}
   - {x: 1.1526883, y: 1.4737397}
 --- !u!212 &1688784015
@@ -46594,6 +46614,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &1688784016
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688784012}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 28.51
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1691349886
 GameObject:
   m_ObjectHideFlags: 0
@@ -59452,6 +59491,7 @@ GameObject:
   - component: {fileID: 2097199449}
   - component: {fileID: 2097199451}
   - component: {fileID: 2097199450}
+  - component: {fileID: 2097199452}
   m_Layer: 11
   m_Name: Racines_1
   m_TagString: Untagged
@@ -59484,16 +59524,17 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.9717906, y: 0.8031468}
-  - {x: -1.0009686, y: -0.7123133}
-  - {x: -0.67698264, y: 0.28265655}
+  - {x: 1.3337654, y: 1.0564709}
+  - {x: 0.26652458, y: 0.7784749}
+  - {x: -1.1990042, y: -0.10491544}
+  - {x: -1.2780645, y: 0.07169585}
   - {x: 0.28626636, y: 0.9814886}
-  - {x: 1.1039774, y: 1.3190295}
+  - {x: 1.3732374, y: 1.3453906}
 --- !u!212 &2097199451
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -59544,6 +59585,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!251 &2097199452
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097199448}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 16.37
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &2098185217
 GameObject:
   m_ObjectHideFlags: 0
