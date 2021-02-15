@@ -1,0 +1,920 @@
+fileFormatVersion: 2
+guid: 2f6f69b69087fcd4ea322bd953081611
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 120453823213354867
+    second: "D\xE9bris_0"
+  - first:
+      213: -3664396937945574922
+    second: "D\xE9bris_1"
+  - first:
+      213: -9188084949605055319
+    second: "D\xE9bris_2"
+  - first:
+      213: -1892823772788464817
+    second: "D\xE9bris sombres 1"
+  - first:
+      213: 5201482430112684260
+    second: "D\xE9bris sombres 2"
+  - first:
+      213: 2512119842887166794
+    second: "D\xE9bris sombres 7"
+  - first:
+      213: -7909676362442936204
+    second: "D\xE9bris_6"
+  - first:
+      213: -6691312754748986051
+    second: "D\xE9bris_7"
+  - first:
+      213: -6530847717836654010
+    second: "D\xE9bris_8"
+  - first:
+      213: 6458279253532187455
+    second: "D\xE9bris_9"
+  - first:
+      213: -970803641400747499
+    second: "D\xE9bris_10"
+  - first:
+      213: 3378711530154688818
+    second: "D\xE9bris sombres 3"
+  - first:
+      213: -197388078764471559
+    second: "D\xE9bris sombres 4"
+  - first:
+      213: -6309604570911035715
+    second: "D\xE9bris sombres 5"
+  - first:
+      213: -5817060110911625247
+    second: "D\xE9bris sombres 6"
+  - first:
+      213: 4064604376545418160
+    second: "D\xE9bris sombres 8"
+  - first:
+      213: 2676264579406645701
+    second: "D\xE9bris_16"
+  - first:
+      213: 722621287979406352
+    second: "D\xE9bris_17"
+  - first:
+      213: -19696132901535058
+    second: "D\xE9bris_18"
+  - first:
+      213: -6197353420428035980
+    second: "D\xE9bris_19"
+  - first:
+      213: 5007366597680440709
+    second: "D\xE9bris_20"
+  - first:
+      213: 2511367510893806387
+    second: "D\xE9bris_21"
+  - first:
+      213: 940780491500649406
+    second: "D\xE9bris_22"
+  - first:
+      213: -8432742024510926609
+    second: "D\xE9bris_23"
+  - first:
+      213: 8995332402294125185
+    second: "D\xE9bris_24"
+  - first:
+      213: 3196794824643249370
+    second: "D\xE9bris_25"
+  - first:
+      213: 6230280739492782515
+    second: "D\xE9bris_26"
+  - first:
+      213: 8719025214310748865
+    second: "D\xE9bris_27"
+  - first:
+      213: 8472009047876330990
+    second: "D\xE9bris_28"
+  - first:
+      213: -4251602757151825972
+    second: "D\xE9bris_29"
+  - first:
+      213: -8528396293949942022
+    second: "D\xE9bris_30"
+  - first:
+      213: 5305434950836686869
+    second: "D\xE9bris_31"
+  - first:
+      213: -6479773441975291355
+    second: "D\xE9bris_32"
+  - first:
+      213: -5773810739557150405
+    second: "D\xE9bris_33"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "D\xE9bris_0"
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 876
+        width: 188
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f38703d10fba100800000000000000
+      internalID: 120453823213354867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_1"
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 876
+        width: 186
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f199b55662752dc0800000000000000
+      internalID: -3664396937945574922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_2"
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 879
+        width: 69
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a48dac3b6d5d7080800000000000000
+      internalID: -9188084949605055319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 1"
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 878
+        width: 188
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f436788aec65bb5e0800000000000000
+      internalID: -1892823772788464817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 2"
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 878
+        width: 186
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e85d4826b06f2840800000000000000
+      internalID: 5201482430112684260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 7"
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 881
+        width: 69
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bef74ffa7dcd220800000000000000
+      internalID: 2512119842887166794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_6"
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 754
+        width: 75
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470f840714f2b3290800000000000000
+      internalID: -7909676362442936204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_7"
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 754
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d652c608ea323a0800000000000000
+      internalID: -6691312754748986051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_8"
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 759
+        width: 66
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64afc204a94cd55a0800000000000000
+      internalID: -6530847717836654010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_9"
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 751
+        width: 220
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b9f0f73ca60a950800000000000000
+      internalID: 6458279253532187455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_10"
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 757
+        width: 156
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a17af4b330782f0800000000000000
+      internalID: -970803641400747499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 3"
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 756
+        width: 75
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23103694c3893ee20800000000000000
+      internalID: 3378711530154688818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 4"
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 756
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fac852969cb24df0800000000000000
+      internalID: -197388078764471559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 5"
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 761
+        width: 66
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbeaaad8218cf68a0800000000000000
+      internalID: -6309604570911035715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 6"
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 753
+        width: 220
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7a40436a6a54fa0800000000000000
+      internalID: -5817060110911625247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris sombres 8"
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 759
+        width: 156
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbdc703520686830800000000000000
+      internalID: 4064604376545418160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_16"
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 367
+        width: 361
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c94e7c9470042520800000000000000
+      internalID: 2676264579406645701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_17"
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 369
+        width: 361
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014d5299b34470a00800000000000000
+      internalID: 722621287979406352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_18"
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 207
+        width: 188
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea284f2b8760abff0800000000000000
+      internalID: -19696132901535058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_19"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 207
+        width: 186
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478b5db26e39ef9a0800000000000000
+      internalID: -6197353420428035980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_20"
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 210
+        width: 69
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58526e2f36dbd7540800000000000000
+      internalID: 5007366597680440709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_21"
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 209
+        width: 188
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3334843027b2ad220800000000000000
+      internalID: 2511367510893806387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_22"
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 209
+        width: 186
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb738f5fd25e0d00800000000000000
+      internalID: 940780491500649406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_23"
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 212
+        width: 69
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0948aaec1e8fa80800000000000000
+      internalID: -8432742024510926609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_24"
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 85
+        width: 75
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1827d4b1927d5dc70800000000000000
+      internalID: 8995332402294125185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_25"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 85
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad40ba6a4fb4d5c20800000000000000
+      internalID: 3196794824643249370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_26"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 90
+        width: 66
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1ec68b257667650800000000000000
+      internalID: 6230280739492782515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_27"
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 82
+        width: 220
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c29aaeac33300970800000000000000
+      internalID: 8719025214310748865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_28"
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 88
+        width: 156
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee56098a75f929570800000000000000
+      internalID: 8472009047876330990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_29"
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 87
+        width: 75
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfd4ed71d54ff4c0800000000000000
+      internalID: -4251602757151825972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_30"
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 87
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af61b5b81cc05a980800000000000000
+      internalID: -8528396293949942022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_31"
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 92
+        width: 66
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51010977af0b0a940800000000000000
+      internalID: 5305434950836686869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_32"
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 84
+        width: 220
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5227d06c2683316a0800000000000000
+      internalID: -6479773441975291355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "D\xE9bris_33"
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 90
+        width: 156
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b315c5c29bd4fdfa0800000000000000
+      internalID: -5773810739557150405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
