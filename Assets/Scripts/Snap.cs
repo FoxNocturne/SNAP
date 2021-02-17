@@ -16,6 +16,8 @@ public class Snap : MonoBehaviour
 
     [HideInInspector]
     public int dimensionAIgnorer = 0;
+    [HideInInspector]
+    public bool cantSnap = false;
 
     private List<GameObject> cameras = new List<GameObject>();
     private float snapPressed, demiTailleX, demiTailleY;
@@ -71,6 +73,9 @@ public class Snap : MonoBehaviour
 
     void Update()
     {
+        if (cantSnap)
+            return;
+
         if (tutoriel)
             return;
 

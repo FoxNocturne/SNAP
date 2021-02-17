@@ -88,7 +88,7 @@ public class CameraFollowing : MonoBehaviour
                 return;
             }
 
-            transform.position = new Vector3(player.position.x, Mathf.Clamp(player.position.y + 2.5f, -38.61296f, float.MaxValue), -10);
+            transform.position = new Vector3(player.position.x, Mathf.Clamp(player.position.y + 2f, -40f, float.MaxValue), -10);
             foreach (Transform child in transform)
             {
                 child.GetComponent<Camera>().orthographicSize += (5 - child.GetComponent<Camera>().orthographicSize) * Time.deltaTime;

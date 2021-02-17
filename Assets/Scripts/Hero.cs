@@ -221,7 +221,6 @@ public class Hero : MonoBehaviour
                 {
                     SonHero.PlayOneShot(sonMrX[5], 0.2f);
                     // GetComponent<SpriteRenderer>().color = Color.red;
-                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;         
 
                     objectPulling = null;
                     isPulling = false;  
@@ -257,6 +256,7 @@ public class Hero : MonoBehaviour
     {
         ghost = true;
         GameObject effect = Instantiate(phantomEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.GetComponent<SpriteRenderer>().sortingLayerID = GetComponent<SpriteRenderer>().sortingLayerID;
         effect.transform.localScale = transform.localScale;
         effect.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         yield return new WaitForSeconds(timeSpawn);
@@ -448,6 +448,7 @@ public class Hero : MonoBehaviour
     IEnumerator DeathMrX()
     {
         isDead = true;
+        GetComponent<Snap>().cantSnap = true;
         anim.SetTrigger("Blesse");
         anim.SetBool("Mort", true);
         activeControl = false;
@@ -457,6 +458,7 @@ public class Hero : MonoBehaviour
         activeControl = true;
         anim.SetBool("Mort", false);
         isDead = false;
+        GetComponent<Snap>().cantSnap = false;
     }
 
     /* void OnDrawGizmos()
