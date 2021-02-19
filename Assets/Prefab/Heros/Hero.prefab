@@ -58,7 +58,6 @@ MonoBehaviour:
   dashSpeed: 30
   maxSpeed: 5
   jump: 715
-  BulleCarre: {fileID: 8434078125660834056}
   sonMrX:
   - {fileID: 8300000, guid: e5b2bb8d73d38d5419185ce1e320e475, type: 3}
   - {fileID: 8300000, guid: a94b1dd78882bef468a8e2ad23aabe63, type: 3}
@@ -77,6 +76,7 @@ MonoBehaviour:
     type: 3}
   CheckEffect: {fileID: 767592818943400113, guid: 624c71d2b66b6e44db64fab7db5fccd8,
     type: 3}
+  PickUp: {fileID: 767592818943400113, guid: 2e6ce4756576db44ab5aa30fcff81dbf, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 3607

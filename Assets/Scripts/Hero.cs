@@ -17,7 +17,6 @@ public class Hero : MonoBehaviour
     private float tailleY;
     public float jump = 100;
     Animator anim;    // ON AJOUTE ANIMATOR POUR GERER L'ANIMATION DE MR.X
-    public Animator BulleCarre; 
     AudioSource SonHero;
     public AudioClip[] sonMrX;
     Rigidbody2D rb;
@@ -25,6 +24,7 @@ public class Hero : MonoBehaviour
     public GameObject phantomEffect;
     public GameObject MessageCollectable;
     public GameObject CheckEffect;
+    public GameObject PickUp;
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
@@ -355,20 +355,24 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
-            BulleCarre.SetBool("PlayerNear", true); 
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", true); 
             if (Input.GetButtonDown("Attraper"))
             {
                 if (GameObject.Find("MessageCollectable") != null)
                 {
+                    
                     Destroy(GameObject.Find("MessageCollectable"));
                 }
+                collision.gameObject.GetComponent<ClignotementCollectable>().AnimPickUp();
+                GameObject PickUp_ = Instantiate(PickUp, collision.gameObject.transform.position, Quaternion.identity) as GameObject;
+                Destroy(PickUp_, 2);
                 GameObject message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
                 message.name = "MessageCollectable";
                 int numero = collision.gameObject.GetComponent<ObserveThisThing>().Numero;
                 string nom = collision.gameObject.GetComponent<ObserveThisThing>().NomCollectable;
                 PlayerPrefs.SetInt(nom, numero);
                 message.GetComponentInChildren<Text>().text = "Vous avez découvert un indice : \n" + nom;
-                Destroy(collision.gameObject);
+
                 StartCoroutine(TempsMessageCollectable());
             }
         }
@@ -420,7 +424,7 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
-            BulleCarre.SetBool("PlayerNear", false); 
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", false); 
         }
     }
 
