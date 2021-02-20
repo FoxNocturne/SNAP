@@ -93,7 +93,7 @@ public class Snap : MonoBehaviour
             SnapNormal();
 
         GetComponent<PlacementPortail>().SetTargetDimension();
-        /*
+        
         if (transform.localScale.x < 0)
         {
             Debug.Log("ici");
@@ -108,7 +108,7 @@ public class Snap : MonoBehaviour
             //feedback.GetComponent<RectTransform>().anchoredPosition = new Vector2(-3.4f, 2.23f);
             feedback.GetComponent<SpriteRenderer>().sprite = bulle[1];
 
-        }*/
+        }
         
     }
 
