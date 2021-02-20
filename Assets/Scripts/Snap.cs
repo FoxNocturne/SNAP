@@ -124,21 +124,27 @@ public class Snap : MonoBehaviour
             {
                 //soundSnap.PlayOneShot(sonSnap[1], 0.05f);
 
-                if (transform.localScale.x < 0)
+
+                /*
+                if (transform.localScale.x > 0)
                 {
                     Debug.Log("ici");
                     //feedback.GetComponent<RectTransform>().localScale = new Vector2(-1f, 1f);
                     //feedback.GetComponent<RectTransform>().anchoredPosition = new Vector2(-3.4f, 2.23f);
-                    feedback.GetComponent<SpriteRenderer>().sprite = bulle[0];
-
-                }
-                else
-                {
-                    // feedback.GetComponent<RectTransform>().localScale = new Vector2(-1f, 1f);
-                    //feedback.GetComponent<RectTransform>().anchoredPosition = new Vector2(-3.4f, 2.23f);
                     feedback.GetComponent<SpriteRenderer>().sprite = bulle[1];
 
                 }
+                if (transform.localScale.x < 0)
+                {
+                    feedback.SetActive(false);
+                    // feedback.GetComponent<RectTransform>().localScale = new Vector2(-1f, 1f);
+                    //feedback.GetComponent<RectTransform>().anchoredPosition = new Vector2(-3.4f, 2.23f);
+                    feedback.GetComponent<SpriteRenderer>().sprite = bulle[0];
+
+                }*/
+
+
+                
                 feedback.SetActive(true);
                 //Invoke("CloseFeedback", 1f);
                 return;
