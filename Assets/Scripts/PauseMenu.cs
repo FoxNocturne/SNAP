@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject firstPauseButton;
     public GameObject firstOptionButton;
     public GameObject firstCollectableButton;
+    public GameObject[] allCollectableButton;
     public GameObject firstCRButton;
     public GameObject firstCQButton;
 
@@ -115,6 +116,7 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(firstPauseButton);
+        // EventSystem.current.IsActive = true;
     }
     public void RestartLevel()
     {
@@ -158,11 +160,9 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Debug.Log("dhqsjkdhjdhqsjdqsh");
             PauseMenuUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(closeOptionButton);
-
         }
 
 

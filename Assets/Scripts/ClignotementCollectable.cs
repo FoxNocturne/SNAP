@@ -7,71 +7,53 @@ public class ClignotementCollectable : MonoBehaviour
 {
     private Light2D clignotement;
     private float t = 0;
+    private float lS = 1;
     private bool transition = false;
-    Color transparence;
+    public GameObject bulle;
     bool delay = false;
-
     bool pickUp = false;
+    PauseMenu afficherCollectable;
+
 
     // Start is called before the first frame update
     void Start()
     {
         clignotement = GetComponent<Light2D>();
-        transparence = GetComponent<SpriteRenderer>().color;
+        afficherCollectable = GameObject.Find("CanvasPause/Menus").GetComponent<PauseMenu>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         clignotement.intensity = Mathf.Lerp(0, 2, t);
+        transform.localScale = new Vector3(Mathf.Lerp(0, 1, lS), Mathf.Lerp(0, 1, lS), Mathf.Lerp(0, 1, lS));
+        if(transition)
+        {
+            t += Time.deltaTime;
+            if(t >= 1)
+            {
+                transition = false;
+            }
+        }
+        else if(!transition && !delay)
+        {
+            t -= Time.deltaTime;
+            if(t <= 0 && !delay)
+            {
+                StartCoroutine(delayCligno());                    
+            }
+        }
 
         if(pickUp)
         {
-                    Debug.Log(t);
-            transparence = new Color(1, 1, 1, t);
-        }
-
-        if(!pickUp)
-        {
-            if(transition)
+            lS -= Time.deltaTime * 5;
+            if(Input.GetButtonDown("Action"))
             {
-                t += Time.deltaTime;
-                if(t >= 1)
-                {
-                    transition = false;
-                }
-            }
-            else if(!transition && !delay)
-            {
-                t -= Time.deltaTime;
-                if(t <= 0 && !delay)
-                {
-                    StartCoroutine(delayCligno());                    
-                }
+                afficherCollectable.firstCollectableButton = afficherCollectable.allCollectableButton[GetComponent<ObserveThisThing>().Numero];
+                afficherCollectable.CollectableMenu();
             }
         }
-        else
-        {
-            if(transition)
-            {
-                t += Time.deltaTime * 5;
-                if(t >= 1)
-                {
-                    transition = false;
-                }
-            }
-            else if(!transition)
-            {
-                
-                if(t > 0)
-                {
-                    t -= Time.deltaTime * 2;
-                    transparence = new Color(1, 1, 1, t);
-
-                }
-            }            
-        }
-
     }
 
     IEnumerator delayCligno()
@@ -85,9 +67,10 @@ public class ClignotementCollectable : MonoBehaviour
     public void AnimPickUp()
     {
         pickUp = true;
+
+        Destroy(bulle);
         transition = true;
-        t = 0;
         gameObject.tag = "Untagged";
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 7);
     }    
 }

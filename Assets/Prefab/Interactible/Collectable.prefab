@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6201684862875708883}
   - component: {fileID: 6201684862875708885}
   m_Layer: 9
-  m_Name: Collectable1
+  m_Name: Collectable
   m_TagString: Display
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d9cce17a451f645bc04f8986f7d219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulle: {fileID: 6201684862074753435}
 --- !u!114 &6201684862875708885
 MonoBehaviour:
   m_ObjectHideFlags: 0
