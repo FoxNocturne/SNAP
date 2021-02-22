@@ -96,12 +96,12 @@ TextureImporter:
       name: levier_0
       rect:
         serializedVersion: 2
-        x: 37
+        x: 0
         y: 88
-        width: 186
+        width: 223
         height: 251
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -119,10 +119,10 @@ TextureImporter:
         serializedVersion: 2
         x: 317
         y: 85
-        width: 189
+        width: 244
         height: 251
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
