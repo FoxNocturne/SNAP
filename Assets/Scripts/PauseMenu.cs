@@ -116,7 +116,7 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(firstPauseButton);
-        // EventSystem.current.IsActive = true;
+        
     }
     public void RestartLevel()
     {

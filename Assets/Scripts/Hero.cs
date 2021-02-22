@@ -40,10 +40,9 @@ public class Hero : MonoBehaviour
     float TimeNoMove = 0;
 
 
-
-
     void Start()
     {
+
         tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
         tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
         speed = maxSpeed;

@@ -14,12 +14,15 @@ public class ClignotementCollectable : MonoBehaviour
     bool pickUp = false;
     PauseMenu afficherCollectable;
 
+    CollectablesUI CollectableTrouve;
+
 
     // Start is called before the first frame update
     void Start()
     {
         clignotement = GetComponent<Light2D>();
         afficherCollectable = GameObject.Find("CanvasPause/Menus").GetComponent<PauseMenu>();
+        
 
     }
 
@@ -52,6 +55,8 @@ public class ClignotementCollectable : MonoBehaviour
             {
                 afficherCollectable.firstCollectableButton = afficherCollectable.allCollectableButton[GetComponent<ObserveThisThing>().Numero];
                 afficherCollectable.CollectableMenu();
+                CollectableTrouve = GameObject.Find("CanvasPause/CollectablesUI").GetComponent<CollectablesUI>();
+                CollectableTrouve.TaskForDisplay(GetComponent<ObserveThisThing>().Numero);
             }
         }
     }
