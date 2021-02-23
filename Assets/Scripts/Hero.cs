@@ -214,6 +214,7 @@ public class Hero : MonoBehaviour
                     // GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     
+                    
                 }
             }
 
@@ -221,7 +222,8 @@ public class Hero : MonoBehaviour
             {
                 if(Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || objectPulling.tag != "Item")
                 {
-                    SonHero.PlayOneShot(sonMrX[5], 0.2f);
+                   // SonHero.PlayOneShot(sonMrX[5], 0.2f);
+                    Debug.Log(hit.transform.GetComponent<Rigidbody2D>().velocity.x);
                     // GetComponent<SpriteRenderer>().color = Color.red;
 
                     objectPulling = null;
