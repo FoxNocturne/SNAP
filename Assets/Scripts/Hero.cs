@@ -55,14 +55,14 @@ public class Hero : MonoBehaviour
     void FixedUpdate()
     {
         // Debug.Log(onTheGround);
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
         }
         // DEPLACEMENT DU PERSONNAGE
-        if(!dash)
+        if(!dash && Time.timeScale != 0)
         {
             onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f, 0.1f, 1f), 0, whatIsGround);
             if (onTheGround)
@@ -91,7 +91,7 @@ public class Hero : MonoBehaviour
         anim.SetFloat("moveVertical", rb.velocity.y); // IL REGARDE SI MR.X VA VERS LE HAUT OU VERS LE BAS POUR L'ANIMATION.
                                                         // S'IL VA VERS LE BAS (moveVertical < 0), ON LANCE LA TRANSITION DE LA CHUTE
 
-        if (!canDash && onTheGround)
+        if (!canDash && onTheGround && Time.timeScale != 0)
         {
             canDash = true;
 
@@ -100,7 +100,7 @@ public class Hero : MonoBehaviour
 
 
         // DEPLACEMENT
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             //SonHero.playOnAwake(sonMrX[6], 1f);
             if (moveHorizontal != 0)
@@ -232,13 +232,13 @@ public class Hero : MonoBehaviour
 
         }
         
-        if (dash && !ghost)
+        if (dash && !ghost && Time.timeScale != 0)
         {
             StartCoroutine(GhostEffect(0.02f));
         }
 
         // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
-        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null )
+        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null && Time.timeScale != 0)
         {
             Destroy(GameObject.Find("ObserveThisThing"));
             Time.timeScale = 1;

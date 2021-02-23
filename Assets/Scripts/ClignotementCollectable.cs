@@ -53,8 +53,10 @@ public class ClignotementCollectable : MonoBehaviour
             lS -= Time.deltaTime * 5;
             if(Input.GetButtonDown("Action"))
             {
+                Time.timeScale = 0; 
                 afficherCollectable.firstCollectableButton = afficherCollectable.allCollectableButton[GetComponent<ObserveThisThing>().Numero];
                 afficherCollectable.CollectableMenu();
+                afficherCollectable.CollectableInstance = true;
                 CollectableTrouve = GameObject.Find("CanvasPause/CollectablesUI").GetComponent<CollectablesUI>();
                 CollectableTrouve.TaskForDisplay(GetComponent<ObserveThisThing>().Numero);
             }

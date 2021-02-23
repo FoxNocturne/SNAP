@@ -28161,9 +28161,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 103588549}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1147020459}
+        m_MethodName: retourCollectable
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -28171,17 +28171,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1586050468}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1002579625
 MonoBehaviour:
@@ -32220,6 +32209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34f7119a63e4154b9b7a49ce402720b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectableInstance: 0
   PauseMenuUI: {fileID: 1586050468}
   ConfirmationRespawnToCheckpointUI: {fileID: 1133230713}
   player: {fileID: 0}
