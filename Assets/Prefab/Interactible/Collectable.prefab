@@ -262,6 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulle: {fileID: 6201684862074753435}
+  MessageCollectable: {fileID: 2327485336277788733, guid: 88d660148b3e21e408c4587844063b08,
+    type: 3}
 --- !u!114 &6201684862875708885
 MonoBehaviour:
   m_ObjectHideFlags: 0
