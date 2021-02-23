@@ -24,6 +24,7 @@ public class Hero : MonoBehaviour
     public GameObject phantomEffect;
     public GameObject MessageCollectable;
     public GameObject CheckEffect;
+    public GameObject PickUp;
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
@@ -41,6 +42,7 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
+
         tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
         tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
         speed = maxSpeed;
@@ -53,14 +55,14 @@ public class Hero : MonoBehaviour
     void FixedUpdate()
     {
         // Debug.Log(onTheGround);
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
         }
         // DEPLACEMENT DU PERSONNAGE
-        if(!dash)
+        if(!dash && Time.timeScale != 0)
         {
             onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f, 0.1f, 1f), 0, whatIsGround);
             if (onTheGround)
@@ -89,7 +91,7 @@ public class Hero : MonoBehaviour
         anim.SetFloat("moveVertical", rb.velocity.y); // IL REGARDE SI MR.X VA VERS LE HAUT OU VERS LE BAS POUR L'ANIMATION.
                                                         // S'IL VA VERS LE BAS (moveVertical < 0), ON LANCE LA TRANSITION DE LA CHUTE
 
-        if (!canDash && onTheGround)
+        if (!canDash && onTheGround && Time.timeScale != 0)
         {
             canDash = true;
 
@@ -98,7 +100,7 @@ public class Hero : MonoBehaviour
 
 
         // DEPLACEMENT
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             //SonHero.playOnAwake(sonMrX[6], 1f);
             if (moveHorizontal != 0)
@@ -229,13 +231,13 @@ public class Hero : MonoBehaviour
 
         }
         
-        if (dash && !ghost)
+        if (dash && !ghost && Time.timeScale != 0)
         {
             StartCoroutine(GhostEffect(0.02f));
         }
 
         // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
-        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null )
+        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null && Time.timeScale != 0)
         {
             Destroy(GameObject.Find("ObserveThisThing"));
             Time.timeScale = 1;
@@ -352,23 +354,29 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", true); 
             if (Input.GetButtonDown("Attraper"))
             {
                 if (GameObject.Find("MessageCollectable") != null)
                 {
+                    
                     Destroy(GameObject.Find("MessageCollectable"));
                 }
+                collision.gameObject.GetComponent<ClignotementCollectable>().AnimPickUp();
+                GameObject PickUp_ = Instantiate(PickUp, collision.gameObject.transform.position, Quaternion.identity) as GameObject;
+                Destroy(PickUp_, 2);
                 GameObject message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
                 message.name = "MessageCollectable";
                 int numero = collision.gameObject.GetComponent<ObserveThisThing>().Numero;
                 string nom = collision.gameObject.GetComponent<ObserveThisThing>().NomCollectable;
                 PlayerPrefs.SetInt(nom, numero);
                 message.GetComponentInChildren<Text>().text = "Vous avez découvert un indice : \n" + nom;
-                Destroy(collision.gameObject);
+
                 StartCoroutine(TempsMessageCollectable());
             }
         }
     }
+   
     //Sons de pas MrX
     public void SonPasMrX() 
     {
@@ -410,6 +418,12 @@ public class Hero : MonoBehaviour
         {
             rb.gravityScale = 2;
             canClimb = false;
+        }
+
+        if (collision.tag == "Display")
+        {
+            // RAMASSER UN OBJET
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", false); 
         }
     }
 
