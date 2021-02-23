@@ -22,8 +22,9 @@ public class Hero : MonoBehaviour
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
-    public GameObject MessageCollectable;
-    public GameObject CheckEffect;    
+
+    public GameObject CheckEffect;
+    public GameObject PickUp;
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
@@ -31,6 +32,7 @@ public class Hero : MonoBehaviour
     bool canDash = false;
     bool canClimb = false;
     bool isPulling = false;
+    public bool isDead { get; private set; } = false;
     Transform objectPulling;
     RaycastHit2D hit;
 
@@ -40,6 +42,7 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
+
         tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
         tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
         speed = maxSpeed;
@@ -52,14 +55,14 @@ public class Hero : MonoBehaviour
     void FixedUpdate()
     {
         // Debug.Log(onTheGround);
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
         }
         // DEPLACEMENT DU PERSONNAGE
-        if(!dash)
+        if(!dash && Time.timeScale != 0)
         {
             onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f, 0.1f, 1f), 0, whatIsGround);
             if (onTheGround)
@@ -88,7 +91,7 @@ public class Hero : MonoBehaviour
         anim.SetFloat("moveVertical", rb.velocity.y); // IL REGARDE SI MR.X VA VERS LE HAUT OU VERS LE BAS POUR L'ANIMATION.
                                                         // S'IL VA VERS LE BAS (moveVertical < 0), ON LANCE LA TRANSITION DE LA CHUTE
 
-        if (!canDash && onTheGround)
+        if (!canDash && onTheGround && Time.timeScale != 0)
         {
             canDash = true;
 
@@ -97,7 +100,7 @@ public class Hero : MonoBehaviour
 
 
         // DEPLACEMENT
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             //SonHero.playOnAwake(sonMrX[6], 1f);
             if (moveHorizontal != 0)
@@ -211,16 +214,17 @@ public class Hero : MonoBehaviour
                     // GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     
+                    
                 }
             }
 
             if(objectPulling != null)
             {
-                if (Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || (objectPulling && objectPulling.GetComponent<Rigidbody2D>().velocity.y < -1))
+                if(Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || objectPulling.tag != "Item")
                 {
-                    SonHero.PlayOneShot(sonMrX[5], 0.2f);
+                   // SonHero.PlayOneShot(sonMrX[5], 0.2f);
+                    Debug.Log(hit.transform.GetComponent<Rigidbody2D>().velocity.x);
                     // GetComponent<SpriteRenderer>().color = Color.red;
-                    hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;         
 
                     objectPulling = null;
                     isPulling = false;  
@@ -229,13 +233,13 @@ public class Hero : MonoBehaviour
 
         }
         
-        if (dash && !ghost)
+        if (dash && !ghost && Time.timeScale != 0)
         {
             StartCoroutine(GhostEffect(0.02f));
         }
 
         // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
-        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null )
+        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null && Time.timeScale != 0)
         {
             Destroy(GameObject.Find("ObserveThisThing"));
             Time.timeScale = 1;
@@ -256,6 +260,7 @@ public class Hero : MonoBehaviour
     {
         ghost = true;
         GameObject effect = Instantiate(phantomEffect, transform.position, Quaternion.identity) as GameObject;
+        effect.GetComponent<SpriteRenderer>().sortingLayerID = GetComponent<SpriteRenderer>().sortingLayerID;
         effect.transform.localScale = transform.localScale;
         effect.GetComponent<SpriteRenderer>().sprite = GetComponent<SpriteRenderer>().sprite;
         yield return new WaitForSeconds(timeSpawn);
@@ -351,23 +356,19 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", true); 
             if (Input.GetButtonDown("Attraper"))
             {
-                if (GameObject.Find("MessageCollectable") != null)
-                {
-                    Destroy(GameObject.Find("MessageCollectable"));
-                }
-                GameObject message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
-                message.name = "MessageCollectable";
-                int numero = collision.gameObject.GetComponent<ObserveThisThing>().Numero;
-                string nom = collision.gameObject.GetComponent<ObserveThisThing>().NomCollectable;
-                PlayerPrefs.SetInt(nom, numero);
-                message.GetComponentInChildren<Text>().text = "Vous avez découvert un indice : \n" + nom;
-                Destroy(collision.gameObject);
-                StartCoroutine(TempsMessageCollectable());
+
+                collision.gameObject.GetComponent<ClignotementCollectable>().AnimPickUp();
+
+                GameObject PickUp_ = Instantiate(PickUp, collision.gameObject.transform.position, Quaternion.identity) as GameObject;
+                Destroy(PickUp_, 2);
+
             }
         }
     }
+   
     //Sons de pas MrX
     public void SonPasMrX() 
     {
@@ -386,8 +387,16 @@ public class Hero : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // DeadZones
-
         if (collision.tag == "Dead" && anim.GetBool("Mort") == false)
+        {
+            StartCoroutine(DeathMrX());
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // DeadZones
+        if (collision.gameObject.tag == "Ennemy" && anim.GetBool("Mort") == false)
         {
             StartCoroutine(DeathMrX());
         }
@@ -401,6 +410,12 @@ public class Hero : MonoBehaviour
         {
             rb.gravityScale = 2;
             canClimb = false;
+        }
+
+        if (collision.tag == "Display")
+        {
+            // RAMASSER UN OBJET
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", false); 
         }
     }
 
@@ -430,14 +445,12 @@ public class Hero : MonoBehaviour
         Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f));
     } 
 
-    IEnumerator TempsMessageCollectable()
-    {
-        yield return new WaitForSeconds(7.1f);
-        Destroy(GameObject.Find("MessageCollectable"));
-    }
+
 
     IEnumerator DeathMrX()
     {
+        isDead = true;
+        GetComponent<Snap>().cantSnap = true;
         anim.SetTrigger("Blesse");
         anim.SetBool("Mort", true);
         activeControl = false;
@@ -446,8 +459,8 @@ public class Hero : MonoBehaviour
         RestartLevel();
         activeControl = true;
         anim.SetBool("Mort", false);
-
-
+        isDead = false;
+        GetComponent<Snap>().cantSnap = false;
     }
 
     /* void OnDrawGizmos()

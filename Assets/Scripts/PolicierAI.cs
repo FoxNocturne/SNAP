@@ -9,9 +9,11 @@ public class PolicierAI : MonoBehaviour
     public float TempsDePause = 2;
     [Header("Recherche")]
     public float viewDistance;
+    public int viewAngle;
     public LayerMask layerMask;
     [Header("Tir")]
     public GameObject BallePrefab;
+    public float waitingSecondsBeforeShoot = 1;
     public float shootSpeed = 10f;
 
     private GameObject player;
@@ -21,6 +23,7 @@ public class PolicierAI : MonoBehaviour
     private bool isWaiting = false;
     private bool playerFinded = false;
     private bool directionGauche;
+    private Coroutine shooting;
     private GameObject shoot;
 
     void Start()
@@ -72,34 +75,43 @@ public class PolicierAI : MonoBehaviour
 
         playerFinded = false;
         float dist = Vector2.Distance(currentPos, player.transform.position);
+        if (player.GetComponent<Hero>().isDead)
+            return;
+
         if (dist <= viewDistance) // Vérification de la distance (cercle de vision)
         {
             float angle = Vector2.Angle(transform.right, (player.transform.position - transform.position).normalized);
 
-            if ((directionGauche && angle > 135) || (!directionGauche && angle < 45)) // Vérification de l'angle (cône de vision)
+            if ((directionGauche && angle > 90 + viewAngle / 2) || (!directionGauche && angle < 90 - viewAngle / 2)) // Vérification de l'angle (cône de vision)
             {
                 if (!(Physics2D.Raycast(transform.position, (player.transform.position - transform.position), dist, layerMask))) // Vérification de la présence d'obstacles
                 {
                     playerFinded = true;
-                    GetComponent<SpriteRenderer>().color = Color.yellow;
-
-                    if(!shoot) // Tir de la balle uniquement s'il n'en existe pas déjà une autre
+                    if(!shoot & shooting == null) // Tir de la balle uniquement s'il n'en existe pas déjà une autre
                     {
-                        float sizeX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
-                        shoot = Instantiate(BallePrefab, new Vector2(transform.position.x + (directionGauche ? sizeX : -sizeX), transform.position.y), Quaternion.identity);
-                        shoot.layer = gameObject.layer;
-
-                        shoot.GetComponent<Rigidbody2D>().AddRelativeForce((player.transform.position - shoot.transform.position) * shootSpeed, ForceMode2D.Impulse);
+                        shooting = StartCoroutine(Tir());
                     }
                 }
             }
         }
+    }
 
-        // Je change la couleur pour un feedback visuel. Mais ce n'est que pour les tests, cette fonction disparaitra
-        if(!playerFinded)
+    IEnumerator Tir()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(waitingSecondsBeforeShoot);
+
+        if (playerFinded)
         {
-            GetComponent<SpriteRenderer>().color = Color.blue;
+            float sizeX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+            shoot = Instantiate(BallePrefab, new Vector2(transform.position.x + (directionGauche ? sizeX : -sizeX), transform.position.y), Quaternion.identity);
+            shoot.layer = gameObject.layer;
+
+            shoot.GetComponent<Rigidbody2D>().AddRelativeForce((player.transform.position - shoot.transform.position) * shootSpeed, ForceMode2D.Impulse);
         }
+
+        GetComponent<SpriteRenderer>().color = Color.blue;
+        shooting = null;
     }
 
     // Pause du policier

@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Snap : MonoBehaviour
 {
+    public GameObject camerasParent;
+    public GameObject UISnap;
+    private Image[] interfaceSnap = new Image[6];
+
+    [Header("Options")]
     public bool tutoriel = true;
     public bool niveau1  = true;
 
     [HideInInspector]
     public int dimensionAIgnorer = 0;
+    [HideInInspector]
+    public bool cantSnap = false;
 
-    private GameObject[] cameras = new GameObject[3];
+    private List<GameObject> cameras = new List<GameObject>();
     private float snapPressed, demiTailleX, demiTailleY;
     private int actualDimension = 0;
     Animator anim;
@@ -27,9 +35,14 @@ public class Snap : MonoBehaviour
 
     void Start()
     {
-        cameras = GameObject.FindGameObjectsWithTag("MainCamera");
+        foreach(Transform child in camerasParent.transform)
+        {
+            cameras.Add(child.gameObject);
+        }
+
         cameras[1].GetComponent<Camera>().enabled = false;
         cameras[2].GetComponent<Camera>().enabled = false;
+
         anim = GetComponent<Animator>();
         Physics2D.IgnoreLayerCollision(8, 7);
         Physics2D.IgnoreLayerCollision(8, 8);
@@ -40,17 +53,37 @@ public class Snap : MonoBehaviour
         demiTailleY = (transform.localScale.y * GetComponent<BoxCollider2D>().size.y) / 2;
 
         soundSnap = GetComponent<AudioSource>();
+
+        // UI du snap
+        //   Left -> actualDimension
+        //   Right -> actualDimension + 3
+        interfaceSnap[0] = UISnap.transform.GetChild(0).GetComponent<Image>();
+        interfaceSnap[1] = UISnap.transform.GetChild(2).GetComponent<Image>();
+        interfaceSnap[2] = UISnap.transform.GetChild(4).GetComponent<Image>();
+        interfaceSnap[3] = UISnap.transform.GetChild(1).GetComponent<Image>();
+        interfaceSnap[4] = UISnap.transform.GetChild(3).GetComponent<Image>();
+        interfaceSnap[5] = UISnap.transform.GetChild(5).GetComponent<Image>();
+
+        interfaceSnap[0].enabled = false;
+        interfaceSnap[2].enabled = false;
+        interfaceSnap[3].enabled = false;
+        interfaceSnap[4].enabled = false;
     }
 
     void Update()
     {
+        if (cantSnap)
+            return;
+
         if (tutoriel)
             return;
-        
+
         if(niveau1)
             SnapNiveau1();
         else
             SnapNormal();
+
+        GetComponent<PlacementPortail>().SetTargetDimension();
     }
 
     private void SnapNiveau1()
@@ -121,6 +154,8 @@ public class Snap : MonoBehaviour
         // Désactivation de la dimension actuelle
         cameras[actualDimension].GetComponent<Camera>().enabled = false;
         Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
+        interfaceSnap[GetPreviousDimension() + 3].enabled = false;
+        interfaceSnap[GetNextDimension()].enabled = false;
 
         // Changement d'index
         actualDimension = (actualDimension + (target == 1 ? 1 : 2)) % 3;
@@ -129,6 +164,8 @@ public class Snap : MonoBehaviour
         cameras[actualDimension].GetComponent<Camera>().enabled = true;
         Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
         GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID($"{LayerMask.LayerToName(actualDimension + 9)}Player");
+        interfaceSnap[GetPreviousDimension() + 3].enabled = true;
+        interfaceSnap[GetNextDimension()].enabled = true;
 
         // Verification des layers de transition
         IgnorerTransition(actualDimension == dimensionAIgnorer);

@@ -13,16 +13,16 @@ public class CollectablesUI : MonoBehaviour
     public Text TextDescription;
     public string[] description;
 
-
-    private void Start()
+    private void Awake()
     {
+        PlayerPrefs.DeleteAll(); // A supprimer une fois le test des collectables effectués
         ImageAffiche.color = new Color(0, 0, 0, 0);
         TextDescription.text = "";
-        PlayerPrefs.DeleteAll();
+         
         for (int i = 1; i <= 12; i++)
         {
             PlayerPrefs.SetInt(nameCollec[i], i);
-        }
+        } 
 
     }
     void Update()
@@ -41,6 +41,7 @@ public class CollectablesUI : MonoBehaviour
 
     public void TaskForDisplay(int value)
     {
+        Debug.Log("Ok !");
         ImageAffiche.sprite = ImageCollec[value];
         TextDescription.text = description[value];
         ImageAffiche.color = new Color(1, 1, 1, 1);

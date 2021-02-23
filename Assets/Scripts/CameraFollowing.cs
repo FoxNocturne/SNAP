@@ -14,6 +14,7 @@ public class CameraFollowing : MonoBehaviour
     public Image fading;
     public float fadingSpeed;
     public Light2D globalLightPostApo;
+    public Light2D lightBouclier;
 
     private bool following = true;
 
@@ -87,7 +88,7 @@ public class CameraFollowing : MonoBehaviour
                 return;
             }
 
-            transform.position = new Vector3(player.position.x, Mathf.Clamp(player.position.y + 2.5f, -38.61296f, float.MaxValue), -10);
+            transform.position = new Vector3(player.position.x, Mathf.Clamp(player.position.y + 2f, -40f, float.MaxValue), -10);
             foreach (Transform child in transform)
             {
                 child.GetComponent<Camera>().orthographicSize += (5 - child.GetComponent<Camera>().orthographicSize) * Time.deltaTime;
@@ -127,6 +128,7 @@ public class CameraFollowing : MonoBehaviour
 
     IEnumerator TomberBouclier(Transform bouclier, GameObject player)
     {
+        lightBouclier.enabled = false;
         Vector2 targetPosP = new Vector2(player.transform.position.x, 0);
         Vector2 targetPosB = new Vector2(bouclier.transform.position.x, 0);
         float timeStart = Time.time;
