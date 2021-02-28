@@ -449,8 +449,10 @@ public class Hero : MonoBehaviour
 
     IEnumerator DeathMrX()
     {
-        isDead = true;
         GetComponent<Snap>().cantSnap = true;
+        GetComponent<PlacementPortail>().cantPlace = true;
+
+        isDead = true;
         anim.SetTrigger("Blesse");
         anim.SetBool("Mort", true);
         activeControl = false;
@@ -460,7 +462,9 @@ public class Hero : MonoBehaviour
         activeControl = true;
         anim.SetBool("Mort", false);
         isDead = false;
+
         GetComponent<Snap>().cantSnap = false;
+        GetComponent<PlacementPortail>().cantPlace = false;
     }
 
     /* void OnDrawGizmos()
