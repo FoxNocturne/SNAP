@@ -78,6 +78,8 @@ public class Snap : MonoBehaviour
         interfaceSnap[3].enabled = false;
         interfaceSnap[4].enabled = false;
 
+
+
     }
 
     void Update()
@@ -97,36 +99,17 @@ public class Snap : MonoBehaviour
 
         GetComponent<PlacementPortail>().SetTargetDimension();
 
-
+        
         if (Hero.flipLeft == true)
         {
-            //feedback.GetComponent<SpriteRenderer>().sprite = bulle[1];
-            Vector2 theScaleBulle = feedback.transform.localScale;
-            theScaleBulle.x *= -1;
-            feedback.transform.localScale = theScaleBulle;
-        }
-        else
-        {
-            feedback.GetComponent<SpriteRenderer>().sprite = bulle[0];
-        }
-
-
-        /*
-        if (transform.localScale.x < 0)
-        {
-            Debug.Log("ici");
-            //feedback.GetComponent<RectTransform>().localScale = new Vector2(-1f, 1f);
-            //feedback.GetComponent<RectTransform>().anchoredPosition = new Vector2(-3.4f, 2.23f);
-            feedback.GetComponent<SpriteRenderer>().sprite = bulle[0];
-
-        }
-        else
-        {
-           // feedback.GetComponent<RectTransform>().localScale = new Vector2(-1f, 1f);
-            //feedback.GetComponent<RectTransform>().anchoredPosition = new Vector2(-3.4f, 2.23f);
             feedback.GetComponent<SpriteRenderer>().sprite = bulle[1];
-
-        }*/
+            feedback.transform.position = Vector3.MoveTowards(new Vector3(transform.position.x - 3.2f, transform.position.y + 2.5f, transform.position.z), feedback.transform.position, 15 * Time.deltaTime);
+        }
+        else
+        {
+            feedback.GetComponent<SpriteRenderer>().sprite = bulle[0];
+            feedback.transform.position = Vector3.MoveTowards(new Vector3(transform.position.x + 3.2f, transform.position.y + 2.5f, transform.position.z), feedback.transform.position, 15 * Time.deltaTime);
+        }
 
     }
 
@@ -136,17 +119,17 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
-            //soundSnap.PlayOneShot(sonSnap[0], 0.05f);
             anim.SetTrigger("SNAP");
             if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f), new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),LayerMask.GetMask(LayerMask.LayerToName((actualDimension == 0 ? 2 : 0) + 9))))
             {
-
+                
                 feedback.SetActive(true);
-                //Invoke("CloseFeedback", 1f);
+                Invoke("CloseFeedback", 3f);
                 return;
             }
             else
             {
+                feedback.SetActive(false);
                 soundSnap.PlayOneShot(sonSnap[0], 0.05f);
             }
            
@@ -245,8 +228,6 @@ public class Snap : MonoBehaviour
     }
     private void CloseFeedback()
     {
-        //feedback.transform.localPosition = new Vector3(transform.position.x, transform.position.y, 0);
-        //feedback.SetActive(true);
 
         feedback.SetActive(false);
     }
