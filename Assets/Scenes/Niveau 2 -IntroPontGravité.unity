@@ -29298,6 +29298,7 @@ GameObject:
   - component: {fileID: 1611259850}
   - component: {fileID: 1611259849}
   - component: {fileID: 1611259848}
+  - component: {fileID: 1611259851}
   m_Layer: 0
   m_Name: Fade
   m_TagString: Untagged
@@ -29385,6 +29386,25 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!95 &1611259851
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611259846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e72b63f2cbd51b547a2e859f67bb0baa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1615520574
 GameObject:
   m_ObjectHideFlags: 0
@@ -34067,13 +34087,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1883801556}
+  - component: {fileID: 1883801557}
   m_Layer: 0
   m_Name: 3D debloquer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1883801556
 Transform:
   m_ObjectHideFlags: 0
@@ -34089,6 +34110,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883801557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883801555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d36bcd39cb568d46be77f8b1e3c5d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 1611259851}
+  transitionTime: 1
+  timer: 3
 --- !u!1 &1884541410
 GameObject:
   m_ObjectHideFlags: 0
@@ -35374,6 +35410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699472155244915897, guid: d80382c98a9a1f741a225ea785f73e85,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472155244915898, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
