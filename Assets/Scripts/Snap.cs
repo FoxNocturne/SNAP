@@ -57,6 +57,16 @@ public class Snap : MonoBehaviour
         // UI du snap
         //   Left -> actualDimension
         //   Right -> actualDimension + 3
+        if(niveau1)
+        {
+            interfaceSnap[0] = UISnap.transform.GetChild(0).GetComponent<Image>();
+            interfaceSnap[1] = UISnap.transform.GetChild(1).GetComponent<Image>();
+
+            interfaceSnap[0].enabled = false;
+
+            return;
+        }
+
         interfaceSnap[0] = UISnap.transform.GetChild(0).GetComponent<Image>();
         interfaceSnap[1] = UISnap.transform.GetChild(2).GetComponent<Image>();
         interfaceSnap[2] = UISnap.transform.GetChild(4).GetComponent<Image>();
@@ -105,12 +115,6 @@ public class Snap : MonoBehaviour
             }
            
 
-
-
-
-
-
-
             // Désactivation de la dimension actuelle
             cameras[actualDimension].GetComponent<Camera>().enabled = false;
             Physics2D.IgnoreLayerCollision(8, actualDimension + 9);
@@ -122,6 +126,9 @@ public class Snap : MonoBehaviour
             cameras[actualDimension].GetComponent<Camera>().enabled = true;
             Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
             GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID($"{LayerMask.LayerToName(actualDimension + 9)}Player");
+
+            interfaceSnap[0].enabled = !interfaceSnap[0].isActiveAndEnabled;
+            interfaceSnap[1].enabled = !interfaceSnap[1].isActiveAndEnabled;
         }
     }
 
