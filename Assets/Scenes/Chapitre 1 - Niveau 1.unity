@@ -16767,6 +16767,18 @@ PrefabInstance:
       propertyPath: objetsRelies.Array.data[0]
       value: 
       objectReference: {fileID: 1932571948}
+    - target: {fileID: 645770514005538997, guid: e9004bd5fe096fd469cf400848a70c82,
+        type: 3}
+      propertyPath: haut
+      value: 
+      objectReference: {fileID: -3782882483724168838, guid: ae7a397017c835f48b6d613ed101b2c8,
+        type: 3}
+    - target: {fileID: 645770514005538997, guid: e9004bd5fe096fd469cf400848a70c82,
+        type: 3}
+      propertyPath: bas
+      value: 
+      objectReference: {fileID: 3914632947217457305, guid: ae7a397017c835f48b6d613ed101b2c8,
+        type: 3}
     - target: {fileID: 645770514005538999, guid: e9004bd5fe096fd469cf400848a70c82,
         type: 3}
       propertyPath: m_SortingLayerID
