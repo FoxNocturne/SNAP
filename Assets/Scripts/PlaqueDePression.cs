@@ -6,20 +6,37 @@ public class PlaqueDePression : MonoBehaviour
 {
     public List<ObjetActivable> objetsRelies; // Liste des objets connectées à la plaque
 
+    [Header("Sprites")]
+    public Sprite haut;
+    public Sprite bas;
+
     AudioSource sonPlaqueEnclencher;
     public AudioClip[] sonPlaque;
+
+    private List<GameObject> activateurs = new List<GameObject>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" || collision.tag == "Item")
+        {
+            GetComponent<SpriteRenderer>().sprite = bas;
+            activateurs.Add(collision.gameObject);
+
             foreach (var objet in objetsRelies)
                 objet.Activation(gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.tag == "Player" || collision.tag == "Item")
+        if(activateurs.Contains(collision.gameObject))
+        {
+            if(activateurs.Count == 0)
+                GetComponent<SpriteRenderer>().sprite = haut;
+            activateurs.Remove(collision.gameObject);
+
             foreach (var objet in objetsRelies)
                 objet.Desactivation(gameObject);
+        }
     }
 }

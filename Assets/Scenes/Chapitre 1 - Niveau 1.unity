@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -16767,6 +16767,18 @@ PrefabInstance:
       propertyPath: objetsRelies.Array.data[0]
       value: 
       objectReference: {fileID: 1932571948}
+    - target: {fileID: 645770514005538997, guid: e9004bd5fe096fd469cf400848a70c82,
+        type: 3}
+      propertyPath: haut
+      value: 
+      objectReference: {fileID: -3782882483724168838, guid: ae7a397017c835f48b6d613ed101b2c8,
+        type: 3}
+    - target: {fileID: 645770514005538997, guid: e9004bd5fe096fd469cf400848a70c82,
+        type: 3}
+      propertyPath: bas
+      value: 
+      objectReference: {fileID: 3914632947217457305, guid: ae7a397017c835f48b6d613ed101b2c8,
+        type: 3}
     - target: {fileID: 645770514005538999, guid: e9004bd5fe096fd469cf400848a70c82,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -22027,7 +22039,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5043332833879439370, guid: b76c67aacc998964bb609eb872b8f346, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b76c67aacc998964bb609eb872b8f346, type: 3}
 --- !u!4 &764530181 stripped
 Transform:
@@ -48950,7 +48963,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5043332833879439370, guid: b76c67aacc998964bb609eb872b8f346, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b76c67aacc998964bb609eb872b8f346, type: 3}
 --- !u!4 &1703471010 stripped
 Transform:
