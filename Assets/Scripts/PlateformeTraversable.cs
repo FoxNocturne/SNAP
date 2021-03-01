@@ -9,7 +9,7 @@ public class PlateformeTraversable : MonoBehaviour
 
     private void Start()
     {
-        player       = GameObject.FindGameObjectWithTag("Player").GetComponent<Snap>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Snap>();
         thisCollider = GetComponent<BoxCollider2D>();
     }
 
