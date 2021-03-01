@@ -35,10 +35,9 @@ public class Snap : MonoBehaviour
 
     void Start()
     {
-        foreach(Transform child in camerasParent.transform)
-        {
-            cameras.Add(child.gameObject);
-        }
+        cameras.Add(camerasParent.transform.GetChild(0).gameObject);
+        cameras.Add(camerasParent.transform.GetChild(1).gameObject);
+        cameras.Add(camerasParent.transform.GetChild(2).gameObject);
 
         cameras[1].GetComponent<Camera>().enabled = false;
         cameras[2].GetComponent<Camera>().enabled = false;
