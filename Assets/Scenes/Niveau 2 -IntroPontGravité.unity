@@ -34252,9 +34252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d36bcd39cb568d46be77f8b1e3c5d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newDimensinUI: {fileID: 1883801555}
-  transition: {fileID: 1611259851}
-  transitionTime: 1
 --- !u!1 &1884541410
 GameObject:
   m_ObjectHideFlags: 0
@@ -35544,7 +35541,7 @@ PrefabInstance:
     - target: {fileID: 6699472155244915897, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472155244915898, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
