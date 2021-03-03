@@ -22,7 +22,7 @@ public class Hero : MonoBehaviour
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
-    public GameObject MessageCollectable;
+
     public GameObject CheckEffect;
     public GameObject PickUp;
     public LayerMask whatIsGround;
@@ -389,22 +389,12 @@ public class Hero : MonoBehaviour
             collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", true); 
             if (Input.GetButtonDown("Attraper"))
             {
-                if (GameObject.Find("MessageCollectable") != null)
-                {
-                    
-                    Destroy(GameObject.Find("MessageCollectable"));
-                }
+
                 collision.gameObject.GetComponent<ClignotementCollectable>().AnimPickUp();
+
                 GameObject PickUp_ = Instantiate(PickUp, collision.gameObject.transform.position, Quaternion.identity) as GameObject;
                 Destroy(PickUp_, 2);
-                GameObject message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
-                message.name = "MessageCollectable";
-                int numero = collision.gameObject.GetComponent<ObserveThisThing>().Numero;
-                string nom = collision.gameObject.GetComponent<ObserveThisThing>().NomCollectable;
-                PlayerPrefs.SetInt(nom, numero);
-                message.GetComponentInChildren<Text>().text = "Vous avez découvert un indice : \n" + nom;
 
-                StartCoroutine(TempsMessageCollectable());
             }
         }
     }
@@ -479,16 +469,14 @@ public class Hero : MonoBehaviour
         Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.7f), new Vector3(0.65f,0.3f, 1f));
     } 
 
-    IEnumerator TempsMessageCollectable()
-    {
-        yield return new WaitForSeconds(7.1f);
-        Destroy(GameObject.Find("MessageCollectable"));
-    }
+
 
     IEnumerator DeathMrX()
     {
-        isDead = true;
         GetComponent<Snap>().cantSnap = true;
+        GetComponent<PlacementPortail>().cantPlace = true;
+
+        isDead = true;
         anim.SetTrigger("Blesse");
         anim.SetBool("Mort", true);
         activeControl = false;
@@ -498,7 +486,9 @@ public class Hero : MonoBehaviour
         activeControl = true;
         anim.SetBool("Mort", false);
         isDead = false;
+
         GetComponent<Snap>().cantSnap = false;
+        GetComponent<PlacementPortail>().cantPlace = false;
     }
 
     /* void OnDrawGizmos()
