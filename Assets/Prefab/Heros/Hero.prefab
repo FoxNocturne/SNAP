@@ -72,8 +72,6 @@ MonoBehaviour:
   circleGround: {fileID: 0}
   phantomEffect: {fileID: 1265865981250434113, guid: 274130e54c367bc409a8bd427e5ba692,
     type: 3}
-  MessageCollectable: {fileID: 2327485336277788733, guid: 88d660148b3e21e408c4587844063b08,
-    type: 3}
   CheckEffect: {fileID: 767592818943400113, guid: 624c71d2b66b6e44db64fab7db5fccd8,
     type: 3}
   PickUp: {fileID: 767592818943400113, guid: 2e6ce4756576db44ab5aa30fcff81dbf, type: 3}
@@ -102,6 +100,10 @@ MonoBehaviour:
   sonSnap:
   - {fileID: 8300000, guid: 0144285eb93aad0489d116b0b3d8ee68, type: 3}
   - {fileID: 0}
+  feedback: {fileID: 0}
+  bulle:
+  - {fileID: 21300000, guid: 78031616518f1ae49acc9580f114a05f, type: 3}
+  - {fileID: 21300000, guid: 6a76a766c95c84e4d8904510d3c7f080, type: 3}
 --- !u!114 &5833364614446276270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutoriel: 1
   niveau1: 1
+  cantPlace: 0
   occlusionPlacement: {fileID: 0}
   portailRadius: {fileID: 5833364615044193006}
   portailPrefab: {fileID: 207636714317200984, guid: 4176333913973404c9cd7812c2916202,

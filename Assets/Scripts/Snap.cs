@@ -7,7 +7,9 @@ public class Snap : MonoBehaviour
 {
     public GameObject camerasParent;
     public GameObject UISnap;
+    
     private Image[] interfaceSnap = new Image[6];
+    
 
     [Header("Options")]
     public bool tutoriel = true;
@@ -26,6 +28,9 @@ public class Snap : MonoBehaviour
     AudioSource soundSnap;
     public AudioClip[] sonSnap;
 
+    public GameObject feedback;
+    public Sprite[] bulle;
+
 
     // Character layer 8
     //
@@ -35,10 +40,9 @@ public class Snap : MonoBehaviour
 
     void Start()
     {
-        foreach(Transform child in camerasParent.transform)
-        {
-            cameras.Add(child.gameObject);
-        }
+        cameras.Add(camerasParent.transform.GetChild(0).gameObject);
+        cameras.Add(camerasParent.transform.GetChild(1).gameObject);
+        cameras.Add(camerasParent.transform.GetChild(2).gameObject);
 
         cameras[1].GetComponent<Camera>().enabled = false;
         cameras[2].GetComponent<Camera>().enabled = false;
@@ -54,9 +58,21 @@ public class Snap : MonoBehaviour
 
         soundSnap = GetComponent<AudioSource>();
 
+        
+
         // UI du snap
         //   Left -> actualDimension
         //   Right -> actualDimension + 3
+        if(niveau1)
+        {
+            interfaceSnap[0] = UISnap.transform.GetChild(0).GetComponent<Image>();
+            interfaceSnap[1] = UISnap.transform.GetChild(1).GetComponent<Image>();
+
+            interfaceSnap[0].enabled = false;
+
+            return;
+        }
+
         interfaceSnap[0] = UISnap.transform.GetChild(0).GetComponent<Image>();
         interfaceSnap[1] = UISnap.transform.GetChild(2).GetComponent<Image>();
         interfaceSnap[2] = UISnap.transform.GetChild(4).GetComponent<Image>();
@@ -68,12 +84,17 @@ public class Snap : MonoBehaviour
         interfaceSnap[2].enabled = false;
         interfaceSnap[3].enabled = false;
         interfaceSnap[4].enabled = false;
+
+
+
     }
 
     void Update()
     {
         if (cantSnap)
+       
             return;
+           
 
         if (tutoriel)
             return;
@@ -84,6 +105,19 @@ public class Snap : MonoBehaviour
             SnapNormal();
 
         GetComponent<PlacementPortail>().SetTargetDimension();
+
+        
+        if (Hero.flipLeft == true)
+        {
+            feedback.GetComponent<SpriteRenderer>().sprite = bulle[1];
+            feedback.transform.position = Vector3.MoveTowards(new Vector3(transform.position.x - 3.2f, transform.position.y + 2.5f, transform.position.z), feedback.transform.position, 15 * Time.deltaTime);
+        }
+        else
+        {
+            feedback.GetComponent<SpriteRenderer>().sprite = bulle[0];
+            feedback.transform.position = Vector3.MoveTowards(new Vector3(transform.position.x + 3.2f, transform.position.y + 2.5f, transform.position.z), feedback.transform.position, 15 * Time.deltaTime);
+        }
+
     }
 
     private void SnapNiveau1()
@@ -92,24 +126,20 @@ public class Snap : MonoBehaviour
         snapPressed = Input.GetAxis("SNAP");
         if (Input.GetButtonDown("SNAP"))
         {
-            //soundSnap.PlayOneShot(sonSnap[0], 0.05f);
             anim.SetTrigger("SNAP");
             if (Physics2D.OverlapArea(new Vector2(transform.position.x - demiTailleX + 0.1f, transform.position.y - demiTailleY + 0.1f), new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),LayerMask.GetMask(LayerMask.LayerToName((actualDimension == 0 ? 2 : 0) + 9))))
             {
-                soundSnap.PlayOneShot(sonSnap[1], 0.05f);
+                
+                feedback.SetActive(true);
+                Invoke("CloseFeedback", 3f);
                 return;
             }
             else
             {
+                feedback.SetActive(false);
                 soundSnap.PlayOneShot(sonSnap[0], 0.05f);
             }
            
-
-
-
-
-
-
 
             // Désactivation de la dimension actuelle
             cameras[actualDimension].GetComponent<Camera>().enabled = false;
@@ -122,6 +152,9 @@ public class Snap : MonoBehaviour
             cameras[actualDimension].GetComponent<Camera>().enabled = true;
             Physics2D.IgnoreLayerCollision(8, actualDimension + 9, false);
             GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID($"{LayerMask.LayerToName(actualDimension + 9)}Player");
+
+            interfaceSnap[0].enabled = !interfaceSnap[0].isActiveAndEnabled;
+            interfaceSnap[1].enabled = !interfaceSnap[1].isActiveAndEnabled;
         }
     }
 
@@ -142,11 +175,13 @@ public class Snap : MonoBehaviour
                                       new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
                                       LayerMask.GetMask(LayerMask.LayerToName(((actualDimension + (target == 1 ? 1 : 2)) % 3) + 9))))
         {
-            soundSnap.PlayOneShot(sonSnap[1], 0.05f);
+            feedback.SetActive(true);
+            Invoke("CloseFeedback", 3f);
             return;
         }
         else
         {
+            feedback.SetActive(false);
             soundSnap.PlayOneShot(sonSnap[0], 0.05f);
         }
        
@@ -197,4 +232,10 @@ public class Snap : MonoBehaviour
         Physics2D.IgnoreLayerCollision(8, 13, param);
         Physics2D.IgnoreLayerCollision(8, 14, param);
     }
+    private void CloseFeedback()
+    {
+
+        feedback.SetActive(false);
+    }
+
 }
