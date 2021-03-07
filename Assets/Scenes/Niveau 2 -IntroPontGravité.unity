@@ -18441,6 +18441,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36789d13ff1378d47b793bab2ee7b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isDead: 0
 --- !u!82 &834379868
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33757,6 +33761,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36789d13ff1378d47b793bab2ee7b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isDead: 0
 --- !u!82 &1489909655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47442,12 +47450,12 @@ PrefabInstance:
     - target: {fileID: 5833364614446276268, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.7
+      value: 110.1
       objectReference: {fileID: 0}
     - target: {fileID: 5833364614446276268, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 5833364614446276268, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
@@ -51949,7 +51957,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7875056098329686711, guid: 6efa8c836e018ab4b85f70226f1bf39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6efa8c836e018ab4b85f70226f1bf39c, type: 3}
 --- !u!4 &4158449480991220605
 Transform:

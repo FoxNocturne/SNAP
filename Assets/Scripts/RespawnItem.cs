@@ -39,6 +39,7 @@ public class RespawnItem : MonoBehaviour
 
         transform.position = itemPosition;
         gameObject.layer = itemLayer;
+        isDead = false;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
