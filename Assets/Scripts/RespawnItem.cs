@@ -5,15 +5,20 @@ using UnityEngine;
 public class RespawnItem : MonoBehaviour
 {
     private Vector3 itemPosition;
-    private bool deathItem;
+    public LayerMask itemLayer;
+    public bool isDead;
+
 
 
     private void Start()
     {
-        deathItem = false;
+        isDead = false;
+
+
         if (transform.tag == "Item")
         {
             itemPosition =new Vector3( GetComponent<Transform>().position.x,GetComponent<Transform>().position.y, 0);
+            itemLayer = gameObject.layer;
         }
 
     }
@@ -21,7 +26,9 @@ public class RespawnItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (deathItem)
+
+        if (Input.GetKeyDown(KeyCode.T) || isDead)
+
         {
             RespawnPositionItem();
         }
@@ -31,6 +38,7 @@ public class RespawnItem : MonoBehaviour
     {
 
         transform.position = itemPosition;
+        gameObject.layer = itemLayer;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,7 +47,8 @@ public class RespawnItem : MonoBehaviour
 
         if (collision.tag == "Dead")
         {
-            deathItem = true;
+            isDead = true;
+
             RespawnPositionItem();
         }
         //deathItem = false;
