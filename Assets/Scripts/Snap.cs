@@ -171,11 +171,13 @@ public class Snap : MonoBehaviour
                                       new Vector2(transform.position.x + demiTailleX - 0.1f, transform.position.y + demiTailleY - 0.1f),
                                       LayerMask.GetMask(LayerMask.LayerToName(((actualDimension + (target == 1 ? 1 : 2)) % 3) + 9))))
         {
-            soundSnap.PlayOneShot(sonSnap[1], 0.05f);
+            feedback.SetActive(true);
+            Invoke("CloseFeedback", 3f);
             return;
         }
         else
         {
+            feedback.SetActive(false);
             soundSnap.PlayOneShot(sonSnap[0], 0.05f);
         }
        
