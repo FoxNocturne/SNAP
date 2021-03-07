@@ -5,6 +5,7 @@ using UnityEngine;
 public class PolicierAI : MonoBehaviour
 {
     [Header("Déplacement")]
+    public bool LookAtLeftAtBeginning;
     public float maxSpeed = 5;
     public float TempsDePause = 2;
     [Header("Recherche")]
@@ -26,12 +27,19 @@ public class PolicierAI : MonoBehaviour
     private Coroutine shooting;
     private GameObject shoot;
 
+    Animator anim;
+
     void Start()
     {
         // Mémorisation des points de patrouille
+        anim = GetComponent<Animator>();
+        if(LookAtLeftAtBeginning)
+        {
+            LookLeft();
+        }
         Transform pathParent = transform.GetChild(0);
         pathParent.name = pathParent.parent.name + " path";
-
+        
         int i = 0;
         foreach (Transform child in pathParent)
         {
@@ -98,19 +106,23 @@ public class PolicierAI : MonoBehaviour
 
     IEnumerator Tir()
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
+        // GetComponent<SpriteRenderer>().color = Color.red;
+        anim.SetBool("Viser", true);
         yield return new WaitForSeconds(waitingSecondsBeforeShoot);
 
         if (playerFinded)
         {
             float sizeX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
+            anim.SetTrigger("Tirer");
             shoot = Instantiate(BallePrefab, new Vector2(transform.position.x + (directionGauche ? sizeX : -sizeX), transform.position.y), Quaternion.identity);
             shoot.layer = gameObject.layer;
+            
 
             shoot.GetComponent<Rigidbody2D>().AddRelativeForce((player.transform.position - shoot.transform.position) * shootSpeed, ForceMode2D.Impulse);
         }
 
-        GetComponent<SpriteRenderer>().color = Color.blue;
+        // GetComponent<SpriteRenderer>().color = Color.blue;
+        anim.SetBool("Viser", false);
         shooting = null;
     }
 
@@ -144,4 +156,12 @@ public class PolicierAI : MonoBehaviour
         float angleY = Mathf.Cos(angleInDegrees * Mathf.Deg2Rad) * (directionGauche ? -1 : 1);
         return new Vector3(angleX, angleY, 0);
     }
+
+    void LookLeft()
+    {
+        directionGauche = !directionGauche;
+        Vector2 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }    
 }

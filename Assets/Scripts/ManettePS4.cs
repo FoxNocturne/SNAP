@@ -11,10 +11,10 @@ public class ManettePS4 : MonoBehaviour
 
     void Update()
     {
-        /* if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
          {
-             //LoadNextLevel();
-         }*/
+             LoadNextLevel();
+         }
 
     }
     public void LoadNextLevel()
@@ -25,7 +25,7 @@ public class ManettePS4 : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        //transition.SetTrigger("Start");
+        transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
     }
