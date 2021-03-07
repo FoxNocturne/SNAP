@@ -13,7 +13,7 @@ public class Transition : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Sauter"))
+        if (Input.anyKeyDown)
         {
             LoadNextLevel();
         }
