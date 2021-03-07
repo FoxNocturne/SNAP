@@ -7,20 +7,22 @@ public class PlacementPortail : MonoBehaviour
 {
     public bool tutoriel;
     public bool niveau1;
+    
+    [HideInInspector] public bool cantPlace;
 
     [SerializeField] private Image occlusionPlacement;
     [SerializeField] private GameObject portailRadius;
     [SerializeField] private GameObject portailPrefab;
     [SerializeField] private Color[] portailColors = new Color[3];
 
-    private GameObject portailPlacing, portailActualDimension, portailTargetDimension;
+    private GameObject portailPlacing, actualDimensionPortal, targetDimensionPortal;
     private Vector2 relativePositionFromPlayer;
     private Snap snapScript;
     private float moveHorizontal, moveVertical;
     private bool placing;
     private bool placingOkay;
     private bool targetIsNext;
-    Animator anim;
+    private int targetDimension;
 
     AudioSource sonPortailEnclencher;
     public AudioClip[] sonPortail;
@@ -29,27 +31,12 @@ public class PlacementPortail : MonoBehaviour
     {
         occlusionPlacement.enabled = false;
         portailRadius.SetActive(false);
-        anim = GetComponent<Animator>();
 
         snapScript = GetComponent<Snap>();
-
         sonPortailEnclencher = GetComponent<AudioSource>();
 
         // Le joueur ignore les layers de transition au départ
         IgnoreAllTransition();
-    }
-
-    private void FixedUpdate()
-    {
-        // Calcule la position du prochain portail
-        if(portailPlacing)
-        {
-            moveHorizontal = Input.GetAxis("Horizontal Portal");
-            moveVertical = -Input.GetAxis("Vertical Portal");
-
-            relativePositionFromPlayer.x += moveHorizontal * 5 * Time.deltaTime;
-            relativePositionFromPlayer.y += moveVertical * 5 * Time.deltaTime;
-        }
     }
 
     private void Update()
@@ -57,142 +44,167 @@ public class PlacementPortail : MonoBehaviour
         if (tutoriel)
             return;
 
-        // Déplace le portail 
-        if (placing)
-        {
-            DeplacementPortail();
-        }
+        if (cantPlace)
+            return;
 
-        // Lance le placement ou détruit le portail s'il est déjà présent
+        // Appui sur L2 ou R2
         if (Input.GetButtonDown("Portail"))
         {
-            sonPortailEnclencher.PlayOneShot(sonPortail[0], 0.05f);
+            SetTargetDimension();
 
-            targetIsNext = Input.GetAxis("Portail") == 1;
+            if (DestroyExistingPortal())
+                return;
 
-            // Je m'excuse d'avance pour le contenu de ce if
-            // Il sert à fermer le portail en appuyant sur le bouton associé
-            // Encore désolé...
-            if ((portailActualDimension && snapScript.GetActualDimension() + 9 == portailActualDimension.layer && portailActualDimension.GetComponent<Portail>().targetDimension == (targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension())) ||
-                (portailTargetDimension && snapScript.GetActualDimension() + 9 == portailTargetDimension.layer && portailTargetDimension.GetComponent<Portail>().targetDimension == (targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension())))
-            {
-                IgnoreAllTransition();
-
-                Destroy(portailActualDimension);
-                Destroy(portailTargetDimension);
-            }
-            else
-            {
-                placing = true;
-                Placer();
-            }
+            Placement();
         }
 
-        // Place le portail une fois la touche relachée
-        if (Input.GetButtonUp("Portail") && placing)
+        // Le portail est en train d'être placé
+        if (placing)
         {
-            anim.SetTrigger("portal");
-            occlusionPlacement.enabled = false;
-            portailRadius.SetActive(false);
+            DeplacementPortailPlacing();
+            CheckPortailPlacingPossibility();
+        }
 
-            if (placingOkay)
-            {
-                if (portailActualDimension)
-                {
-                    IgnoreAllTransition();
-
-                    Destroy(portailActualDimension);
-                    Destroy(portailTargetDimension);
-                }
-                Creer();
-            }else
-            {
-                placing = false;
-                Destroy(portailPlacing);
-            }
-
-            placing = false;
+        if (Input.GetButtonUp("Portail"))
+        {
+            Creer();
         }
     }
 
-    private void DeplacementPortail()
+    // Vérifie si le bouton a été utilisé pour détruire un portail existant
+    private bool DestroyExistingPortal()
     {
-        Vector2 nextPos = new Vector2(transform.position.x + relativePositionFromPlayer.x, transform.position.y + relativePositionFromPlayer.y);
-        if (Vector2.Distance(transform.position, nextPos) <= 5) // On vérifie que le portail n'est pas hors de portée
-            portailPlacing.transform.position = nextPos;
-        else // On remet à jour l'offset si non
-            relativePositionFromPlayer = portailPlacing.transform.position - transform.position;
+        //int actualDimension = snapScript.GetActualDimension();
+        //int targetDimension = Input.GetAxis("Portail") == 1 ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension();
 
-        bool test = (Physics2D.OverlapCircle(portailPlacing.transform.position, portailPlacing.transform.localScale.x, LayerMask.GetMask(LayerMask.LayerToName(snapScript.GetActualDimension() + 9))) ||
-                     Physics2D.OverlapCircle(portailPlacing.transform.position, portailPlacing.transform.localScale.x, LayerMask.GetMask(LayerMask.LayerToName((targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension()) + 9))));
-        portailPlacing.GetComponent<SpriteRenderer>().color = test ? Color.red : Color.white;
-        placingOkay = !test;
+        if (actualDimensionPortal == null)
+            return false;
+
+        if ((actualDimensionPortal.layer == snapScript.GetActualDimension() + 9) ||
+            (targetDimensionPortal.layer == snapScript.GetActualDimension() + 9))
+        {
+            Destroy(actualDimensionPortal);
+            Destroy(targetDimensionPortal);
+
+            return true;
+        }
+
+        return false;
     }
 
-    private void Placer()
+    // Lance le placement du portail
+    private void Placement()
     {
+        placing = true;
         occlusionPlacement.enabled = true;
         portailRadius.SetActive(true);
-        int placementX = GetComponent<Hero>().isMovingLeft() ? -3 : 3;
+        GetComponent<Snap>().cantSnap = true;
 
-        portailPlacing = Instantiate(portailPrefab, new Vector2(transform.position.x + placementX, transform.position.y), transform.rotation, transform);
-        portailPlacing.layer = 8;
-        portailPlacing.GetComponent<Collider2D>().enabled = false;
-
-        relativePositionFromPlayer = new Vector2(placementX, 0);
+        portailPlacing = Instantiate(portailPrefab, transform);
+        portailPlacing.transform.localPosition = new Vector2(3, 0);
+        portailPlacing.GetComponent<Portail>().enabled = false;
+        var colliders = portailPlacing.GetComponents<CircleCollider2D>();
+        foreach (var collider in colliders)
+            collider.enabled = false;
     }
 
+    // Deplace le portail de placement avec le joystick de droite 
+    private void DeplacementPortailPlacing()
+    {
+        float inverseXAxis = 1;
+
+        if (transform.localScale.x < 0)
+            inverseXAxis = -1;
+
+        float horizontal = portailPlacing.transform.localPosition.x + Input.GetAxisRaw("Horizontal Portal") * Time.deltaTime * 5 * inverseXAxis;
+        float vertical   = portailPlacing.transform.localPosition.y - Input.GetAxisRaw("Vertical Portal") * Time.deltaTime * 5;
+        Vector2 newPosition = new Vector2(horizontal, vertical);
+
+        if (Vector2.Distance(newPosition, Vector2.zero) < 5)
+            portailPlacing.transform.localPosition = newPosition;
+    }
+
+    // Vérifie la possibilité de placer le portail à cet endroit
+    private void CheckPortailPlacingPossibility()
+    {
+        placingOkay = true;
+        
+        // Test de la dimension actuelle
+        if (Physics2D.OverlapCircle(portailPlacing.transform.position, 0.8f, LayerMask.GetMask(LayerMask.LayerToName(snapScript.GetActualDimension() + 9))))
+            placingOkay = false;
+
+        // Test de la dimension cible
+        if (Physics2D.OverlapCircle(portailPlacing.transform.position, 0.8f, LayerMask.GetMask(LayerMask.LayerToName(targetDimension + 9))))
+            placingOkay = false;
+
+        ChangeColor(portailPlacing, placingOkay ? Color.white : Color.red);
+    }
+
+    // Création du portail
     private void Creer()
     {
-        portailPlacing.GetComponent<Collider2D>().enabled = true;
-        portailActualDimension = portailPlacing;
-        portailPlacing = null;
+        GetComponent<Snap>().cantSnap = false;
 
-        int targetDimension = targetIsNext ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension();
+        if (portailPlacing == null)
+            return;
+
+        // Désactivation du placement
+        portailRadius.SetActive(false);
+        occlusionPlacement.enabled = false;
+        placing = false;
+
+        Vector2 portalPosition = portailPlacing.transform.position;
+        Destroy(portailPlacing);
+
+        if (!placingOkay)
+            return;
+
         int actualDimension = snapScript.GetActualDimension();
 
-        if(niveau1)
-            targetDimension = (actualDimension == 0 ? 2 : 0);
+        // Création du premier portail
+        actualDimensionPortal = Instantiate(portailPrefab, portalPosition, transform.rotation);
+        SetLayer(actualDimensionPortal, actualDimension + 9);
+        ChangeColor(actualDimensionPortal, portailColors[targetDimension]);
 
-        portailActualDimension.transform.parent = transform.parent;
-        portailActualDimension.layer = actualDimension + 9;
-        foreach (Transform child in portailActualDimension.GetComponentsInChildren<Transform>(true))
-        {
-            child.gameObject.layer = actualDimension + 9;
-        }        
-        portailActualDimension.GetComponent<SpriteRenderer>().color = portailColors[targetDimension];
-        portailActualDimension.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = portailColors[targetDimension];
-        portailActualDimension.transform.GetChild(1).GetComponent<ParticleSystem>().startColor = portailColors[targetDimension];
-        portailActualDimension.transform.GetChild(2).GetComponent<ParticleSystem>().startColor = portailColors[targetDimension];
-        portailActualDimension.GetComponent<Portail>().targetDimension = targetDimension;        
-        
-        
-        portailTargetDimension = Instantiate(portailPrefab, portailActualDimension.transform.position, transform.rotation, portailActualDimension.transform.parent);
-        portailTargetDimension.layer = targetDimension + 9;
-        foreach (Transform child in portailTargetDimension.GetComponentsInChildren<Transform>(true))
-        {
-            child.gameObject.layer = targetDimension + 9;
-        }
-        portailTargetDimension.GetComponent<SpriteRenderer>().color = portailColors[actualDimension];
-        portailTargetDimension.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = portailColors[actualDimension];
-        portailTargetDimension.transform.GetChild(1).GetComponent<ParticleSystem>().startColor = portailColors[actualDimension];
-        portailTargetDimension.transform.GetChild(2).GetComponent<ParticleSystem>().startColor = portailColors[actualDimension];
-        portailTargetDimension.GetComponent<Portail>().targetDimension = actualDimension;
+        // Création du second portail
+        targetDimensionPortal = Instantiate(portailPrefab, portalPosition, transform.rotation);
+        SetLayer(targetDimensionPortal, targetDimension + 9);
+        ChangeColor(targetDimensionPortal, portailColors[actualDimension]);
 
-        
-        portailActualDimension.GetComponent<Portail>().portailLinked = portailTargetDimension.GetComponent<Portail>();
-        portailTargetDimension.GetComponent<Portail>().portailLinked = portailActualDimension.GetComponent<Portail>();
-
-        // Collision entre le layer du joueur et celui de transition
-        Physics2D.IgnoreLayerCollision(8, targetDimension + 12, false);
-        Physics2D.IgnoreLayerCollision(8, actualDimension + 12, false);
-        snapScript.dimensionAIgnorer = ((Mathf.Max(targetDimension, actualDimension) * 2) % 3 - Mathf.Min(targetDimension, actualDimension)); // Trouve la troisième dimension
+        // Lien entre les deux portails 
+        actualDimensionPortal.GetComponent<Portail>().portailLinked = targetDimensionPortal.GetComponent<Portail>();
+        targetDimensionPortal.GetComponent<Portail>().portailLinked = actualDimensionPortal.GetComponent<Portail>();
     }
 
+    // Ignore les collisions avec les layers de transition
     private void IgnoreAllTransition()
     {
         Physics2D.IgnoreLayerCollision(8, 12, true);
         Physics2D.IgnoreLayerCollision(8, 13, true);
         Physics2D.IgnoreLayerCollision(8, 14, true);
+    }
+
+    // Change la couleur des particules du portail
+    private void ChangeColor(GameObject portal, Color newColor)
+    {
+        #pragma warning disable CS0618 // Le type ou le membre est obsolète
+        foreach (Transform child in portal.transform)
+            child.GetComponent<ParticleSystem>().startColor = newColor;
+    }
+
+    private void SetLayer(GameObject portal, int newLayer)
+    {
+        portal.layer = newLayer;
+
+        foreach (Transform child in portal.transform)
+            child.gameObject.layer = newLayer;
+    }
+
+    public void SetTargetDimension()
+    {
+        if (niveau1)
+            targetDimension = snapScript.GetActualDimension() == 0 ? 2 : 0;
+        else
+            targetDimension = Input.GetAxis("Portail") == 1 ? snapScript.GetNextDimension() : snapScript.GetPreviousDimension();
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Porte : ObjetActivable
 {
-    public float speed = 10f;      // Vitesse d'ouverture des portes
+    public float openSpeed = 10f;      // Vitesse d'ouverture des portes
+    public float closeSpeed = 10f;      // Vitesse d'ouverture des portes
     [Range(-1, 1)]
     public float ouverture = 0.9f; // Pourcentage d'ouverture des portes
 
@@ -25,9 +26,9 @@ public class Porte : ObjetActivable
     private void Update()
     {
         if (activators.Count != 0)
-            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, openSpeed * Time.deltaTime);
         else
-            transform.position = Vector2.MoveTowards(transform.position, startingPos, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, startingPos, closeSpeed * Time.deltaTime);
     }
 
     public override void Activation(GameObject activator)

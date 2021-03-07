@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bouton : MonoBehaviour
 {
+    public Sprite Desactive;
+    public Sprite Active;
+
     public List<ObjetActivable> objetsRelies; // Liste des objets connectées au bouton
 
     private bool actif = false;
@@ -29,6 +32,8 @@ public class Bouton : MonoBehaviour
             if (actif)
 
             {
+                GetComponent<SpriteRenderer>().sprite = Active;
+
                 //sonBouttonEnclencher.PlayOneShot(sonBoutton[0], 0.5f);
                 foreach (var objet in objetsRelies)
                 {
@@ -39,6 +44,8 @@ public class Bouton : MonoBehaviour
             }
             else
             {
+                GetComponent<SpriteRenderer>().sprite = Desactive;
+
                 foreach (var objet in objetsRelies)
                     objet.Desactivation(gameObject);
 

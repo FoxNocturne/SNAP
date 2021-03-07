@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 949241764154232276}
   - component: {fileID: 6293496745339595047}
   m_Layer: 5
-  m_Name: "CollectableRamass\xE9"
+  m_Name: MessageCollectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -265,7 +265,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 59fb9544b72d7c3449aab5ce7ba225c3, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

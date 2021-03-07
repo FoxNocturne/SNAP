@@ -9,9 +9,11 @@ public class RespawnItem : MonoBehaviour
     public bool isDead;
 
 
+
     private void Start()
     {
         isDead = false;
+
 
         if (transform.tag == "Item")
         {
@@ -24,10 +26,13 @@ public class RespawnItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.T) || isDead)
+
         {
             RespawnPositionItem();
         }
+
     }
     private void RespawnPositionItem()
     {
@@ -43,8 +48,10 @@ public class RespawnItem : MonoBehaviour
         if (collision.tag == "Dead")
         {
             isDead = true;
+
             RespawnPositionItem();
         }
+        //deathItem = false;
     }
 
 }

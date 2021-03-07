@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 4128389389554109746}
   - component: {fileID: 4128389389554109751}
   - component: {fileID: 4128389389554109744}
+  - component: {fileID: 8671789794390672564}
   - component: {fileID: 4128389389554109745}
   - component: {fileID: 7875056098329686711}
+
   m_Layer: 0
   m_Name: Caisse
   m_TagString: Item
@@ -110,6 +112,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8671789794390672564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4128389389554109747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36789d13ff1378d47b793bab2ee7b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4128389389554109745
 Rigidbody2D:
   serializedVersion: 4
@@ -131,8 +145,10 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+
 --- !u!114 &7875056098329686711
 MonoBehaviour:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -143,3 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36789d13ff1378d47b793bab2ee7b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
