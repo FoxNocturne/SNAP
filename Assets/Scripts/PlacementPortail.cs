@@ -7,6 +7,8 @@ public class PlacementPortail : MonoBehaviour
 {
     public bool tutoriel;
     public bool niveau1;
+    
+    [HideInInspector] public bool cantPlace;
 
     [SerializeField] private Image occlusionPlacement;
     [SerializeField] private GameObject portailRadius;
@@ -40,6 +42,9 @@ public class PlacementPortail : MonoBehaviour
     private void Update()
     {
         if (tutoriel)
+            return;
+
+        if (cantPlace)
             return;
 
         // Appui sur L2 ou R2
@@ -93,6 +98,7 @@ public class PlacementPortail : MonoBehaviour
         placing = true;
         occlusionPlacement.enabled = true;
         portailRadius.SetActive(true);
+        GetComponent<Snap>().cantSnap = true;
 
         portailPlacing = Instantiate(portailPrefab, transform);
         portailPlacing.transform.localPosition = new Vector2(3, 0);
@@ -137,6 +143,8 @@ public class PlacementPortail : MonoBehaviour
     // Création du portail
     private void Creer()
     {
+        GetComponent<Snap>().cantSnap = false;
+
         if (portailPlacing == null)
             return;
 

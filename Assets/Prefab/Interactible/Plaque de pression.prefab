@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetsRelies: []
+  haut: {fileID: -7971814840443264868, guid: ae7a397017c835f48b6d613ed101b2c8, type: 3}
+  bas: {fileID: -1651383260003936545, guid: ae7a397017c835f48b6d613ed101b2c8, type: 3}
   sonPlaque:
   - {fileID: 8300000, guid: fc859f26f21ba7b4fb8e04a80283a2b9, type: 3}
   - {fileID: 0}

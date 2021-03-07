@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class ClignotementCollectable : MonoBehaviour
@@ -10,9 +11,11 @@ public class ClignotementCollectable : MonoBehaviour
     private float lS = 1;
     private bool transition = false;
     public GameObject bulle;
+    public GameObject MessageCollectable;
     bool delay = false;
     bool pickUp = false;
     PauseMenu afficherCollectable;
+    GameObject message;
 
     CollectablesUI CollectableTrouve;
 
@@ -59,6 +62,8 @@ public class ClignotementCollectable : MonoBehaviour
                 afficherCollectable.CollectableInstance = true;
                 CollectableTrouve = GameObject.Find("CanvasPause/CollectablesUI").GetComponent<CollectablesUI>();
                 CollectableTrouve.TaskForDisplay(GetComponent<ObserveThisThing>().Numero);
+                Destroy(message);
+                Destroy(gameObject);
             }
         }
     }
@@ -73,11 +78,31 @@ public class ClignotementCollectable : MonoBehaviour
 
     public void AnimPickUp()
     {
+        if (GameObject.Find("MessageCollectable") != null)
+        {
+            
+            Destroy(GameObject.Find("MessageCollectable"));
+        }
+        message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
+        message.name = "MessageCollectable";
+        int numero = GetComponent<ObserveThisThing>().Numero;
+        string nom = GetComponent<ObserveThisThing>().NomCollectable;
+        PlayerPrefs.SetInt(nom, numero);
+        message.GetComponentInChildren<Text>().text = "Vous avez découvert un indice : \n" + nom;
+
+        StartCoroutine(TempsMessageCollectable());
+
         pickUp = true;
 
         Destroy(bulle);
         transition = true;
         gameObject.tag = "Untagged";
         Destroy(gameObject, 7);
-    }    
+    }
+
+    IEnumerator TempsMessageCollectable()
+    {
+        yield return new WaitForSeconds(7.1f);
+        Destroy(message);
+    }        
 }

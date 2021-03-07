@@ -16,7 +16,17 @@ public class CameraFollowing : MonoBehaviour
     public Light2D globalLightPostApo;
     public Light2D lightBouclier;
 
+    [Header("UI")]
+    public GameObject UI;
+    public Sprite dictPortail;
+    public Sprite postApoPortail;
+
     private bool following = true;
+
+    void Start()
+    {
+        UI.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
@@ -49,6 +59,8 @@ public class CameraFollowing : MonoBehaviour
         else if (player.position.x < 50)
         {
             player.GetComponent<Snap>().tutoriel = false;
+            UI.SetActive(true);
+
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(41.43f, 3.5f, -10), 10 * Time.deltaTime);
         }
         else
@@ -74,6 +86,9 @@ public class CameraFollowing : MonoBehaviour
         else if (player.position.x < 42)
         {
             player.GetComponent<PlacementPortail>().tutoriel = false;
+            UI.transform.GetChild(0).GetComponent<Image>().sprite = dictPortail;
+            UI.transform.GetChild(1).GetComponent<Image>().sprite = postApoPortail;
+
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(30.39f, -33.56f, -10), 15 * Time.deltaTime);
             foreach (Transform child in transform)
             {
