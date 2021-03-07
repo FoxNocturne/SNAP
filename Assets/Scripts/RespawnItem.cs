@@ -5,10 +5,12 @@ using UnityEngine;
 public class RespawnItem : MonoBehaviour
 {
     private Vector3 itemPosition;
+    private bool deathItem;
 
 
     private void Start()
     {
+        deathItem = false;
         if (transform.tag == "Item")
         {
             itemPosition =new Vector3( GetComponent<Transform>().position.x,GetComponent<Transform>().position.y, 0);
@@ -19,10 +21,11 @@ public class RespawnItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (deathItem)
         {
             RespawnPositionItem();
         }
+
     }
     private void RespawnPositionItem()
     {
@@ -36,8 +39,10 @@ public class RespawnItem : MonoBehaviour
 
         if (collision.tag == "Dead")
         {
+            deathItem = true;
             RespawnPositionItem();
         }
+        //deathItem = false;
     }
 
 }

@@ -9,7 +9,7 @@ public class Hero : MonoBehaviour
     private float moveVertical;
     public bool activeControl = true;
     private bool directionGauche;
-    private bool flipLeft = false;
+    public static bool flipLeft = false;
     public float dashSpeed;
     public float maxSpeed = 5;
     private float speed;
@@ -38,6 +38,7 @@ public class Hero : MonoBehaviour
 
     BoxCollider2D hitbox;
     float TimeNoMove = 0;
+    
 
 
     void Start()

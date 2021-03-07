@@ -102,6 +102,8 @@ MonoBehaviour:
   sonSnap:
   - {fileID: 8300000, guid: 0144285eb93aad0489d116b0b3d8ee68, type: 3}
   - {fileID: 0}
+  feedback: {fileID: 0}
+  bulle: []
 --- !u!114 &5833364614446276270
 MonoBehaviour:
   m_ObjectHideFlags: 0
