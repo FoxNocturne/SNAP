@@ -22432,6 +22432,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1405602309}
     m_Modifications:
+    - target: {fileID: -5747319088347745577, guid: b76c67aacc998964bb609eb872b8f346,
+        type: 3}
+      propertyPath: m_UseColliderMask
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 547811307909966098, guid: b76c67aacc998964bb609eb872b8f346,
         type: 3}
       propertyPath: m_UsedByEffector
@@ -49244,6 +49249,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1405602309}
     m_Modifications:
+    - target: {fileID: -5747319088347745577, guid: b76c67aacc998964bb609eb872b8f346,
+        type: 3}
+      propertyPath: m_UseColliderMask
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 547811307909966098, guid: b76c67aacc998964bb609eb872b8f346,
         type: 3}
       propertyPath: m_UsedByEffector

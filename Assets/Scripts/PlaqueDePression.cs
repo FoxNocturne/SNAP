@@ -31,9 +31,9 @@ public class PlaqueDePression : MonoBehaviour
     {
         if(activateurs.Contains(collision.gameObject))
         {
-            if(activateurs.Count == 0)
-                GetComponent<SpriteRenderer>().sprite = haut;
             activateurs.Remove(collision.gameObject);
+            if (activateurs.Count == 0)
+                GetComponent<SpriteRenderer>().sprite = haut;
 
             foreach (var objet in objetsRelies)
                 objet.Desactivation(gameObject);
