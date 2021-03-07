@@ -15,7 +15,7 @@ public class NewDimension : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (/*Input.GetButtonDown("SNAP")|| Input.GetButtonDown("Sauter")|| Input.GetButtonDown("Attraper")|| Input.GetButtonDown("Dash")||*/ Input.anyKeyDown)
         {
             transition.SetTrigger("END");
            
