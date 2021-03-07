@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public static bool optionIsActived = false;
+
+    public bool CollectableInstance = false;
     public GameObject PauseMenuUI;
     public GameObject ConfirmationRespawnToCheckpointUI;
     public GameObject player;
@@ -34,6 +36,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject firstPauseButton;
     public GameObject firstOptionButton;
     public GameObject firstCollectableButton;
+    public GameObject[] allCollectableButton;
     public GameObject firstCRButton;
     public GameObject firstCQButton;
 
@@ -115,6 +118,7 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(firstPauseButton);
+        
     }
     public void RestartLevel()
     {
@@ -158,11 +162,9 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Debug.Log("dhqsjkdhjdhqsjdqsh");
             PauseMenuUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(closeOptionButton);
-
         }
 
 
@@ -207,6 +209,20 @@ public class PauseMenu : MonoBehaviour
             PauseMenuUI.SetActive(true);
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(closeCQButton);
+        }
+    }
+
+    public void retourCollectable()
+    {
+        collectableUI.SetActive(false);
+        if(!CollectableInstance)
+        {
+            PauseMenuUI.SetActive(true);
+        }
+        else
+        {
+            CollectableInstance = false;
+            Time.timeScale = 1; 
         }
     }
     private void RespawnPositionItem()

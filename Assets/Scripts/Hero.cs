@@ -22,8 +22,9 @@ public class Hero : MonoBehaviour
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
-    public GameObject MessageCollectable;
+
     public GameObject CheckEffect;
+    public GameObject PickUp;
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
@@ -42,6 +43,7 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
+
         tailleX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
         tailleY = GetComponent<BoxCollider2D>().size.y * transform.localScale.y / 2;
         speed = maxSpeed;
@@ -54,16 +56,16 @@ public class Hero : MonoBehaviour
     void FixedUpdate()
     {
         // Debug.Log(onTheGround);
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             // Valeur du mouvement horizontal (1 = droite / -1 = gauche)
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
         }
         // DEPLACEMENT DU PERSONNAGE
-        if(!dash)
+        if(!dash && Time.timeScale != 0)
         {
-            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f, 0.1f, 1f), 0, whatIsGround);
+            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.7f), new Vector3(0.65f, 0.3f, 1f), 0, whatIsGround);
             if (onTheGround)
             {
                 anim.SetBool("jump", false); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
@@ -90,7 +92,7 @@ public class Hero : MonoBehaviour
         anim.SetFloat("moveVertical", rb.velocity.y); // IL REGARDE SI MR.X VA VERS LE HAUT OU VERS LE BAS POUR L'ANIMATION.
                                                         // S'IL VA VERS LE BAS (moveVertical < 0), ON LANCE LA TRANSITION DE LA CHUTE
 
-        if (!canDash && onTheGround)
+        if (!canDash && onTheGround && Time.timeScale != 0)
         {
             canDash = true;
 
@@ -99,11 +101,12 @@ public class Hero : MonoBehaviour
 
 
         // DEPLACEMENT
-        if (activeControl && !dash)
+        if (activeControl && !dash && Time.timeScale != 0)
         {
             //SonHero.playOnAwake(sonMrX[6], 1f);
             if (moveHorizontal != 0)
             {
+                anim.speed = 1;  
                 anim.SetBool("run", true); // IL COURT, ACTIVE L'ANIMATION DE COURSE
                 directionGauche = moveHorizontal < 0;
                 if(flipLeft != directionGauche && !isPulling)
@@ -113,6 +116,7 @@ public class Hero : MonoBehaviour
             }
             else
             {
+                anim.speed = 1;  
                 anim.SetBool("run", false); // IL S'ARRETE, DESACTIVE L'ANIMATION DE COURSE
             }
 
@@ -149,18 +153,40 @@ public class Hero : MonoBehaviour
             // Au sol
             else
             {
-                anim.speed = 1;
+                
                 transform.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
-                if (objectPulling)
+                if (objectPulling && hit.transform != null)
                 {
                     objectPulling.Translate(Vector2.right * moveHorizontal * maxSpeed * Time.deltaTime);
+                    // SON DE LA POUSSE EN FONCTION DE LA VITESSE DU JOUEUR
+                    if(anim.GetFloat("pousser") != 0)
+                    {
+                        anim.speed = Mathf.Abs(anim.GetFloat("pousser"));
+                        if(hit.transform.GetComponent<AudioSource>().volume < Mathf.Abs(anim.GetFloat("pousser")))
+                        {
+                            hit.transform.GetComponent<AudioSource>().volume += Time.deltaTime * 2;
+                        }
+                        else if(hit.transform.GetComponent<AudioSource>().volume > Mathf.Abs(anim.GetFloat("pousser")))
+                        {
+                            hit.transform.GetComponent<AudioSource>().volume -= Time.deltaTime * 2;
+                        }
+                    }
+                    else
+                    {
+                        hit.transform.GetComponent<AudioSource>().volume = 0;
+                    }
+                }
+                else
+                {
+                    isPulling = false;
                 }
             }
 
             // SAUTER 
             if (Input.GetButtonDown("Sauter") && onTheGround && !isPulling)
             {
-                SonHero.PlayOneShot(sonMrX[3], 0.2f);              
+                SonHero.PlayOneShot(sonMrX[3], 0.2f);
+                anim.speed = 1;              
                 anim.SetBool("jump", true); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
                 rb.gravityScale = 2; // Initialise la gravité
                 canClimb = false; // Cancel l'escalade
@@ -171,7 +197,7 @@ public class Hero : MonoBehaviour
             // DASH
             if (Input.GetButtonDown("Dash") && !dash && canDash && !isPulling)
             {
-                
+                anim.speed = 1;  
                 if (onTheGround) {
                     StartCoroutine(DashSol());
                     SonHero.PlayOneShot(sonMrX[1], 0.2f);
@@ -209,9 +235,11 @@ public class Hero : MonoBehaviour
                 {
                     isPulling = true;
 
+                    
                     objectPulling = hit.transform;
                     // GetComponent<SpriteRenderer>().color = Color.gray;
                     hit.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                    
                     
                 }
             }
@@ -220,9 +248,15 @@ public class Hero : MonoBehaviour
             {
                 if(Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || objectPulling.tag != "Item")
                 {
-                    SonHero.PlayOneShot(sonMrX[5], 0.2f);
+                   // SonHero.PlayOneShot(sonMrX[5], 0.2f);
                     // GetComponent<SpriteRenderer>().color = Color.red;
-
+                    hit.transform.GetComponent<AudioSource>().volume = 0;
+                    objectPulling = null;
+                    isPulling = false;  
+                }
+                else if(hit.transform == null)
+                {
+                    objectPulling.GetComponent<AudioSource>().volume = 0;
                     objectPulling = null;
                     isPulling = false;  
                 }
@@ -230,13 +264,13 @@ public class Hero : MonoBehaviour
 
         }
         
-        if (dash && !ghost)
+        if (dash && !ghost && Time.timeScale != 0)
         {
             StartCoroutine(GhostEffect(0.02f));
         }
 
         // Sortir d'un panneau ou d'une affiche lorsqu'on le lit
-        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null )
+        if (Input.GetButtonDown("Dash") && GameObject.Find("ObserveThisThing") != null && Time.timeScale != 0)
         {
             Destroy(GameObject.Find("ObserveThisThing"));
             Time.timeScale = 1;
@@ -353,23 +387,19 @@ public class Hero : MonoBehaviour
         if (collision.tag == "Display")
         {
             // RAMASSER UN OBJET
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", true); 
             if (Input.GetButtonDown("Attraper"))
             {
-                if (GameObject.Find("MessageCollectable") != null)
-                {
-                    Destroy(GameObject.Find("MessageCollectable"));
-                }
-                GameObject message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
-                message.name = "MessageCollectable";
-                int numero = collision.gameObject.GetComponent<ObserveThisThing>().Numero;
-                string nom = collision.gameObject.GetComponent<ObserveThisThing>().NomCollectable;
-                PlayerPrefs.SetInt(nom, numero);
-                message.GetComponentInChildren<Text>().text = "Vous avez découvert un indice : \n" + nom;
-                Destroy(collision.gameObject);
-                StartCoroutine(TempsMessageCollectable());
+
+                collision.gameObject.GetComponent<ClignotementCollectable>().AnimPickUp();
+
+                GameObject PickUp_ = Instantiate(PickUp, collision.gameObject.transform.position, Quaternion.identity) as GameObject;
+                Destroy(PickUp_, 2);
+
             }
         }
     }
+   
     //Sons de pas MrX
     public void SonPasMrX() 
     {
@@ -377,12 +407,6 @@ public class Hero : MonoBehaviour
 
     }
     // Sons pousser et tirer Objet
-    public void SonPousserTirer()
-    {
-        SonHero.PlayOneShot(sonMrX[6], 0.5f);
-
-    }
-
 
     // Entrer de collision
     private void OnTriggerEnter2D(Collider2D collision)
@@ -412,6 +436,12 @@ public class Hero : MonoBehaviour
             rb.gravityScale = 2;
             canClimb = false;
         }
+
+        if (collision.tag == "Display")
+        {
+            // RAMASSER UN OBJET
+            collision.gameObject.GetComponentInChildren<Animator>().SetBool("PlayerNear", false); 
+        }
     }
 
         
@@ -437,19 +467,17 @@ public class Hero : MonoBehaviour
         // Draw a semitransparent blue cube at the transforms position
         Gizmos.color = Color.yellow;
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
-        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.65f), new Vector3(0.45f,0.1f, 1f));
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.7f), new Vector3(0.65f,0.3f, 1f));
     } 
 
-    IEnumerator TempsMessageCollectable()
-    {
-        yield return new WaitForSeconds(7.1f);
-        Destroy(GameObject.Find("MessageCollectable"));
-    }
+
 
     IEnumerator DeathMrX()
     {
-        isDead = true;
         GetComponent<Snap>().cantSnap = true;
+        GetComponent<PlacementPortail>().cantPlace = true;
+
+        isDead = true;
         anim.SetTrigger("Blesse");
         anim.SetBool("Mort", true);
         activeControl = false;
@@ -459,7 +487,9 @@ public class Hero : MonoBehaviour
         activeControl = true;
         anim.SetBool("Mort", false);
         isDead = false;
+
         GetComponent<Snap>().cantSnap = false;
+        GetComponent<PlacementPortail>().cantPlace = false;
     }
 
     /* void OnDrawGizmos()
