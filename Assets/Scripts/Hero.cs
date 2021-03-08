@@ -65,7 +65,7 @@ public class Hero : MonoBehaviour
         // DEPLACEMENT DU PERSONNAGE
         if(!dash && Time.timeScale != 0)
         {
-            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.7f), new Vector3(0.65f, 0.3f, 1f), 0, whatIsGround);
+            onTheGround = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 1.7f), new Vector3(0.45f, 0.3f, 1f), 0, whatIsGround);
             if (onTheGround)
             {
                 anim.SetBool("jump", false); // QUAND TOUCHE LE SOL, DESACTIVE L'ANIMATION DE SAUT POUR L'ATTERRISAGE
@@ -467,7 +467,7 @@ public class Hero : MonoBehaviour
         // Draw a semitransparent blue cube at the transforms position
         Gizmos.color = Color.yellow;
         // Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y - 2.5f), new Vector3(0.1f,0.1f, 0.1f));
-        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.7f), new Vector3(0.65f,0.3f, 1f));
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 1.7f), new Vector3(0.45f,0.3f, 1f));
     } 
 
 
