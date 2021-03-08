@@ -54458,7 +54458,7 @@ GameObject:
   - component: {fileID: 1900052853}
   - component: {fileID: 1900052852}
   m_Layer: 9
-  m_Name: Sprite
+  m_Name: Carre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
