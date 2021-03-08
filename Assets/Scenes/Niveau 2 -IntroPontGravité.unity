@@ -61590,6 +61590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
+      propertyPath: portailColors.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
       propertyPath: occlusionPlacement
       value: 
       objectReference: {fileID: 440984386}
@@ -61602,6 +61607,26 @@ PrefabInstance:
         type: 3}
       propertyPath: niveau1
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
+      propertyPath: portailColors.Array.data[4].r
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
+      propertyPath: portailColors.Array.data[4].g
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
+      propertyPath: portailColors.Array.data[4].b
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
+      propertyPath: portailColors.Array.data[4].a
+      value: 0.11372549
       objectReference: {fileID: 0}
     - target: {fileID: 5833364614497570696, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
