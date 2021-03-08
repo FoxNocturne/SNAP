@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -28129,7 +28129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &948307929
 Transform:
   m_ObjectHideFlags: 0
@@ -41499,7 +41499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1352686829
 Transform:
   m_ObjectHideFlags: 0
@@ -51201,6 +51201,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194809248}
     m_Modifications:
+    - target: {fileID: 4334738208851137214, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334738208851137214, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987930609700553780, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987930609700553780, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.7319183
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987930609700553780, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.04553175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6987930609700553780, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.7909288
+      objectReference: {fileID: 0}
     - target: {fileID: 6987930609700553781, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
         type: 3}
       propertyPath: objetsRelies.Array.size
@@ -51284,12 +51314,12 @@ PrefabInstance:
     - target: {fileID: 6987930609700553783, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5068698
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6987930609700553783, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.381439
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6987930609700553802, guid: 708fdf78d6c8cce4e8bc22d1beeb3de0,
         type: 3}
