@@ -14,6 +14,10 @@ public class MainMenu : MonoBehaviour
     public GameObject collectableUI;
     public GameObject quitterBDUI;
 
+    public GameObject menuUI;
+    public GameObject quitterButton;
+    public GameObject boiteDialogueUI;
+
     public GameObject firstOptionButton;
     public GameObject firstCollectableButton;
     public GameObject firstCQButton;
@@ -58,6 +62,14 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCQButton);
+    }
+    public void NonBoiteDialogue()
+    {
+        boiteDialogueUI.SetActive(false);
+        menuUI.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(quitterButton);
     }
 
     IEnumerator LoadAsyncScene()

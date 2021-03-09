@@ -32,6 +32,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject collectableUI;
     public GameObject respawnBDUI;
     public GameObject quitterBDUI;
+    public GameObject quitterMenuButton;
+    public GameObject respawnMenuButton;
 
     public GameObject firstPauseButton;
     public GameObject firstOptionButton;
@@ -85,22 +87,7 @@ public class PauseMenu : MonoBehaviour
             }
 
         }
-        /*
-        if (optionIsActived)
-            
-        {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Debug.Log("dhqsjkdhjdhqsjdqsh");
-                PauseMenuUI.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(null);
-                EventSystem.current.SetSelectedGameObject(closeOptionButton);
-
-            }
-
-
-
-        }*/
+        
     }
     public void Resume()
     {
@@ -116,7 +103,6 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
 
         EventSystem.current.SetSelectedGameObject(null);
-
         EventSystem.current.SetSelectedGameObject(firstPauseButton);
         
     }
@@ -130,13 +116,10 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-
-
     public void ResumeToCheckPoint()
     {
 
         RestartLevel();
-
         ConfirmationRespawnToCheckpointUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -156,62 +139,61 @@ public class PauseMenu : MonoBehaviour
     {
         optionUI.SetActive(true);
         optionIsActived = true;
-
+        Time.timeScale = 0f;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstOptionButton);
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeOptionButton);
-        }
 
 
     }
     public void CollectableMenu()
     {
         collectableUI.SetActive(true);
-
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCollectableButton);
-
-        if (Input.GetButtonDown("Dash"))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeCollectableButton);
-        }
+   
     }
     public void ConfirmationRespawnMenu()
     {
         respawnBDUI.SetActive(true);
-
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCRButton);
 
-        if (Input.GetButtonDown("Dash"))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeCRButton);
-        }
     }
     public void ConfirmationQuitterMenu()
     {
         quitterBDUI.SetActive(true);
-
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCQButton);
 
-        if (Input.GetButtonDown("Dash"))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeCQButton);
-        }
     }
 
+    public void ConfirmationQuitterNONMenu()
+    {
+        quitterBDUI.SetActive(false);
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(quitterMenuButton);
+
+    }
+
+    public void ConfirmationRespawnNONMenu()
+    {
+        respawnBDUI.SetActive(false);
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(respawnMenuButton);
+
+    }
     public void retourCollectable()
     {
         collectableUI.SetActive(false);

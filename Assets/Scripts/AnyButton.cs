@@ -14,7 +14,7 @@ public class AnyButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Sauter"))
+        if (Input.anyKey)
         {
             SceneManager.LoadScene("Menu");
         }

@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CollectablesUI : MonoBehaviour
 {
+    public GameObject menuUI;
+    public GameObject collectableUI;
+    public GameObject collectableButtonMenu;
+
     public Button[] collectableButton;
     public TMPro.TMP_Text[] collectableName;
     public string[] nameCollec;
@@ -26,8 +31,17 @@ public class CollectablesUI : MonoBehaviour
 
     }
     void Update()
-    {       
-        for(int i = 1; i <= 5; i++)
+    {
+        if (Input.GetButtonDown("Dash"))
+        {
+            collectableUI.SetActive(false);
+            menuUI.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(collectableButtonMenu);
+        }
+
+
+        for (int i = 1; i <= 5; i++)
         {
             if (PlayerPrefs.GetInt(nameCollec[i]) != 0)
             {
