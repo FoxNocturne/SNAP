@@ -9,14 +9,18 @@ public class NewDimension : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 0f;
+
         transition = GetComponent<Animator>();
+        transition.updateMode = AnimatorUpdateMode.UnscaledTime;
     }
 
 
     void Update()
     {
-        if (/*Input.GetButtonDown("SNAP")|| Input.GetButtonDown("Sauter")|| Input.GetButtonDown("Attraper")|| Input.GetButtonDown("Dash")||*/ Input.anyKeyDown)
+        if (Input.anyKeyDown)
         {
+            Time.timeScale = 1f;
             transition.SetTrigger("END");
            
         }
