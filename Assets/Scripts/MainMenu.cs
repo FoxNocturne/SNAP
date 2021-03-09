@@ -25,7 +25,13 @@ public class MainMenu : MonoBehaviour
     public Image BarreChargement;
     public Text textLoading;
     float chargementPourcent;
-    
+
+    public static bool optionUIisActived;
+
+    private void Start()
+    {
+        optionUIisActived = false;
+    }
     public void PlayGame()
     {
         StartCoroutine(LoadAsyncScene());
@@ -52,6 +58,7 @@ public class MainMenu : MonoBehaviour
     public void OptionMenu()
     {
         optionUI.SetActive(true);
+        optionUIisActived = true;
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstOptionButton);

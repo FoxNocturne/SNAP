@@ -47,9 +47,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject closeCRButton;
     public GameObject closeCQButton;
 
-
+    public static bool collectableUIisActtived;
     private void Start()
     {
+        collectableUIisActtived = false;
+        optionIsActived = false;
+
         if (transform.tag == "Item")
         {
             itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
@@ -74,8 +77,8 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Input.GetButtonDown("Options")==>faut corriger ça 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        
+        if (Input.GetButtonDown("Option"))
         {
             if (GameIsPaused)
             {
@@ -149,6 +152,7 @@ public class PauseMenu : MonoBehaviour
     {
         collectableUI.SetActive(true);
         Time.timeScale = 0f;
+        collectableUIisActtived = true;
         GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCollectableButton);

@@ -32,7 +32,7 @@ public class CollectablesUI : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Dash"))
+        if (PauseMenu.collectableUIisActtived && Input.GetButtonDown("Dash"))
         {
             collectableUI.SetActive(false);
             menuUI.SetActive(true);
