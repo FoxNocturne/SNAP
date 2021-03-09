@@ -47,6 +47,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject closeCRButton;
     public GameObject closeCQButton;
 
+    public LayerMask itemLayer;
+
     public static bool collectableUIisActtived;
     private void Start()
     {
@@ -56,6 +58,7 @@ public class PauseMenu : MonoBehaviour
         if (transform.tag == "Item")
         {
             itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
+            itemLayer = gameObject.layer;
         }
 
         //pardon pour ça 
@@ -215,6 +218,7 @@ public class PauseMenu : MonoBehaviour
     {
 
         transform.position = itemPosition;
+        gameObject.layer = itemLayer;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
