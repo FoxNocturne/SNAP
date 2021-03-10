@@ -27,10 +27,12 @@ public class MainMenu : MonoBehaviour
     float chargementPourcent;
 
     public static bool optionUIisActived;
+    public static bool collectableUIisActtived;
 
     private void Start()
     {
         optionUIisActived = false;
+        collectableUIisActtived = false;
     }
     public void PlayGame()
     {
@@ -50,7 +52,7 @@ public class MainMenu : MonoBehaviour
     public void CollectableMenu()
     {
         collectableUI.SetActive(true);
-
+        collectableUIisActtived = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCollectableButton);
 

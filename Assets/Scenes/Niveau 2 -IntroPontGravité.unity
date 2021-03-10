@@ -3261,6 +3261,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6520859205658518057, guid: e45f7de68a058f04c8b4b6374d0137a9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520859205658518057, guid: e45f7de68a058f04c8b4b6374d0137a9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9858491
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520859205658518057, guid: e45f7de68a058f04c8b4b6374d0137a9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9858491
+      objectReference: {fileID: 0}
     - target: {fileID: 6520859207445696859, guid: e45f7de68a058f04c8b4b6374d0137a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45316,10 +45331,35 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2604754625694495451, guid: 0c957b7cb4458b84ba98eef0c4951c65,
+        type: 3}
+      propertyPath: itemLayer.m_Bits
+      value: 16384
+      objectReference: {fileID: 0}
     - target: {fileID: 2604754626030682199, guid: 0c957b7cb4458b84ba98eef0c4951c65,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -34.850098
+      value: -34.85016
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604754627437423057, guid: 0c957b7cb4458b84ba98eef0c4951c65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604754627437423087, guid: 0c957b7cb4458b84ba98eef0c4951c65,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604754627437423087, guid: 0c957b7cb4458b84ba98eef0c4951c65,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604754627437423087, guid: 0c957b7cb4458b84ba98eef0c4951c65,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2604754625694495448, guid: 0c957b7cb4458b84ba98eef0c4951c65, type: 3}

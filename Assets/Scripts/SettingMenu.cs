@@ -15,7 +15,7 @@ public class SettingMenu : MonoBehaviour
     public void Update()
     {
        
-        if (PauseMenu.optionIsActived && Input.GetButtonDown("Dash"))
+        if ((PauseMenu.optionIsActived || MainMenu.optionUIisActived) && Input.GetButtonDown("Dash"))
         {
             optionUI.SetActive(false);
             menuUI.SetActive(true);
