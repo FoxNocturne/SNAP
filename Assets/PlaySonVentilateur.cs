@@ -15,7 +15,7 @@ public class PlaySonVentilateur : MonoBehaviour
     }
     public void Sonventilo()
     {
-        sonVentiloEnclencher.PlayOneShot(sonVentilo[0], 0.1f);
+        sonVentiloEnclencher.Play();
     }
     void Update()
     {
