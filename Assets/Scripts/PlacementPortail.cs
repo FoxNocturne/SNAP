@@ -48,7 +48,7 @@ public class PlacementPortail : MonoBehaviour
             return;
 
         // Appui sur L2 ou R2
-        if (Input.GetButtonDown("Portail"))
+        if (Input.GetButtonDown("Portail") && placing == false)
         {
             SetTargetDimension();
 

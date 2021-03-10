@@ -22,7 +22,6 @@ public class Hero : MonoBehaviour
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
-
     public GameObject CheckEffect;
     public GameObject PickUp;
     public LayerMask whatIsGround;

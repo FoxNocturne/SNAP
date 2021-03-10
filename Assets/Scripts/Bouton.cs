@@ -9,7 +9,7 @@ public class Bouton : MonoBehaviour
 
     public List<ObjetActivable> objetsRelies; // Liste des objets connectées au bouton
 
-    private bool actif = false;
+    public bool actif = false;
     private bool playerOn = false;
 
   
