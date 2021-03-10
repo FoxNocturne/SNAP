@@ -137,7 +137,7 @@ public class PlacementPortail : MonoBehaviour
         if (Physics2D.OverlapCircle(portailPlacing.transform.position, 0.8f, LayerMask.GetMask(LayerMask.LayerToName(targetDimension + 9))))
             placingOkay = false;
 
-        ChangeColor(portailPlacing, placingOkay ? Color.white : Color.red);
+        ChangeColor(portailPlacing, placingOkay ? Color.white : portailColors[4]);
     }
 
     // Création du portail
