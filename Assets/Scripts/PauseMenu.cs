@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject optionUI;
     public GameObject collectableUI;
+    public GameObject MomentLectureUI;    
     public GameObject respawnBDUI;
     public GameObject quitterBDUI;
     public GameObject quitterMenuButton;
@@ -154,6 +155,7 @@ public class PauseMenu : MonoBehaviour
     public void CollectableMenu()
     {
         collectableUI.SetActive(true);
+        collectableUI.GetComponent<CollectablesUI>().UpdateCollectables();
         Time.timeScale = 0f;
         collectableUIisActtived = true;
         GameIsPaused = true;
@@ -161,6 +163,13 @@ public class PauseMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(firstCollectableButton);
    
     }
+
+    public void MomentLecture()
+    {
+        MomentLectureUI.SetActive(true);
+   
+    }
+
     public void ConfirmationRespawnMenu()
     {
         respawnBDUI.SetActive(true);
@@ -203,7 +212,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void retourCollectable()
     {
-        collectableUI.SetActive(false);
+        
         if(!CollectableInstance)
         {
             PauseMenuUI.SetActive(true);
@@ -211,8 +220,10 @@ public class PauseMenu : MonoBehaviour
         else
         {
             CollectableInstance = false;
+            collectableUI.GetComponent<CollectablesUI>().CollectableInstance = false;
             Time.timeScale = 1; 
         }
+        collectableUI.SetActive(false);
     }
     private void RespawnPositionItem()
     {

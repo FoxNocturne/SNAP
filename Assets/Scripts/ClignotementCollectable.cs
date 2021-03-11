@@ -19,6 +19,9 @@ public class ClignotementCollectable : MonoBehaviour
 
     CollectablesUI CollectableTrouve;
 
+    AudioSource VoixLecture;
+    public AudioClip[] SonsLecture;
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,11 +63,22 @@ public class ClignotementCollectable : MonoBehaviour
                 afficherCollectable.firstCollectableButton = afficherCollectable.allCollectableButton[GetComponent<ObserveThisThing>().Numero];
                 afficherCollectable.CollectableMenu();
                 afficherCollectable.CollectableInstance = true;
+
                 CollectableTrouve = GameObject.Find("CanvasPause/CollectablesUI").GetComponent<CollectablesUI>();
                 CollectableTrouve.TaskForDisplay(GetComponent<ObserveThisThing>().Numero);
+                CollectableTrouve.CollectableInstance = true;
+                CollectableTrouve.UpdateCollectables();             
+                if(GetComponent<ObserveThisThing>().Numero == 5 || GetComponent<ObserveThisThing>().Numero == 6)
+                {
+                    afficherCollectable.MomentLecture();
+                    VoixLecture = GameObject.Find("CanvasPause/CollectablesUI/Instant Lecture").GetComponent<AudioSource>();
+                    VoixLecture.clip = SonsLecture[0];
+                    VoixLecture.Play();
+                } 
                 Destroy(message);
-                Destroy(gameObject);
+                Destroy(gameObject);                                
             }
+
         }
     }
 
