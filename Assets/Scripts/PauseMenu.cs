@@ -164,12 +164,6 @@ public class PauseMenu : MonoBehaviour
    
     }
 
-    public void MomentLecture()
-    {
-        MomentLectureUI.SetActive(true);
-   
-    }
-
     public void ConfirmationRespawnMenu()
     {
         respawnBDUI.SetActive(true);

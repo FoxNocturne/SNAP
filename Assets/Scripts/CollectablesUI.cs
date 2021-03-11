@@ -18,11 +18,15 @@ public class CollectablesUI : MonoBehaviour
     public Image ImageAffiche;
     public Text TextDescription;
     public string[] description;
-    
+    public AudioClip[] SonsLecture;
+    public AudioClip Page;
+
+    public Sprite[] AfficheLecture;
+    public Image TextLecture;
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll(); // A supprimer une fois le test des collectables effectués
+        // PlayerPrefs.DeleteAll(); // A supprimer une fois le test des collectables effectués
         ImageAffiche.color = new Color(0, 0, 0, 0);
         TextDescription.text = "";
 
@@ -124,6 +128,32 @@ public class CollectablesUI : MonoBehaviour
         ImageAffiche.color = new Color(1, 1, 1, 1);
     }
 
+    public void DisplayMomentLecture(int value)
+    {
+        MomentLectureUI.SetActive(true);
+        AudioSource Voix = MomentLectureUI.GetComponent<AudioSource>();
+        Voix.PlayOneShot(Page, 1f);
+        switch(value)
+        {
+            case 5 :
+            Voix.clip =  SonsLecture[0];
+            TextLecture.sprite = AfficheLecture[0];
+            Voix.Play();            
+            break;
+
+            case 6 :
+            Voix.clip =  SonsLecture[1];
+            TextLecture.sprite = AfficheLecture[1];
+            Voix.Play();  
+            break;
+
+            case 7 :
+            Voix.clip =  SonsLecture[2];
+            TextLecture.sprite = AfficheLecture[2];
+            Voix.Play();  
+            break;                        
+        }
+    }
 
 }
 

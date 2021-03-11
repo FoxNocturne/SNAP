@@ -20,7 +20,8 @@ public class ClignotementCollectable : MonoBehaviour
     CollectablesUI CollectableTrouve;
 
     AudioSource VoixLecture;
-    public AudioClip[] SonsLecture;
+    public AudioClip CollectableRamasse;
+    AudioSource audiosource;
 
 
     // Start is called before the first frame update
@@ -28,7 +29,7 @@ public class ClignotementCollectable : MonoBehaviour
     {
         clignotement = GetComponent<Light2D>();
         afficherCollectable = GameObject.Find("CanvasPause/Menus").GetComponent<PauseMenu>();
-        
+        audiosource = GetComponent<AudioSource>();
 
     }
 
@@ -70,10 +71,7 @@ public class ClignotementCollectable : MonoBehaviour
                 //CollectableTrouve.UpdateCollectables();             
                 if(GetComponent<ObserveThisThing>().Numero == 5 || GetComponent<ObserveThisThing>().Numero == 6)
                 {
-                    afficherCollectable.MomentLecture();
-                    VoixLecture = GameObject.Find("CanvasPause/CollectablesUI/Instant Lecture").GetComponent<AudioSource>();
-                    VoixLecture.clip = SonsLecture[0];
-                    VoixLecture.Play();
+                    CollectableTrouve.DisplayMomentLecture(GetComponent<ObserveThisThing>().Numero);
                 } 
                 Destroy(message);
                 Destroy(gameObject);                                
@@ -97,6 +95,7 @@ public class ClignotementCollectable : MonoBehaviour
             
             Destroy(GameObject.Find("MessageCollectable"));
         }
+        audiosource.PlayOneShot(CollectableRamasse, 1f);
         message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
         message.name = "MessageCollectable";
         int numero = GetComponent<ObserveThisThing>().Numero;
