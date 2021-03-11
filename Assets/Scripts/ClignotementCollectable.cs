@@ -19,13 +19,17 @@ public class ClignotementCollectable : MonoBehaviour
 
     CollectablesUI CollectableTrouve;
 
+    AudioSource VoixLecture;
+    public AudioClip CollectableRamasse;
+    AudioSource audiosource;
+
 
     // Start is called before the first frame update
     void Start()
     {
         clignotement = GetComponent<Light2D>();
         afficherCollectable = GameObject.Find("CanvasPause/Menus").GetComponent<PauseMenu>();
-        
+        audiosource = GetComponent<AudioSource>();
 
     }
 
@@ -60,11 +64,19 @@ public class ClignotementCollectable : MonoBehaviour
                 afficherCollectable.firstCollectableButton = afficherCollectable.allCollectableButton[GetComponent<ObserveThisThing>().Numero];
                 afficherCollectable.CollectableMenu();
                 afficherCollectable.CollectableInstance = true;
+
                 CollectableTrouve = GameObject.Find("CanvasPause/CollectablesUI").GetComponent<CollectablesUI>();
                 CollectableTrouve.TaskForDisplay(GetComponent<ObserveThisThing>().Numero);
+                CollectableTrouve.CollectableInstance = true;
+                //CollectableTrouve.UpdateCollectables();             
+                if(GetComponent<ObserveThisThing>().Numero == 5 || GetComponent<ObserveThisThing>().Numero == 6)
+                {
+                    CollectableTrouve.DisplayMomentLecture(GetComponent<ObserveThisThing>().Numero);
+                } 
                 Destroy(message);
-                Destroy(gameObject);
+                Destroy(gameObject);                                
             }
+
         }
     }
 
@@ -83,6 +95,7 @@ public class ClignotementCollectable : MonoBehaviour
             
             Destroy(GameObject.Find("MessageCollectable"));
         }
+        audiosource.PlayOneShot(CollectableRamasse, 1f);
         message = Instantiate(MessageCollectable, transform.position, Quaternion.identity) as GameObject;
         message.name = "MessageCollectable";
         int numero = GetComponent<ObserveThisThing>().Numero;

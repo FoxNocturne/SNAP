@@ -9,7 +9,8 @@ public class CollectablesUI : MonoBehaviour
     public GameObject menuUI;
     public GameObject collectableUI;
     public GameObject collectableButtonMenu;
-
+    public GameObject MomentLectureUI;       
+    public bool CollectableInstance = false;
     public Button[] collectableButton;
     public TMPro.TMP_Text[] collectableName;
     public string[] nameCollec;
@@ -17,50 +18,142 @@ public class CollectablesUI : MonoBehaviour
     public Image ImageAffiche;
     public Text TextDescription;
     public string[] description;
+    public AudioClip[] SonsLecture;
+    public AudioClip Page;
+
+    public Sprite[] AfficheLecture;
+    public Image TextLecture;
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll(); // A supprimer une fois le test des collectables effectués
+        // PlayerPrefs.DeleteAll(); // A supprimer une fois le test des collectables effectués
         ImageAffiche.color = new Color(0, 0, 0, 0);
         TextDescription.text = "";
-         
-        for (int i = 1; i <= 12; i++)
-        {
-            PlayerPrefs.SetInt(nameCollec[i], i);
-        } 
 
+
+            /*    Navigation navigation = new Navigation();        
+                navigation.mode = Navigation.Mode.Explicit;
+                navigation.selectOnUp = collectableButton[2];
+                navigation.selectOnDown = collectableButton[3];
+                collectableButton[1].navigation = navigation; 
+                */ 
+
+        
     }
     void Update()
     {
         if ((PauseMenu.collectableUIisActtived || MainMenu.collectableUIisActtived) && Input.GetButtonDown("Dash"))
         {
-            collectableUI.SetActive(false);
-            menuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(collectableButtonMenu);
+            
+            if(MomentLectureUI.activeSelf == true)
+            {
+                MomentLectureUI.SetActive(false);
+            }
+            else
+            {
+                if(!CollectableInstance)
+                {
+                    menuUI.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(null);
+                    EventSystem.current.SetSelectedGameObject(collectableButtonMenu);                
+                }
+                else
+                {
+                    CollectableInstance = false;
+                // menuUI.GetComponent<PauseMenu>().CollectableInstance = false;
+                    Time.timeScale = 1; 
+                }
+                collectableUI.SetActive(false);
+            }
+
+
         }
 
 
-        for (int i = 1; i <= 5; i++)
+
+    }
+
+
+    public void UpdateCollectables()
+    {
+        List<int> ordre = new List<int>();
+
+        for (int i = 1; i < collectableButton.Length; i++)
         {
             if (PlayerPrefs.GetInt(nameCollec[i]) != 0)
             {
-
+                ordre.Add(i);
                 collectableName[i].text = nameCollec[i];
                 collectableButton[i].enabled = true;
                 collectableButton[i].interactable = true;
             }
-        }
+        } 
+        for (int i = 0; i < ordre.Count; i++)
+        {
+            Navigation navigation = new Navigation();
+            navigation.mode = Navigation.Mode.Explicit;
+            if(ordre.Count > 1)
+            {
+                if(i == 0)
+                {
+                    navigation.selectOnUp = collectableButton[ordre[ordre.Count - 1]];
+                }
+                else
+                {
+                    navigation.selectOnUp = collectableButton[ordre[i - 1]];
+                }
+                if(i == ordre.Count - 1)
+                {
+                    navigation.selectOnDown = collectableButton[ordre[0]]; 
+                    
+                                          
+                }
+                else
+                {
+                     navigation.selectOnDown = collectableButton[ordre[i + 1]];
+                }
+            }
+            else
+            {
+                navigation.selectOnUp = collectableButton[ordre[0]];
+                navigation.selectOnDown = collectableButton[ordre[0]];
+            }
+            collectableButton[ordre[i]].navigation = navigation;
+        } 
     }
-
     public void TaskForDisplay(int value)
     {
-        Debug.Log("Ok !");
         ImageAffiche.sprite = ImageCollec[value];
         TextDescription.text = description[value];
         ImageAffiche.color = new Color(1, 1, 1, 1);
     }
 
+    public void DisplayMomentLecture(int value)
+    {
+        MomentLectureUI.SetActive(true);
+        AudioSource Voix = MomentLectureUI.GetComponent<AudioSource>();
+        Voix.PlayOneShot(Page, 1f);
+        switch(value)
+        {
+            case 5 :
+            Voix.clip =  SonsLecture[0];
+            TextLecture.sprite = AfficheLecture[0];
+            Voix.Play();            
+            break;
+
+            case 6 :
+            Voix.clip =  SonsLecture[1];
+            TextLecture.sprite = AfficheLecture[1];
+            Voix.Play();  
+            break;
+
+            case 7 :
+            Voix.clip =  SonsLecture[2];
+            TextLecture.sprite = AfficheLecture[2];
+            Voix.Play();  
+            break;                        
+        }
+    }
 
 }
 
