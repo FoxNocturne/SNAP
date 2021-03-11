@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RespawnItem : MonoBehaviour
 {
+    //public GameObject item;
     private Vector3 itemPosition;
     public LayerMask itemLayer;
     public bool isDead;
@@ -14,12 +15,17 @@ public class RespawnItem : MonoBehaviour
     {
         isDead = false;
 
+        //item = GameObject.FindGameObjectWithTag("Item");
+        itemPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+        itemLayer = gameObject.layer;
+        /*
 
         if (transform.tag == "Item")
         {
             itemPosition =new Vector3( GetComponent<Transform>().position.x,GetComponent<Transform>().position.y, 0);
             itemLayer = gameObject.layer;
         }
+        */
 
     }
 
