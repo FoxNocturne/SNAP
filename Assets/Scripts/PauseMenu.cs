@@ -32,6 +32,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject collectableUI;
     public GameObject respawnBDUI;
     public GameObject quitterBDUI;
+    public GameObject quitterMenuButton;
+    public GameObject respawnMenuButton;
 
     public GameObject firstPauseButton;
     public GameObject firstOptionButton;
@@ -45,13 +47,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject closeCRButton;
     public GameObject closeCQButton;
 
+    public LayerMask itemLayer;
 
+    public static bool collectableUIisActtived;
     private void Start()
     {
-        if (transform.tag == "Item")
-        {
-            itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
-        }
+        collectableUIisActtived = false;
+        optionIsActived = false;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        item = GameObject.FindGameObjectWithTag("Item");
+        itemPosition = new Vector3(item.transform.position.x, item.transform.position.y, 0);
+        itemLayer = item.layer;
+        
 
         //pardon pour ça 
 
@@ -72,8 +80,8 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Input.GetButtonDown("Options")==>faut corriger ça 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        
+        if (Input.GetButtonDown("Option")|| Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
@@ -85,22 +93,7 @@ public class PauseMenu : MonoBehaviour
             }
 
         }
-        /*
-        if (optionIsActived)
-            
-        {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Debug.Log("dhqsjkdhjdhqsjdqsh");
-                PauseMenuUI.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(null);
-                EventSystem.current.SetSelectedGameObject(closeOptionButton);
-
-            }
-
-
-
-        }*/
+        
     }
     public void Resume()
     {
@@ -116,27 +109,25 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
 
         EventSystem.current.SetSelectedGameObject(null);
-
         EventSystem.current.SetSelectedGameObject(firstPauseButton);
         
     }
     public void RestartLevel()
     {
         //respawn du joueur au dernier checkpoint
-        player = GameObject.FindGameObjectWithTag("Player");
+ 
         player.transform.position = CheckPoints.reachedPoint;
+        item.transform.position = itemPosition;
+        item.layer = itemLayer;
 
-        RespawnPositionItem();
+        //RespawnPositionItem();
 
     }
-
-
 
     public void ResumeToCheckPoint()
     {
 
         RestartLevel();
-
         ConfirmationRespawnToCheckpointUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -156,62 +147,62 @@ public class PauseMenu : MonoBehaviour
     {
         optionUI.SetActive(true);
         optionIsActived = true;
-
+        Time.timeScale = 0f;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstOptionButton);
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeOptionButton);
-        }
 
 
     }
     public void CollectableMenu()
     {
         collectableUI.SetActive(true);
-
+        Time.timeScale = 0f;
+        collectableUIisActtived = true;
+        GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCollectableButton);
-
-        if (Input.GetButtonDown("Dash"))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeCollectableButton);
-        }
+   
     }
     public void ConfirmationRespawnMenu()
     {
         respawnBDUI.SetActive(true);
-
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCRButton);
 
-        if (Input.GetButtonDown("Dash"))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeCRButton);
-        }
     }
     public void ConfirmationQuitterMenu()
     {
         quitterBDUI.SetActive(true);
-
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCQButton);
 
-        if (Input.GetButtonDown("Dash"))
-        {
-            PauseMenuUI.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(closeCQButton);
-        }
     }
 
+    public void ConfirmationQuitterNONMenu()
+    {
+        quitterBDUI.SetActive(false);
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(quitterMenuButton);
+
+    }
+
+    public void ConfirmationRespawnNONMenu()
+    {
+        respawnBDUI.SetActive(false);
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(respawnMenuButton);
+
+    }
     public void retourCollectable()
     {
         collectableUI.SetActive(false);
@@ -225,10 +216,11 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1; 
         }
     }
-    private void RespawnPositionItem()
+   /* private void RespawnPositionItem()
     {
 
         transform.position = itemPosition;
+        gameObject.layer = itemLayer;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -237,7 +229,7 @@ public class PauseMenu : MonoBehaviour
         {
             RespawnPositionItem();
         }
-    }
+    }*/
 
 
 

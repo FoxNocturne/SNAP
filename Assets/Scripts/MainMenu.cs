@@ -14,6 +14,10 @@ public class MainMenu : MonoBehaviour
     public GameObject collectableUI;
     public GameObject quitterBDUI;
 
+    public GameObject menuUI;
+    public GameObject quitterButton;
+    public GameObject boiteDialogueUI;
+
     public GameObject firstOptionButton;
     public GameObject firstCollectableButton;
     public GameObject firstCQButton;
@@ -21,7 +25,15 @@ public class MainMenu : MonoBehaviour
     public Image BarreChargement;
     public Text textLoading;
     float chargementPourcent;
-    
+
+    public static bool optionUIisActived;
+    public static bool collectableUIisActtived;
+
+    private void Start()
+    {
+        optionUIisActived = false;
+        collectableUIisActtived = false;
+    }
     public void PlayGame()
     {
         StartCoroutine(LoadAsyncScene());
@@ -40,7 +52,7 @@ public class MainMenu : MonoBehaviour
     public void CollectableMenu()
     {
         collectableUI.SetActive(true);
-
+        collectableUIisActtived = true;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCollectableButton);
 
@@ -48,6 +60,7 @@ public class MainMenu : MonoBehaviour
     public void OptionMenu()
     {
         optionUI.SetActive(true);
+        optionUIisActived = true;
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstOptionButton);
@@ -58,6 +71,14 @@ public class MainMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstCQButton);
+    }
+    public void NonBoiteDialogue()
+    {
+        boiteDialogueUI.SetActive(false);
+        menuUI.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(quitterButton);
     }
 
     IEnumerator LoadAsyncScene()

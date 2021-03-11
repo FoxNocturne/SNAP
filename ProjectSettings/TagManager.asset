@@ -12,6 +12,7 @@ TagManager:
   - TagCheckPoint
   - Sons
   - Checkpoint
+  - Bouclier
   layers:
   - Default
   - TransparentFX

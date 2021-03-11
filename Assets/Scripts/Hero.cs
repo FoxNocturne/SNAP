@@ -22,7 +22,6 @@ public class Hero : MonoBehaviour
     Rigidbody2D rb;
     public Transform circleGround;
     public GameObject phantomEffect;
-
     public GameObject CheckEffect;
     public GameObject PickUp;
     public LayerMask whatIsGround;
@@ -231,7 +230,7 @@ public class Hero : MonoBehaviour
             if (Input.GetButtonDown("Attraper"))
             {
                 // Debug.Log(hit.transform);
-                if (hit && hit.transform.tag == "Item")
+                if ((hit && hit.transform.tag == "Item") || (hit && hit.transform.tag == "Bouclier"))
                 {
                     isPulling = true;
 
@@ -246,7 +245,7 @@ public class Hero : MonoBehaviour
 
             if(objectPulling != null)
             {
-                if(Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || objectPulling.tag != "Item")
+                if(Input.GetButtonUp("Attraper") || (isPulling && !onTheGround) || (objectPulling.tag != "Item" && objectPulling.tag != "Bouclier") )
                 {
                    // SonHero.PlayOneShot(sonMrX[5], 0.2f);
                     // GetComponent<SpriteRenderer>().color = Color.red;
@@ -375,7 +374,7 @@ public class Hero : MonoBehaviour
         }
 
         // Si Mr.X est devant un objet à ramasser
-        if (collision.tag == "Item")
+        if (collision.tag == "Item" || collision.tag=="Bouclier")
         {
             // RAMASSER UN OBJET
             if (Input.GetKeyDown(KeyCode.R))
