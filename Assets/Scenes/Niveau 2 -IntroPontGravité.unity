@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5193,6 +5193,86 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1001 &165307106
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 935326600174183136, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_Name
+      value: Themes Musique
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 935326600174183137, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633020237043284513, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: efdd7e4434290db4a9e75937758ea648, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb, type: 3}
+--- !u!1 &165307107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 935326600174183136, guid: 62dcd9f4f04dfaf4bbedc575ea9d81fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 165307106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &167165413
 GameObject:
   m_ObjectHideFlags: 0
@@ -28129,7 +28209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &948307929
 Transform:
   m_ObjectHideFlags: 0
@@ -57257,7 +57337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1860105478
 Transform:
   m_ObjectHideFlags: 0
@@ -61534,6 +61614,11 @@ PrefabInstance:
       propertyPath: feedback
       value: 
       objectReference: {fileID: 1846917474}
+    - target: {fileID: 5833364614446276246, guid: f4d045fe460dc7747aa6a251d0a42327,
+        type: 3}
+      propertyPath: themeMusiqueParent
+      value: 
+      objectReference: {fileID: 165307107}
     - target: {fileID: 5833364614446276268, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -61607,7 +61692,7 @@ PrefabInstance:
     - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
       propertyPath: niveau1
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5833364614446276270, guid: f4d045fe460dc7747aa6a251d0a42327,
         type: 3}
