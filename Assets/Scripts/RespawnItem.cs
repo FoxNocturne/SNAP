@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class RespawnItem : MonoBehaviour
 {
+    //public GameObject item;
     private Vector3 itemPosition;
     public LayerMask itemLayer;
-    public bool isDead;
+    public SpriteRenderer itemSpriteO;
+    public int itemSprite;
 
+    public bool isDead;
+    Rigidbody2D rbCaisse;
 
 
     private void Start()
     {
+
+        rbCaisse = GetComponent<Rigidbody2D>();
         isDead = false;
 
+        //item = GameObject.FindGameObjectWithTag("Item");
+        itemPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        itemLayer = gameObject.layer;
+        itemSprite = GetComponent<SpriteRenderer>().sortingLayerID;
 
-        if (transform.tag == "Item")
-        {
-            itemPosition =new Vector3( GetComponent<Transform>().position.x,GetComponent<Transform>().position.y, 0);
-            itemLayer = gameObject.layer;
-        }
+
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -37,22 +42,25 @@ public class RespawnItem : MonoBehaviour
     private void RespawnPositionItem()
     {
 
-        transform.position = itemPosition;
+        gameObject.transform.position = itemPosition;
         gameObject.layer = itemLayer;
         isDead = false;
-
+        rbCaisse.velocity = new Vector2(0, 0);
+        gameObject.GetComponent<SpriteRenderer>().sortingLayerID = itemSprite;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // DeadZones
-
         if (collision.tag == "Dead")
         {
             isDead = true;
 
             RespawnPositionItem();
         }
-        //deathItem = false;
+        else
+        {
+            isDead = false;
+        }
     }
 
 }
