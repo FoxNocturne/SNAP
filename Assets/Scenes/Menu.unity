@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10237,7 +10237,7 @@ PrefabInstance:
     - target: {fileID: 6699472155244915897, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6699472155244915898, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
@@ -10312,62 +10312,62 @@ PrefabInstance:
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6088542
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6088542
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6088542
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 584.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 329
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1920
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080.7185
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699472156284893950, guid: d80382c98a9a1f741a225ea785f73e85,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d80382c98a9a1f741a225ea785f73e85, type: 3}
