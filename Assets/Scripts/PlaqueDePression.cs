@@ -17,7 +17,7 @@ public class PlaqueDePression : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" || collision.tag == "Item")
+        if (collision.tag == "Player" || collision.tag == "Item" || collision.tag=="Bouclier")
         {
             GetComponent<SpriteRenderer>().sprite = bas;
             activateurs.Add(collision.gameObject);
