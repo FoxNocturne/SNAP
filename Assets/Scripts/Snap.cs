@@ -7,7 +7,13 @@ public class Snap : MonoBehaviour
 {
     public GameObject camerasParent;
     public GameObject UISnap;
-    
+
+    public GameObject themeMusiqueParent;
+
+    public AudioSource dictature;
+    public AudioSource postApo;
+    public AudioSource chaos;
+
     private Image[] interfaceSnap = new Image[6];
     
 
@@ -21,6 +27,7 @@ public class Snap : MonoBehaviour
     public bool cantSnap = false;
 
     private List<GameObject> cameras = new List<GameObject>();
+    private List<GameObject> musique = new List<GameObject>();
     private float snapPressed, demiTailleX, demiTailleY;
     private int actualDimension = 0;
     Animator anim;
@@ -43,6 +50,21 @@ public class Snap : MonoBehaviour
         cameras.Add(camerasParent.transform.GetChild(0).gameObject);
         cameras.Add(camerasParent.transform.GetChild(1).gameObject);
         cameras.Add(camerasParent.transform.GetChild(2).gameObject);
+
+        musique.Add(themeMusiqueParent.transform.GetChild(0).gameObject);
+        musique.Add(themeMusiqueParent.transform.GetChild(1).gameObject);
+        musique.Add(themeMusiqueParent.transform.GetChild(2).gameObject);
+
+        dictature = musique[0].GetComponent<AudioSource>();
+        postApo = musique[1].GetComponent<AudioSource>();
+        chaos = musique[2].GetComponent<AudioSource>();
+
+
+        dictature.volume = 0.3f;
+        postApo.volume = 0f;
+        chaos.volume = 0f;
+
+
 
         cameras[1].GetComponent<Camera>().enabled = false;
         cameras[2].GetComponent<Camera>().enabled = false;
@@ -155,6 +177,27 @@ public class Snap : MonoBehaviour
 
             interfaceSnap[0].enabled = !interfaceSnap[0].isActiveAndEnabled;
             interfaceSnap[1].enabled = !interfaceSnap[1].isActiveAndEnabled;
+
+            if (actualDimension == 0)
+            {
+                dictature.volume = 0.3f;
+                chaos.volume = 0f;
+                postApo.volume = 0f;
+            }
+            else if (actualDimension == 1)
+            {
+                dictature.volume = 0f;
+                chaos.volume = 0.3f;
+                postApo.volume = 0f;
+            }
+            else
+            {
+                dictature.volume = 0f;
+                chaos.volume = 0f;
+                postApo.volume = 0.3f;
+            }
+
+
         }
     }
 
@@ -167,6 +210,8 @@ public class Snap : MonoBehaviour
             anim.SetTrigger("SNAP");
             ActiveSnap(snapPressed);
         }
+
+        
     }
 
     public void ActiveSnap(float target)
@@ -177,6 +222,9 @@ public class Snap : MonoBehaviour
         {
             feedback.SetActive(true);
             Invoke("CloseFeedback", 3f);
+
+
+            
             return;
         }
         else
@@ -201,6 +249,26 @@ public class Snap : MonoBehaviour
         GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID($"{LayerMask.LayerToName(actualDimension + 9)}Player");
         interfaceSnap[GetPreviousDimension() + 3].enabled = true;
         interfaceSnap[GetNextDimension()].enabled = true;
+
+        if (actualDimension == 0)
+        {
+            dictature.volume = 0.3f;
+            chaos.volume = 0f;
+            postApo.volume = 0f;
+        }
+        else if (actualDimension == 1)
+        {
+            dictature.volume = 0f;
+            chaos.volume = 0.3f;
+            postApo.volume = 0f;
+        }
+        else
+        {
+            dictature.volume = 0f;
+            chaos.volume = 0f;
+            postApo.volume = 0.3f;
+        }
+
 
         // Verification des layers de transition
         IgnorerTransition(actualDimension == dimensionAIgnorer);

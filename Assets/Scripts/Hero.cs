@@ -405,7 +405,12 @@ public class Hero : MonoBehaviour
         SonHero.PlayOneShot(sonMrX[0], 0.1f);
 
     }
-    // Sons pousser et tirer Objet
+    // Sons Escalade
+    public void SonEscaladeMrX()
+    {
+        SonHero.PlayOneShot(sonMrX[7], 0.1f);
+
+    }
 
     // Entrer de collision
     private void OnTriggerEnter2D(Collider2D collision)

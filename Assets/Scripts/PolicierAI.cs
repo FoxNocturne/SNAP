@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PolicierAI : MonoBehaviour
 {
+    public AudioSource sonBalleBoum;
+    public AudioClip[] sonBalle;
+
     [Header("Déplacement")]
     public bool LookAtLeftAtBeginning;
     public float maxSpeed = 5;
@@ -31,6 +34,8 @@ public class PolicierAI : MonoBehaviour
 
     void Start()
     {
+
+        sonBalleBoum= GetComponent<AudioSource>();
         // Mémorisation des points de patrouille
         anim = GetComponent<Animator>();
         if(LookAtLeftAtBeginning)
@@ -114,6 +119,7 @@ public class PolicierAI : MonoBehaviour
         {
             float sizeX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
             anim.SetTrigger("Tirer");
+            sonBalleBoum.PlayOneShot(sonBalle[0], 0.5f);
             shoot = Instantiate(BallePrefab, new Vector2(transform.position.x + (directionGauche ? sizeX : -sizeX), transform.position.y), Quaternion.identity);
             shoot.layer = gameObject.layer;
             
@@ -123,6 +129,7 @@ public class PolicierAI : MonoBehaviour
 
         // GetComponent<SpriteRenderer>().color = Color.blue;
         anim.SetBool("Viser", false);
+        //sonBalleBoum.PlayOneShot(sonBalle[1], 0.5f);
         shooting = null;
     }
 

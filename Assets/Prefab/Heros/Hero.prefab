@@ -66,7 +66,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a3c235724569cfc43801efebfbdd4955, type: 3}
   - {fileID: 8300000, guid: 23e0e8f582c2071428558ac2dc0e5ff3, type: 3}
   - {fileID: 8300000, guid: a630aa687c2ca6b4da95a0ebb26645f1, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 42158d08dd6fb72449433730f4fc7b11, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   circleGround: {fileID: 0}
