@@ -18,7 +18,7 @@ public class CollectablesUI : MonoBehaviour
     public Image ImageAffiche;
     public Text TextDescription;
     public string[] description;
-    List<int> ordre = new List<int>();
+    
 
     private void Awake()
     {
@@ -72,58 +72,50 @@ public class CollectablesUI : MonoBehaviour
 
     public void UpdateCollectables()
     {
-        ordre.Capacity = 0;
+        List<int> ordre = new List<int>();
+
         for (int i = 1; i < collectableButton.Length; i++)
         {
             if (PlayerPrefs.GetInt(nameCollec[i]) != 0)
             {
                 ordre.Add(i);
-                Debug.Log(ordre[0]);
                 collectableName[i].text = nameCollec[i];
                 collectableButton[i].enabled = true;
                 collectableButton[i].interactable = true;
             }
         } 
-        Debug.Log(ordre.Count);
-       if(ordre.Count == 1)
+        for (int i = 0; i < ordre.Count; i++)
         {
-                Navigation navigation = new Navigation();        
-                navigation.mode = Navigation.Mode.Explicit;
+            Navigation navigation = new Navigation();
+            navigation.mode = Navigation.Mode.Explicit;
+            if(ordre.Count > 1)
+            {
+                if(i == 0)
+                {
+                    navigation.selectOnUp = collectableButton[ordre[ordre.Count - 1]];
+                }
+                else
+                {
+                    navigation.selectOnUp = collectableButton[ordre[i - 1]];
+                }
+                if(i == ordre.Count - 1)
+                {
+                    navigation.selectOnDown = collectableButton[ordre[0]]; 
+                    
+                                          
+                }
+                else
+                {
+                     navigation.selectOnDown = collectableButton[ordre[i + 1]];
+                }
+            }
+            else
+            {
                 navigation.selectOnUp = collectableButton[ordre[0]];
                 navigation.selectOnDown = collectableButton[ordre[0]];
-                collectableButton[ordre[0]].navigation = navigation;            
-        }
-        else
-        {
-            for (int i = 0; i < ordre.Count; i++)
-            {
-                    Navigation navigation = new Navigation();        
-                    navigation.mode = Navigation.Mode.Explicit;
-                    if(i == 0)
-                    {
-                        navigation.selectOnUp = collectableButton[ordre[ordre.Count - 1]];
-                    }
-                    else
-                    {
-                        navigation.selectOnUp = collectableButton[ordre[i + 1]];
-                    }
-                    if(i == ordre.Count)
-                    {
-                        navigation.selectOnDown = collectableButton[ordre[0]];
-                        
-                    }
-                    else
-                    {
-                        navigation.selectOnDown = collectableButton[ordre[i - 1]];
-                    }
-                    
-
-                    collectableButton[ordre[i]].navigation = navigation;
-            } 
-        }
-
-
-
+            }
+            collectableButton[ordre[i]].navigation = navigation;
+        } 
     }
     public void TaskForDisplay(int value)
     {

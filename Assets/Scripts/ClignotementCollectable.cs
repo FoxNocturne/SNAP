@@ -67,7 +67,7 @@ public class ClignotementCollectable : MonoBehaviour
                 CollectableTrouve = GameObject.Find("CanvasPause/CollectablesUI").GetComponent<CollectablesUI>();
                 CollectableTrouve.TaskForDisplay(GetComponent<ObserveThisThing>().Numero);
                 CollectableTrouve.CollectableInstance = true;
-                CollectableTrouve.UpdateCollectables();             
+                //CollectableTrouve.UpdateCollectables();             
                 if(GetComponent<ObserveThisThing>().Numero == 5 || GetComponent<ObserveThisThing>().Numero == 6)
                 {
                     afficherCollectable.MomentLecture();
