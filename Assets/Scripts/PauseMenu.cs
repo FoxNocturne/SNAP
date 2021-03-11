@@ -56,11 +56,11 @@ public class PauseMenu : MonoBehaviour
         collectableUIisActtived = false;
         optionIsActived = false;
 
-        if (transform.tag == "Item")
-        {
-            itemPosition = new Vector3(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y, 0);
-            itemLayer = gameObject.layer;
-        }
+        player = GameObject.FindGameObjectWithTag("Player");
+        item = GameObject.FindGameObjectWithTag("Item");
+        itemPosition = new Vector3(item.transform.position.x, item.transform.position.y, 0);
+        itemLayer = item.layer;
+        
 
         //pardon pour ça 
 
@@ -82,7 +82,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetButtonDown("Option"))
+        if (Input.GetButtonDown("Option")|| Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
@@ -116,10 +116,12 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel()
     {
         //respawn du joueur au dernier checkpoint
-        player = GameObject.FindGameObjectWithTag("Player");
+ 
         player.transform.position = CheckPoints.reachedPoint;
+        item.transform.position = itemPosition;
+        item.layer = itemLayer;
 
-        RespawnPositionItem();
+        //RespawnPositionItem();
 
     }
 
@@ -219,7 +221,7 @@ public class PauseMenu : MonoBehaviour
         }
         collectableUI.SetActive(false);
     }
-    private void RespawnPositionItem()
+   /* private void RespawnPositionItem()
     {
 
         transform.position = itemPosition;
@@ -232,7 +234,7 @@ public class PauseMenu : MonoBehaviour
         {
             RespawnPositionItem();
         }
-    }
+    }*/
 
 
 

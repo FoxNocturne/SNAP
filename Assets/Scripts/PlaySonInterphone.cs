@@ -13,7 +13,7 @@ public class PlaySonInterphone : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // DeadZones
+        
         if (collision.tag == "Player")
         {
             sonInterphoneEnclencher.PlayOneShot(sonInterphone[0], 1f);
