@@ -36,6 +36,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        PlayerPrefs.DeleteAll();
         StartCoroutine(LoadAsyncScene());
     }
 

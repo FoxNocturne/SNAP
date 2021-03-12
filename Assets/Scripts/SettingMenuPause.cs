@@ -27,7 +27,7 @@ public class SettingMenuPause : MonoBehaviour
             optionUI.SetActive(false);
             menuUI.SetActive(true);
             Time.timeScale = 0f;
-           
+            PauseMenu.optionIsActived = false;
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(optionButtonMenu);
         }
