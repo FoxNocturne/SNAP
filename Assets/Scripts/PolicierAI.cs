@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PolicierAI : MonoBehaviour
 {
-    public AudioSource sonBalleBoum;
+    AudioSource sonBalleBoum;
     public AudioClip[] sonBalle;
 
     [Header("Déplacement")]
@@ -29,6 +29,7 @@ public class PolicierAI : MonoBehaviour
     private bool directionGauche;
     private Coroutine shooting;
     private GameObject shoot;
+    public Transform pointShoot;
 
     Animator anim;
 
@@ -120,9 +121,9 @@ public class PolicierAI : MonoBehaviour
             float sizeX = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
             anim.SetTrigger("Tirer");
             sonBalleBoum.PlayOneShot(sonBalle[0], 0.5f);
-            shoot = Instantiate(BallePrefab, new Vector2(transform.position.x + (directionGauche ? sizeX : -sizeX), transform.position.y), Quaternion.identity);
+            shoot = Instantiate(BallePrefab, new Vector2(pointShoot.transform.position.x + (directionGauche ? sizeX : -sizeX), pointShoot.transform.position.y), Quaternion.identity);
             shoot.layer = gameObject.layer;
-            
+
 
             shoot.GetComponent<Rigidbody2D>().AddRelativeForce((player.transform.position - shoot.transform.position) * shootSpeed, ForceMode2D.Impulse);
         }

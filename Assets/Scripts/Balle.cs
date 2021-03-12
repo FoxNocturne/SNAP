@@ -5,9 +5,16 @@ using UnityEngine;
 public class Balle : MonoBehaviour
 {
 
+    void Start()
+    {
+        Destroy(gameObject, 1);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Ennemy")
+        if(collision.gameObject.tag == "Player")
+        {
             Destroy(gameObject);
+        }
+            
     }
 }
