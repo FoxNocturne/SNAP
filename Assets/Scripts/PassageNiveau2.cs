@@ -11,7 +11,7 @@ public class PassageNiveau2 : MonoBehaviour
     public Text textLoading;
     float chargementPourcent;
 
-    public Animator fin;
+    //public Animator fin;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,7 +20,7 @@ public class PassageNiveau2 : MonoBehaviour
 
     IEnumerator LoadAsyncScene()
     {
-        fin.SetTrigger("Start");
+      // fin.SetTrigger("Start");
         Chargement.SetActive(true);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Niveau 2 -IntroPontGravité");
         BarreChargement.fillAmount = 0;
