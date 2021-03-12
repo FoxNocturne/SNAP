@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScenePS4.unity
     guid: 59f5cb4e9c6c9be478993d4572cad183
   - enabled: 1

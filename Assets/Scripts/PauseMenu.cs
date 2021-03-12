@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject closeCollectableButton;
     public GameObject closeCRButton;
     public GameObject closeCQButton;
-
+    public GameObject FondNoir;
     public LayerMask itemLayer;
 
     public static bool collectableUIisActtived;
@@ -101,6 +101,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        FondNoir.SetActive(false);
 
     }
     public void Pause()
@@ -108,7 +109,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-
+        FondNoir.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstPauseButton);
         
