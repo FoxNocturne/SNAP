@@ -13,6 +13,7 @@ TagManager:
   - Sons
   - Checkpoint
   - Bouclier
+  - Fin
   layers:
   - Default
   - TransparentFX

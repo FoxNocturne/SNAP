@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 2f;
+    public BoxCollider2D fin;
 
     public void LoadNextLevel()
     {
@@ -20,4 +21,9 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
     }
+
+    public void EcranNoir()
+    {
+        transition.SetTrigger("Start");
+    }    
 }
