@@ -17030,7 +17030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &771852682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35382,12 +35382,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1592835767 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6699472156284893890, guid: d80382c98a9a1f741a225ea785f73e85,
-    type: 3}
-  m_PrefabInstance: {fileID: 905246646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1593185729
 GameObject:
   m_ObjectHideFlags: 0
@@ -42352,7 +42346,6 @@ MonoBehaviour:
   Chargement: {fileID: 771852681}
   BarreChargement: {fileID: 1063710775}
   textLoading: {fileID: 1512799188}
-  fin: {fileID: 1592835767}
 --- !u!4 &1892283601
 Transform:
   m_ObjectHideFlags: 0
