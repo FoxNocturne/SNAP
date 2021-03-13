@@ -9,7 +9,10 @@ public class CollectablesUI : MonoBehaviour
     public GameObject menuUI;
     public GameObject collectableUI;
     public GameObject collectableButtonMenu;
-    public GameObject MomentLectureUI;       
+    public GameObject collectableSelect;
+    public GameObject MomentLectureUI;
+    public GameObject ZoomCollectableUI;
+    public Image CollectableUI;
     public bool CollectableInstance = false;
     public Button[] collectableButton;
     public TMPro.TMP_Text[] collectableName;
@@ -23,6 +26,8 @@ public class CollectablesUI : MonoBehaviour
 
     public Sprite[] AfficheLecture;
     public Image TextLecture;
+    private int saveButton;
+
 
     private void Awake()
     {
@@ -45,9 +50,13 @@ public class CollectablesUI : MonoBehaviour
         if ((PauseMenu.collectableUIisActtived || MainMenu.collectableUIisActtived) && Input.GetButtonDown("Dash"))
         {
             
-            if(MomentLectureUI.activeSelf == true)
+            if(MomentLectureUI.activeSelf == true || ZoomCollectableUI.activeSelf == true)
             {
                 MomentLectureUI.SetActive(false);
+                ZoomCollectableUI.SetActive(false);
+                collectableButton[saveButton].enabled = true;
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(collectableSelect);                
             }
             else
             {
@@ -133,6 +142,9 @@ public class CollectablesUI : MonoBehaviour
         MomentLectureUI.SetActive(true);
         AudioSource Voix = MomentLectureUI.GetComponent<AudioSource>();
         Voix.PlayOneShot(Page, 1f);
+        collectableSelect = collectableButton[value].transform.gameObject;
+        collectableButton[value].enabled = false;        
+        saveButton = value;
         switch(value)
         {
             case 5 :
@@ -151,8 +163,36 @@ public class CollectablesUI : MonoBehaviour
             Voix.clip =  SonsLecture[2];
             TextLecture.sprite = AfficheLecture[2];
             Voix.Play();  
-            break;                        
+            break;
+
+            case 8 :
+            Voix.clip =  SonsLecture[3];
+            TextLecture.sprite = AfficheLecture[3];
+            Voix.Play();  
+            break;  
+
+            case 9 :
+            Voix.clip =  SonsLecture[4];
+            TextLecture.sprite = AfficheLecture[4];
+            Voix.Play();  
+            break;  
+
+            case 10 :
+            Voix.clip =  SonsLecture[5];
+            TextLecture.sprite = AfficheLecture[5];
+            Voix.Play();  
+            break;              
         }
+    }
+
+    public void DisplayCollectable(int value)
+    {
+        ZoomCollectableUI.SetActive(true);
+        CollectableUI.sprite = ImageCollec[value];
+        collectableSelect = collectableButton[value].transform.gameObject;
+        collectableButton[value].enabled = false;
+
+        saveButton = value;
     }
 
 }
