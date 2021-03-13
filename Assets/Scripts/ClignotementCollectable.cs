@@ -69,7 +69,7 @@ public class ClignotementCollectable : MonoBehaviour
                 CollectableTrouve.TaskForDisplay(GetComponent<ObserveThisThing>().Numero);
                 CollectableTrouve.CollectableInstance = true;
                 //CollectableTrouve.UpdateCollectables();             
-                if(GetComponent<ObserveThisThing>().Numero == 5 || GetComponent<ObserveThisThing>().Numero == 6)
+                if(GetComponent<ObserveThisThing>().Numero >= 5 && GetComponent<ObserveThisThing>().Numero <= 10)
                 {
                     CollectableTrouve.DisplayMomentLecture(GetComponent<ObserveThisThing>().Numero);
                 } 
