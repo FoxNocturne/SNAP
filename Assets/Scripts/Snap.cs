@@ -60,7 +60,7 @@ public class Snap : MonoBehaviour
         chaos = musique[2].GetComponent<AudioSource>();
 
 
-        dictature.volume = 0.3f;
+        dictature.volume = SettingMenuPause.volume;
         postApo.volume = 0f;
         chaos.volume = 0f;
 
@@ -180,21 +180,21 @@ public class Snap : MonoBehaviour
 
             if (actualDimension == 0)
             {
-                dictature.volume = 0.3f;
+                dictature.volume = SettingMenuPause.volume;
                 chaos.volume = 0f;
                 postApo.volume = 0f;
             }
             else if (actualDimension == 1)
             {
                 dictature.volume = 0f;
-                chaos.volume = 0.3f;
+                chaos.volume = SettingMenuPause.volume;
                 postApo.volume = 0f;
             }
             else
             {
                 dictature.volume = 0f;
                 chaos.volume = 0f;
-                postApo.volume = 0.3f;
+                postApo.volume = SettingMenuPause.volume;
             }
 
 
