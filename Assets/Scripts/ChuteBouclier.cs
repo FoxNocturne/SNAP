@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChuteBouclier : MonoBehaviour
 {
     public GameObject cameras;
+    public GameObject Hero;
     public Animator BulleAnimator;
     AudioSource sonBouclierChute;
     public AudioClip[] sonBouclier;
@@ -18,9 +19,12 @@ public class ChuteBouclier : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerUp && Input.GetButtonDown("Attraper"))
+        if (PlayerUp && Input.GetButtonDown("Attraper") && Hero.GetComponent<Hero>().onTheGround && !Hero.GetComponent<Hero>().dash)
         {
             cameras.GetComponent<CameraFollowing>().EvenementChuteBouclier(transform);
+
+            Hero.GetComponent<Animator>().SetBool("run", false);
+            Hero.transform.position = new Vector2(67.77f, 8.51f);
             sonBouclierChute.PlayOneShot(sonBouclier[0], 0.1f);
         }
     }

@@ -27,7 +27,7 @@ public class Hero : MonoBehaviour
     public LayerMask whatIsGround;
     public bool onTheGround = false;
     bool ghost = false;
-    bool dash = false;
+    public bool dash = false;
     bool canDash = false;
     bool canClimb = false;
     bool isPulling = false;
