@@ -38,7 +38,7 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {                
-        if(timeChange <= 0 && dimension != 2)
+        if(timeChange <= 0)
         {
             timeChange = timeMax;
             EcranNoir.SetTrigger("transition");
