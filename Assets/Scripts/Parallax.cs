@@ -81,25 +81,25 @@ public class Parallax : MonoBehaviour
             plan1P[0].transform.Translate(Vector2.left * Time.deltaTime * 3);
             plan1P[1].transform.Translate(Vector2.left * Time.deltaTime * 3);
 
-            if(plan1P[0].transform.position.x <= -32f)
+            if(plan1P[0].transform.position.x <= -50f)
             {
-                plan1P[0].transform.position = new Vector2(22, plan1P[0].transform.position.y);
+                plan1P[0].transform.position = new Vector2(plan1P[1].transform.position.x + 81, plan1P[0].transform.position.y);
             }
-            if(plan1P[1].transform.position.x <= -32f)
+            if(plan1P[1].transform.position.x <= -50f)
             {
-                plan1P[1].transform.position = new Vector2(22, plan1P[1].transform.position.y);
+                plan1P[1].transform.position = new Vector2(plan1P[0].transform.position.x + 81, plan1P[1].transform.position.y);
             }
 
             plan2P[0].transform.Translate(Vector2.left * Time.deltaTime * 2);
             plan2P[1].transform.Translate(Vector2.left * Time.deltaTime * 2);
 
-            if(plan2P[0].transform.position.x <= -30f)
+            if(plan2P[0].transform.position.x <= -66.6f)
             {
-                plan2P[0].transform.position = new Vector2(24, plan2P[0].transform.position.y);
+                plan2P[0].transform.position = new Vector2(plan2P[1].transform.position.x + 116f, plan2P[0].transform.position.y);
             }
-            if(plan2P[1].transform.position.x <= -30f)
+            if(plan2P[1].transform.position.x <= -66.6f)
             {
-                plan2P[1].transform.position = new Vector2(24, plan2P[1].transform.position.y);
+                plan2P[1].transform.position = new Vector2(plan2P[0].transform.position.x + 116f, plan2P[1].transform.position.y);
             }
         }
     }
