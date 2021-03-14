@@ -12,6 +12,9 @@ public class SettingMenu : MonoBehaviour
     public GameObject menuUI;
     public GameObject optionButtonMenu;
 
+    public static float volume;
+    public Slider volumeSelect;
+
     public void Update()
     {
        
@@ -27,10 +30,9 @@ public class SettingMenu : MonoBehaviour
 
 
     }
-    public void SetVolume (float volume)
+    public void SetVolume ()
     {
-        //Debug.Log(volume);
-        audioMixer.SetFloat("volume", volume);
+        volume = volumeSelect.value;
     }
     public void SetQuality(int qualityIndex)
     {

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6227,6 +6227,7 @@ MonoBehaviour:
   optionUI: {fileID: 927599647}
   menuUI: {fileID: 168199171}
   optionButtonMenu: {fileID: 1039525707}
+  volumeSelect: {fileID: 0}
 --- !u!1 &887838477
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,7 +6712,10 @@ MonoBehaviour:
   menuUI: {fileID: 168199171}
   collectableUI: {fileID: 922147575}
   collectableButtonMenu: {fileID: 1740294703}
+  collectableSelect: {fileID: 0}
   MomentLectureUI: {fileID: 1435891049}
+  ZoomCollectableUI: {fileID: 0}
+  CollectableUI: {fileID: 0}
   CollectableInstance: 0
   collectableButton:
   - {fileID: 0}
@@ -8689,7 +8693,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 863562299}
         m_MethodName: SetVolume
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

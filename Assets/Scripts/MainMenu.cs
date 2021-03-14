@@ -24,6 +24,7 @@ public class MainMenu : MonoBehaviour
     
     public Image BarreChargement;
     public Text textLoading;
+    public Slider volumeSelect;
     float chargementPourcent;
 
     public static bool optionUIisActived;
@@ -62,7 +63,7 @@ public class MainMenu : MonoBehaviour
     {
         optionUI.SetActive(true);
         optionUIisActived = true;
-
+        volumeSelect.value = SettingMenu.volume;
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstOptionButton);
     }

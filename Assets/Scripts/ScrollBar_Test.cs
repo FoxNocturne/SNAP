@@ -11,7 +11,6 @@ public class ScrollBar_Test : MonoBehaviour
  
     public void Lancement(int value)
     {
-        Debug.Log("dslm");
         StartCoroutine(Scroll(value));
        
     }

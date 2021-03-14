@@ -2093,9 +2093,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2604754625694495446}
         m_MethodName: SetVolume
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2880,6 +2880,8 @@ MonoBehaviour:
   optionUI: {fileID: 2604754626811957288}
   menuUI: {fileID: 2604754627437423057}
   optionButtonMenu: {fileID: 2604754626338088306}
+  volumeSelect: {fileID: 2604754625542332636}
+  InstantLecture: {fileID: 9001910688215688562}
 --- !u!1 &2604754625838500384
 GameObject:
   m_ObjectHideFlags: 0
@@ -4604,6 +4606,7 @@ MonoBehaviour:
   collectableSelect: {fileID: 0}
   MomentLectureUI: {fileID: 9001910688215688562}
   ZoomCollectableUI: {fileID: 3026055491134099589}
+  gererVolume: {fileID: 2604754625694495446}
   CollectableUI: {fileID: 4347463229115393826}
   CollectableInstance: 0
   collectableButton:

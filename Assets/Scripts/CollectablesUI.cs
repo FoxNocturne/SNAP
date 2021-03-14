@@ -12,6 +12,7 @@ public class CollectablesUI : MonoBehaviour
     public GameObject collectableSelect;
     public GameObject MomentLectureUI;
     public GameObject ZoomCollectableUI;
+    public SettingMenuPause gererVolume;
     public Image CollectableUI;
     public bool CollectableInstance = false;
     public Button[] collectableButton;
@@ -54,6 +55,7 @@ public class CollectablesUI : MonoBehaviour
             {
                 MomentLectureUI.SetActive(false);
                 ZoomCollectableUI.SetActive(false);
+                gererVolume.SetVolume();
                 collectableButton[saveButton].enabled = true;
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(collectableSelect);                
@@ -141,6 +143,12 @@ public class CollectablesUI : MonoBehaviour
     {
         MomentLectureUI.SetActive(true);
         AudioSource Voix = MomentLectureUI.GetComponent<AudioSource>();
+        if(SettingMenuPause.volume > 0.05f)
+        {
+            SettingMenuPause.volume = 0.05f;
+            gererVolume.SetVolume();
+        }
+
         Voix.PlayOneShot(Page, 1f);
         collectableSelect = collectableButton[value].transform.gameObject;
         collectableButton[value].enabled = false;        
